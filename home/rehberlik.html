@@ -1,537 +1,560 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="tr">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Rehberlik </title>
-  <link rel="icon" type="image/png" href="../image/favicon.ico" />
+  <link rel="icon" type="image/png" href="image/favicon.ico" />
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="css/style.css">
 </head>
+
 <body>
 
-<!-- HEADER -->
-<header>
-  <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+  <!-- HEADER / NAVBAR -->
+  <header>
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+      <div class="container">
+
+        <a class="navbar-brand d-flex align-items-center gap-3" href="index.html">
+          <img src="image/ilokullogo.jpeg" alt="18 Mart Sirac Koleji Logo" class="navbar-logo" />
+          <span class="navbar-title">Özel OnSekiz Mart Siraç Koleji İlkokulu</span>
+        </a>
+
+
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#siracNavbar">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="siracNavbar">
+          <ul class="navbar-nav ms-auto">
+
+            <li class="nav-item">
+              <a class="nav-link" href="index.html">Anasayfa</a>
+            </li>
+
+            <!-- Kurumsal -->
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">Kurumsal</a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="anlayis.html">Eğitim Anlayışımız</a></li>
+                <li><a class="dropdown-item" href="misyon.html">Misyon & Vizyon</a></li>
+                <li><a class="dropdown-item" href="tarihce.html">Tarihçe</a></li>
+              </ul>
+            </li>
+
+            <!-- Eğitim Programları -->
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">Eğitim
+                Programları</a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="manevi.html">Manevi Eğitim</a></li>
+                <li><a class="dropdown-item" href="kulubuler.html">Kulüpler</a></li>
+                <li><a class="dropdown-item" href="olcum.html">Ölçme ve Değerlendirme</a></li>
+                <li><a class="dropdown-item" href="yabancidil.html">Yabancı Dil</a></li>
+                <li><a class="dropdown-item" href="rehberlik.html">Rehberlik</a></li>
+              </ul>
+            </li>
+
+            <!-- Atölyeler -->
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">Atölyeler</a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="robotik.html">Robotik Kodlama</a></li>
+                <li><a class="dropdown-item" href="gorsel.html">Görsel Sanatlar ve Ahşap</a></li>
+                <li><a class="dropdown-item" href="tasavvuf.html">Tasavvuf Müziği</a></li>
+                <li><a class="dropdown-item" href="kozmik.html">Montessori Kozmik</a></li>
+              </ul>
+            </li>
+
+            <!-- Etkinlikler -->
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">Etkinlikler</a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="oyun.html">Oyun ve Fiziki Etkinlikler</a></li>
+                <li><a class="dropdown-item" href="kulubuler.html">Kulüpler ve P4C</a></li>
+                <li><a class="dropdown-item" href="sosyalyardim.html">Sosyal Yardım Projeleri</a></li>
+                <li><a class="dropdown-item" href="Helal_Sagalik.html">Helal ve Sağlıklı</a></li>
+                <li><a class="dropdown-item" href="galeri.html">Galeri</a></li>
+              </ul>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link" href="ogretmenler.html">Kadromuz</a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link" href="iletisim.html">İletişim</a>
+            </li>
+
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <section class="guidance-services py-5 bg-light" style="padding-top: 160px !important;">
     <div class="container">
-
-      <a class="navbar-brand d-flex align-items-center gap-3" href="index.html">
-  <img src="../image/yaı lug.jpg" alt="18 Mart Sirac Koleji Logo" class="navbar-logo" />
-  <span class="navbar-title">Özel OnSekiz Mart Siraç Koleji İlkokulu</span>
-</a>
-
-
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#siracNavbar">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-
-      <div class="collapse navbar-collapse" id="siracNavbar">
-        <ul class="navbar-nav ms-auto">
-
-          <li class="nav-item">
-            <a class="nav-link active" href="index.html">Anasayfa</a>
-          </li>
-
-          <!-- Kurumsal -->
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">Kurumsal</a>
-            <ul class="dropdown-menu">
-              <li><a class="dropdown-item" href="anlayis.html">Eğitim Anlayışımız</a></li>
-              <li><a class="dropdown-item" href="misyon.html">Misyon & Vizyon</a></li>
-              <li><a class="dropdown-item" href="tarihce.html">Tarihçe</a></li>
-              <li><a class="dropdown-item" href="kultur.html">Okul Kültürü</a></li>
-            </ul>
-          </li>
-
-          <!-- Eğitim Programları -->
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">Eğitim Programları</a>
-            <ul class="dropdown-menu">
-              <li><a class="dropdown-item" href="manevi.html">Manevi Eğitim</a></li>
-              <li><a class="dropdown-item" href="Okuma Saat.html">Okuma Saat</a></li>
-              <li><a class="dropdown-item" href="olcum.html">Ölçme ve Değerlendirme</a></li>
-              <li><a class="dropdown-item" href="yabancidil.html">Yabancı Dil</a></li>
-              <li><a class="dropdown-item" href="rehberlik.html">Rehberlik</a></li>
-            </ul>
-          </li>
-
-          <!-- Atölyeler -->
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">Atölyeler</a>
-            <ul class="dropdown-menu">
-              <li><a class="dropdown-item" href="robotik.html">Robotik Kodlama</a></li>
-              <li><a class="dropdown-item" href="gorsel.html">Görsel Sanatlar ve Ahşap</a></li>
-              <li><a class="dropdown-item" href="tasavvuf.html">Tasavvuf Müziği</a></li>
-              <li><a class="dropdown-item" href="kozmik.html">Montessori Kozmik</a></li>
-            </ul>
-          </li>
-
-          <!-- Etkinlikler -->
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">Etkinlikler</a>
-            <ul class="dropdown-menu">
-              <li><a class="dropdown-item" href="oyun.html">Oyun ve Fiziki Etkinlikler</a></li>
-              <li><a class="dropdown-item" href="kulubuler.html">Kulübüler ve P4C</a></li>
-              <li><a class="dropdown-item" href="sosyalyardim.html">Sosyal Yardım Projeleri</a></li>
-              <li><a class="dropdown-item" href="Helal ve Sagalik.html">Helal ve Sağlıklı</a></li>
-              <li><a class="dropdown-item" href="galeri.html">Galeri</a></li>
-            </ul>
-          </li>
-
-          <li class="nav-item">
-            <a class="nav-link" href="ogretmenler.html">Kadromuz</a>
-          </li>
-
-          <li class="nav-item">
-            <a class="nav-link" href="iletisim.html">İletişim</a>
-          </li>
-
-        </ul>
+      <div class="section-header text-center mb-5">
+        <h2 class="display-4 fw-bold">Rehberlik Hizmetlerimiz</h2>
+        <p class="lead text-muted">Bütünsel gelişim için kapsamlı rehberlik çalışmaları</p>
+        <div class="divider mx-auto bg-gradient"></div>
       </div>
-    </div>
-  </nav>
-</header>
 
-<section class="guidance-services py-5 bg-light">
-  <div class="container">
-    <div class="section-header text-center mb-5">
-      <h2 class="display-4 fw-bold">Rehberlik Hizmetlerimiz</h2>
-      <p class="lead text-muted">Bütünsel gelişim için kapsamlı rehberlik çalışmaları</p>
-      <div class="divider mx-auto bg-gradient"></div>
-    </div>
-
-    <div class="row g-4">
-      <!-- Öğrenci Rehberliği -->
-      <div class="col-md-4">
-        <div class="guidance-card student-guidance p-4 rounded-4 shadow-sm h-100">
-          <div class="guidance-icon mb-4">
-            <i class="fas fa-user-graduate"></i>
+      <div class="row g-4">
+        <!-- Öğrenci Rehberliği -->
+        <div class="col-md-4">
+          <div class="guidance-card student-guidance p-4 rounded-4 shadow-sm h-100">
+            <div class="guidance-icon mb-4">
+              <i class="fas fa-user-graduate"></i>
+            </div>
+            <h3 class="mb-4">Öğrenci Rehberliği</h3>
+            <ul class="guidance-features">
+              <li><i class="fas fa-check-circle"></i> Akademik takip</li>
+              <li><i class="fas fa-check-circle"></i> Mesleki rehberlik</li>
+              <li><i class="fas fa-check-circle"></i> Birebir öğrenci görüşmeleri</li>
+              <li><i class="fas fa-check-circle"></i> Sınıf rehberlik çalışmaları</li>
+              <li><i class="fas fa-check-circle"></i> Öğrenci seminerleri</li>
+              <li><i class="fas fa-check-circle"></i> Pano çalışmaları</li>
+            </ul>
+            <div class="stats mt-4 pt-3 border-top">
+              <div class="stat-item">
+                <span class="number">6+</span>
+                <span class="label">Farklı Hizmet</span>
+              </div>
+            </div>
           </div>
-          <h3 class="mb-4">Öğrenci Rehberliği</h3>
-          <ul class="guidance-features">
-            <li><i class="fas fa-check-circle"></i> Akademik takip</li>
-            <li><i class="fas fa-check-circle"></i> Mesleki rehberlik</li>
-            <li><i class="fas fa-check-circle"></i> Birebir öğrenci görüşmeleri</li>
-            <li><i class="fas fa-check-circle"></i> Sınıf rehberlik çalışmaları</li>
-            <li><i class="fas fa-check-circle"></i> Öğrenci seminerleri</li>
-            <li><i class="fas fa-check-circle"></i> Pano çalışmaları</li>
-          </ul>
-          <div class="stats mt-4 pt-3 border-top">
-            <div class="stat-item">
-              <span class="number">6+</span>
-              <span class="label">Farklı Hizmet</span>
+        </div>
+
+        <!-- Veli Rehberliği -->
+        <div class="col-md-4">
+          <div class="guidance-card parent-guidance p-4 rounded-4 shadow-sm h-100">
+            <div class="guidance-icon mb-4">
+              <i class="fas fa-users"></i>
+            </div>
+            <h3 class="mb-4">Veli Rehberliği</h3>
+            <ul class="guidance-features">
+              <li><i class="fas fa-check-circle"></i> Veli seminerleri</li>
+              <li><i class="fas fa-check-circle"></i> Ev ziyaretleri</li>
+              <li><i class="fas fa-check-circle"></i> Veli ile birebir görüşme</li>
+              <li><i class="fas fa-check-circle"></i> Veli bülteni</li>
+            </ul>
+            <div class="stats mt-3 pt-3 border-top">
+              <div class="stat-item">
+                <span class="number">4</span>
+                <span class="label">Temel Çalışma</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Öğretmen Rehberliği -->
+        <div class="col-md-4">
+          <div class="guidance-card teacher-guidance p-4 rounded-4 shadow-sm h-100">
+            <div class="guidance-icon mb-4">
+              <i class="fas fa-chalkboard-teacher"></i>
+            </div>
+            <h3 class="mb-4">Öğretmen Rehberliği</h3>
+            <ul class="guidance-features">
+              <li><i class="fas fa-check-circle"></i> Hizmet içi eğitim seminerleri</li>
+              <li><i class="fas fa-check-circle"></i> Öğretmen görüşmeleri</li>
+              <li><i class="fas fa-check-circle"></i>Öğretmen Rehberliğı</li>
+            </ul>
+            <div class="stats mt-4 pt-3 border-top">
+              <div class="stat-item">
+                <span class="number">360°</span>
+                <span class="label">Bütünsel Yaklaşım</span>
+              </div>
             </div>
           </div>
         </div>
       </div>
 
-      <!-- Veli Rehberliği -->
-      <div class="col-md-4">
-        <div class="guidance-card parent-guidance p-4 rounded-4 shadow-sm h-100">
-          <div class="guidance-icon mb-4">
-            <i class="fas fa-users"></i>
-          </div>
-          <h3 class="mb-4">Veli Rehberliği</h3>
-          <ul class="guidance-features">
-            <li><i class="fas fa-check-circle"></i> Veli seminerleri</li>
-            <li><i class="fas fa-check-circle"></i> Ev ziyaretleri</li>
-            <li><i class="fas fa-check-circle"></i> Veli ile birebir görüşme</li>
-            <li><i class="fas fa-check-circle"></i> Veli bülteni</li>
-          </ul>
-          <div class="stats mt-3 pt-3 border-top">
-            <div class="stat-item">
-              <span class="number">4</span>
-              <span class="label">Temel Çalışma</span>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- Öğretmen Rehberliği -->
-      <div class="col-md-4">
-        <div class="guidance-card teacher-guidance p-4 rounded-4 shadow-sm h-100">
-          <div class="guidance-icon mb-4">
-            <i class="fas fa-chalkboard-teacher"></i>
-          </div>
-          <h3 class="mb-4">Öğretmen Rehberliği</h3>
-          <ul class="guidance-features">
-            <li><i class="fas fa-check-circle"></i> Hizmet içi eğitim seminerleri</li>
-            <li><i class="fas fa-check-circle"></i> Öğretmen görüşmeleri</li>
-            <li><i class="fas fa-check-circle"></i>Öğretmen Rehberliğı</li>
-          </ul>
-          <div class="stats mt-4 pt-3 border-top">
-            <div class="stat-item">
-              <span class="number">360°</span>
-              <span class="label">Bütünsel Yaklaşım</span>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- Olay Çözümlemeleri -->
-    <div class="row mt-5">
-      <div class="col-12">
-        <div class="solution-section p-4 p-lg-5 rounded-4 shadow-sm">
-          <div class="row align-items-center">
-            <div class="col-lg-8">
-              <h3 class="mb-3">PDR</h3>
-              <div class="solution-items row">
-               <div class="col-sm-6 mb-3">
-  <div class="solution-item d-flex align-items-center">
-    <i class="fas fa-brain me-2"></i>
-    <span>Olay Çözümlemeleri</span>
-  </div>
-</div>
-
-                <div class="col-sm-6 mb-3">
-                  <div class="solution-item">
-                    <i class="fas fa-clock me-2"></i>
-                    <span>Rehberlik Saati</span>
+      <!-- Olay Çözümlemeleri -->
+      <div class="row mt-5">
+        <div class="col-12">
+          <div class="solution-section p-4 p-lg-5 rounded-4 shadow-sm">
+            <div class="row align-items-center">
+              <div class="col-lg-8">
+                <h3 class="mb-3">PDR</h3>
+                <div class="solution-items row">
+                  <div class="col-sm-6 mb-3">
+                    <div class="solution-item d-flex align-items-center">
+                      <i class="fas fa-brain me-2"></i>
+                      <span>Olay Çözümlemeleri</span>
+                    </div>
                   </div>
-                </div>
-                <div class="col-sm-6 mb-3">
-                  <div class="solution-item">
-                    <i class="fas fa-comments me-2"></i>
-                    <span>Rehberlik Görüşmeleri</span>
+
+                  <div class="col-sm-6 mb-3">
+                    <div class="solution-item">
+                      <i class="fas fa-clock me-2"></i>
+                      <span>Rehberlik Saati</span>
+                    </div>
                   </div>
-                </div>
-                <div class="col-sm-6 mb-3">
-                  <div class="solution-item">
-                    <i class="fas fa-chalkboard me-2"></i>
-                    <span>Rehberlik Seminerleri</span>
+                  <div class="col-sm-6 mb-3">
+                    <div class="solution-item">
+                      <i class="fas fa-comments me-2"></i>
+                      <span>Rehberlik Görüşmeleri</span>
+                    </div>
                   </div>
-                </div>
-                <div class="col-sm-6 mb-3">
-                  <div class="solution-item">
-                    <i class="fas fa-clipboard-check me-2"></i>
-                    <span>Test ve Envanterler</span>
+                  <div class="col-sm-6 mb-3">
+                    <div class="solution-item">
+                      <i class="fas fa-chalkboard me-2"></i>
+                      <span>Rehberlik Seminerleri</span>
+                    </div>
+                  </div>
+                  <div class="col-sm-6 mb-3">
+                    <div class="solution-item">
+                      <i class="fas fa-clipboard-check me-2"></i>
+                      <span>Test ve Envanterler</span>
+                    </div>
                   </div>
                 </div>
               </div>
-            </div>
-            <div class="col-lg-4 text-center">
-              <img src="../image/sınıf goruntulu/1.JPG" 
-                   alt="Rehberlik çalışmaları" class="img-fluid rounded-3">
+              <div class="col-lg-4 text-center">
+                <img src="image/siınif_goruntulu/1.JPG" alt="Rehberlik çalışmaları" class="img-fluid rounded-3">
+              </div>
             </div>
           </div>
         </div>
       </div>
     </div>
-  </div>
-</section>
-<style>
-.guidance-services {
-  background: linear-gradient(180deg, #f8f9fa, #eef3fb);
-}
+  </section>
+  <style>
+    .guidance-services {
+      background: linear-gradient(180deg, #f8f9fa, #eef3fb);
+    }
 
 
-.guidance-services .section-header h2 {
-  color: #2c5aa0;
-  font-weight: 800;
-   margin-top: 65px;
-}
+    .guidance-services .section-header h2 {
+      color: #2c5aa0;
+      font-weight: 800;
+      margin-top: 65px;
+    }
 
-.guidance-services .section-header p {
-  font-size: 1.15rem;
-}
+    .guidance-services .section-header p {
+      font-size: 1.15rem;
+    }
 
-.guidance-services .divider {
-  width: 90px;
-  height: 5px;
-  border-radius: 10px;
-  background: linear-gradient(90deg, #2c5aa0, #6cbb3c, #f8b739);
-}
+    .guidance-services .divider {
+      width: 90px;
+      height: 5px;
+      border-radius: 10px;
+      background: linear-gradient(90deg, #2c5aa0, #6cbb3c, #f8b739);
+    }
 
-.guidance-card {
-  background: #ffffff;
-  transition: all 0.4s ease;
-  position: relative;
-  overflow: hidden;
-}
+    .guidance-card {
+      background: #ffffff;
+      transition: all 0.4s ease;
+      position: relative;
+      overflow: hidden;
+    }
 
-.guidance-card::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 6px;
-  height: 100%;
-  background: #2c5aa0;
-}
+    .guidance-card::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 6px;
+      height: 100%;
+      background: #2c5aa0;
+    }
 
-.guidance-card:hover {
-  transform: translateY(-10px);
-  box-shadow: 0 18px 45px rgba(0,0,0,0.15);
-}
+    .guidance-card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 18px 45px rgba(0, 0, 0, 0.15);
+    }
 
-.student-guidance::before { background: #2c5aa0; }
-.parent-guidance::before { background: #6cbb3c; }
-.teacher-guidance::before { background: #f8b739; }
+    .student-guidance::before {
+      background: #2c5aa0;
+    }
 
-.guidance-icon {
-  width: 65px;
-  height: 65px;
-  border-radius: 18px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 1.8rem;
-  color: #fff;
-}
+    .parent-guidance::before {
+      background: #6cbb3c;
+    }
 
-.student-guidance .guidance-icon { background: #2c5aa0; }
-.parent-guidance .guidance-icon { background: #6cbb3c; }
-.teacher-guidance .guidance-icon { background: #f8b739; }
+    .teacher-guidance::before {
+      background: #f8b739;
+    }
 
-.guidance-card h3 {
-  font-weight: 700;
-  color: #343a40;
-}
+    .guidance-icon {
+      width: 65px;
+      height: 65px;
+      border-radius: 18px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.8rem;
+      color: #fff;
+    }
 
-.guidance-features {
-  list-style: none;
-  padding: 0;
-}
+    .student-guidance .guidance-icon {
+      background: #2c5aa0;
+    }
 
-.guidance-features li {
-  margin-bottom: 10px;
-  font-size: 0.95rem;
-  display: flex;
-  align-items: center;
-  gap: 10px;
-}
+    .parent-guidance .guidance-icon {
+      background: #6cbb3c;
+    }
 
-.guidance-features i {
-  color: #6cbb3c;
-}
+    .teacher-guidance .guidance-icon {
+      background: #f8b739;
+    }
 
-.stats {
-  display: flex;
-  justify-content: center;
-}
+    .guidance-card h3 {
+      font-weight: 700;
+      color: #343a40;
+    }
 
-.stat-item {
-  text-align: center;
-}
+    .guidance-features {
+      list-style: none;
+      padding: 0;
+    }
 
-.stat-item .number {
-  font-size: 2rem;
-  font-weight: 800;
-  color: #2c5aa0;
-}
+    .guidance-features li {
+      margin-bottom: 10px;
+      font-size: 0.95rem;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
 
-.stat-item .label {
-  font-size: 0.85rem;
-  color: #6c757d;
-}
+    .guidance-features i {
+      color: #6cbb3c;
+    }
 
-.solution-section {
-  background: linear-gradient(135deg, #ffffff, #f4f7fb);
-  border-left: 6px solid #2c5aa0;
-}
+    .stats {
+      display: flex;
+      justify-content: center;
+    }
 
-.solution-section h3 {
-  font-weight: 700;
-  color: #2c5aa0;
-}
+    .stat-item {
+      text-align: center;
+    }
 
-.solution-item {
-  background: #ffffff;
-  padding: 12px 15px;
-  border-radius: 10px;
-  box-shadow: 0 6px 15px rgba(0,0,0,0.08);
-  font-size: 0.95rem;
-  transition: 0.3s ease;
-}
+    .stat-item .number {
+      font-size: 2rem;
+      font-weight: 800;
+      color: #2c5aa0;
+    }
 
-.solution-item i {
-  color: #2c5aa0;
-}
+    .stat-item .label {
+      font-size: 0.85rem;
+      color: #6c757d;
+    }
 
-.solution-item:hover {
-  transform: translateX(6px);
-  background: #eef3fb;
-}
-.solution-section img {
-  transition: transform 0.5s ease;
-}
+    .solution-section {
+      background: linear-gradient(135deg, #ffffff, #f4f7fb);
+      border-left: 6px solid #2c5aa0;
+    }
 
-.solution-section img:hover {
-  transform: scale(1.05);
-}
-@media (max-width: 768px) {
-  .guidance-card {
-    text-align: center;
-  }
+    .solution-section h3 {
+      font-weight: 700;
+      color: #2c5aa0;
+    }
 
-  .guidance-features li {
-    justify-content: center;
-  }
+    .solution-item {
+      background: #ffffff;
+      padding: 12px 15px;
+      border-radius: 10px;
+      box-shadow: 0 6px 15px rgba(0, 0, 0, 0.08);
+      font-size: 0.95rem;
+      transition: 0.3s ease;
+    }
 
-  .solution-section {
-    border-left: none;
-    border-top: 5px solid #2c5aa0;
-  }
-}
+    .solution-item i {
+      color: #2c5aa0;
+    }
 
-</style>
-<!-- FOOTER -->
-<footer>
- <div class="container">
-    <div class="row">
-      <!-- LOGO VE AÇIKLAMA -->
-      <div class="col-lg-4 mb-4 mb-lg-0">
-        <div class="footer-logo">
-          <i class="fas fa-graduation-cap"></i>
-          <div>
-            <h5>Özel On Sekiz Mart <span>Siraç İlkokulu</span></h5>
-          </div>
-        </div>
-        <p>2007 yılında kurulan 18 Mart Sirac Koleji, güçlü değerlerle donanmış nesiller yetiştirir. Öğrencilerimizin akademik, sosyal ve manevi gelişimini ön planda tutuyoruz.</p>
-        
-        <!-- ÖZELLİKLER -->
-        <div class="footer-features">
-          <div class="feature-item">
-            <div class="feature-icon">
-              <i class="fas fa-award"></i>
-            </div>
-            <div class="feature-text">Kaliteli Eğitim</div>
-          </div>
-          <div class="feature-item">
-            <div class="feature-icon">
-              <i class="fas fa-heart"></i>
-            </div>
-            <div class="feature-text">Sevgi Dolu Ortam</div>
-          </div>
-          <div class="feature-item">
-            <div class="feature-icon">
-              <i class="fas fa-users"></i>
-            </div>
-            <div class="feature-text">Deneyimli Kadro</div>
-          </div>
-        </div>
-        
-        <!-- SOSYAL MEDYA -->
-        <div class="footer-social">
-          <a href="https://www.facebook.com/18MartSiracKoleji/" class="social-icon" target="_blank" title="Facebook">
-            <i class="fab fa-facebook-f"></i>
-          </a>
-          <a href="https://www.instagram.com/18martsirackoleji/" class="social-icon" target="_blank" title="Instagram">
-            <i class="fab fa-instagram"></i>
-          </a>
-          <a href="#" class="social-icon" title="Twitter">
-            <i class="fab fa-twitter"></i>
-          </a>
-          <a href="#" class="social-icon" title="YouTube">
-            <i class="fab fa-youtube"></i>
-          </a>
-        </div>
-      </div>
-      
-      <!-- İLETİŞİM -->
-      <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
-        <h5 class="footer-title">İletişim Bilgileri</h5>
-        <div class="footer-contact">
-          <p><i class="fas fa-map-marker-alt"></i> Kalabaklı/Kepez, Çanakkale</p>
-          <p><i class="fas fa-phone"></i> +90 543 717 8217</p>
-          <p><i class="fas fa-envelope"></i> bilgi@18martsirackoleji.com</p>
-          <p><i class="fas fa-clock"></i> Pazartesi - Cuma: 08:00 - 18:00</p>
-        </div>
-        
-        <!-- ÇALIŞMA SAATLERİ -->
-        <div class="working-hours">
-          <h6>Çalışma Saatleri</h6>
-          <p>Pazartesi - Cuma <span>08:00 - 18:00</span></p>
-          <p>Cumartesi <span>09:00 - 14:00</span></p>
-          <p>Pazar <span>Kapalı</span></p>
-        </div>
-      </div>
-      
-      <!-- HIZLI LİNKLER -->
-      <div class="col-lg-2 col-md-6 mb-4 mb-md-0">
-        <h5 class="footer-title">Hızlı Linkler</h5>
-        <ul class="footer-links list-unstyled">
-          <li><a href="index.html">Anasayfa</a></li>
-          <li><a href="anlayis.html">Eğitim Anlayışımız</a></li>
-          <li><a href="galeri.html">Galeri</a></li>
-          <li><a href="ogretmenler.html">Öğretmen Kadromuz</a></li>
-          <li><a href="rehberlik.html">Rehberlik</a></li>
-          <li><a href="iletisim.html">İletişim</a></li>
-        </ul>
-      </div>
-      
-      <!-- E-BÜLTEN -->
-      <div class="col-lg-3 col-md-6">
-        <h5 class="footer-title">E-Bülten Aboneliği</h5>
-        <p>Etkinlik ve duyurularımızdan haberdar olmak için e-bültenimize abone olun.</p>
-        <form id="newsletter-form">
-          <div class="input-group mb-3">
-            <input type="email" class="form-control" placeholder="E-posta adresiniz" required aria-label="E-posta adresi">
-            <button class="btn btn-warning" type="submit">
-              <i class="fas fa-paper-plane me-1"></i>Abone Ol
-            </button>
-          </div>
-        </form>
-        
-        <!-- GÜVENLİK BADGES -->
-        <div class="security-badge mt-4">
-          <div style="display: flex; align-items: center; gap: 10px; padding: 10px; background: rgba(42, 157, 143, 0.1); border-radius: 8px; border-left: 4px solid #2a9d8f;">
-            <i class="fas fa-shield-alt" style="color: #0af1d3; font-size: 1.5rem;"></i>
+    .solution-item:hover {
+      transform: translateX(6px);
+      background: #eef3fb;
+    }
+
+    .solution-section img {
+      transition: transform 0.5s ease;
+    }
+
+    .solution-section img:hover {
+      transform: scale(1.05);
+    }
+
+    @media (max-width: 768px) {
+      .guidance-card {
+        text-align: center;
+      }
+
+      .guidance-features li {
+        justify-content: center;
+      }
+
+      .solution-section {
+        border-left: none;
+        border-top: 5px solid #2c5aa0;
+      }
+    }
+  </style>
+  <!-- FOOTER -->
+  <footer>
+    <div class="container">
+      <div class="row">
+        <!-- LOGO VE AÇIKLAMA -->
+        <div class="col-lg-4 mb-4 mb-lg-0">
+          <div class="footer-logo">
+            <i class="fas fa-graduation-cap"></i>
             <div>
-              <small style="color: #adb5bd; font-size: 0.85rem; display: block;">Güvenli İletişim</small>
-              <small style="color: #0af1d3; font-size: 0.75rem;">KVKK Uyumludur</small>
+              <h5>Özel On Sekiz Mart <span>Siraç İlkokulu</span></h5>
+            </div>
+          </div>
+          <p>2007 yılında kurulan 18 Mart Sirac Koleji, güçlü değerlerle donanmış nesiller yetiştirir. Öğrencilerimizin
+            akademik, sosyal ve manevi gelişimini ön planda tutuyoruz.</p>
+
+          <!-- ÖZELLİKLER -->
+          <div class="footer-features">
+            <div class="feature-item">
+              <div class="feature-icon">
+                <i class="fas fa-award"></i>
+              </div>
+              <div class="feature-text">Kaliteli Eğitim</div>
+            </div>
+            <div class="feature-item">
+              <div class="feature-icon">
+                <i class="fas fa-heart"></i>
+              </div>
+              <div class="feature-text">Sevgi Dolu Ortam</div>
+            </div>
+            <div class="feature-item">
+              <div class="feature-icon">
+                <i class="fas fa-users"></i>
+              </div>
+              <div class="feature-text">Deneyimli Kadro</div>
+            </div>
+          </div>
+
+          <!-- SOSYAL MEDYA -->
+          <div class="footer-social">
+            <a href="https://www.facebook.com/18MartSiracKoleji/" class="social-icon" target="_blank" title="Facebook">
+              <i class="fab fa-facebook-f"></i>
+            </a>
+            <a href="https://www.instagram.com/18martsirackoleji/" class="social-icon" target="_blank"
+              title="Instagram">
+              <i class="fab fa-instagram"></i>
+            </a>
+            <a href="#" class="social-icon" title="Twitter">
+              <i class="fab fa-twitter"></i>
+            </a>
+            <a href="#" class="social-icon" title="YouTube">
+              <i class="fab fa-youtube"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- İLETİŞİM -->
+        <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+          <h5 class="footer-title">İletişim Bilgileri</h5>
+          <div class="footer-contact">
+            <p><i class="fas fa-map-marker-alt"></i> Kalabaklı/Kepez, Çanakkale</p>
+            <p><i class="fas fa-phone"></i> +90 543 717 8217</p>
+            <p><i class="fas fa-envelope"></i> bilgi@18martsirackoleji.com</p>
+            <p><i class="fas fa-clock"></i> Pazartesi - Cuma: 08:00 - 18:00</p>
+          </div>
+
+          <!-- ÇALIŞMA SAATLERİ -->
+          <div class="working-hours">
+            <h6>Çalışma Saatleri</h6>
+            <p>Pazartesi - Cuma <span>08:00 - 18:00</span></p>
+            <p>Cumartesi <span>09:00 - 14:00</span></p>
+            <p>Pazar <span>Kapalı</span></p>
+          </div>
+        </div>
+
+        <!-- HIZLI LİNKLER -->
+        <div class="col-lg-2 col-md-6 mb-4 mb-md-0">
+          <h5 class="footer-title">Hızlı Linkler</h5>
+          <ul class="footer-links list-unstyled">
+            <li><a href="index.html">Anasayfa</a></li>
+            <li><a href="anlayis.html">Eğitim Anlayışımız</a></li>
+            <li><a href="galeri.html">Galeri</a></li>
+            <li><a href="ogretmenler.html">Öğretmen Kadromuz</a></li>
+            <li><a href="rehberlik.html">Rehberlik</a></li>
+            <li><a href="iletisim.html">İletişim</a></li>
+          </ul>
+        </div>
+
+        <!-- E-BÜLTEN -->
+        <div class="col-lg-3 col-md-6">
+          <h5 class="footer-title">E-Bülten Aboneliği</h5>
+          <p>Etkinlik ve duyurularımızdan haberdar olmak için e-bültenimize abone olun.</p>
+          <form id="newsletter-form">
+            <div class="input-group mb-3">
+              <input type="email" class="form-control" placeholder="E-posta adresiniz" required
+                aria-label="E-posta adresi">
+              <button class="btn btn-warning" type="submit">
+                <i class="fas fa-paper-plane me-1"></i>Abone Ol
+              </button>
+            </div>
+          </form>
+
+          <!-- GÜVENLİK BADGES -->
+          <div class="security-badge mt-4">
+            <div
+              style="display: flex; align-items: center; gap: 10px; padding: 10px; background: rgba(42, 157, 143, 0.1); border-radius: 8px; border-left: 4px solid #2a9d8f;">
+              <i class="fas fa-shield-alt" style="color: #0af1d3; font-size: 1.5rem;"></i>
+              <div>
+                <small style="color: #adb5bd; font-size: 0.85rem; display: block;">Güvenli İletişim</small>
+                <small style="color: #0af1d3; font-size: 0.75rem;">KVKK Uyumludur</small>
+              </div>
             </div>
           </div>
         </div>
       </div>
+
+      <!-- COPYRIGHT -->
+      <div class="copyright">
+        <small>&copy; 2007-2025 18 Mart Sirac Koleji. Tüm Hakları Saklıdır. |
+          <a href="#" style="color: #0af1d3; text-decoration: none;">Gizlilik Politikası</a> |
+          <a href="#" style="color: #0af1d3; text-decoration: none;">Çerez Politikası</a>
+        </small>
+      </div>
     </div>
-    
-    <!-- COPYRIGHT -->
-    <div class="copyright">
-      <small>&copy; 2007-2025 18 Mart Sirac Koleji. Tüm Hakları Saklıdır. | 
-        <a href="#" style="color: #0af1d3; text-decoration: none;">Gizlilik Politikası</a> | 
-        <a href="#" style="color: #0af1d3; text-decoration: none;">Çerez Politikası</a>
-      </small>
-    </div>
-  </div>
-</footer>
-<script src="../js/script.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
-<script>
-  // Smooth scrolling for anchor links
-  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-    anchor.addEventListener('click', function(e) {
-      e.preventDefault();
-      document.querySelector(this.getAttribute('href')).scrollIntoView({
+  </footer>
+  <script src="js/script.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+    // Smooth scrolling for anchor links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        document.querySelector(this.getAttribute('href')).scrollIntoView({
+          behavior: 'smooth'
+        });
+      });
+    });
+    // Back to top button functionality
+    const backToTopButton = document.createElement('button');
+    backToTopButton.innerHTML = '<i class="fas fa-arrow-up"></i>';
+    backToTopButton.classList.add('back-to-top-button');
+    document.body.appendChild(backToTopButton);
+
+    backToTopButton.addEventListener('click', function () {
+      window.scrollTo({
+        top: 0,
         behavior: 'smooth'
       });
     });
-  });
-  // Back to top button functionality
-  const backToTopButton = document.createElement('button');
-  backToTopButton.innerHTML = '<i class="fas fa-arrow-up"></i>';
-  backToTopButton.classList.add('back-to-top-button');
-  document.body.appendChild(backToTopButton);
-
-  backToTopButton.addEventListener('click', function() {
-    window.scrollTo({
-      top: 0,
-      behavior: 'smooth'
+  </script>
+  <script>
+    // Back to Top Button Functionality
+    window.addEventListener('scroll', function () {
+      const backToTopButton = document.querySelector('.back-to-top-button');
+      if (window.scrollY > 300) {
+        backToTopButton.style.display = 'block';
+      } else {
+        backToTopButton.style.display = 'none';
+      }
     });
-  });
-</script>
-<script>
-  // Back to Top Button Functionality
-  window.addEventListener('scroll', function() {
-    const backToTopButton = document.querySelector('.back-to-top-button');
-    if (window.scrollY > 300) {
-      backToTopButton.style.display = 'block';
-    } else {
-      backToTopButton.style.display = 'none';
-    }
-  });
-</script>
+  </script>
 </body>
+
 </html>

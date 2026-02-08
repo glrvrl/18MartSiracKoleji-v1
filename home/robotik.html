@@ -1,709 +1,742 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="tr">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Robotik Kodlama</title>
-  <link rel="icon" type="image/png" href="../image/favicon.ico" />
+  <link rel="icon" type="image/png" href="image/favicon.ico" />
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
- <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="css/style.css">
 </head>
+
 <body>
 
-<!-- HEADER -->
-<header>
-  <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
-    <div class="container">
+  <!-- HEADER / NAVBAR -->
+  <header>
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+      <div class="container">
 
-      <a class="navbar-brand d-flex align-items-center gap-3" href="index.html">
-  <img src="../image/yaı lug.jpg" alt="18 Mart Sirac Koleji Logo" class="navbar-logo" />
-  <span class="navbar-title">Özel OnSekiz Mart Siraç Koleji İlkokulu</span>
-</a>
+        <a class="navbar-brand d-flex align-items-center gap-3" href="index.html">
+          <img src="image/ilokullogo.jpeg" alt="18 Mart Sirac Koleji Logo" class="navbar-logo" />
+          <span class="navbar-title">Özel OnSekiz Mart Siraç Koleji İlkokulu</span>
+        </a>
 
 
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#siracNavbar">
-        <span class="navbar-toggler-icon"></span>
-      </button>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#siracNavbar">
+          <span class="navbar-toggler-icon"></span>
+        </button>
 
-      <div class="collapse navbar-collapse" id="siracNavbar">
-        <ul class="navbar-nav ms-auto">
+        <div class="collapse navbar-collapse" id="siracNavbar">
+          <ul class="navbar-nav ms-auto">
 
-          <li class="nav-item">
-            <a class="nav-link active" href="index.html">Anasayfa</a>
-          </li>
+            <li class="nav-item">
+              <a class="nav-link" href="index.html">Anasayfa</a>
+            </li>
 
-          <!-- Kurumsal -->
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">Kurumsal</a>
-            <ul class="dropdown-menu">
-              <li><a class="dropdown-item" href="anlayis.html">Eğitim Anlayışımız</a></li>
-              <li><a class="dropdown-item" href="misyon.html">Misyon & Vizyon</a></li>
-              <li><a class="dropdown-item" href="tarihce.html">Tarihçe</a></li>
-              <li><a class="dropdown-item" href="kultur.html">Okul Kültürü</a></li>
-            </ul>
-          </li>
+            <!-- Kurumsal -->
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">Kurumsal</a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="anlayis.html">Eğitim Anlayışımız</a></li>
+                <li><a class="dropdown-item" href="misyon.html">Misyon & Vizyon</a></li>
+                <li><a class="dropdown-item" href="tarihce.html">Tarihçe</a></li>
+              </ul>
+            </li>
 
-          <!-- Eğitim Programları -->
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">Eğitim Programları</a>
-            <ul class="dropdown-menu">
-              <li><a class="dropdown-item" href="manevi.html">Manevi Eğitim</a></li>
-              <li><a class="dropdown-item" href="Okuma Saat.html">Okuma Saat</a></li>
-              <li><a class="dropdown-item" href="olcum.html">Ölçme ve Değerlendirme</a></li>
-              <li><a class="dropdown-item" href="yabancidil.html">Yabancı Dil</a></li>
-              <li><a class="dropdown-item" href="rehberlik.html">Rehberlik</a></li>
-            </ul>
-          </li>
+            <!-- Eğitim Programları -->
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">Eğitim
+                Programları</a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="manevi.html">Manevi Eğitim</a></li>
+                <li><a class="dropdown-item" href="kulubuler.html">Kulüpler</a></li>
+                <li><a class="dropdown-item" href="olcum.html">Ölçme ve Değerlendirme</a></li>
+                <li><a class="dropdown-item" href="yabancidil.html">Yabancı Dil</a></li>
+                <li><a class="dropdown-item" href="rehberlik.html">Rehberlik</a></li>
+              </ul>
+            </li>
 
-          <!-- Atölyeler -->
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">Atölyeler</a>
-            <ul class="dropdown-menu">
-              <li><a class="dropdown-item" href="robotik.html">Robotik Kodlama</a></li>
-              <li><a class="dropdown-item" href="gorsel.html">Görsel Sanatlar ve Ahşap</a></li>
-              <li><a class="dropdown-item" href="tasavvuf.html">Tasavvuf Müziği</a></li>
-              <li><a class="dropdown-item" href="kozmik.html">Montessori Kozmik</a></li>
-            </ul>
-          </li>
+            <!-- Atölyeler -->
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">Atölyeler</a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="robotik.html">Robotik Kodlama</a></li>
+                <li><a class="dropdown-item" href="gorsel.html">Görsel Sanatlar ve Ahşap</a></li>
+                <li><a class="dropdown-item" href="tasavvuf.html">Tasavvuf Müziği</a></li>
+                <li><a class="dropdown-item" href="kozmik.html">Montessori Kozmik</a></li>
+              </ul>
+            </li>
 
-          <!-- Etkinlikler -->
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">Etkinlikler</a>
-            <ul class="dropdown-menu">
-              <li><a class="dropdown-item" href="oyun.html">Oyun ve Fiziki Etkinlikler</a></li>
-              <li><a class="dropdown-item" href="kulubuler.html">Kulübüler ve P4C</a></li>
-              <li><a class="dropdown-item" href="sosyalyardim.html">Sosyal Yardım Projeleri</a></li>
-              <li><a class="dropdown-item" href="Helal ve Sagalik.html">Helal ve Sağlıklı</a></li>
-              <li><a class="dropdown-item" href="galeri.html">Galeri</a></li>
-            </ul>
-          </li>
+            <!-- Etkinlikler -->
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">Etkinlikler</a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="oyun.html">Oyun ve Fiziki Etkinlikler</a></li>
+                <li><a class="dropdown-item" href="kulubuler.html">Kulüpler ve P4C</a></li>
+                <li><a class="dropdown-item" href="sosyalyardim.html">Sosyal Yardım Projeleri</a></li>
+                <li><a class="dropdown-item" href="Helal_Sagalik.html">Helal ve Sağlıklı</a></li>
+                <li><a class="dropdown-item" href="galeri.html">Galeri</a></li>
+              </ul>
+            </li>
 
-          <li class="nav-item">
-            <a class="nav-link" href="ogretmenler.html">Kadromuz</a>
-          </li>
+            <li class="nav-item">
+              <a class="nav-link" href="ogretmenler.html">Kadromuz</a>
+            </li>
 
-          <li class="nav-item">
-            <a class="nav-link" href="iletisim.html">İletişim</a>
-          </li>
+            <li class="nav-item">
+              <a class="nav-link" href="iletisim.html">İletişim</a>
+            </li>
 
-        </ul>
-      </div>
-    </div>
-  </nav>
-</header>
-<!-- HERO -->
-<section class="hero-section">
-  <div class="container">
-    <h1> ROBOTİK KODLAMA ATÖLYESİ </h1>
-  </div>
-</section>
-<!-- robot kodlama  SECTION -->
- <section class="robotics-section py-5 bg-light">
-  <div class="container">
-    <div class="text-center mb-5">
-      <h2 class="fw-bold text-purple display-5">Robotik Kodlama Atölyesi</h2>
-      <p class="lead text-muted">Geleceğin teknolojisini bugünden öğreniyoruz</p>
-      <div class="divider"></div>
-    </div>
-
-    <div class="row align-items-center g-4">
-      <!-- SOL GÖRSEL -->
-      <div class="col-md-6">
-        <div class="robotics-image-wrapper shadow rounded overflow-hidden">
-          <img src="../image/robotik kodlama/4.JPG" alt="Robotik Kodlama" class="img-fluid w-100 h-100 object-fit-cover">
+          </ul>
         </div>
       </div>
+    </nav>
+  </header>
+  <!-- HERO -->
+  <section class="hero-section">
+    <div class="container">
+      <h1> ROBOTİK KODLAMA ATÖLYESİ </h1>
+    </div>
+  </section>
+  <!-- robot kodlama  SECTION -->
+  <section class="robotics-section py-5 bg-light">
+    <div class="container">
+      <div class="text-center mb-5">
+        <h2 class="fw-bold text-purple display-5">Robotik Kodlama Atölyesi</h2>
+        <p class="lead text-muted">Geleceğin teknolojisini bugünden öğreniyoruz</p>
+        <div class="divider"></div>
+      </div>
 
-      <!-- SAĞ METİN -->
-      <div class="col-md-6">
-        <div class="robotics-text bg-white rounded-4 shadow-sm p-4 h-100">
-          <p>
-            <strong>Robotik Kodlama</strong>, teknoloji ve bilişim çağında yaşadığımız şu günlerde her bireyin bilmesi ve öğrenmesi gereken alanlardan biri haline gelmiştir.</p>
+      <div class="row align-items-center g-4">
+        <!-- SOL GÖRSEL -->
+        <div class="col-md-6">
+          <div class="robotics-image-wrapper shadow rounded overflow-hidden">
+            <img src="image/robotik_kodlama/1.JPG" alt="Robotik Kodlama" class="img-fluid w-100 h-100 object-fit-cover">
+          </div>
+        </div>
 
-          <p>
-           Değişen dünyada eğitimin amacı bireylerin bu değişime uygun kazanımlar elde etmelerini sağlamaktır. Bu anlamda öğrencilerin inovasyon, yaratıcılık, eleştirel düşünme, okuma ve dil becerileri, bilimsel ve tasarımsal düşünme, matematik okuryazarlığı, dijital dünya vatandaşlığı gibi becerileri kazanmaları 
-          önemlidir. Kodlama eğitimi bu becerilerin kazanılmasına olanak sağlamakla birlikte aynı zamanda bireyin analitik ve sistematik 
-              düşünme yetisini, problem çözme becerilerini geliştirir. 
-         Özel On Sekiz Mart Siraç İlkokulu olarak öğrencilerimizin bu becerileri kazanmalarını, çağımızın hızla gelişen teknolojisini anlamalarını ve bir çok teknolojik aletin 
-        temelini oluşturan kodlamayı öğrenmelerini önemsiyoruz. Günlük yaşamda kullandığımız akıllı saatler, telefonlar, bilgisayarlar, tabletler, oyunlar, küçük mutfak aletleri, uçaklar, arabalar gibi birçok teknolojik 
-           aletin ve programların altyapısını kodlamalar oluşturur. Öğrencilerimiz basit kodlama 
-          yapmayı öğrenerek zaman içerisinde hayatımızın her alanında kullandığımız teknolojik aletlerin ve programların kodlamalar neticesinde oluştuğunu öğreneceklerdir. 
-        Bunun bilincinde olarak öğrencilerimizin basit kodlamalar yapmalarına, kodlama yaparak kendi oyunlarını yapabilmelerine, basit bir robota kodlama yaparak onu istedikleri neticede hareket ettirmelerine,  yönlendirmelerine ve böylece hayatımızı kolaylaştırıcı projeler geliştirmelerine olanak sağlayacak eğitimler almalarını sağlıyoruz.
-          </p>
-
-          <div class="highlight-box mt-4 p-3 bg-light border-start border-4 border-purple d-flex">
-            <i class="fas fa-robot fs-3 text-purple me-3"></i>
-            <p class="mb-0">
-             Teknolojiyi üretmenin keyfine varmak isteyen öğrencilerimiz için tasarladığımız bu atölyede, robotik sistemlerin temellerini öğrenirken kodlama dünyasına ilk adımlarınızı atacaksınız!
-
+        <!-- SAĞ METİN -->
+        <div class="col-md-6">
+          <div class="robotics-text bg-white rounded-4 shadow-sm p-4 h-100">
+            <p>
+              <strong>Robotik Kodlama</strong>, teknoloji ve bilişim çağında yaşadığımız şu günlerde her bireyin bilmesi
+              ve öğrenmesi gereken alanlardan biri haline gelmiştir.
             </p>
+
+            <p>
+              Değişen dünyada eğitimin amacı bireylerin bu değişime uygun kazanımlar elde etmelerini sağlamaktır. Bu
+              anlamda öğrencilerin inovasyon, yaratıcılık, eleştirel düşünme, okuma ve dil becerileri, bilimsel ve
+              tasarımsal düşünme, matematik okuryazarlığı, dijital dünya vatandaşlığı gibi becerileri kazanmaları
+              önemlidir. Kodlama eğitimi bu becerilerin kazanılmasına olanak sağlamakla birlikte aynı zamanda bireyin
+              analitik ve sistematik
+              düşünme yetisini, problem çözme becerilerini geliştirir.
+              Özel On Sekiz Mart Siraç İlkokulu olarak öğrencilerimizin bu becerileri kazanmalarını, çağımızın hızla
+              gelişen teknolojisini anlamalarını ve bir çok teknolojik aletin
+              temelini oluşturan kodlamayı öğrenmelerini önemsiyoruz. Günlük yaşamda kullandığımız akıllı saatler,
+              telefonlar, bilgisayarlar, tabletler, oyunlar, küçük mutfak aletleri, uçaklar, arabalar gibi birçok
+              teknolojik
+              aletin ve programların altyapısını kodlamalar oluşturur. Öğrencilerimiz basit kodlama
+              yapmayı öğrenerek zaman içerisinde hayatımızın her alanında kullandığımız teknolojik aletlerin ve
+              programların kodlamalar neticesinde oluştuğunu öğreneceklerdir.
+              Bunun bilincinde olarak öğrencilerimizin basit kodlamalar yapmalarına, kodlama yaparak kendi oyunlarını
+              yapabilmelerine, basit bir robota kodlama yaparak onu istedikleri neticede hareket ettirmelerine,
+              yönlendirmelerine ve böylece hayatımızı kolaylaştırıcı projeler geliştirmelerine olanak sağlayacak
+              eğitimler almalarını sağlıyoruz.
+            </p>
+
+            <div class="highlight-box mt-4 p-3 bg-light border-start border-4 border-purple d-flex">
+              <i class="fas fa-robot fs-3 text-purple me-3"></i>
+              <p class="mb-0">
+                Teknolojiyi üretmenin keyfine varmak isteyen öğrencilerimiz için tasarladığımız bu atölyede, robotik
+                sistemlerin temellerini öğrenirken kodlama dünyasına ilk adımlarınızı atacaksınız!
+
+              </p>
+            </div>
           </div>
         </div>
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
-<style>
-.robotics-section {
-  background-color: #f8f9fa;
-}
+  <style>
+    .robotics-section {
+      background-color: #f8f9fa;
+    }
 
-.text-purple {
-  color: #6a3093;
-}
+    .text-purple {
+      color: #6a3093;
+    }
 
-.divider {
-  width: 60px;
-  height: 4px;
-  background: linear-gradient(to right, #6a3093, #a044ff);
-  margin: 20px auto;
-  border-radius: 2px;
-}
+    .divider {
+      width: 60px;
+      height: 4px;
+      background: linear-gradient(to right, #6a3093, #a044ff);
+      margin: 20px auto;
+      border-radius: 2px;
+    }
 
-.robotics-image-wrapper {
-  max-height: 400px;
-}
+    .robotics-image-wrapper {
+      max-height: 400px;
+    }
 
-.object-fit-cover {
-  object-fit: cover;
-}
+    .object-fit-cover {
+      object-fit: cover;
+    }
 
-.highlight-box {
-  font-size: 0.95rem;
-  border-left: 5px solid #6a3093;
-  background-color: #f3eefc;
-  border-radius: 8px;
-  transition: background 0.3s ease;
-}
+    .highlight-box {
+      font-size: 0.95rem;
+      border-left: 5px solid #6a3093;
+      background-color: #f3eefc;
+      border-radius: 8px;
+      transition: background 0.3s ease;
+    }
 
-.highlight-box:hover {
-  background-color: #ece2f9;
-}
+    .highlight-box:hover {
+      background-color: #ece2f9;
+    }
 
-.robotics-text p {
-  font-size: 1rem;
-  line-height: 1.7;
-  color: #444;
-}
-.robotics-text {
-  background-color: #ffffff;
-  border-radius: 10px;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-}
-.robotics-text h2 {
-  font-size: 1.5rem;
-  color: #6a3093;
-  margin-bottom: 20px;
-}
-.robotics-text p {
-  font-size: 1rem;
-  color: #555;
-  line-height: 1.6;
-}
-.robotics-text ul {
-  list-style-type: disc;
-  padding-left: 20px;
-}
-.robotics-text ul li {
-  margin-bottom: 10px;
-}
-.robotics-text ul li i {
-  color: #6a3093;
-  margin-right: 10px;
-}
-.robotics-text .highlight {
-  background-color: rgba(106, 48, 147, 0.1);
-  padding: 10px;
-  border-radius: 5px;
-}
-.robotics-text .highlight {
-  background-color: rgba(106, 48, 147, 0.1);
-  padding: 10px;
-  border-radius: 5px;
-}
-.robotics-text .highlight p {
-  margin: 0;
-  font-weight: bold;
-  color: #6a3093;
-}
-.robotics-text .highlight i {
-  color: #6a3093;
-  margin-right: 10px;
-}
-</style>
+    .robotics-text p {
+      font-size: 1rem;
+      line-height: 1.7;
+      color: #444;
+    }
 
-<style>
-  .hero-section {
-  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-              url('../image/robotkodlama.JPG') center/cover no-repeat;
-  color: white;
-  padding: 180px 0;
-  text-align: center;
-  user-select: none;
-  min-height: 600px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
+    .robotics-text {
+      background-color: #ffffff;
+      border-radius: 10px;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    }
 
-.hero-section h1 {
-  font-size: 4rem;
-  font-weight: 800;
-  letter-spacing: 1px;
-  margin-bottom: 20px;
-  text-shadow: 2px 2px 5px rgba(0,0,0,0.6);
-}
-
-.hero-section p {
-  font-size: 1.5rem;
-  max-width: 700px;
-  margin: 20px auto 0;
-  line-height: 1.6;
-  text-shadow: 1px 1px 3px rgba(0,0,0,0.4);
-}
-
-.hero-section .btn {
-  background-color: #ffffff;
-  color: #000;
-  font-weight: bold;
-  padding: 12px 30px;
-  border-radius: 30px;
-  text-decoration: none;
-  transition: all 0.3s ease;
-  display: inline-block;
-  margin-top: 30px;
-}
-
-.hero-section .btn:hover {
-  background-color: var(--sirac-secondary, #4a7b9d); /* yedek renk */
-  color: #fff;
-}
-
-  /* Robotics Workshop Styles */
-  .robotics-workshop {
-    background: linear-gradient(135deg, #f9f9ff 0%, #f0f2ff 100%);
-    position: relative;
-    overflow: hidden;
-  }
-  
-  .robotics-workshop::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: url('path/to/tech-pattern.png') repeat;
-    opacity: 0.03;
-    z-index: 0;
-  }
-  
-  .divider.bg-gradient {
-    background: linear-gradient(90deg, #6a3093, #a044ff);
-    height: 4px;
-    width: 80px;
-    margin: 20px auto 30px;
-  }
-  
-  /* Custom Colors */
-  .bg-purple {
-    background-color: #6a3093 !important;
-  }
-  
-  .bg-orange {
-    background-color: #ff6b35 !important;
-  }
-  
-  .bg-teal {
-    background-color: #00a896 !important;
-  }
-  
-  .text-purple {
-    color: #6a3093 !important;
-  }
-  
-  .text-orange {
-    color: #ff6b35 !important;
-  }
-  
-  .text-teal {
-    color: #00a896 !important;
-  }
-  
-  .border-purple {
-    border-color: #6a3093 !important;
-  }
-  
-  /* Robotics Image */
-  .robotics-image {
-    height: 100%;
-    min-height: 400px;
-    transition: transform 0.3s ease;
-  }
-  
-  .robotics-image:hover {
-    transform: scale(1.02);
-  }
-  
-  .robotics-image img {
-    height: 100%;
-    object-fit: cover;
-  }
-  
-  .tech-badges {
-    position: absolute;
-    bottom: 20px;
-    right: 20px;
-  }
-  
-  .tech-badges .badge {
-    font-size: 0.9rem;
-    padding: 8px 12px;
-    border-radius: 50px;
-    margin-bottom: 5px;
-    display: inline-block;
-  }
-  
-  .bg-purple {
-    background-color: #6a3093 !important;
-  }
-  
-  .bg-orange {
-    background-color: #ff6b35 !important;
-  }
-  
-  .bg-teal {
-    background-color: #00a896 !important;
-  }
-  
-  /* Robotics Content */
-  .robotics-content {
-    transition: all 0.3s ease;
-  }
-  
-  .robotics-content:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1) !important;
-  }
-  
-  .feature-icon {
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: white;
-    font-size: 1.2rem;
-  }
-  
-  .feature-item {
-    transition: transform 0.3s ease;
-  }
-  
-  .feature-item:hover {
-    transform: translateX(5px);
-  }
-  
-  .highlight-box {
-    transition: all 0.3s ease;
-    background-color: rgba(106, 48, 147, 0.08) !important;
-  }
-  
-  .highlight-box:hover {
-    background-color: rgba(106, 48, 147, 0.15) !important;
-  }
-  
-  .robotics-stats {
-    border-top: 1px dashed #dee2e6;
-    padding-top: 15px;
-  }
-  
-  .stat-number {
-    line-height: 1.2;
-  }
-  
-  .stat-label {
-    color: #6c757d;
-  }
-  
-  @media (max-width: 768px) {
-    .robotics-image {
-      min-height: 300px;
+    .robotics-text h2 {
+      font-size: 1.5rem;
+      color: #6a3093;
       margin-bottom: 20px;
     }
-    
-    .robotics-content {
-      padding: 2rem;
-    }
-    
-    .section-header h2 {
-      font-size: 2.2rem;
-    }
-  }
-</style>
 
-<!-- FOOTER -->
-<footer>
- <div class="container">
-    <div class="row">
-      <!-- LOGO VE AÇIKLAMA -->
-      <div class="col-lg-4 mb-4 mb-lg-0">
-        <div class="footer-logo">
-          <i class="fas fa-graduation-cap"></i>
-          <div>
-            <h5>Özel On Sekiz Mart <span>Siraç İlkokulu</span></h5>
-          </div>
-        </div>
-        <p>2007 yılında kurulan 18 Mart Sirac Koleji, güçlü değerlerle donanmış nesiller yetiştirir. Öğrencilerimizin akademik, sosyal ve manevi gelişimini ön planda tutuyoruz.</p>
-        
-        <!-- ÖZELLİKLER -->
-        <div class="footer-features">
-          <div class="feature-item">
-            <div class="feature-icon">
-              <i class="fas fa-award"></i>
-            </div>
-            <div class="feature-text">Kaliteli Eğitim</div>
-          </div>
-          <div class="feature-item">
-            <div class="feature-icon">
-              <i class="fas fa-heart"></i>
-            </div>
-            <div class="feature-text">Sevgi Dolu Ortam</div>
-          </div>
-          <div class="feature-item">
-            <div class="feature-icon">
-              <i class="fas fa-users"></i>
-            </div>
-            <div class="feature-text">Deneyimli Kadro</div>
-          </div>
-        </div>
-        
-        <!-- SOSYAL MEDYA -->
-        <div class="footer-social">
-          <a href="https://www.facebook.com/18MartSiracKoleji/" class="social-icon" target="_blank" title="Facebook">
-            <i class="fab fa-facebook-f"></i>
-          </a>
-          <a href="https://www.instagram.com/18martsirackoleji/" class="social-icon" target="_blank" title="Instagram">
-            <i class="fab fa-instagram"></i>
-          </a>
-          <a href="#" class="social-icon" title="Twitter">
-            <i class="fab fa-twitter"></i>
-          </a>
-          <a href="#" class="social-icon" title="YouTube">
-            <i class="fab fa-youtube"></i>
-          </a>
-        </div>
-      </div>
-      
-      <!-- İLETİŞİM -->
-      <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
-        <h5 class="footer-title">İletişim Bilgileri</h5>
-        <div class="footer-contact">
-          <p><i class="fas fa-map-marker-alt"></i> Kalabaklı/Kepez, Çanakkale</p>
-          <p><i class="fas fa-phone"></i> +90 543 717 8217</p>
-          <p><i class="fas fa-envelope"></i> bilgi@18martsirackoleji.com</p>
-          <p><i class="fas fa-clock"></i> Pazartesi - Cuma: 08:00 - 18:00</p>
-        </div>
-        
-        <!-- ÇALIŞMA SAATLERİ -->
-        <div class="working-hours">
-          <h6>Çalışma Saatleri</h6>
-          <p>Pazartesi - Cuma <span>08:00 - 18:00</span></p>
-          <p>Cumartesi <span>09:00 - 14:00</span></p>
-          <p>Pazar <span>Kapalı</span></p>
-        </div>
-      </div>
-      
-      <!-- HIZLI LİNKLER -->
-      <div class="col-lg-2 col-md-6 mb-4 mb-md-0">
-        <h5 class="footer-title">Hızlı Linkler</h5>
-        <ul class="footer-links list-unstyled">
-          <li><a href="index.html">Anasayfa</a></li>
-          <li><a href="anlayis.html">Eğitim Anlayışımız</a></li>
-          <li><a href="galeri.html">Galeri</a></li>
-          <li><a href="ogretmenler.html">Öğretmen Kadromuz</a></li>
-          <li><a href="rehberlik.html">Rehberlik</a></li>
-          <li><a href="iletisim.html">İletişim</a></li>
-        </ul>
-      </div>
-      
-      <!-- E-BÜLTEN -->
-      <div class="col-lg-3 col-md-6">
-        <h5 class="footer-title">E-Bülten Aboneliği</h5>
-        <p>Etkinlik ve duyurularımızdan haberdar olmak için e-bültenimize abone olun.</p>
-        <form id="newsletter-form">
-          <div class="input-group mb-3">
-            <input type="email" class="form-control" placeholder="E-posta adresiniz" required aria-label="E-posta adresi">
-            <button class="btn btn-warning" type="submit">
-              <i class="fas fa-paper-plane me-1"></i>Abone Ol
-            </button>
-          </div>
-        </form>
-        
-        <!-- GÜVENLİK BADGES -->
-        <div class="security-badge mt-4">
-          <div style="display: flex; align-items: center; gap: 10px; padding: 10px; background: rgba(42, 157, 143, 0.1); border-radius: 8px; border-left: 4px solid #2a9d8f;">
-            <i class="fas fa-shield-alt" style="color: #0af1d3; font-size: 1.5rem;"></i>
+    .robotics-text p {
+      font-size: 1rem;
+      color: #555;
+      line-height: 1.6;
+    }
+
+    .robotics-text ul {
+      list-style-type: disc;
+      padding-left: 20px;
+    }
+
+    .robotics-text ul li {
+      margin-bottom: 10px;
+    }
+
+    .robotics-text ul li i {
+      color: #6a3093;
+      margin-right: 10px;
+    }
+
+    .robotics-text .highlight {
+      background-color: rgba(106, 48, 147, 0.1);
+      padding: 10px;
+      border-radius: 5px;
+    }
+
+    .robotics-text .highlight {
+      background-color: rgba(106, 48, 147, 0.1);
+      padding: 10px;
+      border-radius: 5px;
+    }
+
+    .robotics-text .highlight p {
+      margin: 0;
+      font-weight: bold;
+      color: #6a3093;
+    }
+
+    .robotics-text .highlight i {
+      color: #6a3093;
+      margin-right: 10px;
+    }
+  </style>
+
+  <style>
+    .hero-section {
+      background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+        url('image/robotkodlama.JPG') center/cover no-repeat;
+      color: white;
+      padding: 180px 0;
+      text-align: center;
+      user-select: none;
+      min-height: 600px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .hero-section h1 {
+      font-size: 4rem;
+      font-weight: 800;
+      letter-spacing: 1px;
+      margin-bottom: 20px;
+      text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.6);
+    }
+
+    .hero-section p {
+      font-size: 1.5rem;
+      max-width: 700px;
+      margin: 20px auto 0;
+      line-height: 1.6;
+      text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.4);
+    }
+
+    .hero-section .btn {
+      background-color: #ffffff;
+      color: #000;
+      font-weight: bold;
+      padding: 12px 30px;
+      border-radius: 30px;
+      text-decoration: none;
+      transition: all 0.3s ease;
+      display: inline-block;
+      margin-top: 30px;
+    }
+
+    .hero-section .btn:hover {
+      background-color: var(--sirac-secondary, #4a7b9d);
+      /* yedek renk */
+      color: #fff;
+    }
+
+    /* Robotics Workshop Styles */
+    .robotics-workshop {
+      background: linear-gradient(135deg, #f9f9ff 0%, #f0f2ff 100%);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .robotics-workshop::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: url('path/to/tech-pattern.png') repeat;
+      opacity: 0.03;
+      z-index: 0;
+    }
+
+    .divider.bg-gradient {
+      background: linear-gradient(90deg, #6a3093, #a044ff);
+      height: 4px;
+      width: 80px;
+      margin: 20px auto 30px;
+    }
+
+    /* Custom Colors */
+    .bg-purple {
+      background-color: #6a3093 !important;
+    }
+
+    .bg-orange {
+      background-color: #ff6b35 !important;
+    }
+
+    .bg-teal {
+      background-color: #00a896 !important;
+    }
+
+    .text-purple {
+      color: #6a3093 !important;
+    }
+
+    .text-orange {
+      color: #ff6b35 !important;
+    }
+
+    .text-teal {
+      color: #00a896 !important;
+    }
+
+    .border-purple {
+      border-color: #6a3093 !important;
+    }
+
+    /* Robotics Image */
+    .robotics-image {
+      height: 100%;
+      min-height: 400px;
+      transition: transform 0.3s ease;
+    }
+
+    .robotics-image:hover {
+      transform: scale(1.02);
+    }
+
+    .robotics-image img {
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .tech-badges {
+      position: absolute;
+      bottom: 20px;
+      right: 20px;
+    }
+
+    .tech-badges .badge {
+      font-size: 0.9rem;
+      padding: 8px 12px;
+      border-radius: 50px;
+      margin-bottom: 5px;
+      display: inline-block;
+    }
+
+    .bg-purple {
+      background-color: #6a3093 !important;
+    }
+
+    .bg-orange {
+      background-color: #ff6b35 !important;
+    }
+
+    .bg-teal {
+      background-color: #00a896 !important;
+    }
+
+    /* Robotics Content */
+    .robotics-content {
+      transition: all 0.3s ease;
+    }
+
+    .robotics-content:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1) !important;
+    }
+
+    .feature-icon {
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      font-size: 1.2rem;
+    }
+
+    .feature-item {
+      transition: transform 0.3s ease;
+    }
+
+    .feature-item:hover {
+      transform: translateX(5px);
+    }
+
+    .highlight-box {
+      transition: all 0.3s ease;
+      background-color: rgba(106, 48, 147, 0.08) !important;
+    }
+
+    .highlight-box:hover {
+      background-color: rgba(106, 48, 147, 0.15) !important;
+    }
+
+    .robotics-stats {
+      border-top: 1px dashed #dee2e6;
+      padding-top: 15px;
+    }
+
+    .stat-number {
+      line-height: 1.2;
+    }
+
+    .stat-label {
+      color: #6c757d;
+    }
+
+    @media (max-width: 768px) {
+      .robotics-image {
+        min-height: 300px;
+        margin-bottom: 20px;
+      }
+
+      .robotics-content {
+        padding: 2rem;
+      }
+
+      .section-header h2 {
+        font-size: 2.2rem;
+      }
+    }
+  </style>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="container">
+      <div class="row">
+        <!-- LOGO VE AÇIKLAMA -->
+        <div class="col-lg-4 mb-4 mb-lg-0">
+          <div class="footer-logo">
+            <i class="fas fa-graduation-cap"></i>
             <div>
-              <small style="color: #adb5bd; font-size: 0.85rem; display: block;">Güvenli İletişim</small>
-              <small style="color: #0af1d3; font-size: 0.75rem;">KVKK Uyumludur</small>
+              <h5>Özel On Sekiz Mart <span>Siraç İlkokulu</span></h5>
+            </div>
+          </div>
+          <p>2007 yılında kurulan 18 Mart Sirac Koleji, güçlü değerlerle donanmış nesiller yetiştirir. Öğrencilerimizin
+            akademik, sosyal ve manevi gelişimini ön planda tutuyoruz.</p>
+
+          <!-- ÖZELLİKLER -->
+          <div class="footer-features">
+            <div class="feature-item">
+              <div class="feature-icon">
+                <i class="fas fa-award"></i>
+              </div>
+              <div class="feature-text">Kaliteli Eğitim</div>
+            </div>
+            <div class="feature-item">
+              <div class="feature-icon">
+                <i class="fas fa-heart"></i>
+              </div>
+              <div class="feature-text">Sevgi Dolu Ortam</div>
+            </div>
+            <div class="feature-item">
+              <div class="feature-icon">
+                <i class="fas fa-users"></i>
+              </div>
+              <div class="feature-text">Deneyimli Kadro</div>
+            </div>
+          </div>
+
+          <!-- SOSYAL MEDYA -->
+          <div class="footer-social">
+            <a href="https://www.facebook.com/18MartSiracKoleji/" class="social-icon" target="_blank" title="Facebook">
+              <i class="fab fa-facebook-f"></i>
+            </a>
+            <a href="https://www.instagram.com/18martsirackoleji/" class="social-icon" target="_blank"
+              title="Instagram">
+              <i class="fab fa-instagram"></i>
+            </a>
+            <a href="#" class="social-icon" title="Twitter">
+              <i class="fab fa-twitter"></i>
+            </a>
+            <a href="#" class="social-icon" title="YouTube">
+              <i class="fab fa-youtube"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- İLETİŞİM -->
+        <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+          <h5 class="footer-title">İletişim Bilgileri</h5>
+          <div class="footer-contact">
+            <p><i class="fas fa-map-marker-alt"></i> Kalabaklı/Kepez, Çanakkale</p>
+            <p><i class="fas fa-phone"></i> +90 543 717 8217</p>
+            <p><i class="fas fa-envelope"></i> bilgi@18martsirackoleji.com</p>
+            <p><i class="fas fa-clock"></i> Pazartesi - Cuma: 08:00 - 18:00</p>
+          </div>
+
+          <!-- ÇALIŞMA SAATLERİ -->
+          <div class="working-hours">
+            <h6>Çalışma Saatleri</h6>
+            <p>Pazartesi - Cuma <span>08:00 - 18:00</span></p>
+            <p>Cumartesi <span>09:00 - 14:00</span></p>
+            <p>Pazar <span>Kapalı</span></p>
+          </div>
+        </div>
+
+        <!-- HIZLI LİNKLER -->
+        <div class="col-lg-2 col-md-6 mb-4 mb-md-0">
+          <h5 class="footer-title">Hızlı Linkler</h5>
+          <ul class="footer-links list-unstyled">
+            <li><a href="index.html">Anasayfa</a></li>
+            <li><a href="anlayis.html">Eğitim Anlayışımız</a></li>
+            <li><a href="galeri.html">Galeri</a></li>
+            <li><a href="ogretmenler.html">Öğretmen Kadromuz</a></li>
+            <li><a href="rehberlik.html">Rehberlik</a></li>
+            <li><a href="iletisim.html">İletişim</a></li>
+          </ul>
+        </div>
+
+        <!-- E-BÜLTEN -->
+        <div class="col-lg-3 col-md-6">
+          <h5 class="footer-title">E-Bülten Aboneliği</h5>
+          <p>Etkinlik ve duyurularımızdan haberdar olmak için e-bültenimize abone olun.</p>
+          <form id="newsletter-form">
+            <div class="input-group mb-3">
+              <input type="email" class="form-control" placeholder="E-posta adresiniz" required
+                aria-label="E-posta adresi">
+              <button class="btn btn-warning" type="submit">
+                <i class="fas fa-paper-plane me-1"></i>Abone Ol
+              </button>
+            </div>
+          </form>
+
+          <!-- GÜVENLİK BADGES -->
+          <div class="security-badge mt-4">
+            <div
+              style="display: flex; align-items: center; gap: 10px; padding: 10px; background: rgba(42, 157, 143, 0.1); border-radius: 8px; border-left: 4px solid #2a9d8f;">
+              <i class="fas fa-shield-alt" style="color: #0af1d3; font-size: 1.5rem;"></i>
+              <div>
+                <small style="color: #adb5bd; font-size: 0.85rem; display: block;">Güvenli İletişim</small>
+                <small style="color: #0af1d3; font-size: 0.75rem;">KVKK Uyumludur</small>
+              </div>
             </div>
           </div>
         </div>
       </div>
+
+      <!-- COPYRIGHT -->
+      <div class="copyright">
+        <small>&copy; 2007-2025 18 Mart Sirac Koleji. Tüm Hakları Saklıdır. |
+          <a href="#" style="color: #0af1d3; text-decoration: none;">Gizlilik Politikası</a> |
+          <a href="#" style="color: #0af1d3; text-decoration: none;">Çerez Politikası</a>
+        </small>
+      </div>
     </div>
-    
-    <!-- COPYRIGHT -->
-    <div class="copyright">
-      <small>&copy; 2007-2025 18 Mart Sirac Koleji. Tüm Hakları Saklıdır. | 
-        <a href="#" style="color: #0af1d3; text-decoration: none;">Gizlilik Politikası</a> | 
-        <a href="#" style="color: #0af1d3; text-decoration: none;">Çerez Politikası</a>
-      </small>
-    </div>
-  </div>
-</footer>
-<script src="../js/script.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
-<script>
-  // Smooth scrolling for anchor links
-  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-    anchor.addEventListener('click', function(e) {
-      e.preventDefault();
-      document.querySelector(this.getAttribute('href')).scrollIntoView({
+  </footer>
+  <script src="js/script.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+    // Smooth scrolling for anchor links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        document.querySelector(this.getAttribute('href')).scrollIntoView({
+          behavior: 'smooth'
+        });
+      });
+    });
+    // Back to top button functionality
+    const backToTopButton = document.createElement('button');
+    backToTopButton.innerHTML = '<i class="fas fa-arrow-up"></i>';
+    backToTopButton.classList.add('back-to-top-button');
+    document.body.appendChild(backToTopButton);
+
+    backToTopButton.addEventListener('click', function () {
+      window.scrollTo({
+        top: 0,
         behavior: 'smooth'
       });
     });
-  });
-  // Back to top button functionality
-  const backToTopButton = document.createElement('button');
-  backToTopButton.innerHTML = '<i class="fas fa-arrow-up"></i>';
-  backToTopButton.classList.add('back-to-top-button');
-  document.body.appendChild(backToTopButton);
-
-  backToTopButton.addEventListener('click', function() {
-    window.scrollTo({
-      top: 0,
-      behavior: 'smooth'
-    });
-  });
-</script>
-<style>
-  /* Back to Top Button Styles */
-  .back-to-top-button {
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    background-color: #3498db;
-    color: white;
-    border: none;
-    border-radius: 50%;
-    width: 50px;
-    height: 50px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    cursor: pointer;
-    z-index: 1000;
-    transition: background-color 0.3s ease, transform 0.3s ease;
-  }
-  
-  .back-to-top-button:hover {
-    background-color: #2980b9;
-    transform: scale(1.1);
-  }
-  
-  .back-to-top-button i {
-    font-size: 24px;
-  }
-  @media (max-width: 768px) {
+  </script>
+  <style>
+    /* Back to Top Button Styles */
     .back-to-top-button {
-      width: 40px;
-      height: 40px;
-      bottom: 15px;
-      right: 15px;
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background-color: #3498db;
+      color: white;
+      border: none;
+      border-radius: 50%;
+      width: 50px;
+      height: 50px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+      cursor: pointer;
+      z-index: 1000;
+      transition: background-color 0.3s ease, transform 0.3s ease;
     }
-    
+
+    .back-to-top-button:hover {
+      background-color: #2980b9;
+      transform: scale(1.1);
+    }
+
     .back-to-top-button i {
-      font-size: 20px;
+      font-size: 24px;
     }
-  }
-  /* Footer Styles */
-  footer {
-    background-color: #343a40;
-    color: white;
-    padding: 40px 0;
-  }
-  
-  .footer-title {
-    font-size: 1.5rem;
-    margin-bottom: 20px;
-    color: #f8f9fa;
-  }
-  
-  .footer-links {
-    list-style: none;
-    padding: 0;
-  }
-  
-  .footer-links li {
-    margin-bottom: 10px;
-  }
-  
-  .footer-links a {
-    color: #f8f9fa;
-    text-decoration: none;
-    transition: color 0.3s ease;
-  }
-  
-  .footer-links a:hover {
-    color: #3498db;
-  }
-</style>
-<style>
-  /* Hero Section Styles */
-  .hero-section {
-    background: url('../image/anasayfa1.JPG') no-repeat center center/cover;
-    color: white;
-    padding: 100px 0;
-    text-align: center;
-  }
-  
-  .hero-section h1 {
-    font-size: 3rem;
-    margin-bottom: 20px;
-  }
-  
-  .hero-section p {
-    font-size: 1.2rem;
-    max-width: 600px;
-    margin: auto;
-  }
-  
-  @media (max-width: 768px) {
+
+    @media (max-width: 768px) {
+      .back-to-top-button {
+        width: 40px;
+        height: 40px;
+        bottom: 15px;
+        right: 15px;
+      }
+
+      .back-to-top-button i {
+        font-size: 20px;
+      }
+    }
+
+    /* Footer Styles */
+    footer {
+      background-color: #343a40;
+      color: white;
+      padding: 40px 0;
+    }
+
+    .footer-title {
+      font-size: 1.5rem;
+      margin-bottom: 20px;
+      color: #f8f9fa;
+    }
+
+    .footer-links {
+      list-style: none;
+      padding: 0;
+    }
+
+    .footer-links li {
+      margin-bottom: 10px;
+    }
+
+    .footer-links a {
+      color: #f8f9fa;
+      text-decoration: none;
+      transition: color 0.3s ease;
+    }
+
+    .footer-links a:hover {
+      color: #3498db;
+    }
+  </style>
+  <style>
+    /* Hero Section Styles */
+    .hero-section {
+      background: url('image/anasayfa1.JPG') no-repeat center center/cover;
+      color: white;
+      padding: 100px 0;
+      text-align: center;
+    }
+
     .hero-section h1 {
-      font-size: 2.5rem;
+      font-size: 3rem;
+      margin-bottom: 20px;
     }
-    
+
     .hero-section p {
-      font-size: 1rem;
+      font-size: 1.2rem;
+      max-width: 600px;
+      margin: auto;
     }
-  }
-</style>
-<script>
-  // Back to Top Button Functionality
-  window.addEventListener('scroll', function() {
-    const backToTopButton = document.querySelector('.back-to-top-button');
-    if (window.scrollY > 300) {
-      backToTopButton.style.display = 'block';
-    } else {
-      backToTopButton.style.display = 'none';
+
+    @media (max-width: 768px) {
+      .hero-section h1 {
+        font-size: 2.5rem;
+      }
+
+      .hero-section p {
+        font-size: 1rem;
+      }
     }
-  });
-</script>
+  </style>
+  <script>
+    // Back to Top Button Functionality
+    window.addEventListener('scroll', function () {
+      const backToTopButton = document.querySelector('.back-to-top-button');
+      if (window.scrollY > 300) {
+        backToTopButton.style.display = 'block';
+      } else {
+        backToTopButton.style.display = 'none';
+      }
+    });
+  </script>
 </body>
+
 </html>

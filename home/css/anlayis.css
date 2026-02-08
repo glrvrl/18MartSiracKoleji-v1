@@ -1,0 +1,152 @@
+/* HEADER STYLE (From Inline) */
+.education-header {
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+        url('../image/anasayfa1.JPG') center/cover no-repeat;
+    color: white;
+    padding: 160px 0 120px;
+    min-height: 500px;
+    text-align: center;
+    background-attachment: fixed;
+    position: relative;
+}
+
+.education-header h1 {
+    font-size: 3rem;
+    font-weight: 800;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.education-header p {
+    font-size: 1.2rem;
+    max-width: 700px;
+    margin: 0 auto;
+    opacity: 0.9;
+}
+
+/* CONTENT STYLE */
+.education-content {
+    padding: 60px 0;
+    background-color: #f9f9f9;
+}
+
+.education-principles {
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    padding: 40px;
+    margin-bottom: 40px;
+}
+
+/* PRINCIPLE CARDS */
+.principle-card {
+    padding: 25px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    transition: all 0.3s ease;
+    border-left: 4px solid #3498db;
+    background-color: #f8fafc;
+    height: 100%;
+    /* Ensure equal height in flex rows if needed */
+}
+
+.principle-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+    border-left: 4px solid #e74c3c;
+}
+
+.principle-icon {
+    font-size: 2.5rem;
+    color: #3498db;
+    margin-bottom: 20px;
+}
+
+.principle-card h4 {
+    font-size: 1.25rem;
+    font-weight: 700;
+    margin-bottom: 15px;
+    color: #2c3e50;
+}
+
+.principle-card p {
+    font-size: 0.95rem;
+    color: #555;
+    line-height: 1.6;
+}
+
+/* MONTESSORI SECTION */
+.montessori-section {
+    background: linear-gradient(135deg, #2c3e50 0%, #4ca1af 100%);
+    color: white;
+    padding: 60px 40px;
+    border-radius: 10px;
+    margin: 40px 0;
+    box-shadow: 0 10px 30px rgba(44, 62, 80, 0.3);
+}
+
+.montessori-section h3 {
+    font-weight: 700;
+}
+
+/* QUOTE SECTION */
+.quote-section {
+    background-color: #f8f9fa;
+    border-left: 5px solid #f9a826;
+    padding: 30px;
+    margin: 40px 0;
+    font-style: italic;
+    font-size: 1.1rem;
+    border-radius: 0 8px 8px 0;
+}
+
+/* BUTTONS & LINKS */
+.education-content .btn {
+    border-radius: 50px;
+    padding: 12px 30px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.education-content .btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* ANIMATIONS */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.principle-card,
+.montessori-section {
+    animation: fadeInUp 0.8s ease-out;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+    .education-header {
+        padding: 120px 0 80px;
+        min-height: auto;
+    }
+
+    .education-header h1 {
+        font-size: 2rem;
+    }
+
+    .education-principles {
+        padding: 20px;
+    }
+
+    .montessori-section {
+        padding: 40px 20px;
+    }
+}

@@ -1,18 +1,19 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="tr">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Kadromuz - Özel On Sekiz Mart Siraç İlkokulu</title>
-  <link rel="icon" type="image/png" href="../image/favicon.ico" />
+  <link rel="icon" type="image/png" href="image/favicon.ico" />
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="css/style.css">
   <style>
     .teacher-hero {
-      background: linear-gradient(135deg, rgba(26, 86, 219, 0.9) 0%, rgba(16, 66, 179, 0.95) 100%), 
-                  url('../image/anasayfa1.JPG');
+      background: linear-gradient(135deg, rgba(26, 86, 219, 0.9) 0%, rgba(16, 66, 179, 0.95) 100%),
+        url('image/anasayfa1.JPG');
       background-size: cover;
       background-position: center;
       padding: 120px 20px 80px;
@@ -21,7 +22,7 @@
       position: relative;
       overflow: hidden;
     }
-    
+
     .teacher-hero::before {
       content: '';
       position: absolute;
@@ -32,7 +33,7 @@
       background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" preserveAspectRatio="none"><path fill="rgba(255,255,255,0.05)" d="M0,0 L100,0 L100,100 Z"/></svg>');
       background-size: cover;
     }
-    
+
     .teacher-hero h1 {
       font-size: 3.5rem;
       font-weight: 800;
@@ -40,7 +41,7 @@
       text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.3);
       position: relative;
     }
-    
+
     .teacher-hero p {
       font-size: 1.3rem;
       max-width: 800px;
@@ -49,7 +50,7 @@
       line-height: 1.6;
       position: relative;
     }
-    
+
     .hero-divider {
       width: 100px;
       height: 4px;
@@ -58,19 +59,19 @@
       border-radius: 2px;
       position: relative;
     }
-    
+
     /* Öğretim Kadromuz Bölümü */
     .qualities-section {
       padding: 80px 0;
       background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
       position: relative;
     }
-    
+
     .qualities-section .container {
       position: relative;
       z-index: 1;
     }
-    
+
     .section-title {
       text-align: center;
       font-size: 2.8rem;
@@ -80,7 +81,7 @@
       position: relative;
       padding-bottom: 15px;
     }
-    
+
     .section-title::after {
       content: '';
       position: absolute;
@@ -92,7 +93,7 @@
       background: linear-gradient(90deg, #ffd700, #ffed4e);
       border-radius: 2px;
     }
-    
+
     .section-subtitle {
       text-align: center;
       font-size: 1.2rem;
@@ -103,7 +104,7 @@
       margin-right: auto;
       line-height: 1.6;
     }
-    
+
     .description {
       max-width: 900px;
       margin: 0 auto 60px;
@@ -118,11 +119,11 @@
       border-left: 5px solid #1a56db;
       transition: transform 0.3s ease;
     }
-    
+
     .description:hover {
       transform: translateY(-5px);
     }
-    
+
     /* Kadro Özellikleri Kartları */
     .kadro-box {
       background: white;
@@ -137,7 +138,7 @@
       z-index: 1;
       border: 3px solid transparent;
     }
-    
+
     .kadro-box::before {
       content: '';
       position: absolute;
@@ -147,7 +148,7 @@
       height: 5px;
       z-index: 2;
     }
-    
+
     .kadro-box::after {
       content: '';
       position: absolute;
@@ -160,38 +161,38 @@
       z-index: -1;
       border-radius: 20px;
     }
-    
+
     .kadro-box:hover {
       transform: translateY(-15px);
       box-shadow: 0 25px 50px rgba(0, 0, 0, 0.15);
       border-color: rgba(255, 215, 0, 0.3);
     }
-    
+
     .kadro-box:hover::after {
       height: 100%;
     }
-    
+
     /* Kart Renkleri */
     .orange-box::before {
       background: linear-gradient(90deg, #ff7e5f, #feb47b);
     }
-    
+
     .green-box::before {
       background: linear-gradient(90deg, #56ab2f, #a8e063);
     }
-    
+
     .blue-box::before {
       background: linear-gradient(90deg, #4a6fa5, #86a8e7);
     }
-    
+
     .sky-box::before {
       background: linear-gradient(90deg, #36d1dc, #5b86e5);
     }
-    
+
     .red-box::before {
       background: linear-gradient(90deg, #ff5858, #f09819);
     }
-    
+
     /* İkonlar */
     .kadro-box .icon {
       font-size: 4rem;
@@ -199,7 +200,7 @@
       display: block;
       transition: all 0.4s ease;
     }
-    
+
     .orange-box .icon {
       color: #ff7e5f;
       background: linear-gradient(135deg, #ff7e5f, #feb47b);
@@ -207,7 +208,7 @@
       -webkit-text-fill-color: transparent;
       background-clip: text;
     }
-    
+
     .green-box .icon {
       color: #56ab2f;
       background: linear-gradient(135deg, #56ab2f, #a8e063);
@@ -215,7 +216,7 @@
       -webkit-text-fill-color: transparent;
       background-clip: text;
     }
-    
+
     .blue-box .icon {
       color: #4a6fa5;
       background: linear-gradient(135deg, #4a6fa5, #86a8e7);
@@ -223,7 +224,7 @@
       -webkit-text-fill-color: transparent;
       background-clip: text;
     }
-    
+
     .sky-box .icon {
       color: #36d1dc;
       background: linear-gradient(135deg, #36d1dc, #5b86e5);
@@ -231,7 +232,7 @@
       -webkit-text-fill-color: transparent;
       background-clip: text;
     }
-    
+
     .red-box .icon {
       color: #ff5858;
       background: linear-gradient(135deg, #ff5858, #f09819);
@@ -239,11 +240,11 @@
       -webkit-text-fill-color: transparent;
       background-clip: text;
     }
-    
+
     .kadro-box:hover .icon {
       transform: scale(1.2) rotate(5deg);
     }
-    
+
     /* Kart Başlıkları */
     .kadro-box h5 {
       font-size: 1.4rem;
@@ -253,17 +254,17 @@
       transition: color 0.3s ease;
       line-height: 1.4;
     }
-    
+
     .kadro-box:hover h5 {
       color: #1a2530;
     }
-    
+
     /* Öğretmen Kartları */
     .teachers-section {
       padding: 80px 0;
       background: white;
     }
-    
+
     .teacher-card {
       transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
       overflow: hidden;
@@ -277,31 +278,31 @@
       border: 2px solid transparent;
       position: relative;
     }
-    
+
     .teacher-card:hover {
       transform: translateY(-15px) scale(1.02);
       box-shadow: 0 25px 50px rgba(0, 0, 0, 0.15);
       border-color: #1a56db;
     }
-    
+
     .teacher-img-container {
       position: relative;
       overflow: hidden;
       border-radius: 20px 20px 0 0;
       height: 280px;
     }
-    
+
     .teacher-img {
       width: 100%;
       height: 100%;
       object-fit: cover;
       transition: transform 0.6s ease;
     }
-    
+
     .teacher-card:hover .teacher-img {
       transform: scale(1.1);
     }
-    
+
     .teacher-overlay {
       position: absolute;
       top: 0;
@@ -312,23 +313,23 @@
       opacity: 0;
       transition: opacity 0.4s ease;
     }
-    
+
     .teacher-card:hover .teacher-overlay {
       opacity: 1;
     }
-  
+
     .teacher-contact {
       padding: 25px 20px;
       text-align: center;
     }
-    
+
     .teacher-name {
       font-weight: 700;
       font-size: 1.4rem;
       color: #1a56db;
       margin-bottom: 8px;
     }
-    
+
     .teacher-position {
       color: #6c757d;
       font-weight: 500;
@@ -337,7 +338,7 @@
       padding-bottom: 15px;
       border-bottom: 1px solid #e9ecef;
     }
-    
+
     .teacher-email-btn {
       background: linear-gradient(135deg, #1a56db, #0d47a1);
       color: white;
@@ -350,693 +351,756 @@
       text-decoration: none;
       display: inline-block;
     }
-    
+
     .teacher-email-btn:hover {
       background: linear-gradient(135deg, #0d47a1, #1a56db);
       transform: translateY(-3px);
       box-shadow: 0 10px 20px rgba(26, 86, 219, 0.3);
       color: white;
     }
-    
+
     .teacher-email-btn i {
       margin-right: 8px;
     }
-    
+
     /* Responsive Tasarım */
     @media (max-width: 992px) {
       .teacher-hero h1 {
         font-size: 2.8rem;
       }
-      
+
       .section-title {
         font-size: 2.4rem;
       }
-      
+
       .kadro-box {
         padding: 30px 20px;
       }
-      
+
       .kadro-box .icon {
         font-size: 3.5rem;
       }
     }
-    
+
     @media (max-width: 768px) {
       .teacher-hero {
         padding: 100px 20px 60px;
       }
-      
+
       .teacher-hero h1 {
         font-size: 2.3rem;
       }
-      
+
       .teacher-hero p {
         font-size: 1.1rem;
       }
-      
+
       .section-title {
         font-size: 2rem;
       }
-      
+
       .description {
         padding: 25px;
         font-size: 1rem;
       }
-      
+
       .teacher-img-container {
         height: 250px;
       }
-      
+
       .kadro-box {
         margin-bottom: 20px;
       }
     }
-    
+
     @media (max-width: 576px) {
       .teacher-hero h1 {
         font-size: 1.8rem;
       }
-      
+
       .section-title {
         font-size: 1.7rem;
       }
-      
+
       .kadro-box .icon {
         font-size: 3rem;
       }
-      
+
       .kadro-box h5 {
         font-size: 1.2rem;
       }
-      
+
       .teacher-name {
         font-size: 1.2rem;
       }
     }
-    
+
     /* Animasyonlar */
     @keyframes fadeInUp {
       from {
         opacity: 0;
         transform: translateY(30px);
       }
+
       to {
         opacity: 1;
         transform: translateY(0);
       }
     }
-    
+
     .kadro-box,
     .teacher-card {
       animation: fadeInUp 0.6s ease forwards;
       opacity: 0;
     }
-    
-    .kadro-box:nth-child(1) { animation-delay: 0.1s; }
-    .kadro-box:nth-child(2) { animation-delay: 0.2s; }
-    .kadro-box:nth-child(3) { animation-delay: 0.3s; }
-    .kadro-box:nth-child(4) { animation-delay: 0.4s; }
-    .kadro-box:nth-child(5) { animation-delay: 0.5s; }
-    
-    .teacher-card:nth-child(1) { animation-delay: 0.1s; }
-    .teacher-card:nth-child(2) { animation-delay: 0.2s; }
-    .teacher-card:nth-child(3) { animation-delay: 0.3s; }
-    .teacher-card:nth-child(4) { animation-delay: 0.4s; }
-    .teacher-card:nth-child(5) { animation-delay: 0.5s; }
-    .teacher-card:nth-child(6) { animation-delay: 0.6s; }
-    .teacher-card:nth-child(7) { animation-delay: 0.7s; }
-    .teacher-card:nth-child(8) { animation-delay: 0.8s; }
-    .teacher-card:nth-child(9) { animation-delay: 0.9s; }
-    .teacher-card:nth-child(10) { animation-delay: 1.0s; }
-    .teacher-card:nth-child(11) { animation-delay: 1.1s; }
-    .teacher-card:nth-child(12) { animation-delay: 1.2s; }
-    
+
+    .kadro-box:nth-child(1) {
+      animation-delay: 0.1s;
+    }
+
+    .kadro-box:nth-child(2) {
+      animation-delay: 0.2s;
+    }
+
+    .kadro-box:nth-child(3) {
+      animation-delay: 0.3s;
+    }
+
+    .kadro-box:nth-child(4) {
+      animation-delay: 0.4s;
+    }
+
+    .kadro-box:nth-child(5) {
+      animation-delay: 0.5s;
+    }
+
+    .teacher-card:nth-child(1) {
+      animation-delay: 0.1s;
+    }
+
+    .teacher-card:nth-child(2) {
+      animation-delay: 0.2s;
+    }
+
+    .teacher-card:nth-child(3) {
+      animation-delay: 0.3s;
+    }
+
+    .teacher-card:nth-child(4) {
+      animation-delay: 0.4s;
+    }
+
+    .teacher-card:nth-child(5) {
+      animation-delay: 0.5s;
+    }
+
+    .teacher-card:nth-child(6) {
+      animation-delay: 0.6s;
+    }
+
+    .teacher-card:nth-child(7) {
+      animation-delay: 0.7s;
+    }
+
+    .teacher-card:nth-child(8) {
+      animation-delay: 0.8s;
+    }
+
+    .teacher-card:nth-child(9) {
+      animation-delay: 0.9s;
+    }
+
+    .teacher-card:nth-child(10) {
+      animation-delay: 1.0s;
+    }
+
+    .teacher-card:nth-child(11) {
+      animation-delay: 1.1s;
+    }
+
+    .teacher-card:nth-child(12) {
+      animation-delay: 1.2s;
+    }
+
     /* Scroll animasyonları */
     .animate-on-scroll {
       opacity: 0;
       transform: translateY(30px);
       transition: opacity 0.8s ease, transform 0.8s ease;
     }
-    
+
     .animate-on-scroll.animated {
       opacity: 1;
       transform: translateY(0);
     }
   </style>
 </head>
+
 <body>
 
-<!-- HEADER -->
-<header>
-  <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+  <!-- HEADER / NAVBAR -->
+  <header>
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+      <div class="container">
+
+        <a class="navbar-brand d-flex align-items-center gap-3" href="index.html">
+          <img src="image/ilokullogo.jpeg" alt="18 Mart Sirac Koleji Logo" class="navbar-logo" />
+          <span class="navbar-title">Özel OnSekiz Mart Siraç Koleji İlkokulu</span>
+        </a>
+
+
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#siracNavbar">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="siracNavbar">
+          <ul class="navbar-nav ms-auto">
+
+            <li class="nav-item">
+              <a class="nav-link" href="index.html">Anasayfa</a>
+            </li>
+
+            <!-- Kurumsal -->
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">Kurumsal</a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="anlayis.html">Eğitim Anlayışımız</a></li>
+                <li><a class="dropdown-item" href="misyon.html">Misyon & Vizyon</a></li>
+                <li><a class="dropdown-item" href="tarihce.html">Tarihçe</a></li>
+              </ul>
+            </li>
+
+            <!-- Eğitim Programları -->
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">Eğitim
+                Programları</a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="manevi.html">Manevi Eğitim</a></li>
+                <li><a class="dropdown-item" href="kulubuler.html">Kulüpler</a></li>
+                <li><a class="dropdown-item" href="olcum.html">Ölçme ve Değerlendirme</a></li>
+                <li><a class="dropdown-item" href="yabancidil.html">Yabancı Dil</a></li>
+                <li><a class="dropdown-item" href="rehberlik.html">Rehberlik</a></li>
+              </ul>
+            </li>
+
+            <!-- Atölyeler -->
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">Atölyeler</a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="robotik.html">Robotik Kodlama</a></li>
+                <li><a class="dropdown-item" href="gorsel.html">Görsel Sanatlar ve Ahşap</a></li>
+                <li><a class="dropdown-item" href="tasavvuf.html">Tasavvuf Müziği</a></li>
+                <li><a class="dropdown-item" href="kozmik.html">Montessori Kozmik</a></li>
+              </ul>
+            </li>
+
+            <!-- Etkinlikler -->
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">Etkinlikler</a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="oyun.html">Oyun ve Fiziki Etkinlikler</a></li>
+                <li><a class="dropdown-item" href="kulubuler.html">Kulüpler ve P4C</a></li>
+                <li><a class="dropdown-item" href="sosyalyardim.html">Sosyal Yardım Projeleri</a></li>
+                <li><a class="dropdown-item" href="Helal_Sagalik.html">Helal ve Sağlıklı</a></li>
+                <li><a class="dropdown-item" href="galeri.html">Galeri</a></li>
+              </ul>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link" href="ogretmenler.html">Kadromuz</a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link" href="iletisim.html">İletişim</a>
+            </li>
+
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <!-- HERO BÖLÜMÜ -->
+  <section class="teacher-hero animate-on-scroll">
     <div class="container">
-      <a class="navbar-brand d-flex align-items-center gap-3" href="index.html">
-        <img src="../image/yaı lug.jpg" alt="18 Mart Sirac Koleji Logo" class="navbar-logo" />
-        <span class="navbar-title">Özel OnSekiz Mart Siraç Koleji İlkokulu</span>
-      </a>
-
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#siracNavbar">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-
-      <div class="collapse navbar-collapse" id="siracNavbar">
-        <ul class="navbar-nav ms-auto">
-          <li class="nav-item">
-            <a class="nav-link" href="index.html">Anasayfa</a>
-          </li>
-
-          <!-- Kurumsal -->
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">Kurumsal</a>
-            <ul class="dropdown-menu">
-              <li><a class="dropdown-item" href="anlayis.html">Eğitim Anlayışımız</a></li>
-              <li><a class="dropdown-item" href="misyon.html">Misyon & Vizyon</a></li>
-              <li><a class="dropdown-item" href="tarihce.html">Tarihçe</a></li>
-              <li><a class="dropdown-item" href="kultur.html">Okul Kültürü</a></li>
-            </ul>
-          </li>
-
-          <!-- Eğitim Programları -->
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">Eğitim Programları</a>
-            <ul class="dropdown-menu">
-              <li><a class="dropdown-item" href="manevi.html">Manevi Eğitim</a></li>
-              <li><a class="dropdown-item" href="Okuma Saat.html">Okuma Saat</a></li>
-              <li><a class="dropdown-item" href="olcum.html">Ölçme ve Değerlendirme</a></li>
-              <li><a class="dropdown-item" href="yabancidil.html">Yabancı Dil</a></li>
-              <li><a class="dropdown-item" href="rehberlik.html">Rehberlik</a></li>
-            </ul>
-          </li>
-
-          <!-- Atölyeler -->
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">Atölyeler</a>
-            <ul class="dropdown-menu">
-              <li><a class="dropdown-item" href="robotik.html">Robotik Kodlama</a></li>
-              <li><a class="dropdown-item" href="gorsel.html">Görsel Sanatlar ve Ahşap</a></li>
-              <li><a class="dropdown-item" href="tasavvuf.html">Tasavvuf Müziği</a></li>
-              <li><a class="dropdown-item" href="kozmik.html">Montessori Kozmik</a></li>
-            </ul>
-          </li>
-
-          <!-- Etkinlikler -->
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">Etkinlikler</a>
-            <ul class="dropdown-menu">
-              <li><a class="dropdown-item" href="oyun.html">Oyun ve Fiziki Etkinlikler</a></li>
-              <li><a class="dropdown-item" href="kulubuler.html">Kulübüler ve P4C</a></li>
-              <li><a class="dropdown-item" href="sosyalyardim.html">Sosyal Yardım Projeleri</a></li>
-              <li><a class="dropdown-item" href="Helal ve Sagalik.html">Helal ve Sağlıklı</a></li>
-              <li><a class="dropdown-item" href="galeri.html">Galeri</a></li>
-            </ul>
-          </li>
-
-          <li class="nav-item">
-            <a class="nav-link active" href="ogretmenler.html">Kadromuz</a>
-          </li>
-
-          <li class="nav-item">
-            <a class="nav-link" href="iletisim.html">İletişim</a>
-          </li>
-        </ul>
-      </div>
+      <h1>Öğretim Kadromuz</h1>
+      <div class="hero-divider"></div>
+      <p>Deneyimli, uzman ve idealist eğitim kadromuzla, geleceğin aydınlık nesillerini yetiştiriyoruz. Her biri
+        alanında uzman, özverili ve öğrencilerimizin gelişimine adanmış öğretmenlerimizle gurur duyuyoruz.</p>
     </div>
-  </nav>
-</header>
+  </section>
 
-<!-- HERO BÖLÜMÜ -->
-<section class="teacher-hero animate-on-scroll">
-  <div class="container">
-    <h1>Öğretim Kadromuz</h1>
-    <div class="hero-divider"></div>
-    <p>Deneyimli, uzman ve idealist eğitim kadromuzla, geleceğin aydınlık nesillerini yetiştiriyoruz. Her biri alanında uzman, özverili ve öğrencilerimizin gelişimine adanmış öğretmenlerimizle gurur duyuyoruz.</p>
-  </div>
-</section>
-
-<!-- ÖĞRETİM KADROSU ÖZELLİKLERİ -->
-<section class="qualities-section animate-on-scroll">
-  <div class="container">
-    <div class="description">
-      <p>Erdemli, çalışkan, dürüst, sabırlı, hoşgörülü, yenilikçi, iyi bir gözlemci, araştırmacı, takipçi, iş disiplini yüksek ve lider özelliklere sahip uzman kadromuz ile öğrencilerimize rehberliğe hazırız. Akademik öğretmen kadromuz, uzman eğitmenlerle birlikte seminer dönemlerinde Montessori materyal eğitimlerini tamamlamışlardır.</p>
-    </div>
-    
-    <div class="row justify-content-center g-4">
-      <!-- Şefkatli rehber edinen -->
-      <div class="col-lg-3 col-md-4 col-sm-6">
-        <div class="kadro-box orange-box">
-          <i class="fas fa-hands-helping icon"></i>
-          <h5 class="mt-2">Şefkatli Rehber</h5>
-          <p class="mt-3 small text-muted">Öğrencilerimizi şefkatle yönlendiriyoruz</p>
-        </div>
+  <!-- ÖĞRETİM KADROSU ÖZELLİKLERİ -->
+  <section class="qualities-section animate-on-scroll">
+    <div class="container">
+      <div class="description">
+        <p>Erdemli, çalışkan, dürüst, sabırlı, hoşgörülü, yenilikçi, iyi bir gözlemci, araştırmacı, takipçi, iş
+          disiplini yüksek ve lider özelliklere sahip uzman kadromuz ile öğrencilerimize rehberliğe hazırız. Akademik
+          öğretmen kadromuz, uzman eğitmenlerle birlikte seminer dönemlerinde Montessori materyal eğitimlerini
+          tamamlamışlardır.</p>
       </div>
 
-      <!-- İdealist -->
-      <div class="col-lg-3 col-md-4 col-sm-6">
-        <div class="kadro-box green-box">
-          <i class="fas fa-lightbulb icon"></i>
-          <h5 class="mt-2">İdealist</h5>
-          <p class="mt-3 small text-muted">Gelecek vizyonuyla eğitim veriyoruz</p>
-        </div>
-      </div>
-
-      <!-- Alanında uzman -->
-      <div class="col-lg-3 col-md-4 col-sm-6">
-        <div class="kadro-box blue-box">
-          <i class="fas fa-user-graduate icon"></i>
-          <h5 class="mt-2">Alanında Uzman</h5>
-          <p class="mt-3 small text-muted">Branşlarında uzmanlaşmış kadro</p>
-        </div>
-      </div>
-
-      <!-- Ekip çalışmasına önem veren -->
-      <div class="col-lg-3 col-md-4 col-sm-6">
-        <div class="kadro-box sky-box">
-          <i class="fas fa-people-group icon"></i>
-          <h5 class="mt-2">Ekip Çalışması</h5>
-          <p class="mt-3 small text-muted">Uyumlu ve koordineli ekip çalışması</p>
-        </div>
-      </div>
-
-      <!-- Rol model olan -->
-      <div class="col-lg-3 col-md-4 col-sm-6">
-        <div class="kadro-box red-box">
-          <i class="fas fa-chalkboard-teacher icon"></i>
-          <h5 class="mt-2">Rol Model</h5>
-          <p class="mt-3 small text-muted">Örnek davranışlarıyla öncülük ediyor</p>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ÖĞRETMEN KADROSU -->
-<section class="teachers-section animate-on-scroll">
-  <div class="container"> 
-    <div class="row g-4">
-      <!-- Şengül Karaca Göktaş -->
-      <div class="col-lg-3 col-md-4 col-sm-6">
-        <div class="teacher-card">
-          <div class="teacher-img-container">
-            <img src="../image/ogretman/sangul.mudur.jpg" class="teacher-img" alt="Şengül Karaca Göktaş">
-            <div class="teacher-overlay"></div>
-          </div>
-          <div class="teacher-contact">
-            <h5 class="teacher-name">Şengül Karaca Göktaş</h5>
-            <p class="teacher-position">Okul Müdürü</p>
-            <a href="mailto:sengul.goktas@sirackoleji.com" class="teacher-email-btn">
-              <i class="fas fa-envelope"></i> E-posta Gönder
-            </a>
+      <div class="row justify-content-center g-4">
+        <!-- Şefkatli rehber edinen -->
+        <div class="col-lg-3 col-md-4 col-sm-6">
+          <div class="kadro-box orange-box">
+            <i class="fas fa-hands-helping icon"></i>
+            <h5 class="mt-2">Şefkatli Rehber</h5>
+            <p class="mt-3 small text-muted">Öğrencilerimizi şefkatle yönlendiriyoruz</p>
           </div>
         </div>
-      </div>
 
-      <!-- Elif Saytaş -->
-      <div class="col-lg-3 col-md-4 col-sm-6">
-        <div class="teacher-card">
-          <div class="teacher-img-container">
-            <img src="../image/ogretman/yanı ıcns.jpg" class="teacher-img" alt="Elif Saytaş">
-            <div class="teacher-overlay"></div>
-          </div>
-          <div class="teacher-contact">
-            <h5 class="teacher-name">Elif Soytaş</h5>
-            <p class="teacher-position">Müdür Yardımcısı</p>
-            <a href="mailto:elif.soytas@sirackoleji.com" class="teacher-email-btn">
-              <i class="fas fa-envelope"></i> E-posta Gönder
-            </a>
+        <!-- İdealist -->
+        <div class="col-lg-3 col-md-4 col-sm-6">
+          <div class="kadro-box green-box">
+            <i class="fas fa-lightbulb icon"></i>
+            <h5 class="mt-2">İdealist</h5>
+            <p class="mt-3 small text-muted">Gelecek vizyonuyla eğitim veriyoruz</p>
           </div>
         </div>
-      </div>
 
-      <!-- Seda Nur Tekeli -->
-      <div class="col-lg-3 col-md-4 col-sm-6">
-        <div class="teacher-card">
-          <div class="teacher-img-container">
-            <img src="../image/ogretman/seda nur.jpg" class="teacher-img" alt="Seda Nur Tekeli">
-            <div class="teacher-overlay"></div>
-          </div>
-          <div class="teacher-contact">
-            <h5 class="teacher-name">Seda Nur Tekeli</h5>
-            <p class="teacher-position">İngilizce Öğretmeni</p>
-            <a href="mailto:sedanur.tekeli@sirackoleji.com" class="teacher-email-btn">
-              <i class="fas fa-envelope"></i> E-posta Gönder
-            </a>
+        <!-- Alanında uzman -->
+        <div class="col-lg-3 col-md-4 col-sm-6">
+          <div class="kadro-box blue-box">
+            <i class="fas fa-user-graduate icon"></i>
+            <h5 class="mt-2">Alanında Uzman</h5>
+            <p class="mt-3 small text-muted">Branşlarında uzmanlaşmış kadro</p>
           </div>
         </div>
-      </div>
 
-      <!-- Dilek Orhan -->
-      <div class="col-lg-3 col-md-4 col-sm-6">
-        <div class="teacher-card">
-          <div class="teacher-img-container">
-            <img src="../image/ogretman/dilek.jpg" class="teacher-img" alt="Dilek Orhan">
-            <div class="teacher-overlay"></div>
-          </div>
-          <div class="teacher-contact">
-            <h5 class="teacher-name">Dilek Orhan</h5>
-            <p class="teacher-position">Görsel Sanatlar Öğretmeni</p>
-            <a href="mailto:dilek.orhan@sirackoleji.com" class="teacher-email-btn">
-              <i class="fas fa-envelope"></i> E-posta Gönder
-            </a>
+        <!-- Ekip çalışmasına önem veren -->
+        <div class="col-lg-3 col-md-4 col-sm-6">
+          <div class="kadro-box sky-box">
+            <i class="fas fa-people-group icon"></i>
+            <h5 class="mt-2">Ekip Çalışması</h5>
+            <p class="mt-3 small text-muted">Uyumlu ve koordineli ekip çalışması</p>
           </div>
         </div>
-      </div>
 
-      <!-- Beyzanur Ateş -->
-      <div class="col-lg-3 col-md-4 col-sm-6">
-        <div class="teacher-card">
-          <div class="teacher-img-container">
-            <img src="../image/ogretman/yanı ıcns.jpg" class="teacher-img" alt="Beyzanur Ateş">
-            <div class="teacher-overlay"></div>
-          </div>
-          <div class="teacher-contact">
-            <h5 class="teacher-name">Beyzanur Ateş</h5>
-            <p class="teacher-position">Matematik Öğretmeni</p>
-            <a href="mailto:beyzanur.ates@sirackoleji.com" class="teacher-email-btn">
-              <i class="fas fa-envelope"></i> E-posta Gönder
-            </a>
-          </div>
-        </div>
-      </div>
-
-      <!-- Melike Nur Sezer -->
-      <div class="col-lg-3 col-md-4 col-sm-6">
-        <div class="teacher-card">
-          <div class="teacher-img-container">
-            <img src="../image/ogretman/yanı ıcns.jpg" class="teacher-img" alt="Melike Nur Sezer">
-            <div class="teacher-overlay"></div>
-          </div>
-          <div class="teacher-contact">
-            <h5 class="teacher-name">Melike Nur Sezer</h5>
-            <p class="teacher-position">Anaokulu Öğretmeni</p>
-            <a href="mailto:melikenur.sezer@sirackoleji.com" class="teacher-email-btn">
-              <i class="fas fa-envelope"></i> E-posta Gönder
-            </a>
-          </div>
-        </div>
-      </div>
-
-      <!-- Mustafa Kubilay Ergül -->
-      <div class="col-lg-3 col-md-4 col-sm-6">
-        <div class="teacher-card">
-          <div class="teacher-img-container">
-            <img src="../image/ogretman/mustafe.jpg" class="teacher-img" alt="Mustafa Kubilay Ergül">
-            <div class="teacher-overlay"></div>
-          </div>
-          <div class="teacher-contact">
-            <h5 class="teacher-name">Mustafa Kubilay Ergül</h5>
-            <p class="teacher-position">Beden Eğitimi Öğretmeni</p>
-            <a href="mailto:mustafa@okul.com" class="teacher-email-btn">
-              <i class="fas fa-envelope"></i> E-posta Gönder
-            </a>
-          </div>
-        </div>
-      </div>
-
-      <!-- Furkan Köksal -->
-      <div class="col-lg-3 col-md-4 col-sm-6">
-        <div class="teacher-card">
-          <div class="teacher-img-container">
-            <img src="../image/ogretman/furgan.koksal.jpg" class="teacher-img" alt="Furkan Köksal">
-            <div class="teacher-overlay"></div>
-          </div>
-          <div class="teacher-contact">
-            <h5 class="teacher-name">Furkan Köksal</h5>
-            <p class="teacher-position">Sınıf Öğretmeni</p>
-            <a href="mailto:furkan.koksal@sirackoleji.com" class="teacher-email-btn">
-              <i class="fas fa-envelope"></i> E-posta Gönder
-            </a>
-          </div>
-        </div>
-      </div>
-
-      <!-- Başak Koçak -->
-      <div class="col-lg-3 col-md-4 col-sm-6">
-        <div class="teacher-card">
-          <div class="teacher-img-container">
-            <img src="../image/ogretman/yanı ıcns.jpg" class="teacher-img" alt="Başak Kökçak">
-            <div class="teacher-overlay"></div>
-          </div>
-          <div class="teacher-contact">
-            <h5 class="teacher-name">Başak Kökçak</h5>
-            <p class="teacher-position">Sınıf Öğretmeni</p>
-            <a href="mailto:basak.kokcak@sirackoleji.com" class="teacher-email-btn">
-              <i class="fas fa-envelope"></i> E-posta Gönder
-            </a>
-          </div>
-        </div>
-      </div>
-
-      <!-- Hatice Şüheda Bayram -->
-      <div class="col-lg-3 col-md-4 col-sm-6">
-        <div class="teacher-card">
-          <div class="teacher-img-container">
-            <img src="../image/ogretman/yanı ıcns.jpg" class="teacher-img" alt="Hatice Şuheda Bayram">
-            <div class="teacher-overlay"></div>
-          </div>
-          <div class="teacher-contact">
-            <h5 class="teacher-name">Hatice Şuheda Bayram</h5>
-            <p class="teacher-position">Psikolojik Danışman</p>
-            <a href="mailto:hatice.bayram@sirackoleji.com" class="teacher-email-btn">
-              <i class="fas fa-envelope"></i> E-posta Gönder
-            </a>
-          </div>
-        </div>
-      </div>
-
-      <!-- Figen Aksoy -->
-      <div class="col-lg-3 col-md-4 col-sm-6">
-        <div class="teacher-card">
-          <div class="teacher-img-container">
-            <img src="../image/ogretman/figan.aksoy.jpg" class="teacher-img" alt="Figen Aksoy">
-            <div class="teacher-overlay"></div>
-          </div>
-          <div class="teacher-contact">
-            <h5 class="teacher-name">Figen Aksoy</h5>
-            <p class="teacher-position">Okul Öncesi Öğretmeni</p>
-            <a href="mailto:figen.aksoy@sirackoleji.com" class="teacher-email-btn">
-              <i class="fas fa-envelope"></i> E-posta Gönder
-            </a>
-          </div>
-        </div>
-      </div>
-
-      <!-- Zeynep Topçu -->
-      <div class="col-lg-3 col-md-4 col-sm-6">
-        <div class="teacher-card">
-          <div class="teacher-img-container">
-            <img src="../image/ogretman/yanı ıcns.jpg" class="teacher-img" alt="Zeynep Topçu">
-            <div class="teacher-overlay"></div>
-          </div>
-          <div class="teacher-contact">
-            <h5 class="teacher-name">Hayrünnisa Arpar</h5>
-            <p class="teacher-position">Sınıf Öğretmeni</p>
-            <a href="mailto:hyrnnsaokul@gmail.com" class="teacher-email-btn">
-              <i class="fas fa-envelope"></i> E-posta Gönder
-            </a>
-          </div>
-        </div>
-      </div>
-
-      <!-- Şeyma Işık -->
-      <div class="col-lg-3 col-md-4 col-sm-6">
-        <div class="teacher-card">
-          <div class="teacher-img-container">
-            <img src="../image/ogretman/seyma.isik.jpg" class="teacher-img" alt="Şeyma Işık">
-            <div class="teacher-overlay"></div>
-          </div>
-          <div class="teacher-contact">
-            <h5 class="teacher-name">Şeyma Işık</h5>
-            <p class="teacher-position">Okul Öncesi Öğretmeni</p>
-            <a href="mailto:seyma.isik@sirackoleji.com" class="teacher-email-btn">
-              <i class="fas fa-envelope"></i> E-posta Gönder
-            </a>
+        <!-- Rol model olan -->
+        <div class="col-lg-3 col-md-4 col-sm-6">
+          <div class="kadro-box red-box">
+            <i class="fas fa-chalkboard-teacher icon"></i>
+            <h5 class="mt-2">Rol Model</h5>
+            <p class="mt-3 small text-muted">Örnek davranışlarıyla öncülük ediyor</p>
           </div>
         </div>
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
-<!-- FOOTER -->
-<footer>
-  <div class="container">
-    <div class="row">
-      <!-- LOGO VE AÇIKLAMA -->
-      <div class="col-lg-4 mb-4 mb-lg-0">
-        <div class="footer-logo">
-          <i class="fas fa-graduation-cap"></i>
-          <div>
-            <h5>Özel On Sekiz Mart <span>Siraç İlkokulu</span></h5>
-          </div>
-        </div>
-        <p>2007 yılında kurulan 18 Mart Sirac Koleji, güçlü değerlerle donanmış nesiller yetiştirir. Öğrencilerimizin akademik, sosyal ve manevi gelişimini ön planda tutuyoruz.</p>
-        
-        <!-- ÖZELLİKLER -->
-        <div class="footer-features">
-          <div class="feature-item">
-            <div class="feature-icon">
-              <i class="fas fa-award"></i>
+  <!-- ÖĞRETMEN KADROSU -->
+  <section class="teachers-section animate-on-scroll">
+    <div class="container">
+      <div class="row g-4">
+        <!-- Şengül Karaca Göktaş -->
+        <div class="col-lg-3 col-md-4 col-sm-6">
+          <div class="teacher-card">
+            <div class="teacher-img-container">
+              <img src="image/ogretman/sangul.mudur.jpg" class="teacher-img" alt="Şengül Karaca Göktaş">
+              <div class="teacher-overlay"></div>
             </div>
-            <div class="feature-text">Kaliteli Eğitim</div>
-          </div>
-          <div class="feature-item">
-            <div class="feature-icon">
-              <i class="fas fa-heart"></i>
+            <div class="teacher-contact">
+              <h5 class="teacher-name">Şengül Karaca Göktaş</h5>
+              <p class="teacher-position">Okul Müdürü</p>
+              <a href="mailto:sengul.goktas@sirackoleji.com" class="teacher-email-btn">
+                <i class="fas fa-envelope"></i> E-posta Gönder
+              </a>
             </div>
-            <div class="feature-text">Sevgi Dolu Ortam</div>
           </div>
-          <div class="feature-item">
-            <div class="feature-icon">
-              <i class="fas fa-users"></i>
+        </div>
+
+        <!-- Elif Saytaş -->
+        <div class="col-lg-3 col-md-4 col-sm-6">
+          <div class="teacher-card">
+            <div class="teacher-img-container">
+              <img src="image/ogretman/yanı ıcns.jpg" class="teacher-img" alt="Elif Saytaş">
+              <div class="teacher-overlay"></div>
             </div>
-            <div class="feature-text">Deneyimli Kadro</div>
+            <div class="teacher-contact">
+              <h5 class="teacher-name">Elif Soytaş</h5>
+              <p class="teacher-position">Müdür Yardımcısı</p>
+              <a href="mailto:elif.soytas@sirackoleji.com" class="teacher-email-btn">
+                <i class="fas fa-envelope"></i> E-posta Gönder
+              </a>
+            </div>
           </div>
         </div>
-        
-        <!-- SOSYAL MEDYA -->
-        <div class="footer-social">
-          <a href="https://www.facebook.com/18MartSiracKoleji/" class="social-icon" target="_blank" title="Facebook">
-            <i class="fab fa-facebook-f"></i>
-          </a>
-          <a href="https://www.instagram.com/18martsirackoleji/" class="social-icon" target="_blank" title="Instagram">
-            <i class="fab fa-instagram"></i>
-          </a>
-          <a href="#" class="social-icon" title="Twitter">
-            <i class="fab fa-twitter"></i>
-          </a>
-          <a href="#" class="social-icon" title="YouTube">
-            <i class="fab fa-youtube"></i>
-          </a>
-        </div>
-      </div>
-      
-      <!-- İLETİŞİM -->
-      <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
-        <h5 class="footer-title">İletişim Bilgileri</h5>
-        <div class="footer-contact">
-          <p><i class="fas fa-map-marker-alt"></i> Kalabaklı/Kepez, Çanakkale</p>
-          <p><i class="fas fa-phone"></i> +90 543 717 8217</p>
-          <p><i class="fas fa-envelope"></i> bilgi@18martsirackoleji.com</p>
-          <p><i class="fas fa-clock"></i> Pazartesi - Cuma: 08:00 - 18:00</p>
-        </div>
-        
-        <!-- ÇALIŞMA SAATLERİ -->
-        <div class="working-hours">
-          <h6>Çalışma Saatleri</h6>
-          <p>Pazartesi - Cuma <span>08:00 - 18:00</span></p>
-          <p>Cumartesi <span>09:00 - 14:00</span></p>
-          <p>Pazar <span>Kapalı</span></p>
-        </div>
-      </div>
-      
-      <!-- HIZLI LİNKLER -->
-      <div class="col-lg-2 col-md-6 mb-4 mb-md-0">
-        <h5 class="footer-title">Hızlı Linkler</h5>
-        <ul class="footer-links list-unstyled">
-          <li><a href="index.html">Anasayfa</a></li>
-          <li><a href="anlayis.html">Eğitim Anlayışımız</a></li>
-          <li><a href="galeri.html">Galeri</a></li>
-          <li><a href="ogretmenler.html">Öğretmen Kadromuz</a></li>
-          <li><a href="rehberlik.html">Rehberlik</a></li>
-          <li><a href="iletisim.html">İletişim</a></li>
-        </ul>
-      </div>
-      
-      <!-- E-BÜLTEN -->
-      <div class="col-lg-3 col-md-6">
-        <h5 class="footer-title">E-Bülten Aboneliği</h5>
-        <p>Etkinlik ve duyurularımızdan haberdar olmak için e-bültenimize abone olun.</p>
-        <form id="newsletter-form">
-          <div class="input-group mb-3">
-            <input type="email" class="form-control" placeholder="E-posta adresiniz" required aria-label="E-posta adresi">
-            <button class="btn btn-warning" type="submit">
-              <i class="fas fa-paper-plane me-1"></i>Abone Ol
-            </button>
+
+        <!-- Seda Nur Tekeli -->
+        <div class="col-lg-3 col-md-4 col-sm-6">
+          <div class="teacher-card">
+            <div class="teacher-img-container">
+              <img src="image/ogretman/seda nur.jpg" class="teacher-img" alt="Seda Nur Tekeli">
+              <div class="teacher-overlay"></div>
+            </div>
+            <div class="teacher-contact">
+              <h5 class="teacher-name">Seda Nur Tekeli</h5>
+              <p class="teacher-position">İngilizce Öğretmeni</p>
+              <a href="mailto:sedanur.tekeli@sirackoleji.com" class="teacher-email-btn">
+                <i class="fas fa-envelope"></i> E-posta Gönder
+              </a>
+            </div>
           </div>
-        </form>
-        
-        <!-- GÜVENLİK BADGE -->
-        <div class="security-badge mt-4">
-          <div style="display: flex; align-items: center; gap: 10px; padding: 10px; background: rgba(42, 157, 143, 0.1); border-radius: 8px; border-left: 4px solid #2a9d8f;">
-            <i class="fas fa-shield-alt" style="color: #0af1d3; font-size: 1.5rem;"></i>
+        </div>
+
+        <!-- Dilek Orhan -->
+        <div class="col-lg-3 col-md-4 col-sm-6">
+          <div class="teacher-card">
+            <div class="teacher-img-container">
+              <img src="image/ogretman/dilek.jpg" class="teacher-img" alt="Dilek Orhan">
+              <div class="teacher-overlay"></div>
+            </div>
+            <div class="teacher-contact">
+              <h5 class="teacher-name">Dilek Orhan</h5>
+              <p class="teacher-position">Görsel Sanatlar Öğretmeni</p>
+              <a href="mailto:dilek.orhan@sirackoleji.com" class="teacher-email-btn">
+                <i class="fas fa-envelope"></i> E-posta Gönder
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Beyzanur Ateş -->
+        <div class="col-lg-3 col-md-4 col-sm-6">
+          <div class="teacher-card">
+            <div class="teacher-img-container">
+              <img src="image/ogretman/yanı ıcns.jpg" class="teacher-img" alt="Beyzanur Ateş">
+              <div class="teacher-overlay"></div>
+            </div>
+            <div class="teacher-contact">
+              <h5 class="teacher-name">Beyzanur Ateş</h5>
+              <p class="teacher-position">Matematik Öğretmeni</p>
+              <a href="mailto:beyzanur.ates@sirackoleji.com" class="teacher-email-btn">
+                <i class="fas fa-envelope"></i> E-posta Gönder
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Melike Nur Sezer -->
+        <div class="col-lg-3 col-md-4 col-sm-6">
+          <div class="teacher-card">
+            <div class="teacher-img-container">
+              <img src="image/ogretman/yanı ıcns.jpg" class="teacher-img" alt="Melike Nur Sezer">
+              <div class="teacher-overlay"></div>
+            </div>
+            <div class="teacher-contact">
+              <h5 class="teacher-name">Melike Nur Sezer</h5>
+              <p class="teacher-position">Anaokulu Öğretmeni</p>
+              <a href="mailto:melikenur.sezer@sirackoleji.com" class="teacher-email-btn">
+                <i class="fas fa-envelope"></i> E-posta Gönder
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Mustafa Kubilay Ergül -->
+        <div class="col-lg-3 col-md-4 col-sm-6">
+          <div class="teacher-card">
+            <div class="teacher-img-container">
+              <img src="image/ogretman/mustafe.jpg" class="teacher-img" alt="Mustafa Kubilay Ergül">
+              <div class="teacher-overlay"></div>
+            </div>
+            <div class="teacher-contact">
+              <h5 class="teacher-name">Mustafa Kubilay Ergül</h5>
+              <p class="teacher-position">Beden Eğitimi Öğretmeni</p>
+              <a href="mailto:mustafa@okul.com" class="teacher-email-btn">
+                <i class="fas fa-envelope"></i> E-posta Gönder
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Furkan Köksal -->
+        <div class="col-lg-3 col-md-4 col-sm-6">
+          <div class="teacher-card">
+            <div class="teacher-img-container">
+              <img src="image/ogretman/furgan.koksal.jpg" class="teacher-img" alt="Furkan Köksal">
+              <div class="teacher-overlay"></div>
+            </div>
+            <div class="teacher-contact">
+              <h5 class="teacher-name">Furkan Köksal</h5>
+              <p class="teacher-position">Sınıf Öğretmeni</p>
+              <a href="mailto:furkan.koksal@sirackoleji.com" class="teacher-email-btn">
+                <i class="fas fa-envelope"></i> E-posta Gönder
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Başak Koçak -->
+        <div class="col-lg-3 col-md-4 col-sm-6">
+          <div class="teacher-card">
+            <div class="teacher-img-container">
+              <img src="image/ogretman/basak.kokcak.jpg" class="teacher-img" alt="Başak Kökçak">
+              <div class="teacher-overlay"></div>
+            </div>
+            <div class="teacher-contact">
+              <h5 class="teacher-name">Başak Kökçak</h5>
+              <p class="teacher-position">Sınıf Öğretmeni</p>
+              <a href="mailto:basak.kokcak@sirackoleji.com" class="teacher-email-btn">
+                <i class="fas fa-envelope"></i> E-posta Gönder
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Hatice Şüheda Bayram -->
+        <div class="col-lg-3 col-md-4 col-sm-6">
+          <div class="teacher-card">
+            <div class="teacher-img-container">
+              <img src="image/ogretman/yanı ıcns.jpg" class="teacher-img" alt="Hatice Şuheda Bayram">
+              <div class="teacher-overlay"></div>
+            </div>
+            <div class="teacher-contact">
+              <h5 class="teacher-name">Hatice Şuheda Bayram</h5>
+              <p class="teacher-position">Psikolojik Danışman</p>
+              <a href="mailto:hatice.bayram@sirackoleji.com" class="teacher-email-btn">
+                <i class="fas fa-envelope"></i> E-posta Gönder
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Figen Aksoy -->
+        <div class="col-lg-3 col-md-4 col-sm-6">
+          <div class="teacher-card">
+            <div class="teacher-img-container">
+              <img src="image/ogretman/figan.aksoy.jpg" class="teacher-img" alt="Figen Aksoy">
+              <div class="teacher-overlay"></div>
+            </div>
+            <div class="teacher-contact">
+              <h5 class="teacher-name">Figen Aksoy</h5>
+              <p class="teacher-position">Okul Öncesi Öğretmeni</p>
+              <a href="mailto:figen.aksoy@sirackoleji.com" class="teacher-email-btn">
+                <i class="fas fa-envelope"></i> E-posta Gönder
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Zeynep Topçu -->
+        <div class="col-lg-3 col-md-4 col-sm-6">
+          <div class="teacher-card">
+            <div class="teacher-img-container">
+              <img src="image/ogretman/zeynap.jpg" class="teacher-img" alt="Zeynep Topçu">
+              <div class="teacher-overlay"></div>
+            </div>
+            <div class="teacher-contact">
+              <h5 class="teacher-name">Hayrünnisa Arpar</h5>
+              <p class="teacher-position">Sınıf Öğretmeni</p>
+              <a href="mailto:hyrnnsaokul@gmail.com" class="teacher-email-btn">
+                <i class="fas fa-envelope"></i> E-posta Gönder
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Şeyma Işık -->
+        <div class="col-lg-3 col-md-4 col-sm-6">
+          <div class="teacher-card">
+            <div class="teacher-img-container">
+              <img src="image/ogretman/seyma.isik.jpg" class="teacher-img" alt="Şeyma Işık">
+              <div class="teacher-overlay"></div>
+            </div>
+            <div class="teacher-contact">
+              <h5 class="teacher-name">Şeyma Işık</h5>
+              <p class="teacher-position">Okul Öncesi Öğretmeni</p>
+              <a href="mailto:seyma.isik@sirackoleji.com" class="teacher-email-btn">
+                <i class="fas fa-envelope"></i> E-posta Gönder
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="container">
+      <div class="row">
+        <!-- LOGO VE AÇIKLAMA -->
+        <div class="col-lg-4 mb-4 mb-lg-0">
+          <div class="footer-logo">
+            <i class="fas fa-graduation-cap"></i>
             <div>
-              <small style="color: #adb5bd; font-size: 0.85rem; display: block;">Güvenli İletişim</small>
-              <small style="color: #0af1d3; font-size: 0.75rem;">KVKK Uyumludur</small>
+              <h5>Özel On Sekiz Mart <span>Siraç İlkokulu</span></h5>
+            </div>
+          </div>
+          <p>2007 yılında kurulan 18 Mart Sirac Koleji, güçlü değerlerle donanmış nesiller yetiştirir. Öğrencilerimizin
+            akademik, sosyal ve manevi gelişimini ön planda tutuyoruz.</p>
+
+          <!-- ÖZELLİKLER -->
+          <div class="footer-features">
+            <div class="feature-item">
+              <div class="feature-icon">
+                <i class="fas fa-award"></i>
+              </div>
+              <div class="feature-text">Kaliteli Eğitim</div>
+            </div>
+            <div class="feature-item">
+              <div class="feature-icon">
+                <i class="fas fa-heart"></i>
+              </div>
+              <div class="feature-text">Sevgi Dolu Ortam</div>
+            </div>
+            <div class="feature-item">
+              <div class="feature-icon">
+                <i class="fas fa-users"></i>
+              </div>
+              <div class="feature-text">Deneyimli Kadro</div>
+            </div>
+          </div>
+
+          <!-- SOSYAL MEDYA -->
+          <div class="footer-social">
+            <a href="https://www.facebook.com/18MartSiracKoleji/" class="social-icon" target="_blank" title="Facebook">
+              <i class="fab fa-facebook-f"></i>
+            </a>
+            <a href="https://www.instagram.com/18martsirackoleji/" class="social-icon" target="_blank"
+              title="Instagram">
+              <i class="fab fa-instagram"></i>
+            </a>
+            <a href="#" class="social-icon" title="Twitter">
+              <i class="fab fa-twitter"></i>
+            </a>
+            <a href="#" class="social-icon" title="YouTube">
+              <i class="fab fa-youtube"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- İLETİŞİM -->
+        <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+          <h5 class="footer-title">İletişim Bilgileri</h5>
+          <div class="footer-contact">
+            <p><i class="fas fa-map-marker-alt"></i> Kalabaklı/Kepez, Çanakkale</p>
+            <p><i class="fas fa-phone"></i> +90 543 717 8217</p>
+            <p><i class="fas fa-envelope"></i> bilgi@18martsirackoleji.com</p>
+            <p><i class="fas fa-clock"></i> Pazartesi - Cuma: 08:00 - 18:00</p>
+          </div>
+
+          <!-- ÇALIŞMA SAATLERİ -->
+          <div class="working-hours">
+            <h6>Çalışma Saatleri</h6>
+            <p>Pazartesi - Cuma <span>08:00 - 18:00</span></p>
+            <p>Cumartesi <span>09:00 - 14:00</span></p>
+            <p>Pazar <span>Kapalı</span></p>
+          </div>
+        </div>
+
+        <!-- HIZLI LİNKLER -->
+        <div class="col-lg-2 col-md-6 mb-4 mb-md-0">
+          <h5 class="footer-title">Hızlı Linkler</h5>
+          <ul class="footer-links list-unstyled">
+            <li><a href="index.html">Anasayfa</a></li>
+            <li><a href="anlayis.html">Eğitim Anlayışımız</a></li>
+            <li><a href="galeri.html">Galeri</a></li>
+            <li><a href="ogretmenler.html">Öğretmen Kadromuz</a></li>
+            <li><a href="rehberlik.html">Rehberlik</a></li>
+            <li><a href="iletisim.html">İletişim</a></li>
+          </ul>
+        </div>
+
+        <!-- E-BÜLTEN -->
+        <div class="col-lg-3 col-md-6">
+          <h5 class="footer-title">E-Bülten Aboneliği</h5>
+          <p>Etkinlik ve duyurularımızdan haberdar olmak için e-bültenimize abone olun.</p>
+          <form id="newsletter-form">
+            <div class="input-group mb-3">
+              <input type="email" class="form-control" placeholder="E-posta adresiniz" required
+                aria-label="E-posta adresi">
+              <button class="btn btn-warning" type="submit">
+                <i class="fas fa-paper-plane me-1"></i>Abone Ol
+              </button>
+            </div>
+          </form>
+
+          <!-- GÜVENLİK BADGES -->
+          <div class="security-badge mt-4">
+            <div
+              style="display: flex; align-items: center; gap: 10px; padding: 10px; background: rgba(42, 157, 143, 0.1); border-radius: 8px; border-left: 4px solid #2a9d8f;">
+              <i class="fas fa-shield-alt" style="color: #0af1d3; font-size: 1.5rem;"></i>
+              <div>
+                <small style="color: #adb5bd; font-size: 0.85rem; display: block;">Güvenli İletişim</small>
+                <small style="color: #0af1d3; font-size: 0.75rem;">KVKK Uyumludur</small>
+              </div>
             </div>
           </div>
         </div>
       </div>
-    </div>
-    
-    <!-- COPYRIGHT -->
-    <div class="copyright">
-      <small>&copy; 2007-2025 18 Mart Sirac Koleji. Tüm Hakları Saklıdır. | 
-        <a href="#" style="color: #0af1d3; text-decoration: none;">Gizlilik Politikası</a> | 
-        <a href="#" style="color: #0af1d3; text-decoration: none;">Çerez Politikası</a>
-      </small>
-    </div>
-  </div>
-</footer>
 
-<script src="../js/script.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
-<script>
-  // Scroll animasyonları
-  document.addEventListener('DOMContentLoaded', function() {
-    const animatedElements = document.querySelectorAll('.animate-on-scroll');
-    
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('animated');
+      <!-- COPYRIGHT -->
+      <div class="copyright">
+        <small>&copy; 2007-2025 18 Mart Sirac Koleji. Tüm Hakları Saklıdır. |
+          <a href="#" style="color: #0af1d3; text-decoration: none;">Gizlilik Politikası</a> |
+          <a href="#" style="color: #0af1d3; text-decoration: none;">Çerez Politikası</a>
+        </small>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/script.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+    // Scroll animasyonları
+    document.addEventListener('DOMContentLoaded', function () {
+      const animatedElements = document.querySelectorAll('.animate-on-scroll');
+
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('animated');
+          }
+        });
+      }, {
+        threshold: 0.1,
+        rootMargin: '0px 0px -50px 0px'
+      });
+
+      animatedElements.forEach(element => {
+        observer.observe(element);
+      });
+
+      // Smooth scrolling for anchor links
+      document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+          e.preventDefault();
+          const targetId = this.getAttribute('href');
+          if (targetId !== '#') {
+            document.querySelector(targetId).scrollIntoView({
+              behavior: 'smooth'
+            });
+          }
+        });
+      });
+
+      // Back to top button
+      const backToTopButton = document.createElement('button');
+      backToTopButton.innerHTML = '<i class="fas fa-chevron-up"></i>';
+      backToTopButton.classList.add('back-to-top');
+      document.body.appendChild(backToTopButton);
+
+      backToTopButton.addEventListener('click', function () {
+        window.scrollTo({
+          top: 0,
+          behavior: 'smooth'
+        });
+      });
+
+      window.addEventListener('scroll', function () {
+        if (window.scrollY > 300) {
+          backToTopButton.style.display = 'block';
+        } else {
+          backToTopButton.style.display = 'none';
         }
       });
-    }, {
-      threshold: 0.1,
-      rootMargin: '0px 0px -50px 0px'
-    });
-    
-    animatedElements.forEach(element => {
-      observer.observe(element);
-    });
-    
-    // Smooth scrolling for anchor links
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-      anchor.addEventListener('click', function(e) {
-        e.preventDefault();
-        const targetId = this.getAttribute('href');
-        if (targetId !== '#') {
-          document.querySelector(targetId).scrollIntoView({
-            behavior: 'smooth'
-          });
-        }
-      });
-    });
-    
-    // Back to top button
-    const backToTopButton = document.createElement('button');
-    backToTopButton.innerHTML = '<i class="fas fa-chevron-up"></i>';
-    backToTopButton.classList.add('back-to-top');
-    document.body.appendChild(backToTopButton);
-    
-    backToTopButton.addEventListener('click', function() {
-      window.scrollTo({
-        top: 0,
-        behavior: 'smooth'
-      });
-    });
-    
-    window.addEventListener('scroll', function() {
-      if (window.scrollY > 300) {
-        backToTopButton.style.display = 'block';
-      } else {
-        backToTopButton.style.display = 'none';
-      }
-    });
-    
-    // Back to top button styles
-    const style = document.createElement('style');
-    style.textContent = `
+
+      // Back to top button styles
+      const style = document.createElement('style');
+      style.textContent = `
       .back-to-top {
         position: fixed;
         bottom: 30px;
@@ -1061,8 +1125,9 @@
         box-shadow: 0 8px 20px rgba(26, 86, 219, 0.4);
       }
     `;
-    document.head.appendChild(style);
-  });
-</script>
+      document.head.appendChild(style);
+    });
+  </script>
 </body>
+
 </html>
