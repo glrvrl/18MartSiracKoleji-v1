@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ön Kayıt Başvuru - Özel On Sekiz Mart Siraç İlkokulu</title>
+    <link rel="icon" type="image/png" href="image/favicon.ico">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css">
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        /* HERO SECTION */
+        .onkayit-hero {
+            position: relative;
+            height: 50vh;
+            min-height: 450px;
+            background: linear-gradient(rgba(26, 82, 118, 0.85), rgba(44, 62, 80, 0.8)),
+                url('image/anasayfa1.JPG') center/cover fixed;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: white;
+            margin-bottom: 60px;
+            border-radius: 0 0 50px 50px;
+            overflow: hidden;
+        }
+
+        .onkayit-hero::before {
+            content: '';
+            position: absolute;
+            bottom: -50px;
+            left: 0;
+            width: 100%;
+            height: 100px;
+            background: #f8f9fa;
+            border-radius: 50% 50% 0 0;
+            transform: scaleX(1.5);
+            z-index: 1;
+        }
+
+        .hero-content {
+            z-index: 2;
+            animation: fadeInUp 1s ease-out;
+        }
+
+        .onkayit-hero h1 {
+            font-size: 3.5rem;
+            font-weight: 700;
+            margin-bottom: 15px;
+            text-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+        }
+
+        /* FORM CARDS */
+        .form-container {
+            background: white;
+            border-radius: 20px;
+            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            margin-bottom: 80px;
+            border: 1px solid rgba(0, 0, 0, 0.05);
+        }
+
+        .form-header {
+            background: #1a5276;
+            padding: 40px;
+            color: white;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .form-header::after {
+            content: '';
+            position: absolute;
+            bottom: -20px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 100px;
+            height: 6px;
+            background: #e68d08;
+            border-radius: 3px;
+        }
+
+        .form-body {
+            padding: 60px;
+        }
+
+        .section-title {
+            color: #1a5276;
+            font-weight: 700;
+            margin-bottom: 30px;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            border-bottom: 2px solid #f1f1f1;
+            padding-bottom: 10px;
+        }
+
+        .section-title i {
+            color: #e68d08;
+        }
+
+        .form-group {
+            margin-bottom: 25px;
+        }
+
+        .form-group label {
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: #555;
+            margin-bottom: 10px;
+            display: block;
+            font-weight: 600;
+        }
+
+        .form-group input,
+        .form-group select,
+        .form-group textarea {
+            background: #f8f9fa;
+            border: 1px solid #eee;
+            padding: 15px 20px;
+            border-radius: 12px;
+            transition: all 0.3s ease;
+            width: 100%;
+            font-size: 1rem;
+        }
+
+        .form-group input:focus,
+        .form-group select:focus,
+        .form-group textarea:focus {
+            background: white;
+            border-color: #e68d08;
+            box-shadow: 0 0 0 4px rgba(230, 141, 8, 0.1);
+            outline: none;
+        }
+
+        .btn-submit {
+            background: #e68d08;
+            color: white;
+            padding: 18px 45px;
+            border-radius: 50px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            font-size: 1.1rem;
+            border: none;
+            width: 100%;
+            font-weight: 700;
+            margin-top: 30px;
+            box-shadow: 0 10px 25px rgba(230, 141, 8, 0.3);
+            transition: all 0.3s ease;
+        }
+
+        .btn-submit:hover {
+            background: #d47d06;
+            transform: translateY(-3px);
+            box-shadow: 0 15px 35px rgba(230, 141, 8, 0.4);
+        }
+
+        /* BACKGROUND DECORATION */
+        body {
+            background-color: #f8f9fa;
+        }
+
+        .bg-shape {
+            position: fixed;
+            z-index: -1;
+            opacity: 0.03;
+        }
+
+        #shape1 {
+            top: 10%;
+            left: 5%;
+            width: 400px;
+        }
+
+        #shape2 {
+            bottom: 10%;
+            right: 5%;
+            width: 300px;
+        }
+
+        @media (max-width: 768px) {
+            .form-body {
+                padding: 30px 20px;
+            }
+
+            .onkayit-hero h1 {
+                font-size: 2.5rem;
+            }
+        }
+
+        /* MODAL STYLE FOR SUCCESS */
+        .success-overlay {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.8);
+            z-index: 9999;
+            backdrop-filter: blur(10px);
+            justify-content: center;
+            align-items: center;
+            color: white;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- NAVBAR -->
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+            <div class="container">
+                <a class="navbar-brand d-flex align-items-center gap-3" href="index.html">
+                    <img src="image/ilokullogo.jpeg" alt="Siraç Koleji" class="navbar-logo" style="height: 60px;">
+                    <span class="navbar-title">Özel OnSekiz Mart Siraç Koleji</span>
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item"><a class="nav-link" href="index.html">Anasayfa</a></li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">Kurumsal</a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="anlayis.html">Eğitim Anlayışımız</a></li>
+                                <li><a class="dropdown-item" href="misyon.html">Misyon & Vizyon</a></li>
+                                <li><a class="dropdown-item" href="tarihce.html">Tarihçe</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item"><a class="nav-link" href="ogretmenler.html">Kadromuz</a></li>
+                        <li class="nav-item"><a class="nav-link" href="iletisim.html">İletişim</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- HERO -->
+    <section class="onkayit-hero">
+        <div class="hero-content container" data-aos="fade-up">
+            <h1>2026-2027 Ön Kayıt Formu</h1>
+            <p class="lead">Geleceğin parlayan yıldızları arasında yerinizi alın.</p>
+            <div style="width: 80px; height: 4px; background: #e68d08; margin: 20px auto; border-radius: 2px;"></div>
+        </div>
+    </section>
+
+    <!-- FORM SECTION -->
+    <div class="container">
+        <div class="form-container" data-aos="fade-up" data-aos-delay="100">
+            <div class="form-header">
+                <h2>Öğrenci Ön Kayıt Başvuru Formu</h2>
+                <p>Lütfen bilgileri eksiksiz ve doğru bir şekilde doldurunuz.</p>
+            </div>
+
+            <form id="onKayitForm" class="form-body">
+                <div class="row">
+                    <!-- ÖĞRENCİ BİLGİLERİ -->
+                    <div class="col-md-6 mb-5">
+                        <h3 class="section-title"><i class="fas fa-user-graduate"></i> Öğrenci Bilgileri</h3>
+
+                        <div class="form-group">
+                            <label>Öğrenci Ad Soyad</label>
+                            <input type="text" name="student_name" placeholder="Öğrencinin Adı ve Soyadı" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label>T.C. Kimlik No (Opsiyonel)</label>
+                            <input type="text" name="student_tc" placeholder="T.C. Kimlik Numarası" maxlength="11">
+                        </div>
+
+                        <div class="form-group">
+                            <label>Doğum Tarihi</label>
+                            <input type="date" name="student_birth" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label>Başvurulan Sınıf/Kademesi</label>
+                            <select name="student_grade" required>
+                                <option value="" disabled selected>Sınıf Seçiniz</option>
+                                <option value="okul_oncesi">Okul Öncesi</option>
+                                <option value="1">1. Sınıf</option>
+                                <option value="2">2. Sınıf</option>
+                                <option value="3">3. Sınıf</option>
+                                <option value="4">4. Sınıf</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <!-- VELİ BİLGİLERİ -->
+                    <div class="col-md-6 mb-5">
+                        <h3 class="section-title"><i class="fas fa-user-friends"></i> Veli Bilgileri</h3>
+
+                        <div class="form-group">
+                            <label>Veli Ad Soyad</label>
+                            <input type="text" name="parent_name" placeholder="Velinin Adı ve Soyadı" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label>Telefon Numarası</label>
+                            <input type="tel" name="parent_phone" placeholder="0 (5xx) xxx xx xx" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label>E-posta Adresi</label>
+                            <input type="email" name="parent_email" placeholder="ornek@mail.com" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label>Yakınlık Derecesi</label>
+                            <select name="parent_relation" required>
+                                <option value="anne">Anne</option>
+                                <option value="baba">Baba</option>
+                                <option value="diger">Diğer</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="col-12">
+                        <h3 class="section-title"><i class="fas fa-info-circle"></i> Ek Bilgiler</h3>
+                        <div class="form-group">
+                            <label>Adres Bilgisi</label>
+                            <textarea name="address" rows="3" placeholder="Açık adresiniz..."></textarea>
+                        </div>
+
+                        <div class="form-check mb-4">
+                            <input class="form-check-input" type="checkbox" id="kvkkCheck" required>
+                            <label class="form-check-label" for="kvkkCheck"
+                                style="text-transform: none; color: #666; font-size: 0.85rem;">
+                                KVKK kapsamında kişisel verilerimin işlenmesini ve tarafımla iletişime geçilmesini kabul
+                                ediyorum.
+                            </label>
+                        </div>
+
+                        <button type="submit" class="btn-submit">BAŞVURUYU TAMAMLA</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <div class="success-overlay" id="successOverlay">
+        <div data-aos="zoom-in">
+            <i class="fas fa-check-circle" style="font-size: 5rem; color: #2ecc71; margin-bottom: 20px;"></i>
+            <h2>Başvurunuz Alındı!</h2>
+            <p class="lead">Ön kayıt başvurunuz başarıyla sistemimize kaydedilmiştir.<br>En kısa sürede sizinle
+                iletişime geçeceğiz.</p>
+            <button class="btn btn-light mt-4 px-5 py-2" onclick="window.location.href='index.html'">ANASAYFAYA
+                DÖN</button>
+        </div>
+    </div>
+
+    <!-- FOOTER SIRAÇ KOLEJİ -->
+    <footer class="bg-dark text-white py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 mb-4">
+                    <img src="image/ilokullogo.jpeg" alt="Siraç Koleji Logo"
+                        style="height: 80px; background: white; padding: 10px; border-radius: 10px; margin-bottom: 20px;">
+                    <h5>Özel OnSekiz Mart Siraç Koleji</h5>
+                    <p class="text-white-50">Çanakkale'nin öncü eğitim kurumu. Modern eğitim anlayışı ve manevi
+                        değerlerle geleceğe emin adımlarla.</p>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <h5 class="mb-4">Hızlı Linkler</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="index.html" class="text-white-50 text-decoration-none hover-white">Anasayfa</a>
+                        </li>
+                        <li><a href="anlayis.html" class="text-white-50 text-decoration-none hover-white">Eğitim
+                                Anlayışımız</a></li>
+                        <li><a href="iletisim.html" class="text-white-50 text-decoration-none hover-white">İletişim</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <h5 class="mb-4">İletişim</h5>
+                    <p class="text-white-50"><i class="fas fa-map-marker-alt me-2"></i> Kepez, Çanakkale</p>
+                    <p class="text-white-50"><i class="fas fa-phone me-2"></i> +90 543 717 8217</p>
+                    <p class="text-white-50"><i class="fas fa-envelope me-2"></i> bilgi@18martsirackoleji.com</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 1000,
+            once: true
+        });
+
+        document.getElementById('onKayitForm').addEventListener('submit', function (e) {
+            e.preventDefault();
+            document.getElementById('successOverlay').style.display = 'flex';
+            // Gerçek API entegrasyonu buraya gelecek
+        });
+    </script>
+</body>
+
+</html>

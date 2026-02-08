@@ -7,14 +7,16 @@
   <title>Personel İş Başvuru Formu</title>
   <link rel="icon" type="image/png" href="image/favicon.ico" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css">
   <style>
     :root {
-      --primary: #0af1d3;
+      --primary: #1a5276;
       --secondary: #e68d08;
       --light: #f8f9fa;
       --dark: #212529;
-      --accent: #2a9d8f;
-      --accent2: #f9a826;
+      --accent: #21618c;
+      --accent2: #d47d06;
       --border: rgba(0, 0, 0, 0.12);
     }
 
@@ -40,13 +42,15 @@
 
     /* HERO BÖLÜMÜ */
     .apply-hero {
-      background: linear-gradient(135deg, var(--accent), var(--primary));
-      padding: 160px 0 60px;
+      background: linear-gradient(rgba(26, 82, 118, 0.85), rgba(44, 62, 80, 0.8)),
+        url('image/anasayfa1.JPG') center/cover fixed;
+      padding: 180px 0 100px;
       text-align: center;
       color: white;
       box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
       position: relative;
       overflow: hidden;
+      border-radius: 0 0 50px 50px;
     }
 
     .apply-hero::before {
@@ -703,88 +707,6 @@
 
 <body>
 
-  <!-- HEADER / NAVBAR -->
-  <header>
-    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
-      <div class="container">
-
-        <a class="navbar-brand d-flex align-items-center gap-3" href="index.html">
-          <img src="image/ilokullogo.jpeg" alt="18 Mart Sirac Koleji Logo" class="navbar-logo" />
-          <span class="navbar-title">Özel OnSekiz Mart Siraç Koleji İlkokulu</span>
-        </a>
-
-
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#siracNavbar">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-
-        <div class="collapse navbar-collapse" id="siracNavbar">
-          <ul class="navbar-nav ms-auto">
-
-            <li class="nav-item">
-              <a class="nav-link" href="index.html">Anasayfa</a>
-            </li>
-
-            <!-- Kurumsal -->
-            <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">Kurumsal</a>
-              <ul class="dropdown-menu">
-                <li><a class="dropdown-item" href="anlayis.html">Eğitim Anlayışımız</a></li>
-                <li><a class="dropdown-item" href="misyon.html">Misyon & Vizyon</a></li>
-                <li><a class="dropdown-item" href="tarihce.html">Tarihçe</a></li>
-              </ul>
-            </li>
-
-            <!-- Eğitim Programları -->
-            <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">Eğitim
-                Programları</a>
-              <ul class="dropdown-menu">
-                <li><a class="dropdown-item" href="manevi.html">Manevi Eğitim</a></li>
-                <li><a class="dropdown-item" href="kulubuler.html">Kulüpler</a></li>
-                <li><a class="dropdown-item" href="olcum.html">Ölçme ve Değerlendirme</a></li>
-                <li><a class="dropdown-item" href="yabancidil.html">Yabancı Dil</a></li>
-                <li><a class="dropdown-item" href="rehberlik.html">Rehberlik</a></li>
-              </ul>
-            </li>
-
-            <!-- Atölyeler -->
-            <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">Atölyeler</a>
-              <ul class="dropdown-menu">
-                <li><a class="dropdown-item" href="robotik.html">Robotik Kodlama</a></li>
-                <li><a class="dropdown-item" href="gorsel.html">Görsel Sanatlar ve Ahşap</a></li>
-                <li><a class="dropdown-item" href="tasavvuf.html">Tasavvuf Müziği</a></li>
-                <li><a class="dropdown-item" href="kozmik.html">Montessori Kozmik</a></li>
-              </ul>
-            </li>
-
-            <!-- Etkinlikler -->
-            <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">Etkinlikler</a>
-              <ul class="dropdown-menu">
-                <li><a class="dropdown-item" href="oyun.html">Oyun ve Fiziki Etkinlikler</a></li>
-                <li><a class="dropdown-item" href="kulubuler.html">Kulüpler ve P4C</a></li>
-                <li><a class="dropdown-item" href="sosyalyardim.html">Sosyal Yardım Projeleri</a></li>
-                <li><a class="dropdown-item" href="Helal_Sagalik.html">Helal ve Sağlıklı</a></li>
-                <li><a class="dropdown-item" href="galeri.html">Galeri</a></li>
-              </ul>
-            </li>
-
-            <li class="nav-item">
-              <a class="nav-link" href="ogretmenler.html">Kadromuz</a>
-            </li>
-
-            <li class="nav-item">
-              <a class="nav-link" href="iletisim.html">İletişim</a>
-            </li>
-
-          </ul>
-        </div>
-      </div>
-    </nav>
-  </header>
-
   <!-- Form -->
   <main class="apply-page">
     <div class="container">
@@ -837,7 +759,7 @@
 
               <div class="field">
                 <label for="city">İl / İlçe <span class="required">*</span></label>
-                <input id="city" name="city" type="text" placeholder="Örn: cannakle /Merkez" required>
+                <input id="city" name="city" type="text" placeholder="Örn: Çanakkale / Merkez" required>
               </div>
 
               <div class="field">
@@ -1230,7 +1152,12 @@
     </div>
   </div>
 
+  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
   <script>
+    AOS.init({
+      duration: 1000,
+      once: true
+    });
     // DOM yüklendiğinde
     document.addEventListener('DOMContentLoaded', function () {
       // Değişkenler
