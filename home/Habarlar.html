@@ -1063,22 +1063,66 @@
     });
   </script>
   <script>
-    document.querySelectorAll('.yt-video').forEach(box => {
-      box.addEventListener('click', function () {
+    document.addEventListener('DOMContentLoaded', function () {
+      const videos = document.querySelectorAll('video');
 
-        const mp4 = this.dataset.video;
+      // Diğer videoları durdurma fonksiyonu
+      function pauseOtherVideos(currentVideo) {
+        videos.forEach(video => {
+          if (video !== currentVideo && !video.paused) {
+            video.pause();
+            // Video kartındaki aktif durumunu temizle
+            const container = video.closest('.video-card');
+            if (container) container.classList.remove('is-playing');
+          }
+        });
+      }
 
-        const video = document.createElement("video");
-        video.src = mp4;
-        video.controls = true;
-        video.autoplay = true;
-        video.style.width = "100%";
-        video.style.height = "100%";
-        video.style.objectFit = "cover";
+      videos.forEach(video => {
+        const container = video.closest('.video-card');
 
-        this.innerHTML = "";
-        this.appendChild(video);
+        // Video oynatıldığında
+        video.addEventListener('play', function () {
+          if (container) container.classList.add('is-playing');
+          pauseOtherVideos(this); // Diğer videoları durdur
+        });
 
+        // Video durdurulduğunda
+        video.addEventListener('pause', function () {
+          if (container) container.classList.remove('is-playing');
+        });
+
+        // Video bittiğinde
+        video.addEventListener('ended', function () {
+          if (container) container.classList.remove('is-playing');
+          // Videoyu başa sarıp posteri göster (isteğe bağlı)
+          this.currentTime = 0;
+          this.load();
+        });
+
+        // Hata durumunda
+        video.addEventListener('error', function () {
+          console.error('Video yüklenemedi:', this.src);
+          if (container) {
+            container.style.border = '2px solid red';
+            // Daha önce eklenmiş hata mesajı varsa sil
+            const existingMsg = container.querySelector('.error-msg');
+            if (existingMsg) existingMsg.remove();
+
+            const errorMsg = document.createElement('div');
+            errorMsg.classList.add('error-msg');
+            errorMsg.textContent = 'Video yüklenemedi';
+            errorMsg.style.color = 'red';
+            errorMsg.style.textAlign = 'center';
+            errorMsg.style.padding = '10px';
+            errorMsg.style.zIndex = '5';
+            errorMsg.style.position = 'absolute';
+            errorMsg.style.bottom = '0';
+            errorMsg.style.width = '100%';
+            errorMsg.style.backgroundColor = 'rgba(255,255,255,0.8)';
+            container.appendChild(errorMsg);
+          }
+        });
       });
     });
   </script>

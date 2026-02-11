@@ -54,14 +54,16 @@ body {
     padding: 6rem 1rem;
     overflow: hidden;
 }
+
 .hero {
-    background: linear-gradient(rgba(26, 35, 126, 0.85), rgba(57, 73, 171, 0.9)), 
-                url('../image/1sirac.jpg') center/cover no-repeat;
+    background: linear-gradient(rgba(26, 35, 126, 0.85), rgba(57, 73, 171, 0.9)),
+        url('../image/1sirac.jpg') center/cover no-repeat;
 }
 
 .hero {
     background: url('../image/1sirac.jpg') center/cover no-repeat;
 }
+
 .hero {
     position: relative;
     background: url('../image/1sirac.jpg') center/cover no-repeat;
@@ -83,11 +85,13 @@ body {
     z-index: 2;
     /* diğer stiller aynı */
 }
+
 @keyframes fadeIn {
     from {
         opacity: 0;
         transform: translateY(30px);
     }
+
     to {
         opacity: 1;
         transform: translateY(0);
@@ -114,6 +118,7 @@ body {
         opacity: 0;
         transform: translateY(-30px);
     }
+
     to {
         opacity: 1;
         transform: translateY(0);
@@ -138,6 +143,7 @@ body {
         opacity: 0;
         transform: scale(0.9);
     }
+
     to {
         opacity: 1;
         transform: scale(1);
@@ -175,6 +181,7 @@ body {
         opacity: 0;
         transform: translateY(30px);
     }
+
     to {
         opacity: 1;
         transform: translateY(0);
@@ -611,10 +618,17 @@ body {
     z-index: 1;
     opacity: 0;
     transition: opacity 0.3s ease;
+    pointer-events: none;
+    /* Tıklamaların videoya ulaşmasını sağlar */
 }
 
 .video-card:hover::before {
     opacity: 1;
+}
+
+/* Video oynarken overlay'i gizle */
+.video-card.is-playing::before {
+    opacity: 0 !important;
 }
 
 .yt-video {
@@ -635,6 +649,20 @@ body {
     transform: scale(1.05);
 }
 
+@keyframes pulse {
+    0% {
+        box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.7);
+    }
+
+    70% {
+        box-shadow: 0 0 0 15px rgba(255, 255, 255, 0);
+    }
+
+    100% {
+        box-shadow: 0 0 0 0 rgba(255, 255, 255, 0);
+    }
+}
+
 .yt-video::after {
     content: '▶';
     position: absolute;
@@ -643,7 +671,7 @@ body {
     transform: translate(-50%, -50%);
     width: 60px;
     height: 60px;
-    background: rgba(255, 255, 255, 0.9);
+    background: rgba(255, 255, 255, 0.95);
     border-radius: 50%;
     display: flex;
     align-items: center;
@@ -653,10 +681,33 @@ body {
     z-index: 2;
     opacity: 0;
     transition: var(--transition);
+    pointer-events: none;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
 }
 
 .video-card:hover .yt-video::after {
     opacity: 1;
+    animation: pulse 1.5s infinite;
+}
+
+.video-card.is-playing .yt-video::after {
+    opacity: 0 !important;
+    display: none;
+    animation: none;
+}
+
+/* Video oynarken kartın görünümü */
+.video-card.is-playing {
+    border: 2px solid var(--primary);
+    transform: scale(1.02);
+    box-shadow: 0 15px 30px rgba(42, 157, 143, 0.2);
+    z-index: 10;
+}
+
+.video-card.is-playing:hover {
+    transform: scale(1.02);
+    /* Oynarken hover efektini sabit tut */
+    box-shadow: 0 15px 30px rgba(42, 157, 143, 0.2);
 }
 
 /* FOTOĞRAF GALERİ */
@@ -699,11 +750,9 @@ body {
     left: 0;
     width: 100%;
     height: 100%;
-    background: linear-gradient(
-        to bottom,
-        rgba(0, 0, 0, 0.1) 0%,
-        rgba(0, 0, 0, 0.7) 100%
-    );
+    background: linear-gradient(to bottom,
+            rgba(0, 0, 0, 0.1) 0%,
+            rgba(0, 0, 0, 0.7) 100%);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -825,11 +874,11 @@ body {
     .hero-title {
         font-size: 3.5rem;
     }
-    
+
     .calendar-grid {
         grid-template-columns: 1fr;
     }
-    
+
     .news-grid {
         grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
     }
@@ -840,40 +889,40 @@ body {
         min-height: 70vh;
         padding: 4rem 1rem;
     }
-    
+
     .hero-title {
         font-size: 2.8rem;
     }
-    
+
     .hero-description {
         font-size: 1.1rem;
     }
-    
+
     .section {
         padding: 4rem 0;
     }
-    
+
     .section-title {
         font-size: 2.2rem;
     }
-    
+
     .news-grid {
         grid-template-columns: 1fr;
         gap: 2rem;
     }
-    
+
     .video-grid {
         grid-template-columns: 1fr;
     }
-    
+
     .photo-grid {
         grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
     }
-    
+
     .hero-stats {
         gap: 2rem;
     }
-    
+
     .stat-number {
         font-size: 2rem;
     }
@@ -883,39 +932,39 @@ body {
     .hero-title {
         font-size: 2.2rem;
     }
-    
+
     .hero-badge {
         font-size: 0.9rem;
         padding: 10px 20px;
     }
-    
+
     .section-title {
         font-size: 1.8rem;
     }
-    
+
     .news-content {
         padding: 1.5rem;
     }
-    
+
     .news-meta {
         flex-direction: column;
         gap: 8px;
     }
-    
+
     .calendar-card {
         padding: 1.5rem;
     }
-    
+
     .calendar-grid {
         gap: 1.5rem;
     }
-    
+
     .event-item {
         flex-direction: column;
         text-align: center;
         gap: 1rem;
     }
-    
+
     .photo-card {
         height: 250px;
     }
