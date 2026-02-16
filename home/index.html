@@ -494,43 +494,11 @@
       </div>
     </div>
   </footer>
-  <script>
-    document.querySelectorAll(".ann-title").forEach(btn => {
-      btn.addEventListener("click", () => {
-        const item = btn.closest(".announcement-item");
-        item.classList.toggle("active");
-      });
-    });
-  </script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="js/main.js"></script>
+
   <script>
     document.addEventListener("DOMContentLoaded", function () {
-      new bootstrap.Carousel("#heroCarousel", {
-        interval: 2000,
-        ride: "carousel",
-        pause: false,
-        wrap: true,
-        touch: true
-      });
-    });
-  </script>
-
-</body>
-<!-- IMAGE POPUP -->
-<div class="image-popup-overlay" id="imagePopup" style="display:none;">
-  <div class="image-popup-box">
-    <button class="image-popup-close" onclick="closeImagePopup()">×</button>
-    <img src="image/habarlar/1ansayfa.jpeg" alt="Duyuru Görseli">
-  </div>
-</div>
-
-<script>
-  document.addEventListener("DOMContentLoaded", function () {
-    // Sadece index sayfasında ve belirli periyotlarla popup göster
-    const currentPage = window.location.pathname;
-    const isIndex = currentPage.endsWith("index.html") || currentPage === "/" || currentPage.includes("index");
-
-    if (isIndex) {
       if (!sessionStorage.getItem("popupShown")) {
         const popup = document.getElementById("imagePopup");
         if (popup) {
@@ -541,11 +509,11 @@
     }
   });
 
-  function closeImagePopup() {
-    const popup = document.getElementById("imagePopup");
-    if (popup) popup.style.display = "none";
-  }
-</script>
+    function closeImagePopup() {
+      const popup = document.getElementById("imagePopup");
+      if (popup) popup.style.display = "none";
+    }
+  </script>
 
 
 
