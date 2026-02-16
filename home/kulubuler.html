@@ -4,23 +4,27 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Kulübüler </title>
+  <title>Öğrenci Kulüpleri</title>
   <link rel="icon" type="image/png" href="image/favicon.ico" />
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <!-- Lightbox CSS for Gallery -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/css/lightbox.min.css" rel="stylesheet" />
   <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/kulup.css">
 </head>
 
 <body>
 
   <!-- HEADER / NAVBAR -->
   <header>
-    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+    <nav class="navbar navbar-expand-lg navbar-light bg-white fixed-top shadow-sm">
       <div class="container">
 
         <a class="navbar-brand d-flex align-items-center gap-3" href="index.html">
-          <img src="image/ilokullogo.jpeg" alt="18 Mart Sirac Koleji Logo" class="navbar-logo" />
-          <span class="navbar-title">Özel OnSekiz Mart Siraç Koleji İlkokulu</span>
+          <img src="image/siraclogu .png" alt="18 Mart Sirac Koleji Logo" class="navbar-logo" />
+          <span class="navbar-title d-none d-sm-block">Özel OnSekiz Mart<br>Siraç İlkokulu</span>
+          <span class="navbar-title d-block d-sm-none">Siraç Koleji</span>
         </a>
 
 
@@ -94,595 +98,247 @@
       </div>
     </nav>
   </header>
-  <style>
-    :root {
-      --primary-color: #0af1d3;
-      --secondary-color: #e68d08;
-      --accent-color: #e74c3c;
-      --light-color: #f8f9fa;
-      --dark-color: #212529;
-      --success-color: #2a9d8f;
-      --warning-color: #f9a826;
-      --blue-dark: #1a56a7;
-      --blue-light: #4a86e8;
-    }
 
-    body {
-      font-family: 'Open Sans', sans-serif;
-      line-height: 1.6;
-      background-color: #fff;
-      color: #333;
-      overflow-x: hidden;
-    }
-
-    h1,
-    h2,
-    h3,
-    h4,
-    h5 {
-      font-family: 'Poppins', sans-serif;
-      font-weight: 700;
-    }
-
-    .club-hero {
-      background: linear-gradient(135deg, rgba(26, 86, 167, 0.9), rgba(42, 157, 143, 0.9)), url('../image/anasayfa1.JPG') no-repeat center center/cover;
-      color: white;
-      padding: 100px 0;
-      text-align: center;
-      position: relative;
-      overflow: hidden;
-    }
-
-    .club-hero::before {
-      content: '';
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" preserveAspectRatio="none"><polygon points="0,0 100,100 0,100" fill="rgba(255,255,255,0.1)"/></svg>');
-      background-size: 100% 100%;
-    }
-
-    .club-hero h1 {
-      font-size: 3.5rem;
-      margin-bottom: 20px;
-      text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.4);
-      animation: fadeInDown 1s ease;
-      position: relative;
-      z-index: 2;
-    }
-
-    .club-hero p {
-      font-size: 1.3rem;
-      max-width: 700px;
-      margin: 0 auto 40px;
-      animation: fadeInUp 1s ease 0.3s forwards;
-      opacity: 0;
-      position: relative;
-      z-index: 2;
-    }
-
-    .hero-cta {
-      animation: fadeInUp 1s ease 0.6s forwards;
-      opacity: 0;
-      position: relative;
-      z-index: 2;
-    }
-
-    .club-section {
-      padding: 100px 0;
-      position: relative;
-    }
-
-    .club-section:nth-child(odd) {
-      background-color: var(--light-color);
-    }
-
-    .section-title {
-      text-align: center;
-      margin-bottom: 60px;
-      position: relative;
-    }
-
-    .section-title h2 {
-      font-size: 2.5rem;
-      color: var(--blue-dark);
-      margin-bottom: 20px;
-      display: inline-block;
-    }
-
-    .section-title h2::after {
-      content: '';
-      display: block;
-      width: 80px;
-      height: 4px;
-      background: var(--secondary-color);
-      margin: 15px auto;
-      border-radius: 2px;
-    }
-
-    .club-card {
-      background: #fff;
-      border-radius: 12px;
-      overflow: hidden;
-      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
-      transition: all 0.4s ease;
-      height: 100%;
-      display: flex;
-      flex-direction: column;
-    }
-
-    .club-card:hover {
-      transform: translateY(-10px);
-      box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
-    }
-
-    .club-img-container {
-      height: 220px;
-      overflow: hidden;
-      position: relative;
-    }
-
-    .club-img-container img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      transition: transform 0.5s ease;
-    }
-
-    .club-card:hover .club-img-container img {
-      transform: scale(1.1);
-    }
-
-    .club-overlay {
-      position: absolute;
-      bottom: 0;
-      left: 0;
-      right: 0;
-      background: linear-gradient(transparent, rgba(0, 0, 0, 0.7));
-      padding: 20px;
-      opacity: 0;
-      transition: opacity 0.3s ease;
-    }
-
-    .club-card:hover .club-overlay {
-      opacity: 1;
-    }
-
-    .club-content {
-      padding: 25px;
-      flex-grow: 1;
-      display: flex;
-      flex-direction: column;
-    }
-
-    .club-content h3 {
-      font-size: 1.6rem;
-      color: var(--blue-dark);
-      margin-bottom: 15px;
-      position: relative;
-      padding-bottom: 10px;
-    }
-
-    .club-content h3::after {
-      content: '';
-      position: absolute;
-      bottom: 0;
-      left: 0;
-      width: 50px;
-      height: 3px;
-      background: var(--primary-color);
-      border-radius: 2px;
-    }
-
-    .club-content p {
-      color: #555;
-      margin-bottom: 20px;
-      flex-grow: 1;
-    }
-
-    .club-details-btn {
-      background: var(--blue-dark);
-      color: white;
-      border: none;
-      padding: 10px 20px;
-      border-radius: 30px;
-      font-weight: 600;
-      transition: all 0.3s ease;
-      align-self: flex-start;
-      text-decoration: none;
-      display: inline-block;
-    }
-
-    .club-details-btn:hover {
-      background: var(--secondary-color);
-      color: white;
-      transform: translateY(-3px);
-      box-shadow: 0 5px 15px rgba(230, 141, 8, 0.3);
-    }
-
-    .gallery-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-      gap: 15px;
-      margin-top: 30px;
-    }
-
-    .gallery-item {
-      border-radius: 8px;
-      overflow: hidden;
-      height: 150px;
-      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-      transition: all 0.3s ease;
-    }
-
-    .gallery-item:hover {
-      transform: scale(1.05);
-      box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
-    }
-
-    .gallery-item img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-    }
-
-    .modal-content {
-      border-radius: 12px;
-      overflow: hidden;
-    }
-
-    .club-detail-modal .modal-header {
-      background: var(--blue-dark);
-      color: white;
-      border-bottom: none;
-    }
-
-    .club-detail-modal .modal-body {
-      padding: 30px;
-    }
-
-    .club-detail-modal .modal-title {
-      font-size: 1.8rem;
-    }
-
-    .club-detail-modal .detail-content p {
-      margin-bottom: 20px;
-      line-height: 1.8;
-    }
-
-    .detail-highlight {
-      background: rgba(10, 241, 211, 0.1);
-      border-left: 4px solid var(--primary-color);
-      padding: 20px;
-      border-radius: 0 8px 8px 0;
-      margin: 25px 0;
-    }
-
-    .detail-highlight h4 {
-      color: var(--blue-dark);
-      margin-bottom: 15px;
-    }
-
-    .activities-list {
-      list-style-type: none;
-      padding: 0;
-    }
-
-    .activities-list li {
-      padding: 10px 0;
-      padding-left: 30px;
-      position: relative;
-      border-bottom: 1px solid #eee;
-    }
-
-    .activities-list li:before {
-      content: '\f00c';
-      font-family: 'Font Awesome 5 Free';
-      font-weight: 900;
-      position: absolute;
-      left: 0;
-      top: 12px;
-      color: var(--success-color);
-    }
-
-    /* Animations */
-    @keyframes fadeInDown {
-      from {
-        opacity: 0;
-        transform: translateY(-30px);
-      }
-
-      to {
-        opacity: 1;
-        transform: translateY(0);
-      }
-    }
-
-    @keyframes fadeInUp {
-      from {
-        opacity: 0;
-        transform: translateY(30px);
-      }
-
-      to {
-        opacity: 1;
-        transform: translateY(0);
-      }
-    }
-
-    /* Responsive */
-    @media (max-width: 992px) {
-      .club-hero h1 {
-        font-size: 2.8rem;
-      }
-
-      .club-section {
-        padding: 70px 0;
-      }
-
-      .section-title h2 {
-        font-size: 2.2rem;
-      }
-    }
-
-    @media (max-width: 768px) {
-      .club-hero {
-        padding: 70px 0;
-      }
-
-      .club-hero h1 {
-        font-size: 2.3rem;
-      }
-
-      .club-hero p {
-        font-size: 1.1rem;
-      }
-
-      .section-title h2 {
-        font-size: 1.8rem;
-      }
-
-      .club-content h3 {
-        font-size: 1.4rem;
-      }
-    }
-
-    @media (max-width: 576px) {
-      .club-hero h1 {
-        font-size: 2rem;
-      }
-
-      .club-section {
-        padding: 50px 0;
-      }
-
-      .gallery-grid {
-        grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
-      }
-    }
-  </style>
-  <!-- Hero Section -->
-  <section class="club-hero">
+  <!-- HERO SECTION -->
+  <section class="hero-section">
     <div class="container">
       <h1>Öğrenci Kulüplerimiz</h1>
       <p>Öğrencilerimizin ilgi alanlarını keşfetmeleri ve yeteneklerini geliştirmeleri için tasarlanmış kulüplerimizle
         birlikteyiz.</p>
-      <div class="hero-cta">
-        <a href="#clubs" class="btn btn-warning btn-lg px-4 py-2 rounded-pill fw-bold">Kulüpleri Keşfet <i
-            class="fas fa-arrow-down ms-2"></i></a>
-      </div>
+      <a href="#clubs" class="hero-btn">Kulüpleri Keşfet <i class="fas fa-arrow-down ms-2"></i></a>
     </div>
   </section>
 
-  <!-- Clubs Section -->
+  <!-- CLUBS SECTION -->
   <section id="clubs" class="club-section">
     <div class="container">
       <div class="section-title">
-        <h2>Öğrenci Kulüplerimiz</h2>
-        <p class="lead">Öğrencilerimizin kişisel gelişimlerine katkı sağlayan zengin kulüp seçenekleri</p>
+        <h2>Yeteneğini <span style="color: #f9a826;">Keşfet</span></h2>
+        <p>Öğrencilerimizin kişisel gelişimlerine katkı sağlayan zengin kulüp seçenekleri</p>
       </div>
+
       <div class="row g-4">
-        <!-- Okuma Saati ve P4C Kulübü -->
+        <!-- CLUB 1: MUTFAK -->
         <div class="col-lg-4 col-md-6">
           <div class="club-card">
-            <div class="club-img-container">
-              <img src="image/mutfak/1.JPG" alt="Okuma Kulübü">
-              <div class="club-overlay">
-                <h5 class="text-white mb-0">Mutfak Kulübü</h5>
-              </div>
+            <div class="club-img-wrapper">
+              <span class="club-badge">Gastronomi</span>
+              <img src="image/mutfak/1.JPG" alt="Mutfak Kulübü">
             </div>
             <div class="club-content">
               <h3>Mutfak Kulübü</h3>
-              <p>Çocuklar için mutfakta öğrenmenin, üretmenin ve paylaşmanın keyfi Çocuklar mutfakta çalışmaya
-                başladıklarında sadece yemek yapmayı değil; özgüven, sorumluluk ve bağımsızlık gibi temel yaşam
-                becerilerini kazanırlar.
-                Kendi yaptıkları yemeği tatmak onlara aitlik ve başarı duygusu kazandırır</p>
-              <a href="#" class="club-details-btn" data-bs-toggle="modal" data-bs-target="#readingClubModal">
-                Detayları Gör <i class="fas fa-arrow-right ms-2"></i>
+              <p>Çocuklar mutfakta çalışmaya başladıklarında sadece yemek yapmayı değil; özgüven, sorumluluk ve
+                bağımsızlık
+                gibi temel yaşam becerilerini kazanırlar.</p>
+              <a href="#" class="btn-link" data-bs-toggle="modal" data-bs-target="#readingClubModal">
+                Detayları İncele <i class="fas fa-arrow-right"></i>
               </a>
             </div>
           </div>
         </div>
 
-        <!-- Tekvando Kulübü -->
+        <!-- CLUB 2: TEKVANDO -->
         <div class="col-lg-4 col-md-6">
           <div class="club-card">
-            <div class="club-img-container">
+            <div class="club-img-wrapper">
+              <span class="club-badge">Spor & Disiplin</span>
               <img src="image/tekvando/3.PNG" alt="Tekvando Kulübü">
-              <div class="club-overlay">
-                <h5 class="text-white mb-0">Tekvando Kulübü</h5>
-              </div>
             </div>
             <div class="club-content">
               <h3>Tekvando Kulübü</h3>
-              <p>Tekvando Kulübümüzde öğrencilerimiz hem fiziksel dayanıklılıklarını artırır hem de disiplin, özgüven ve
-                odaklanma becerilerini geliştirir. Sportif başarıların yanı sıra karakter gelişimine de katkı sağlanır.
-              </p>
-              <a href="#" class="club-details-btn" data-bs-toggle="modal" data-bs-target="#tekvandoClubModal">
-                Detayları Gör <i class="fas fa-arrow-right ms-2"></i>
+              <p>Fiziksel dayanıklılığı artıran, disiplin ve odaklanma becerilerini geliştiren, karakter gelişimine
+                katkı
+                sağlayan sportif faaliyetler.</p>
+              <a href="#" class="btn-link" data-bs-toggle="modal" data-bs-target="#tekvandoClubModal">
+                Detayları İncele <i class="fas fa-arrow-right"></i>
               </a>
             </div>
           </div>
         </div>
 
-        <!-- Müzik Kulübü -->
+        <!-- CLUB 3: MÜZİK -->
         <div class="col-lg-4 col-md-6">
           <div class="club-card">
-            <div class="club-img-container">
+            <div class="club-img-wrapper">
+              <span class="club-badge">Sanat & Ritim</span>
               <img src="image/muzik/3.JPEG" alt="Müzik Kulübü">
-              <div class="club-overlay">
-                <h5 class="text-white mb-0">Müzik Kulübü</h5>
-              </div>
             </div>
             <div class="club-content">
               <h3>Müzik Kulübü</h3>
-              <p>Öğrencilerimizin çeşitli enstrümanlarla müzikal becerilerini geliştirdiği, sahne performanslarıyla
-                kendilerini ifade ettikleri kulüp. Klasik Türk müziğinden modern enstrümanlara kadar geniş bir yelpazede
-                eğitim verilmektedir.</p>
-              <a href="#" class="club-details-btn" data-bs-toggle="modal" data-bs-target="#musicClubModal">
-                Detayları Gör <i class="fas fa-arrow-right ms-2"></i>
+              <p>Enstrüman eğitimi ve koro çalışmalarıyla öğrencilerimizin müzikal yeteneklerini açığa çıkarıyor, sahne
+                deneyimi kazandırıyoruz.</p>
+              <a href="#" class="btn-link" data-bs-toggle="modal" data-bs-target="#musicClubModal">
+                Detayları İncele <i class="fas fa-arrow-right"></i>
               </a>
             </div>
           </div>
         </div>
 
-        <!-- Görsel Sanatlar Kulübü -->
+        <!-- CLUB 4: GÖRSEL SANATLAR -->
         <div class="col-lg-4 col-md-6">
           <div class="club-card">
-            <div class="club-img-container">
+            <div class="club-img-wrapper">
+              <span class="club-badge">Estetik & Tasarım</span>
               <img src="image/gorselhasab/4.PNG" alt="Görsel Sanatlar Kulübü">
-              <div class="club-overlay">
-                <h5 class="text-white mb-0">Görsel Sanatlar Kulübü</h5>
-              </div>
             </div>
             <div class="club-content">
-              <h3>Görsel Sanatlar Kulübü</h3>
-              <p>Resim, heykel, grafik tasarım ve geleneksel sanatlarımızla öğrencilerimizin yaratıcılıklarını
-                geliştirdiğimiz kulüp. Öğrencilerimiz kendi sanat eserlerini oluştururken estetik bakış açısı
-                kazanırlar.</p>
-              <a href="#" class="club-details-btn" data-bs-toggle="modal" data-bs-target="#artClubModal">
-                Detayları Gör <i class="fas fa-arrow-right ms-2"></i>
+              <h3>Görsel Sanatlar</h3>
+              <p>Resim, seramik ve el sanatlarıyla hayal gücünü somutlaştırıyor, estetik bakış açısını
+                geliştiriyoruz.</p>
+              <a href="#" class="btn-link" data-bs-toggle="modal" data-bs-target="#artClubModal">
+                Detayları İncele <i class="fas fa-arrow-right"></i>
               </a>
             </div>
           </div>
         </div>
 
-        <!-- Akıl ve Zeka Oyunları Kulübü -->
+        <!-- CLUB 5: AKIL VE ZEKA OYUNLARI -->
         <div class="col-lg-4 col-md-6">
           <div class="club-card">
-            <div class="club-img-container">
-              <img src="image/akil _zeka_oyunları/akilve zaka1.JPG" alt="Akıl ve Zeka Oyunları Kulübü">
-              <div class="club-overlay">
-                <h5 class="text-white mb-0">Akıl ve Zeka Oyunları</h5>
-              </div>
+            <div class="club-img-wrapper">
+              <span class="club-badge">Strateji</span>
+              <img src="image/akil _zeka_oyunları/akilve zaka1.JPG" alt="Akıl ve Zeka Oyunları">
             </div>
             <div class="club-content">
-              <h3>Akıl ve Zeka Oyunları Kulübü</h3>
-              <p>Satranç, mangala, sudoku, reversi ve daha birçok zeka oyunuyla öğrencilerimizin stratejik düşünme ve
-                problem çözme becerilerini geliştirdiğimiz kulüp. Turnuvalar ve yarışmalarla öğrencilerimiz kendilerini
-                test ederler.</p>
-              <a href="#" class="club-details-btn" data-bs-toggle="modal" data-bs-target="#mindClubModal">
-                Detayları Gör <i class="fas fa-arrow-right ms-2"></i>
+              <h3>Akıl ve Zeka Oyunları</h3>
+              <p>Satranç, mangala ve zeka oyunlarıyla analitik düşünme, problem çözme ve strateji geliştirme
+                becerilerini
+                artırıyoruz.</p>
+              <a href="#" class="btn-link" data-bs-toggle="modal" data-bs-target="#mindClubModal">
+                Detayları İncele <i class="fas fa-arrow-right"></i>
               </a>
             </div>
           </div>
         </div>
 
-        <!-- Robotik Kodlama Kulübü -->
+        <!-- CLUB 6: ROBOTİK KODLAMA -->
         <div class="col-lg-4 col-md-6">
           <div class="club-card">
-            <div class="club-img-container">
-              <img src="image/robotik_kodlama/1.JPG" alt="Robotik Kodlama Kulübü">
-              <div class="club-overlay">
-                <h5 class="text-white mb-0">Robotik Kodlama Kulübü</h5>
-              </div>
+            <div class="club-img-wrapper">
+              <span class="club-badge">Teknoloji & Bilim</span>
+              <img src="image/robotik_kodlama/1.JPG" alt="Robotik Kodlama">
             </div>
             <div class="club-content">
-              <h3>Robotik Kodlama Kulübü</h3>
-              <p>Deneyler, projeler ve bilim fuarlarıyla öğrencilerimizin bilimsel düşünme becerilerini geliştirdiğimiz
-                kulüp. Robotik kitlerle çalışan öğrencilerimiz kodlama ve mühendislik becerileri kazanırlar.</p>
-              <a href="#" class="club-details-btn" data-bs-toggle="modal" data-bs-target="#roboticsClubModal">
-                Detayları Gör <i class="fas fa-arrow-right ms-2"></i>
+              <h3>Robotik Kodlama</h3>
+              <p>Algoritmik düşünme, kodlama temelleri ve robotik projelerle geleceğin mühendislerini
+                yetiştiriyoruz.</p>
+              <a href="#" class="btn-link" data-bs-toggle="modal" data-bs-target="#roboticsClubModal">
+                Detayları İncele <i class="fas fa-arrow-right"></i>
               </a>
             </div>
           </div>
         </div>
       </div>
 
-      <!-- Gallery Section -->
-      <div class="mt-5">
+      <!-- GALLERY SECTION (MASONRY STYLE) -->
+      <div class="mt-5 pt-5">
         <div class="section-title">
-          <h2>Kulüp Etkinliklerimizden Kareler</h2>
-          <p class="lead">Öğrencilerimizin kulüp çalışmalarından en güzel anlar</p>
+          <h2>Etkinliklerimizden Kareler</h2>
+          <p>Öğrencilerimizin kulüp çalışmalarından en renkli anlar</p>
         </div>
 
         <div class="gallery-grid">
-          <a href="image/mutfak/2.JPG" data-lightbox="gallery" data-title="Okuma Kulübü">
-            <div class="gallery-item">
-              <img src="image/mutfak/2.JPG" alt="Okuma Kulübü">
-            </div>
+          <!-- Images need to be wrapped in links for Lightbox if interactivity is desired, 
+               otherwise just images. Assuming user might want lightbox, retaining structure but cleaning classes. -->
+          <a href="image/mutfak/2.JPG" data-lightbox="gallery" data-title="Mutfak Atölyesi">
+            <div class="gallery-item"><img src="image/mutfak/2.JPG" alt="Mutfak"></div>
           </a>
-          <a href="image/gorselhasab/4.PNG" data-lightbox="gallery" data-title="Görsel Sanatlar">
-            <div class="gallery-item">
-              <img src="image/gorselhasab/4.PNG" alt="Görsel Sanatlar">
-            </div>
+          <a href="image/gorselhasab/4.PNG" data-lightbox="gallery" data-title="Sanat Atölyesi">
+            <div class="gallery-item"><img src="image/gorselhasab/4.PNG" alt="Sanat"></div>
           </a>
-          <a href="image/gorselhasab/6.jpg" data-lightbox="gallery" data-title="Ahşap Atölyesi">
-            <div class="gallery-item">
-              <img src="image/gorselhasab/6.jpg" alt="Ahşap Atölyesi">
-            </div>
+          <a href="image/gorselhasab/6.jpg" data-lightbox="gallery" data-title="Ahşap Çalışması">
+            <div class="gallery-item"><img src="image/gorselhasab/6.jpg" alt="Ahşap"></div>
           </a>
           <a href="image/akil _zeka_oyunları/akilve zaka1.JPG" data-lightbox="gallery" data-title="Zeka Oyunları">
-            <div class="gallery-item">
-              <img src="image/akil _zeka_oyunları/akilve zaka1.JPG" alt="Zeka Oyunları">
-            </div>
+            <div class="gallery-item"><img src="image/akil _zeka_oyunları/akilve zaka1.JPG" alt="Zeka 1"></div>
           </a>
           <a href="image/akil _zeka_oyunları/akilvzaka2.JPG" data-lightbox="gallery" data-title="Zeka Oyunları">
-            <div class="gallery-item">
-              <img src="image/akil _zeka_oyunları/akilvzaka2.JPG" alt="Zeka Oyunları">
-            </div>
+            <div class="gallery-item"><img src="image/akil _zeka_oyunları/akilvzaka2.JPG" alt="Zeka 2"></div>
           </a>
-          <a href="image/dijital/2.JPG" data-lightbox="gallery" data-title="Teknoloji Kulübü">
-            <div class="gallery-item">
-              <img src="image/dijital/2.JPG" alt="Teknoloji Kulübü">
-            </div>
+          <a href="image/dijital/2.JPG" data-lightbox="gallery" data-title="Dijital Atölye">
+            <div class="gallery-item"><img src="image/dijital/2.JPG" alt="Dijital"></div>
           </a>
-          <a href="image/robotik_kodlama/3.JPG" data-lightbox="gallery" data-title="Robotik Kodlama">
-            <div class="gallery-item">
-              <img src="image/robotik_kodlama/3.JPG" alt="Robotik Kodlama">
-            </div>
+          <a href="image/robotik_kodlama/3.JPG" data-lightbox="gallery" data-title="Robotik 1">
+            <div class="gallery-item"><img src="image/robotik_kodlama/3.JPG" alt="Robotik 1"></div>
           </a>
-          <a href="image/robotik_kodlama/1.JPG" data-lightbox="gallery" data-title="Robotik Kulübü">
-            <div class="gallery-item">
-              <img src="image/robotik_kodlama/1.JPG" alt="Robotik Kulübü">
-            </div>
+          <a href="image/robotik_kodlama/1.JPG" data-lightbox="gallery" data-title="Robotik 2">
+            <div class="gallery-item"><img src="image/robotik_kodlama/1.JPG" alt="Robotik 2"></div>
           </a>
-          <a href="image/robotik_kodlama/2.JPG" data-lightbox="gallery" data-title="Robotik Çalışmaları">
-            <div class="gallery-item">
-              <img src="image/robotik_kodlama/2.JPG" alt="Robotik Çalışmaları">
-            </div>
+          <a href="image/muzik/3.JPEG" data-lightbox="gallery" data-title="Müzik Dinletisi">
+            <div class="gallery-item"><img src="image/muzik/3.JPEG" alt="Müzik"></div>
           </a>
-          <a href="image/robotik_kodlama/4.JPG" data-lightbox="gallery" data-title="Robotik Projeler">
-            <div class="gallery-item">
-              <img src="image/robotik_kodlama/4.JPG" alt="Robotik Projeler">
-            </div>
-          </a>
-          <a href="image/muzik/3.JPEG" data-lightbox="gallery" data-title="Müzik Kulübü">
-            <div class="gallery-item">
-              <img src="image/muzik/3.JPEG" alt="Müzik Kulübü">
-            </div>
-          </a>
-          <a href="image/muzik/2.PNG" data-lightbox="gallery" data-title="Müzik Etkinliği">
-            <div class="gallery-item">
-              <img src="image/muzik/2.PNG" alt="Müzik Etkinliği">
-            </div>
+          <a href="image/muzik/2.PNG" data-lightbox="gallery" data-title="Koro">
+            <div class="gallery-item"><img src="image/muzik/2.PNG" alt="Koro"></div>
           </a>
         </div>
       </div>
     </div>
   </section>
+
+  <ul class="activity-list">
+    <li>Tuval üzeri yağlı boya ve akrilik</li>
+    <li>Ebru sanatı ve seramik</li>
+    <li>Ahşap boyama</li>
+    <li>Sergi hazırlıkları</li>
+  </ul>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+
+  <!-- Zeka Oyunları Modal -->
+  <div class="modal fade" id="mindClubModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">Akıl ve Zeka Oyunları</h5>
+          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <p>Satranç, mangala, sudoku, reversi ve daha birçok zeka oyunuyla öğrencilerimizin stratejik düşünme ve
+            problem
+            çözme becerilerini geliştirdiğimiz kulüp. Turnuvalar ve yarışmalarla öğrencilerimiz kendilerini test
+            ederler.</p>
+          <div class="modal-highlight">
+            <h5>Kazanımlar</h5>
+            <ul class="activity-list">
+              <li>Stratejik ve analitik düşünme</li>
+              <li>Problem çözme yeteneği</li>
+              <li>Dikkat ve konsantrasyon</li>
+              <li>Planlama becerisi</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Robotik Modal -->
+  <div class="modal fade" id="roboticsClubModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">Robotik Kodlama Kulübü</h5>
+          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <p>Deneyler, projeler ve bilim fuarlarıyla öğrencilerimizin bilimsel düşünme becerilerini geliştirdiğimiz
+            kulüp.
+            Robotik kitlerle çalışan öğrencilerimiz kodlama ve mühendislik becerileri kazanırlar.</p>
+          <div class="modal-highlight">
+            <h5>Faaliyetler</h5>
+            <ul class="activity-list">
+              <li>Algoritma ve kodlama eğitimi</li>
+              <li>Lego Education setleri ile tasarım</li>
+              <li>Arduino projeleri</li>
+              <li>Robot yarışmalarına hazırlık</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 
   <!-- FOOTER -->
   <footer>
@@ -798,406 +454,374 @@
           </div>
         </div>
       </div>
-
-      <!-- COPYRIGHT -->
-      <div class="copyright">
-        <small>&copy; 2007-2025 18 Mart Sirac Koleji. Tüm Hakları Saklıdır. |
-          <a href="#" style="color: #0af1d3; text-decoration: none;">Gizlilik Politikası</a> |
-          <a href="#" style="color: #0af1d3; text-decoration: none;">Çerez Politikası</a>
-        </small>
-      </div>
+      kendi yetenek ve zevklerini keşfederler Her ay farklı temalarla yapılan etkinliklerde çocuklar geleneksel
+      yemekleri tanır, bilimsel mutfak deneyleri yapar ve dünya mutfağından tarifler denerler.</p>
     </div>
-  </footer>
-  <!-- Club Detail Modals -->
-  <div class="modal fade club-detail-modal" id="readingClubModal" tabindex="-1" aria-hidden="true">
-    <div class="modal-dialog modal-lg">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title">Mutfak Kulübü</h5>
-          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
-        </div>
-        <div class="modal-body">
-          <div class="detail-content">
-            <p>Çocuklar mutfakta çalışmaya başladıklarında sadece yemek yapmayı değil; özgüven, sorumluluk ve
-              bağımsızlık gibi temel yaşam becerilerini kazanırlar.
-              Kendi yaptıkları yemeği tatmak onlara aitlik ve başarı duygusu kazandırır.</p>
+    </div>
+    <div class="modal-footer">
+      <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Kapat</button>
+    </div>
+    </div>
+    </div>
+    </div>
 
-            <div class="detail-highlight">
-              <h4>Kulüp Etkinlikleri</h4>
-              <ul class="activities-list">
-                <li>Günlük yaşam becerileri</li>
-                <li>Üretime katılma</li>
-                <li>Helal ve sağlıklı beslenme alışkanlığı</li>
-                <li>Kendi yeteneklerini keşfetme</li>
-              </ul>
+    <div class="modal fade club-detail-modal" id="tekvandoClubModal" tabindex="-1" aria-hidden="true">
+      <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">Tekvando Kulübü</h5>
+            <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <div class="detail-content">
+              <p>Tekvando Kulübümüz, öğrencilerimizin fiziksel gelişimlerini desteklerken aynı zamanda disiplin, özgüven
+                ve odaklanma becerilerini geliştirmeyi hedeflemektedir. Uzman eğitmenler eşliğinde gerçekleştirilen
+                antrenmanlarda öğrencilerimiz hem spor yapmakta hem de kendilerini savunma tekniklerini öğrenmektedir.
+              </p>
+
+              <div class="detail-highlight">
+                <h4>Kulüp Faaliyetleri</h4>
+                <ul class="activities-list">
+                  <li>Temel tekvando teknikleri eğitimi</li>
+                  <li>Fiziksel kondisyon ve esneklik çalışmaları</li>
+                  <li>Denge ve koordinasyon egzersizleri</li>
+                  <li>Savunma teknikleri ve pratik uygulamalar</li>
+                  <li>Turnuva ve müsabaka hazırlıkları</li>
+                  <li>Derece ve kuşak sınavları</li>
+                </ul>
+              </div>
+
+              <p>Tekvando Kulübü'nde öğrencilerimiz, sadece fiziksel becerilerini geliştirmekle kalmaz, aynı zamanda
+                saygı, disiplin ve öz kontrol gibi değerleri de özümserler. Kulübümüzde düzenlenen turnuvalar ve
+                gösterilerle öğrencilerimiz kazanımlarını sergileme fırsatı bulurlar.</p>
             </div>
-
-            <p> Mutfak atölyesi; takım çalışması, paylaşma, sabır, iletişim ve iş bölümü gibi sosyal becerileri
-              destekler. Aynı zamanda çocuklar
-              kendi yetenek ve zevklerini keşfederler Her ay farklı temalarla yapılan etkinliklerde çocuklar geleneksel
-              yemekleri tanır, bilimsel mutfak deneyleri yapar ve dünya mutfağından tarifler denerler.</p>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Kapat</button>
           </div>
         </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Kapat</button>
-        </div>
       </div>
     </div>
-  </div>
 
-  <div class="modal fade club-detail-modal" id="tekvandoClubModal" tabindex="-1" aria-hidden="true">
-    <div class="modal-dialog modal-lg">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title">Tekvando Kulübü</h5>
-          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
-        </div>
-        <div class="modal-body">
-          <div class="detail-content">
-            <p>Tekvando Kulübümüz, öğrencilerimizin fiziksel gelişimlerini desteklerken aynı zamanda disiplin, özgüven
-              ve odaklanma becerilerini geliştirmeyi hedeflemektedir. Uzman eğitmenler eşliğinde gerçekleştirilen
-              antrenmanlarda öğrencilerimiz hem spor yapmakta hem de kendilerini savunma tekniklerini öğrenmektedir.</p>
+    <div class="modal fade club-detail-modal" id="musicClubModal" tabindex="-1" aria-hidden="true">
+      <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">Müzik Kulübü</h5>
+            <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <div class="detail-content">
+              <p>Müzik Kulübümüz, öğrencilerimizin sanatsal yeteneklerini keşfetmeleri ve geliştirmeleri için
+                tasarlanmıştır. Kulübümüzde öğrencilerimiz, çeşitli enstrümanları öğrenir, korolar oluşturur ve okul
+                etkinliklerinde performans sergilerler.</p>
 
-            <div class="detail-highlight">
-              <h4>Kulüp Faaliyetleri</h4>
-              <ul class="activities-list">
-                <li>Temel tekvando teknikleri eğitimi</li>
-                <li>Fiziksel kondisyon ve esneklik çalışmaları</li>
-                <li>Denge ve koordinasyon egzersizleri</li>
-                <li>Savunma teknikleri ve pratik uygulamalar</li>
-                <li>Turnuva ve müsabaka hazırlıkları</li>
-                <li>Derece ve kuşak sınavları</li>
-              </ul>
+              <div class="detail-highlight">
+                <h4>Kulüp Çalışmaları</h4>
+                <ul class="activities-list">
+                  <li>Enstrüman eğitimleri (Bağlama, gitar, piyano, keman)</li>
+                  <li>Koro çalışmaları ve ses eğitimi</li>
+                  <li>Tasavvuf müziği ve Türk sanat müziği</li>
+                  <li>Ritim ve nota eğitimleri</li>
+                  <li>Bestecilik ve aranjman çalışmaları</li>
+                  <li>Konser ve müzik dinletileri</li>
+                </ul>
+              </div>
+
+              <p>Müzik Kulübü'nde öğrencilerimiz, müzik teorisi ve pratiğini bir arada öğrenirken aynı zamanda
+                disiplinli
+                çalışma, konsantrasyon ve ekip uyumu gibi beceriler kazanırlar. Kulübümüz, öğrencilerimizin kendilerini
+                müzikal olarak ifade etmelerine ve sanatsal bir bakış açısı geliştirmelerine olanak tanır.</p>
             </div>
-
-            <p>Tekvando Kulübü'nde öğrencilerimiz, sadece fiziksel becerilerini geliştirmekle kalmaz, aynı zamanda
-              saygı, disiplin ve öz kontrol gibi değerleri de özümserler. Kulübümüzde düzenlenen turnuvalar ve
-              gösterilerle öğrencilerimiz kazanımlarını sergileme fırsatı bulurlar.</p>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Kapat</button>
           </div>
         </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Kapat</button>
-        </div>
       </div>
     </div>
-  </div>
 
-  <div class="modal fade club-detail-modal" id="musicClubModal" tabindex="-1" aria-hidden="true">
-    <div class="modal-dialog modal-lg">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title">Müzik Kulübü</h5>
-          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
-        </div>
-        <div class="modal-body">
-          <div class="detail-content">
-            <p>Müzik Kulübümüz, öğrencilerimizin sanatsal yeteneklerini keşfetmeleri ve geliştirmeleri için
-              tasarlanmıştır. Kulübümüzde öğrencilerimiz, çeşitli enstrümanları öğrenir, korolar oluşturur ve okul
-              etkinliklerinde performans sergilerler.</p>
+    <div class="modal fade club-detail-modal" id="artClubModal" tabindex="-1" aria-hidden="true">
+      <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">Görsel Sanatlar Kulübü</h5>
+            <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <div class="detail-content">
+              <p>Görsel Sanatlar Kulübümüz, öğrencilerimizin yaratıcılıklarını ortaya çıkarmaları ve geliştirmeleri için
+                tasarlanmıştır. Farklı sanat teknikleri ve malzemelerle çalışan öğrencilerimiz, kendilerini görsel
+                olarak
+                ifade etme fırsatı bulurlar.</p>
 
-            <div class="detail-highlight">
-              <h4>Kulüp Çalışmaları</h4>
-              <ul class="activities-list">
-                <li>Enstrüman eğitimleri (Bağlama, gitar, piyano, keman)</li>
-                <li>Koro çalışmaları ve ses eğitimi</li>
-                <li>Tasavvuf müziği ve Türk sanat müziği</li>
-                <li>Ritim ve nota eğitimleri</li>
-                <li>Bestecilik ve aranjman çalışmaları</li>
-                <li>Konser ve müzik dinletileri</li>
-              </ul>
+              <div class="detail-highlight">
+                <h4>Kulüp Faaliyetleri</h4>
+                <ul class="activities-list">
+                  <li>Resim teknikleri (suluboya, akrilik, pastel)</li>
+                  <li>Heykel ve seramik çalışmaları</li>
+                  <li>Grafik tasarım ve dijital sanat</li>
+                  <li>Geleneksel Türk sanatları (ebru, tezhip)</li>
+                  <li>Ahşap boyama ve tasarım</li>
+                  <li>Sergi ve sanat gezileri</li>
+                </ul>
+              </div>
+
+              <p>Kulübümüzde öğrencilerimiz, sanatın farklı dallarını tanırken aynı zamanda estetik bakış açısı
+                kazanırlar. Yıl boyunca yapılan çalışmalar, okul içinde düzenlenen sergilerde veli ve öğrencilerimizin
+                beğenisine sunulur.</p>
             </div>
-
-            <p>Müzik Kulübü'nde öğrencilerimiz, müzik teorisi ve pratiğini bir arada öğrenirken aynı zamanda disiplinli
-              çalışma, konsantrasyon ve ekip uyumu gibi beceriler kazanırlar. Kulübümüz, öğrencilerimizin kendilerini
-              müzikal olarak ifade etmelerine ve sanatsal bir bakış açısı geliştirmelerine olanak tanır.</p>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Kapat</button>
           </div>
         </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Kapat</button>
-        </div>
       </div>
     </div>
-  </div>
 
-  <div class="modal fade club-detail-modal" id="artClubModal" tabindex="-1" aria-hidden="true">
-    <div class="modal-dialog modal-lg">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title">Görsel Sanatlar Kulübü</h5>
-          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
-        </div>
-        <div class="modal-body">
-          <div class="detail-content">
-            <p>Görsel Sanatlar Kulübümüz, öğrencilerimizin yaratıcılıklarını ortaya çıkarmaları ve geliştirmeleri için
-              tasarlanmıştır. Farklı sanat teknikleri ve malzemelerle çalışan öğrencilerimiz, kendilerini görsel olarak
-              ifade etme fırsatı bulurlar.</p>
+    <div class="modal fade club-detail-modal" id="mindClubModal" tabindex="-1" aria-hidden="true">
+      <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">Akıl ve Zeka Oyunları Kulübü</h5>
+            <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <div class="detail-content">
+              <p>Akıl ve Zeka Oyunları Kulübümüz, öğrencilerimizin stratejik düşünme, problem çözme ve analitik
+                becerilerini geliştirmeyi hedeflemektedir. Farklı zeka oyunları ve bulmacalarla öğrencilerimizin
+                zihinsel
+                kapasitelerini artırmayı amaçlıyoruz.</p>
 
-            <div class="detail-highlight">
-              <h4>Kulüp Faaliyetleri</h4>
-              <ul class="activities-list">
-                <li>Resim teknikleri (suluboya, akrilik, pastel)</li>
-                <li>Heykel ve seramik çalışmaları</li>
-                <li>Grafik tasarım ve dijital sanat</li>
-                <li>Geleneksel Türk sanatları (ebru, tezhip)</li>
-                <li>Ahşap boyama ve tasarım</li>
-                <li>Sergi ve sanat gezileri</li>
-              </ul>
+              <div class="detail-highlight">
+                <h4>Kulüp Etkinlikleri</h4>
+                <ul class="activities-list">
+                  <li>Satranç turnuvaları ve eğitimleri</li>
+                  <li>Mangala, reversi, abalone gibi strateji oyunları</li>
+                  <li>Sudoku, kakuro ve diğer mantık bulmacaları</li>
+                  <li>Kelime oyunları ve anagram çalışmaları</li>
+                  <li>Zeka soruları ve matematiksel bulmacalar</li>
+                  <li>Okullar arası zeka oyunları yarışmaları</li>
+                </ul>
+              </div>
+
+              <p>Kulübümüzde öğrencilerimiz, keyifli vakit geçirirken aynı zamanda zihinsel becerilerini geliştirme
+                fırsatı bulurlar. Düzenlenen turnuvalar ve yarışmalarla öğrencilerimiz kazanımlarını sınama imkanı elde
+                ederler.</p>
             </div>
-
-            <p>Kulübümüzde öğrencilerimiz, sanatın farklı dallarını tanırken aynı zamanda estetik bakış açısı
-              kazanırlar. Yıl boyunca yapılan çalışmalar, okul içinde düzenlenen sergilerde veli ve öğrencilerimizin
-              beğenisine sunulur.</p>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Kapat</button>
           </div>
         </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Kapat</button>
-        </div>
       </div>
     </div>
-  </div>
 
-  <div class="modal fade club-detail-modal" id="mindClubModal" tabindex="-1" aria-hidden="true">
-    <div class="modal-dialog modal-lg">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title">Akıl ve Zeka Oyunları Kulübü</h5>
-          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
-        </div>
-        <div class="modal-body">
-          <div class="detail-content">
-            <p>Akıl ve Zeka Oyunları Kulübümüz, öğrencilerimizin stratejik düşünme, problem çözme ve analitik
-              becerilerini geliştirmeyi hedeflemektedir. Farklı zeka oyunları ve bulmacalarla öğrencilerimizin zihinsel
-              kapasitelerini artırmayı amaçlıyoruz.</p>
+    <div class="modal fade club-detail-modal" id="roboticsClubModal" tabindex="-1" aria-hidden="true">
+      <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">Robotik Kodlama Kulübü</h5>
+            <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <div class="detail-content">
+              <p>Robotik Kodlama Kulübümüz, öğrencilerimizi geleceğin teknolojilerine hazırlamayı ve onlara bilimsel
+                düşünme becerileri kazandırmayı hedeflemektedir. Kulübümüzde öğrencilerimiz, robotik setlerle çalışarak
+                kendi robotlarını tasarlar ve programlarlar.</p>
 
-            <div class="detail-highlight">
-              <h4>Kulüp Etkinlikleri</h4>
-              <ul class="activities-list">
-                <li>Satranç turnuvaları ve eğitimleri</li>
-                <li>Mangala, reversi, abalone gibi strateji oyunları</li>
-                <li>Sudoku, kakuro ve diğer mantık bulmacaları</li>
-                <li>Kelime oyunları ve anagram çalışmaları</li>
-                <li>Zeka soruları ve matematiksel bulmacalar</li>
-                <li>Okullar arası zeka oyunları yarışmaları</li>
-              </ul>
+              <div class="detail-highlight">
+                <h4>Kulüp Çalışmaları</h4>
+                <ul class="activities-list">
+                  <li>Temel elektronik ve mekanik eğitimleri</li>
+                  <li>Robot tasarımı ve montajı</li>
+                  <li>Blok tabanlı ve metin tabanlı kodlama</li>
+                  <li>Sensörler ve motor kontrol sistemleri</li>
+                  <li>3D modelleme ve baskı teknolojileri</li>
+                  <li>Robot yarışmalarına hazırlık</li>
+                </ul>
+              </div>
+
+              <p>Kulübümüzde öğrencilerimiz, takım çalışması, proje yönetimi ve problem çözme becerilerini geliştirirken
+                aynı zamanda mühendislik ve teknoloji alanlarında deneyim kazanırlar. Yıl sonunda düzenlenen bilim
+                şenliğinde öğrencilerimiz projelerini sergilerler.</p>
             </div>
-
-            <p>Kulübümüzde öğrencilerimiz, keyifli vakit geçirirken aynı zamanda zihinsel becerilerini geliştirme
-              fırsatı bulurlar. Düzenlenen turnuvalar ve yarışmalarla öğrencilerimiz kazanımlarını sınama imkanı elde
-              ederler.</p>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Kapat</button>
           </div>
         </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Kapat</button>
-        </div>
       </div>
     </div>
-  </div>
 
-  <div class="modal fade club-detail-modal" id="roboticsClubModal" tabindex="-1" aria-hidden="true">
-    <div class="modal-dialog modal-lg">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title">Robotik Kodlama Kulübü</h5>
-          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
-        </div>
-        <div class="modal-body">
-          <div class="detail-content">
-            <p>Robotik Kodlama Kulübümüz, öğrencilerimizi geleceğin teknolojilerine hazırlamayı ve onlara bilimsel
-              düşünme becerileri kazandırmayı hedeflemektedir. Kulübümüzde öğrencilerimiz, robotik setlerle çalışarak
-              kendi robotlarını tasarlar ve programlarlar.</p>
-
-            <div class="detail-highlight">
-              <h4>Kulüp Çalışmaları</h4>
-              <ul class="activities-list">
-                <li>Temel elektronik ve mekanik eğitimleri</li>
-                <li>Robot tasarımı ve montajı</li>
-                <li>Blok tabanlı ve metin tabanlı kodlama</li>
-                <li>Sensörler ve motor kontrol sistemleri</li>
-                <li>3D modelleme ve baskı teknolojileri</li>
-                <li>Robot yarışmalarına hazırlık</li>
-              </ul>
-            </div>
-
-            <p>Kulübümüzde öğrencilerimiz, takım çalışması, proje yönetimi ve problem çözme becerilerini geliştirirken
-              aynı zamanda mühendislik ve teknoloji alanlarında deneyim kazanırlar. Yıl sonunda düzenlenen bilim
-              şenliğinde öğrencilerimiz projelerini sergilerler.</p>
-          </div>
-        </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Kapat</button>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.4/js/lightbox.min.js"></script>
-  <script>
-    // Lightbox settings
-    lightbox.option({
-      'resizeDuration': 200,
-      'wrapAround': true,
-      'showImageNumberLabel': true,
-      'disableScrolling': true
-    });
-
-    // Scroll to clubs section
-    document.querySelector('.hero-cta a').addEventListener('click', function (e) {
-      e.preventDefault();
-      document.querySelector(this.getAttribute('href')).scrollIntoView({
-        behavior: 'smooth'
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.4/js/lightbox.min.js"></script>
+    <script>
+      // Lightbox settings
+      lightbox.option({
+        'resizeDuration': 200,
+        'wrapAround': true,
+        'showImageNumberLabel': true,
+        'disableScrolling': true
       });
-    });
 
-    // Newsletter form submission
-    document.querySelector('form').addEventListener('submit', function (e) {
-      e.preventDefault();
-      const email = this.querySelector('input[type="email"]').value;
-      if (email) {
-        alert('E-bülten aboneliğiniz için teşekkür ederiz!');
-        this.reset();
-      }
-    });
-  </script>
-  <script>
-    // Smooth scrolling for anchor links
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-      anchor.addEventListener('click', function (e) {
+      // Scroll to clubs section
+      document.querySelector('.hero-cta a').addEventListener('click', function (e) {
         e.preventDefault();
         document.querySelector(this.getAttribute('href')).scrollIntoView({
           behavior: 'smooth'
         });
       });
-    });
-    // Back to top button functionality
-    const backToTopButton = document.createElement('button');
-    backToTopButton.innerHTML = '<i class="fas fa-arrow-up"></i>';
-    backToTopButton.classList.add('back-to-top-button');
-    document.body.appendChild(backToTopButton);
 
-    backToTopButton.addEventListener('click', function () {
-      window.scrollTo({
-        top: 0,
-        behavior: 'smooth'
+      // Newsletter form submission
+      document.querySelector('form').addEventListener('submit', function (e) {
+        e.preventDefault();
+        const email = this.querySelector('input[type="email"]').value;
+        if (email) {
+          alert('E-bülten aboneliğiniz için teşekkür ederiz!');
+          this.reset();
+        }
       });
-    });
-  </script>
-  <style>
-    /* Back to Top Button Styles */
-    .back-to-top-button {
-      position: fixed;
-      bottom: 20px;
-      right: 20px;
-      background-color: #3498db;
-      color: white;
-      border: none;
-      border-radius: 50%;
-      width: 50px;
-      height: 50px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-      cursor: pointer;
-      z-index: 1000;
-      transition: background-color 0.3s ease, transform 0.3s ease;
-    }
+    </script>
+    <script>
+      // Smooth scrolling for anchor links
+      document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+          e.preventDefault();
+          document.querySelector(this.getAttribute('href')).scrollIntoView({
+            behavior: 'smooth'
+          });
+        });
+      });
+      // Back to top button functionality
+      const backToTopButton = document.createElement('button');
+      backToTopButton.innerHTML = '<i class="fas fa-arrow-up"></i>';
+      backToTopButton.classList.add('back-to-top-button');
+      document.body.appendChild(backToTopButton);
 
-    .back-to-top-button:hover {
-      background-color: #2980b9;
-      transform: scale(1.1);
-    }
-
-    .back-to-top-button i {
-      font-size: 24px;
-    }
-
-    @media (max-width: 768px) {
+      backToTopButton.addEventListener('click', function () {
+        window.scrollTo({
+          top: 0,
+          behavior: 'smooth'
+        });
+      });
+    </script>
+    <style>
+      /* Back to Top Button Styles */
       .back-to-top-button {
-        width: 40px;
-        height: 40px;
-        bottom: 15px;
-        right: 15px;
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        background-color: #3498db;
+        color: white;
+        border: none;
+        border-radius: 50%;
+        width: 50px;
+        height: 50px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        cursor: pointer;
+        z-index: 1000;
+        transition: background-color 0.3s ease, transform 0.3s ease;
+      }
+
+      .back-to-top-button:hover {
+        background-color: #2980b9;
+        transform: scale(1.1);
       }
 
       .back-to-top-button i {
-        font-size: 20px;
+        font-size: 24px;
       }
-    }
 
-    /* Footer Styles */
-    footer {
-      background-color: #343a40;
-      color: white;
-      padding: 40px 0;
-    }
+      @media (max-width: 768px) {
+        .back-to-top-button {
+          width: 40px;
+          height: 40px;
+          bottom: 15px;
+          right: 15px;
+        }
 
-    .footer-title {
-      font-size: 1.5rem;
-      margin-bottom: 20px;
-      color: #f8f9fa;
-    }
+        .back-to-top-button i {
+          font-size: 20px;
+        }
+      }
 
-    .footer-links {
-      list-style: none;
-      padding: 0;
-    }
+      /* Footer Styles */
+      footer {
+        background-color: #343a40;
+        color: white;
+        padding: 40px 0;
+      }
 
-    .footer-links li {
-      margin-bottom: 10px;
-    }
+      .footer-title {
+        font-size: 1.5rem;
+        margin-bottom: 20px;
+        color: #f8f9fa;
+      }
 
-    .footer-links a {
-      color: #f8f9fa;
-      text-decoration: none;
-      transition: color 0.3s ease;
-    }
+      .footer-links {
+        list-style: none;
+        padding: 0;
+      }
 
-    .footer-links a:hover {
-      color: #3498db;
-    }
-  </style>
-  <style>
-    /* Hero Section Styles */
-    .hero-section {
-      background: url('../image/anasayfa1.JPG') no-repeat center center/cover;
-      color: white;
-      padding: 100px 0;
-      text-align: center;
-    }
+      .footer-links li {
+        margin-bottom: 10px;
+      }
 
-    .hero-section h1 {
-      font-size: 3rem;
-      margin-bottom: 20px;
-    }
+      .footer-links a {
+        color: #f8f9fa;
+        text-decoration: none;
+        transition: color 0.3s ease;
+      }
 
-    .hero-section p {
-      font-size: 1.2rem;
-      max-width: 600px;
-      margin: auto;
-    }
+      .footer-links a:hover {
+        color: #3498db;
+      }
+    </style>
+    <style>
+      /* Hero Section Styles */
+      .hero-section {
+        background: url('../image/anasayfa1.JPG') no-repeat center center/cover;
+        color: white;
+        padding: 100px 0;
+        text-align: center;
+      }
 
-    @media (max-width: 768px) {
       .hero-section h1 {
-        font-size: 2.5rem;
+        font-size: 3rem;
+        margin-bottom: 20px;
       }
 
       .hero-section p {
-        font-size: 1rem;
+        font-size: 1.2rem;
+        max-width: 600px;
+        margin: auto;
       }
-    }
-  </style>
-  <script>
-    // Back to Top Button Functionality
-    window.addEventListener('scroll', function () {
-      const backToTopButton = document.querySelector('.back-to-top-button');
-      if (window.scrollY > 300) {
-        backToTopButton.style.display = 'block';
-      } else {
-        backToTopButton.style.display = 'none';
+
+      @media (max-width: 768px) {
+        .hero-section h1 {
+          font-size: 2.5rem;
+        }
+
+        .hero-section p {
+          font-size: 1rem;
+        }
       }
-    });
-  </script>
+    </style>
+    <script>
+      // Back to Top Button Functionality
+      window.addEventListener('scroll', function () {
+        const backToTopButton = document.querySelector('.back-to-top-button');
+        if (window.scrollY > 300) {
+          backToTopButton.style.display = 'block';
+        } else {
+          backToTopButton.style.display = 'none';
+        }
+      });
+    </script>
 </body>
 
 </html>

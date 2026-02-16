@@ -4,26 +4,29 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Yabancı Diller</title>
-  <link rel="shortcut icon" href="image/favicon.ico" type="image/x-icon" />
+  <title>Yabancı Dil Eğitimi - Özel On Sekiz Mart Siraç İlkokulu</title>
+  <link rel="icon" type="image/png" href="image/favicon.ico" />
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <link rel="stylesheet" href="css/style.css">
-
+  <link rel="stylesheet" href="css/yabancidil.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&display=swap" rel="stylesheet">
 </head>
 
 <body>
 
   <!-- HEADER / NAVBAR -->
   <header>
-    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+    <nav class="navbar navbar-expand-lg navbar-light bg-white fixed-top shadow-sm">
       <div class="container">
 
         <a class="navbar-brand d-flex align-items-center gap-3" href="index.html">
-          <img src="image/ilokullogo.jpeg" alt="18 Mart Sirac Koleji Logo" class="navbar-logo" />
-          <span class="navbar-title">Özel OnSekiz Mart Siraç Koleji İlkokulu</span>
+          <img src="image/siraclogu .png" alt="18 Mart Sirac Koleji Logo" class="navbar-logo" />
+          <span class="navbar-title d-none d-sm-block">Özel OnSekiz Mart<br>Siraç İlkokulu</span>
+          <span class="navbar-title d-block d-sm-none">Siraç Koleji</span>
         </a>
-
 
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#siracNavbar">
           <span class="navbar-toggler-icon"></span>
@@ -31,12 +34,7 @@
 
         <div class="collapse navbar-collapse" id="siracNavbar">
           <ul class="navbar-nav ms-auto">
-
-            <li class="nav-item">
-              <a class="nav-link" href="index.html">Anasayfa</a>
-            </li>
-
-            <!-- Kurumsal -->
+            <li class="nav-item"><a class="nav-link" href="index.html">Anasayfa</a></li>
             <li class="nav-item dropdown">
               <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">Kurumsal</a>
               <ul class="dropdown-menu">
@@ -45,8 +43,6 @@
                 <li><a class="dropdown-item" href="tarihce.html">Tarihçe</a></li>
               </ul>
             </li>
-
-            <!-- Eğitim Programları -->
             <li class="nav-item dropdown">
               <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">Eğitim
                 Programları</a>
@@ -58,8 +54,6 @@
                 <li><a class="dropdown-item" href="rehberlik.html">Rehberlik</a></li>
               </ul>
             </li>
-
-            <!-- Atölyeler -->
             <li class="nav-item dropdown">
               <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">Atölyeler</a>
               <ul class="dropdown-menu">
@@ -69,8 +63,6 @@
                 <li><a class="dropdown-item" href="kozmik.html">Montessori Kozmik</a></li>
               </ul>
             </li>
-
-            <!-- Etkinlikler -->
             <li class="nav-item dropdown">
               <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">Etkinlikler</a>
               <ul class="dropdown-menu">
@@ -81,238 +73,133 @@
                 <li><a class="dropdown-item" href="galeri.html">Galeri</a></li>
               </ul>
             </li>
-
-            <li class="nav-item">
-              <a class="nav-link" href="ogretmenler.html">Kadromuz</a>
-            </li>
-
-            <li class="nav-item">
-              <a class="nav-link" href="iletisim.html">İletişim</a>
-            </li>
-
+            <li class="nav-item"><a class="nav-link" href="ogretmenler.html">Kadromuz</a></li>
+            <li class="nav-item"><a class="nav-link" href="iletisim.html">İletişim</a></li>
           </ul>
         </div>
       </div>
     </nav>
   </header>
-  <!-- yabanci dil section -->
-  <section class="language-education py-5">
+
+  <!-- HERO SECTION -->
+  <section class="hero-section">
     <div class="container">
-      <div class="section-header text-center mb-5">
-        <h2 class="display-4 fw-bold">Yabancı Dil Eğitimi</h2>
-        <p class="lead text-muted">İki dil, bir dünya: İngilizce ve Arapça</p>
-        <div class="divider mx-auto bg-gradient"></div>
-      </div>
-
-      <div class="row g-4 align-items-center">
-        <div class="col-lg-6">
-          <div class="language-image-container rounded-4 overflow-hidden shadow-lg position-relative">
-            <img src="image/ingilizce/1.JPG" alt="Yabancı dil eğitimi" class="img-fluid w-100">
-            <div class="language-badge">
-              <span class="badge bg-primary me-2">İngilizce</span>
-              <span class="badge bg-success">Arapça</span>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-lg-6">
-          <div class="language-content p-4 p-lg-5 bg-white rounded-4 shadow-sm h-100">
-            <h3 class="mb-4">Montessori Felsefesi ile Dil Öğrenimi</h3>
-
-            <div class="language-features mb-4">
-              <div class="feature-item d-flex mb-3">
-                <div class="feature-icon bg-primary me-3">
-                  <i class="fas fa-child"></i>
-                </div>
-                <div>
-                  <p class="mb-0 small">Anaokulu ve ilkokul kademelerinde öğrencilerimizin gelişim düzeylerine, ilgi ve
-                    isteklerine, öğrenme hızlarına uygun olarak dil eğitimi veriyoruz</p>
-                </div>
-              </div>
-
-              <div class="feature-item d-flex mb-3">
-                <div class="feature-icon bg-success me-3">
-                  <i class="fas fa-hands"></i>
-                </div>
-                <div>
-                  <p class="mb-0 small">Montessori Felsefesi ışığında öğrencilerimize yaparak-yaşayarak hedef dili
-                    içselleştirme olanağı sunuyoru.</p>
-                </div>
-              </div>
-              <div class="feature-item d-flex mb-3">
-                <div class="me-3">
-                  <i class="fas fa-brain fa-2x text-success"></i>
-                </div>
-                <div>
-                  <p class="mb-0 small text-muted">
-                    İlgi düzeylerini arttıran, materyaller ile zenginleştirilmiş derslerimizde dört temel dil
-                    becerilerinin gelişimini sağlıyoruz.
-                  </p>
-                </div>
-              </div>
-
-
-              <div class="feature-item d-flex mb-3">
-                <div class="feature-icon bg-warning me-3">
-                  <i class="fas fa-comments"></i>
-                </div>
-                <div>
-                  <p class="mb-0 small">Speaking derslerimiz ile öğrencilerimizin aktif katılımını sağlayarak
-                    iletişimsel dil becerilerini üst düzeye ulaştırmayı hedefliyoruz</p>
-                </div>
-              </div>
-            </div>
-
-            <div class="highlight-box p-4 rounded-3 bg-light border-start border-4 border-primary">
-              <div class="d-flex">
-                <i class="fas fa-star text-warning me-3 fs-4"></i>
-                <p class="mb-0">18 Mart Sirac Koleji olarak İngilizce ve Arapça dil eğitiminde milli ve manevi değerler
-                  ile hedef dili harmanlayarak çocuklarımızın ahlaki gelişimlerini destekliyoruz.</p>
-              </div>
-            </div>
-
-            <div class="language-stats mt-4 row text-center">
-              <div class="col-4">
-                <div class="stat-number text-primary fw-bold fs-3">4+</div>
-                <div class="stat-label small">Temel Beceri</div>
-              </div>
-              <div class="col-4">
-                <div class="stat-number text-success fw-bold fs-3">100%</div>
-                <div class="stat-label small">Pratik Odaklı</div>
-              </div>
-              <div class="col-4">
-                <div class="stat-number text-warning fw-bold fs-3">2</div>
-                <div class="stat-label small">Yabancı Dil</div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
+      <h1>YABANCI DİL EĞİTİMİ</h1>
+      <div class="divider"></div>
+      <p>İki Dil, Bir Dünya Vizyonuyla Geleceğin Dünya Vatandaşlarını Yetiştiriyoruz</p>
     </div>
   </section>
 
-  <style>
-    .language-education {
-      background: linear-gradient(135deg, #f8f9fa 0%, #f1f5f9 100%);
-      position: relative;
-      overflow: hidden;
-      padding-top: 160px;
-      margin-top: 0;
-    }
+  <!-- MAIN LANGUAGE SECTION -->
+  <section class="language-section">
+    <div class="container">
+      <div class="section-header text-center">
+        <h2>Dünya İle Konuşun</h2>
+        <div class="divider-dark"></div>
+        <p class="lead">İngilizce ve Arapça ile Sınırları Aşıyoruz</p>
+      </div>
 
-    .language-education::before {
-      content: "";
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background: url('path/to/subtle-pattern.png') repeat;
-      opacity: 0.03;
-      z-index: 0;
-    }
+      <!-- Content Row -->
+      <div class="row g-5 align-items-center">
+        <!-- Image with Floating Badges -->
+        <div class="col-lg-6">
+          <div class="language-image-wrapper">
+            <img src="image/ingilizce/1.JPG" alt="Yabancı Dil Sınıfı">
 
-    .divider.bg-gradient {
-      background: linear-gradient(90deg, #3498db, #2ecc71);
-      height: 4px;
-      width: 80px;
-      margin: 20px auto 30px;
-    }
+            <!-- Floating Badge 1 -->
+            <div class="floating-badge badge-top-right">
+              <div class="badge-icon badge-blue">
+                <i class="fas fa-globe-americas"></i>
+              </div>
+              <div class="badge-text">
+                <h6>Global Vizyon</h6>
+                <span>Uluslararası Standartlar</span>
+              </div>
+            </div>
 
-    /* Language Image */
-    .language-image-container {
-      height: 100%;
-      min-height: 400px;
-      transition: transform 0.3s ease;
-    }
+            <!-- Floating Badge 2 -->
+            <div class="floating-badge badge-bottom-left">
+              <div class="badge-icon badge-green">
+                <i class="fas fa-language"></i>
+              </div>
+              <div class="badge-text">
+                <h6>İki Dilli Eğitim</h6>
+                <span>İngilizce & Arapça</span>
+              </div>
+            </div>
+          </div>
+        </div>
 
-    .language-image-container:hover {
-      transform: scale(1.02);
-    }
+        <!-- Content -->
+        <div class="col-lg-6">
+          <div class="language-content-box">
+            <h3>Montessori Felsefesi ile Dil Öğrenimi</h3>
 
-    .language-image-container img {
-      height: 100%;
-      object-fit: cover;
-    }
+            <ul class="feature-list">
+              <li class="feature-item">
+                <div class="feature-icon">
+                  <i class="fas fa-child"></i>
+                </div>
+                <p><strong>Bireysel Yaklaşım:</strong> Öğrencilerimizin gelişim düzeylerine, ilgi ve hızlarına uygun,
+                  kişiselleştirilmiş dil eğitimi.</p>
+              </li>
 
-    .language-badge {
-      position: absolute;
-      top: 20px;
-      right: 20px;
-    }
+              <li class="feature-item">
+                <div class="feature-icon" style="background: linear-gradient(135deg, #2ecc71, #27ae60);">
+                  <i class="fas fa-hands-holding"></i>
+                </div>
+                <p><strong>Yaparak Yaşayarak:</strong> Montessori felsefesi ışığında, dili ezberleyerek değil,
+                  hayatın içinde kullanarak ve içselleştirerek öğrenim.</p>
+              </li>
 
-    .language-badge .badge {
-      font-size: 0.9rem;
-      padding: 8px 12px;
-      border-radius: 50px;
-    }
+              <li class="feature-item">
+                <div class="feature-icon" style="background: linear-gradient(135deg, #f39c12, #d35400);">
+                  <i class="fas fa-comments"></i>
+                </div>
+                <p><strong>Speaking Odaklı:</strong> Aktif katılımı teşvik eden konuşma dersleri ile iletişimsel
+                  becerilerin geliştirilmesi.</p>
+              </li>
+            </ul>
 
-    /* Language Content */
-    .language-content {
-      transition: all 0.3s ease;
-    }
+            <div class="info-box">
+              <i class="fas fa-star"></i>
+              <p>Milli ve manevi değerlerimizle harmanlanmış, ahlaki gelişimi destekleyen dil eğitimi modelimizle
+                fark
+                yaratıyoruz.</p>
+            </div>
+          </div>
+        </div>
+      </div>
 
-    .language-content:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1) !important;
-    }
+      <!-- Stats Grid -->
+      <div class="stats-grid">
+        <div class="row g-4 justify-content-center">
+          <div class="col-md-4">
+            <div class="stat-card">
+              <div class="stat-number">4+</div>
+              <div class="stat-label">Temel Dil Becerisi</div>
+              <p class="text-muted small mt-2">Okuma, Yazma, Dinleme, Konuşma</p>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="stat-card">
+              <div class="stat-number">%100</div>
+              <div class="stat-label">Pratik Uygulama</div>
+              <p class="text-muted small mt-2">Günlük hayatta dil kullanımı</p>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="stat-card">
+              <div class="stat-number">2</div>
+              <div class="stat-label">Yabancı Dil</div>
+              <p class="text-muted small mt-2">İngilizce ve Arapça Eğitimi</p>
+            </div>
+          </div>
+        </div>
+      </div>
 
-    .feature-icon {
-      width: 50px;
-      height: 50px;
-      border-radius: 50%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      color: white;
-      font-size: 1.2rem;
-    }
-
-    .feature-item {
-      transition: transform 0.3s ease;
-    }
-
-    .feature-item:hover {
-      transform: translateX(5px);
-    }
-
-    .highlight-box {
-      transition: all 0.3s ease;
-    }
-
-    .highlight-box:hover {
-      background-color: rgba(52, 152, 219, 0.15) !important;
-    }
-
-    .language-stats {
-      border-top: 1px dashed #dee2e6;
-      padding-top: 15px;
-    }
-
-    .stat-number {
-      line-height: 1.2;
-    }
-
-    .stat-label {
-      color: #6c757d;
-    }
-
-    @media (max-width: 768px) {
-      .language-image-container {
-        min-height: 300px;
-        margin-bottom: 20px;
-      }
-
-      .language-content {
-        padding: 2rem;
-      }
-
-      .section-header h2 {
-        font-size: 2.2rem;
-      }
-    }
-  </style>
-
+    </div>
+  </section>
 
   <!-- FOOTER -->
   <footer>
@@ -329,43 +216,28 @@
           <p>2007 yılında kurulan 18 Mart Sirac Koleji, güçlü değerlerle donanmış nesiller yetiştirir. Öğrencilerimizin
             akademik, sosyal ve manevi gelişimini ön planda tutuyoruz.</p>
 
-          <!-- ÖZELLİKLER -->
           <div class="footer-features">
             <div class="feature-item">
-              <div class="feature-icon">
-                <i class="fas fa-award"></i>
-              </div>
+              <div class="feature-icon"><i class="fas fa-award"></i></div>
               <div class="feature-text">Kaliteli Eğitim</div>
             </div>
             <div class="feature-item">
-              <div class="feature-icon">
-                <i class="fas fa-heart"></i>
-              </div>
+              <div class="feature-icon"><i class="fas fa-heart"></i></div>
               <div class="feature-text">Sevgi Dolu Ortam</div>
             </div>
             <div class="feature-item">
-              <div class="feature-icon">
-                <i class="fas fa-users"></i>
-              </div>
+              <div class="feature-icon"><i class="fas fa-users"></i></div>
               <div class="feature-text">Deneyimli Kadro</div>
             </div>
           </div>
 
-          <!-- SOSYAL MEDYA -->
           <div class="footer-social">
-            <a href="https://www.facebook.com/18MartSiracKoleji/" class="social-icon" target="_blank" title="Facebook">
-              <i class="fab fa-facebook-f"></i>
-            </a>
+            <a href="https://www.facebook.com/18MartSiracKoleji/" class="social-icon" target="_blank"
+              title="Facebook"><i class="fab fa-facebook-f"></i></a>
             <a href="https://www.instagram.com/18martsirackoleji/" class="social-icon" target="_blank"
-              title="Instagram">
-              <i class="fab fa-instagram"></i>
-            </a>
-            <a href="#" class="social-icon" title="Twitter">
-              <i class="fab fa-twitter"></i>
-            </a>
-            <a href="#" class="social-icon" title="YouTube">
-              <i class="fab fa-youtube"></i>
-            </a>
+              title="Instagram"><i class="fab fa-instagram"></i></a>
+            <a href="#" class="social-icon" title="Twitter"><i class="fab fa-twitter"></i></a>
+            <a href="#" class="social-icon" title="YouTube"><i class="fab fa-youtube"></i></a>
           </div>
         </div>
 
@@ -379,7 +251,6 @@
             <p><i class="fas fa-clock"></i> Pazartesi - Cuma: 08:00 - 18:00</p>
           </div>
 
-          <!-- ÇALIŞMA SAATLERİ -->
           <div class="working-hours">
             <h6>Çalışma Saatleri</h6>
             <p>Pazartesi - Cuma <span>08:00 - 18:00</span></p>
@@ -409,13 +280,10 @@
             <div class="input-group mb-3">
               <input type="email" class="form-control" placeholder="E-posta adresiniz" required
                 aria-label="E-posta adresi">
-              <button class="btn btn-warning" type="submit">
-                <i class="fas fa-paper-plane me-1"></i>Abone Ol
-              </button>
+              <button class="btn btn-warning" type="submit"><i class="fas fa-paper-plane me-1"></i>Abone Ol</button>
             </div>
           </form>
 
-          <!-- GÜVENLİK BADGES -->
           <div class="security-badge mt-4">
             <div
               style="display: flex; align-items: center; gap: 10px; padding: 10px; background: rgba(42, 157, 143, 0.1); border-radius: 8px; border-left: 4px solid #2a9d8f;">
@@ -438,118 +306,9 @@
       </div>
     </div>
   </footer>
+
   <script src="js/script.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
-  <script>
-    // Smooth scrolling for anchor links
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-      anchor.addEventListener('click', function (e) {
-        e.preventDefault();
-        document.querySelector(this.getAttribute('href')).scrollIntoView({
-          behavior: 'smooth'
-        });
-      });
-    });
-    // Back to top button functionality
-    const backToTopButton = document.createElement('button');
-    backToTopButton.innerHTML = '<i class="fas fa-arrow-up"></i>';
-    backToTopButton.classList.add('back-to-top-button');
-    document.body.appendChild(backToTopButton);
-
-    backToTopButton.addEventListener('click', function () {
-      window.scrollTo({
-        top: 0,
-        behavior: 'smooth'
-      });
-    });
-  </script>
-  <style>
-    /* Back to Top Button Styles */
-    .back-to-top-button {
-      position: fixed;
-      bottom: 20px;
-      right: 20px;
-      background-color: #3498db;
-      color: white;
-      border: none;
-      border-radius: 50%;
-      width: 50px;
-      height: 50px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-      cursor: pointer;
-      z-index: 1000;
-      transition: background-color 0.3s ease, transform 0.3s ease;
-    }
-
-    .back-to-top-button:hover {
-      background-color: #2980b9;
-      transform: scale(1.1);
-    }
-
-    .back-to-top-button i {
-      font-size: 24px;
-    }
-
-    @media (max-width: 768px) {
-      .back-to-top-button {
-        width: 40px;
-        height: 40px;
-        bottom: 15px;
-        right: 15px;
-      }
-
-      .back-to-top-button i {
-        font-size: 20px;
-      }
-    }
-
-    /* Footer Styles */
-    footer {
-      background-color: #343a40;
-      color: white;
-      padding: 40px 0;
-    }
-
-    .footer-title {
-      font-size: 1.5rem;
-      margin-bottom: 20px;
-      color: #f8f9fa;
-    }
-
-    .footer-links {
-      list-style: none;
-      padding: 0;
-    }
-
-    .footer-links li {
-      margin-bottom: 10px;
-    }
-
-    .footer-links a {
-      color: #f8f9fa;
-      text-decoration: none;
-      transition: color 0.3s ease;
-    }
-
-    .footer-links a:hover {
-      color: #3498db;
-    }
-  </style>
-
-  <script>
-    // Back to Top Button Functionality
-    window.addEventListener('scroll', function () {
-      const backToTopButton = document.querySelector('.back-to-top-button');
-      if (window.scrollY > 300) {
-        backToTopButton.style.display = 'block';
-      } else {
-        backToTopButton.style.display = 'none';
-      }
-    });
-  </script>
 </body>
 
 </html>

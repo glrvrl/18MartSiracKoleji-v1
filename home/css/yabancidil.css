@@ -1,0 +1,337 @@
+/* 'YABANCI DIL' PAGE - PREMIUM GLOBAL DESIGN */
+/* Clean, "Mirror-like", Modern, and Communicative */
+
+/* 1. HERO SECTION */
+.hero-section {
+    position: relative;
+    background: linear-gradient(135deg, rgba(0, 82, 212, 0.9), rgba(67, 100, 247, 0.8), rgba(111, 177, 252, 0.8)),
+        url('../image/ingilizce/1.JPG') center/cover no-repeat fixed;
+    color: white;
+    padding: 180px 0 140px;
+    text-align: center;
+    clip-path: polygon(0 0, 100% 0, 100% 90%, 50% 100%, 0 90%);
+    /* Modern angular clip */
+    margin-bottom: -60px;
+    z-index: 1;
+}
+
+.hero-section h1 {
+    font-size: 3.8rem;
+    font-weight: 800;
+    margin-bottom: 20px;
+    text-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    animation: fadeInDown 1s ease-out;
+    letter-spacing: 1px;
+}
+
+.hero-section p {
+    font-size: 1.4rem;
+    max-width: 800px;
+    margin: 0 auto 30px;
+    font-weight: 300;
+    opacity: 0.95;
+    line-height: 1.6;
+    animation: fadeInUp 1s ease-out 0.3s backwards;
+}
+
+.divider {
+    height: 4px;
+    width: 90px;
+    margin: 20px auto 30px;
+    border-radius: 2px;
+    background: linear-gradient(90deg, #fff, #a1c4fd);
+}
+
+/* 2. MAIN CONTENT SECTION */
+.language-section {
+    background-color: #f0f4f8;
+    /* Very light cool grey/blue */
+    padding: 100px 0 80px;
+    position: relative;
+    z-index: 2;
+}
+
+.section-header {
+    margin-bottom: 70px;
+}
+
+.section-header h2 {
+    font-size: 2.8rem;
+    font-weight: 800;
+    color: #2c3e50;
+    margin-bottom: 15px;
+}
+
+.section-header .lead {
+    font-size: 1.2rem;
+    color: #5d6d7e;
+}
+
+.section-header .divider-dark {
+    background: linear-gradient(90deg, #0052d4, #4364f7);
+    height: 4px;
+    width: 80px;
+    margin: 20px auto;
+    border-radius: 2px;
+}
+
+/* 3. CARDS & CONTENT BOXES */
+.language-content-box {
+    background: #ffffff;
+    border-radius: 25px;
+    padding: 45px;
+    box-shadow: 0 15px 35px rgba(0, 82, 212, 0.08);
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    /* Bouncy transition */
+    height: 100%;
+    position: relative;
+    border-top: 5px solid #0052d4;
+    overflow: hidden;
+}
+
+.language-content-box:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 25px 50px rgba(0, 82, 212, 0.15);
+}
+
+/* "Mirror/Glass" Effect Overlay */
+.language-content-box::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle, rgba(255, 255, 255, 0.8) 0%, rgba(255, 255, 255, 0) 70%);
+    opacity: 0;
+    transform: scale(0.5);
+    transition: opacity 0.5s, transform 0.5s;
+    pointer-events: none;
+}
+
+.language-content-box:hover::before {
+    opacity: 0.1;
+    transform: scale(1);
+}
+
+.language-content-box h3 {
+    color: #0052d4;
+    font-weight: 700;
+    margin-bottom: 25px;
+}
+
+.feature-list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.feature-item {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 25px;
+}
+
+.feature-icon {
+    min-width: 55px;
+    height: 55px;
+    background: linear-gradient(135deg, #0052d4, #4364f7);
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 1.4rem;
+    margin-right: 20px;
+    box-shadow: 0 5px 15px rgba(0, 82, 212, 0.2);
+    flex-shrink: 0;
+}
+
+.feature-item p {
+    margin: 0;
+    color: #555;
+    line-height: 1.6;
+    font-size: 1.05rem;
+}
+
+/* 4. IMAGES & VISUALS */
+.language-image-wrapper {
+    position: relative;
+    border-radius: 25px;
+    overflow: hidden;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+    height: 100%;
+    min-height: 500px;
+}
+
+.language-image-wrapper img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.6s ease;
+}
+
+.language-image-wrapper:hover img {
+    transform: scale(1.08);
+}
+
+/* Floating Badges */
+.floating-badge {
+    position: absolute;
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
+    padding: 15px 25px;
+    border-radius: 15px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    z-index: 2;
+    transition: transform 0.3s ease;
+}
+
+.floating-badge:hover {
+    transform: translateY(-5px);
+}
+
+.badge-top-right {
+    top: 30px;
+    right: 30px;
+}
+
+.badge-bottom-left {
+    bottom: 30px;
+    left: 30px;
+}
+
+.badge-icon {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2rem;
+    color: white;
+}
+
+.badge-blue {
+    background: #0052d4;
+}
+
+.badge-green {
+    background: #2ecc71;
+}
+
+.badge-text h6 {
+    margin: 0;
+    font-weight: 700;
+    color: #2c3e50;
+}
+
+.badge-text span {
+    font-size: 0.85rem;
+    color: #6c757d;
+}
+
+
+/* 5. STATS GRID */
+.stats-grid {
+    margin-top: 60px;
+}
+
+.stat-card {
+    background: white;
+    padding: 30px 20px;
+    border-radius: 20px;
+    text-align: center;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+    transition: all 0.3s ease;
+    border: 1px solid rgba(0, 0, 0, 0.02);
+}
+
+.stat-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 20px 40px rgba(0, 82, 212, 0.1);
+    border-color: rgba(0, 82, 212, 0.2);
+}
+
+.stat-number {
+    font-size: 3rem;
+    font-weight: 800;
+    background: linear-gradient(135deg, #0052d4, #4364f7);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-bottom: 10px;
+}
+
+.stat-label {
+    font-weight: 600;
+    color: #555;
+    font-size: 1.1rem;
+}
+
+/* 6. INFO BOX */
+.info-box {
+    margin-top: 40px;
+    background: linear-gradient(135deg, #e3f2fd, #bbdefb);
+    border-left: 5px solid #0052d4;
+    padding: 25px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.info-box i {
+    font-size: 2rem;
+    color: #0052d4;
+}
+
+.info-box p {
+    margin: 0;
+    color: #1565c0;
+    font-weight: 600;
+    font-size: 1.05rem;
+}
+
+/* ANIMATIONS */
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* RESPONSIVE */
+@media (max-width: 992px) {
+    .hero-section {
+        padding: 150px 0 100px;
+    }
+
+    .hero-section h1 {
+        font-size: 2.8rem;
+    }
+
+    .language-image-wrapper {
+        min-height: 350px;
+    }
+}

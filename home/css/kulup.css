@@ -1,0 +1,320 @@
+/* 'STUDENT CLUBS' PAGE - PREMIUM DESIGN */
+/* Consistent with anlayis.css, kozmik.css, gorsel.css */
+/* Core Theme: Vibrant, Energetic (Colors: Gold/Teal/Blue) */
+
+/* 1. HERO SECTION */
+.hero-section {
+    position: relative;
+    /* Dynamic gradient + background image */
+    background: linear-gradient(135deg, rgba(26, 86, 167, 0.9), rgba(42, 157, 143, 0.85)),
+        url('../image/anasayfa1.JPG') center/cover no-repeat fixed;
+    color: #fff;
+    padding: 180px 0 140px;
+    text-align: center;
+    /* Modern clipped bottom edge */
+    clip-path: polygon(0 0, 100% 0, 100% 90%, 50% 100%, 0 90%);
+    margin-bottom: -60px;
+    z-index: 1;
+}
+
+.hero-section h1 {
+    font-size: 3.5rem;
+    font-weight: 800;
+    letter-spacing: -1px;
+    margin-bottom: 20px;
+    text-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    animation: fadeInDown 1s ease-out;
+}
+
+.hero-section p {
+    font-size: 1.35rem;
+    max-width: 800px;
+    margin: 0 auto 30px;
+    font-weight: 300;
+    opacity: 0.95;
+    line-height: 1.6;
+    animation: fadeInUp 1s ease-out 0.3s backwards;
+}
+
+.hero-btn {
+    display: inline-block;
+    padding: 15px 40px;
+    background: #f9a826;
+    color: #fff;
+    font-weight: 700;
+    border-radius: 50px;
+    text-decoration: none;
+    box-shadow: 0 10px 20px rgba(249, 168, 38, 0.4);
+    transition: all 0.3s ease;
+    animation: fadeInUp 1s ease-out 0.6s backwards;
+}
+
+.hero-btn:hover {
+    background: #e68d08;
+    transform: translateY(-5px);
+    color: #fff;
+    box-shadow: 0 15px 30px rgba(249, 168, 38, 0.6);
+}
+
+/* 2. CLUBS GRID SECTION */
+.club-section {
+    background-color: #ffffff;
+    padding: 100px 0 80px;
+    position: relative;
+    z-index: 2;
+}
+
+.section-title {
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.section-title h2 {
+    font-size: 2.5rem;
+    font-weight: 800;
+    color: #2c3e50;
+    position: relative;
+    display: inline-block;
+}
+
+.section-title h2::after {
+    content: '';
+    display: block;
+    width: 80px;
+    height: 4px;
+    background: var(--turkuaz, #4fb6c2);
+    margin: 15px auto 0;
+    border-radius: 2px;
+}
+
+.section-title p {
+    color: #6c757d;
+    font-size: 1.1rem;
+    margin-top: 15px;
+}
+
+/* 3. CLUB CARDS */
+.club-card {
+    background: #fff;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    height: 100%;
+    border: 1px solid rgba(0, 0, 0, 0.02);
+    display: flex;
+    flex-direction: column;
+}
+
+.club-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.1);
+}
+
+.club-img-wrapper {
+    position: relative;
+    height: 240px;
+    overflow: hidden;
+}
+
+.club-img-wrapper img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.6s ease;
+}
+
+.club-card:hover .club-img-wrapper img {
+    transform: scale(1.1);
+}
+
+.club-badge {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background: #fff;
+    color: #2c3e50;
+    padding: 8px 15px;
+    border-radius: 30px;
+    font-weight: 700;
+    font-size: 0.85rem;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    z-index: 2;
+}
+
+.club-content {
+    padding: 30px;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.club-content h3 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #2c3e50;
+    margin-bottom: 15px;
+}
+
+.club-content p {
+    color: #666;
+    font-size: 0.95rem;
+    line-height: 1.6;
+    margin-bottom: 25px;
+    flex-grow: 1;
+    /* Push button to bottom */
+}
+
+.club-content .btn-link {
+    color: var(--turkuaz, #4fb6c2);
+    text-decoration: none;
+    font-weight: 700;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    transition: gap 0.3s ease;
+    padding: 0;
+    align-self: flex-start;
+}
+
+.club-content .btn-link:hover {
+    gap: 12px;
+    color: #3fa3ad;
+}
+
+/* 4. GALLERY GRID (Masonry Feel) */
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
+    padding: 20px 0;
+}
+
+.gallery-item {
+    border-radius: 12px;
+    overflow: hidden;
+    height: 200px;
+    position: relative;
+    cursor: pointer;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+}
+
+.gallery-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.gallery-item:hover img {
+    transform: scale(1.1);
+}
+
+/* 5. MODALS (Popups) - Clean & Modern */
+.modal-content {
+    border: none;
+    border-radius: 20px;
+    box-shadow: 0 25px 50px rgba(0, 0, 0, 0.25);
+    overflow: hidden;
+}
+
+.modal-header {
+    background: linear-gradient(135deg, #1a56a7, #4fb6c2);
+    color: #fff;
+    border-bottom: none;
+    padding: 25px 30px;
+}
+
+.modal-title {
+    font-weight: 700;
+    font-size: 1.5rem;
+}
+
+.btn-close-white {
+    filter: invert(1) grayscale(100%) brightness(200%);
+}
+
+.modal-body {
+    padding: 40px;
+    background: #fff;
+}
+
+.modal-body p {
+    font-size: 1.05rem;
+    color: #555;
+    line-height: 1.8;
+    margin-bottom: 20px;
+}
+
+.modal-highlight {
+    background: #f0f7ff;
+    border-left: 5px solid #1a56a7;
+    padding: 20px;
+    margin: 20px 0;
+    border-radius: 0 10px 10px 0;
+}
+
+.modal-highlight h5 {
+    color: #1a56a7;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.activity-list {
+    list-style: none;
+    padding: 0;
+}
+
+.activity-list li {
+    position: relative;
+    padding-left: 30px;
+    margin-bottom: 12px;
+    color: #444;
+}
+
+.activity-list li::before {
+    content: '\f00c';
+    /* FontAwesome Check */
+    font-family: 'Font Awesome 6 Free';
+    font-weight: 900;
+    position: absolute;
+    left: 0;
+    top: 3px;
+    color: #2a9d8f;
+}
+
+/* ANIMATIONS */
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* RESPONSIVE */
+@media (max-width: 992px) {
+    .hero-section {
+        padding: 150px 0 100px;
+    }
+
+    .hero-section h1 {
+        font-size: 2.5rem;
+    }
+}

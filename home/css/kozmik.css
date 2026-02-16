@@ -1,0 +1,245 @@
+/* 'MONTESSORI COSMIC EDUCATION' PAGE DESIGN */
+/* Theme: Universe, Nature, Discovery - Dark Blue / Teal / Gold accents */
+
+/* 1. HERO SECTION */
+.hero-section {
+    position: relative;
+    /* Deep cosmic gradient + subtle texture */
+    background: linear-gradient(135deg, rgba(20, 30, 48, 0.9) 0%, rgba(36, 59, 85, 0.8) 100%),
+        url('../image/montessori/4.PNG') center/cover no-repeat;
+    color: #fff;
+    padding: 180px 0 140px;
+    text-align: center;
+    /* Modern clipped bottom edge */
+    clip-path: polygon(0 0, 100% 0, 100% 90%, 50% 100%, 0 90%);
+    margin-bottom: -60px;
+    z-index: 1;
+}
+
+.hero-section h1 {
+    font-size: 3.5rem;
+    font-weight: 800;
+    letter-spacing: -1px;
+    margin-bottom: 20px;
+    text-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+    background: -webkit-linear-gradient(#fff, #aab7c4);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.hero-section p {
+    font-size: 1.35rem;
+    max-width: 800px;
+    margin: 0 auto;
+    font-weight: 300;
+    opacity: 0.95;
+    line-height: 1.6;
+}
+
+/* 2. MAIN CONTENT AREA */
+.cosmic-content {
+    background-color: var(--acik-gri, #f8fafc);
+    padding: 100px 0 80px;
+    position: relative;
+    z-index: 2;
+    overflow: hidden;
+}
+
+/* Decorative Background Elements (Planets/Circles) */
+.cosmic-content::before {
+    content: '';
+    position: absolute;
+    top: 10%;
+    left: -100px;
+    width: 300px;
+    height: 300px;
+    background: radial-gradient(circle, rgba(79, 182, 194, 0.05) 0%, transparent 70%);
+    border-radius: 50%;
+    z-index: -1;
+}
+
+.cosmic-content::after {
+    content: '';
+    position: absolute;
+    bottom: 10%;
+    right: -100px;
+    width: 400px;
+    height: 400px;
+    background: radial-gradient(circle, rgba(243, 156, 61, 0.05) 0%, transparent 70%);
+    border-radius: 50%;
+    z-index: -1;
+}
+
+/* 3. FEATURE BLOCKS (ZIG-ZAG LAYOUT) */
+.feature-block {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+    margin-bottom: 80px;
+}
+
+/* Reverse layout for even items */
+.feature-block.reverse {
+    flex-direction: row-reverse;
+}
+
+/* TEXT COLUMN */
+.text-col {
+    flex: 1;
+}
+
+.text-col h2 {
+    font-size: 2.2rem;
+    font-weight: 700;
+    color: #2c3e50;
+    margin-bottom: 25px;
+    position: relative;
+    display: inline-block;
+}
+
+.text-col h2::after {
+    content: '';
+    display: block;
+    width: 60px;
+    height: 4px;
+    background: var(--turkuaz, #4fb6c2);
+    margin-top: 10px;
+    border-radius: 2px;
+}
+
+.text-col p {
+    font-size: 1.08rem;
+    color: #555;
+    line-height: 1.8;
+    margin-bottom: 20px;
+    text-align: justify;
+}
+
+/* IMAGE COLUMN */
+.image-col {
+    flex: 1;
+    position: relative;
+}
+
+.image-wrapper {
+    position: relative;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.15);
+    transform: perspective(1000px) rotateY(2deg);
+    transition: all 0.5s ease;
+}
+
+.image-wrapper::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to bottom, transparent 60%, rgba(0, 0, 0, 0.6));
+    z-index: 1;
+}
+
+.image-wrapper img {
+    width: 100%;
+    height: auto;
+    display: block;
+    transition: transform 0.6s ease;
+}
+
+.image-caption {
+    position: absolute;
+    bottom: 20px;
+    left: 30px;
+    right: 30px;
+    color: #fff;
+    z-index: 2;
+    font-style: italic;
+    font-size: 0.95rem;
+    border-left: 3px solid var(--turuncu, #f39c3d);
+    padding-left: 15px;
+    transform: translateY(10px);
+    opacity: 0;
+    transition: all 0.4s ease;
+}
+
+/* HOVER EFFECTS */
+.feature-block:hover .image-wrapper {
+    transform: perspective(1000px) rotateY(0deg) translateY(-10px);
+    box-shadow: 0 30px 60px rgba(0, 0, 0, 0.2);
+}
+
+.feature-block:hover .image-wrapper img {
+    transform: scale(1.05);
+}
+
+.feature-block:hover .image-caption {
+    transform: translateY(0);
+    opacity: 1;
+}
+
+
+/* 4. HIGHLIGHT BOX (QUOTE) */
+.highlight-box {
+    background: #fff;
+    border-radius: 16px;
+    padding: 30px;
+    margin: 30px 0;
+    border-left: 5px solid var(--turkuaz, #4fb6c2);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+    position: relative;
+}
+
+.highlight-box p {
+    font-size: 1.15rem;
+    font-weight: 500;
+    color: #34495e;
+    margin: 0;
+    font-style: italic;
+}
+
+.highlight-box i {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    font-size: 2rem;
+    color: rgba(79, 182, 194, 0.15);
+}
+
+
+/* RESPONSIVE */
+@media (max-width: 992px) {
+    .hero-section {
+        padding: 150px 0 100px;
+    }
+
+    .hero-section h1 {
+        font-size: 2.5rem;
+    }
+
+    .feature-block,
+    .feature-block.reverse {
+        flex-direction: column;
+        gap: 40px;
+        margin-bottom: 60px;
+    }
+
+    .image-wrapper {
+        transform: none;
+        max-width: 100%;
+    }
+
+    .image-caption {
+        opacity: 1;
+        transform: translateY(0);
+        position: relative;
+        bottom: auto;
+        left: auto;
+        right: auto;
+        margin-top: -5px;
+        background: #444;
+        padding: 15px;
+        border-radius: 0 0 20px 20px;
+        border-left: none;
+        border-top: 3px solid var(--turuncu);
+    }
+}

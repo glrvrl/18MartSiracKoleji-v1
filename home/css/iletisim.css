@@ -1,0 +1,313 @@
+/* 'İLETİŞİM' PAGE - PREMIUM GLOBAL DESIGN */
+:root {
+    --primary: #1a5276;
+    --primary-light: #2980b9;
+    --secondary: #e68d08;
+    --accent: #2ecc71;
+    --dark: #2c3e50;
+    --light: #f8f9fa;
+    --white: #ffffff;
+    --gray: #7f8c8d;
+    --transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+    --shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+    --radius: 20px;
+}
+
+/* 1. HERO SECTION */
+.contact-hero {
+    position: relative;
+    height: 60vh;
+    min-height: 500px;
+    background: linear-gradient(135deg, rgba(26, 82, 118, 0.9), rgba(44, 62, 80, 0.8)),
+        url('../image/anasayfa1.JPG') center/cover no-repeat fixed;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: var(--white);
+    clip-path: polygon(0 0, 100% 0, 100% 85%, 50% 100%, 0 85%);
+    z-index: 1;
+}
+
+.hero-content h1 {
+    font-size: 4rem;
+    font-weight: 900;
+    margin-bottom: 20px;
+    letter-spacing: -1px;
+    animation: fadeInDown 1s both;
+}
+
+.hero-content p {
+    font-size: 1.25rem;
+    max-width: 700px;
+    margin: 0 auto 40px;
+    opacity: 0.95;
+    animation: fadeInUp 1s 0.2s both;
+}
+
+.hero-btns {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    animation: fadeInUp 1s 0.4s both;
+}
+
+.hero-btn {
+    padding: 15px 35px;
+    border-radius: 50px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: var(--transition);
+}
+
+.hero-btn-primary {
+    background: var(--secondary);
+    color: white;
+    box-shadow: 0 10px 20px rgba(230, 141, 8, 0.3);
+}
+
+.hero-btn-primary:hover {
+    background: #d47d06;
+    transform: translateY(-5px);
+    box-shadow: 0 15px 30px rgba(230, 141, 8, 0.4);
+}
+
+.hero-btn-outline {
+    background: rgba(255, 255, 255, 0.1);
+    border: 2px solid white;
+    color: white;
+    backdrop-filter: blur(5px);
+}
+
+.hero-btn-outline:hover {
+    background: white;
+    color: var(--primary);
+    transform: translateY(-5px);
+}
+
+/* 2. CONTACT INFO CARDS - SLIGHTLY ROUNDED & SOFT */
+.contact-info-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+    margin-top: -60px;
+    position: relative;
+    z-index: 10;
+    padding: 0 15px;
+}
+
+.info-card {
+    background: var(--white);
+    padding: 45px 35px;
+    border-radius: 30px;
+    /* More rounded */
+    text-align: center;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.06);
+    /* Softer shadow */
+    transition: var(--transition);
+    border: 1px solid rgba(0, 0, 0, 0.02);
+}
+
+.info-card:hover {
+    transform: translateY(-12px);
+    box-shadow: 0 30px 60px rgba(0, 0, 0, 0.1);
+}
+
+.info-icon {
+    width: 70px;
+    height: 70px;
+    background: linear-gradient(135deg, var(--secondary), #ffb347);
+    color: white;
+    border-radius: 22px;
+    /* Squircle style */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.8rem;
+    margin: 0 auto 25px;
+    box-shadow: 0 8px 15px rgba(230, 141, 8, 0.2);
+}
+
+/* 3. MAIN CONTACT AREA - REMOVE BOXY FEEL */
+.contact-main {
+    padding: 80px 0;
+    background: radial-gradient(circle at top right, rgba(230, 141, 8, 0.03), transparent 400px);
+}
+
+.contact-layout {
+    display: grid;
+    grid-template-columns: 1.3fr 1fr;
+    gap: 40px;
+    background: white;
+    border-radius: 40px;
+    /* Very rounded corner */
+    overflow: hidden;
+    box-shadow: 0 30px 70px rgba(0, 0, 0, 0.07);
+}
+
+.form-side {
+    padding: 70px;
+}
+
+.map-side {
+    position: relative;
+    min-height: 500px;
+    border-left: 1px solid #f0f0f0;
+}
+
+.map-side iframe {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    border: 0;
+}
+
+/* Form Styling */
+.section-tag {
+    color: var(--secondary);
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    display: block;
+    margin-bottom: 10px;
+}
+
+.section-title {
+    font-size: 2.5rem;
+    font-weight: 900;
+    color: var(--dark);
+    margin-bottom: 40px;
+}
+
+.premium-input {
+    width: 100%;
+    padding: 16px 22px;
+    background: #fcfcfc;
+    border: 2px solid #f0f0f0;
+    /* Thicker but lighter border */
+    border-radius: 16px;
+    margin-bottom: 20px;
+    font-size: 1rem;
+    transition: var(--transition);
+    color: var(--dark);
+}
+
+.premium-input:focus {
+    background: white;
+    border-color: var(--secondary);
+    box-shadow: 0 0 0 5px rgba(230, 141, 8, 0.1);
+    outline: none;
+}
+
+/* Specific Select Styling */
+select.premium-input {
+    cursor: pointer;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='%23e68d08' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'%3E%3C/polyline%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 15px center;
+    background-size: 18px;
+    -webkit-appearance: none;
+}
+
+.submit-btn {
+    background: linear-gradient(135deg, var(--secondary), #d47d06);
+    color: white;
+    padding: 18px 40px;
+    border-radius: 18px;
+    border: none;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    cursor: pointer;
+    transition: var(--transition);
+    width: 100%;
+    box-shadow: 0 10px 25px rgba(230, 141, 8, 0.3);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+}
+
+.submit-btn:hover {
+    background: var(--dark);
+    transform: translateY(-5px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+}
+
+/* 4. SOCIAL MEDIA SECTION */
+.social-section {
+    padding: 80px 0;
+    background: var(--light);
+    text-align: center;
+}
+
+.social-links {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.social-box {
+    width: 70px;
+    height: 70px;
+    background: white;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.8rem;
+    color: var(--primary);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05);
+    transition: var(--transition);
+    text-decoration: none !important;
+}
+
+.social-box:hover {
+    background: var(--primary);
+    color: white;
+    transform: translateY(-10px) rotate(8deg);
+}
+
+/* Animations */
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+    .contact-layout {
+        grid-template-columns: 1fr;
+    }
+
+    .map-side {
+        height: 400px;
+        order: -1;
+    }
+
+    .hero-content h1 {
+        font-size: 2.8rem;
+    }
+}

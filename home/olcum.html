@@ -4,25 +4,26 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Degerlerimiz</title>
+  <title>Ölçme ve Değerlendirme - Özel On Sekiz Mart Siraç İlkokulu</title>
   <link rel="icon" type="image/png" href="image/favicon.ico" />
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/olcum.css">
 </head>
 
 <body>
 
   <!-- HEADER / NAVBAR -->
   <header>
-    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+    <nav class="navbar navbar-expand-lg navbar-light bg-white fixed-top shadow-sm">
       <div class="container">
 
         <a class="navbar-brand d-flex align-items-center gap-3" href="index.html">
-          <img src="image/ilokullogo.jpeg" alt="18 Mart Sirac Koleji Logo" class="navbar-logo" />
-          <span class="navbar-title">Özel OnSekiz Mart Siraç Koleji İlkokulu</span>
+          <img src="image/siraclogu .png" alt="18 Mart Sirac Koleji Logo" class="navbar-logo" />
+          <span class="navbar-title d-none d-sm-block">Özel OnSekiz Mart<br>Siraç İlkokulu</span>
+          <span class="navbar-title d-block d-sm-none">Siraç Koleji</span>
         </a>
-
 
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#siracNavbar">
           <span class="navbar-toggler-icon"></span>
@@ -30,12 +31,7 @@
 
         <div class="collapse navbar-collapse" id="siracNavbar">
           <ul class="navbar-nav ms-auto">
-
-            <li class="nav-item">
-              <a class="nav-link" href="index.html">Anasayfa</a>
-            </li>
-
-            <!-- Kurumsal -->
+            <li class="nav-item"><a class="nav-link" href="index.html">Anasayfa</a></li>
             <li class="nav-item dropdown">
               <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">Kurumsal</a>
               <ul class="dropdown-menu">
@@ -44,8 +40,6 @@
                 <li><a class="dropdown-item" href="tarihce.html">Tarihçe</a></li>
               </ul>
             </li>
-
-            <!-- Eğitim Programları -->
             <li class="nav-item dropdown">
               <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">Eğitim
                 Programları</a>
@@ -57,8 +51,6 @@
                 <li><a class="dropdown-item" href="rehberlik.html">Rehberlik</a></li>
               </ul>
             </li>
-
-            <!-- Atölyeler -->
             <li class="nav-item dropdown">
               <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">Atölyeler</a>
               <ul class="dropdown-menu">
@@ -68,8 +60,6 @@
                 <li><a class="dropdown-item" href="kozmik.html">Montessori Kozmik</a></li>
               </ul>
             </li>
-
-            <!-- Etkinlikler -->
             <li class="nav-item dropdown">
               <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">Etkinlikler</a>
               <ul class="dropdown-menu">
@@ -80,378 +70,147 @@
                 <li><a class="dropdown-item" href="galeri.html">Galeri</a></li>
               </ul>
             </li>
-
-            <li class="nav-item">
-              <a class="nav-link" href="ogretmenler.html">Kadromuz</a>
-            </li>
-
-            <li class="nav-item">
-              <a class="nav-link" href="iletisim.html">İletişim</a>
-            </li>
-
+            <li class="nav-item"><a class="nav-link" href="ogretmenler.html">Kadromuz</a></li>
+            <li class="nav-item"><a class="nav-link" href="iletisim.html">İletişim</a></li>
           </ul>
         </div>
       </div>
     </nav>
   </header>
-  <!-- HERO -->
+
+  <!-- HERO SECTION -->
   <section class="hero-section">
     <div class="container">
-      <h1>Ölçme ve Değerlendirme Sistemimiz</h1>
+      <h1>Ölçme ve Değerlendirme</h1>
+      <p>Öğrencilerimizin akademik ve bireysel gelişimlerini; modern, bilimsel ve bütüncül yaklaşımlarla takip
+        ediyoruz.</p>
     </div>
   </section>
 
-  <section class="assessment-system py-5 bg-light">
+  <!-- MAIN CONTENT -->
+  <section class="assessment-system">
     <div class="container">
-      <div class="section-header text-center mb-5">
-        <h2 class="display-4 fw-bold">Ölçme ve Değerlendirme Sistemimiz</h2>
-        <p class="lead text-muted">Bireysel gelişimi merkeze alan modern değerlendirme yöntemleri</p>
-        <div class="divider mx-auto bg-primary"></div>
+      <div class="section-header text-center">
+        <h2>Sistemimiz</h2>
+        <div class="divider mx-auto"></div>
+        <p class="lead">Bireysel gelişimi merkeze alan modern değerlendirme yöntemleri</p>
       </div>
 
-      <div class="row g-4">
+      <div class="row g-5">
         <!-- A- Etüt Çalışmaları -->
         <div class="col-lg-6">
-          <div class="assessment-card p-4 p-lg-5 rounded-4 shadow-sm h-100">
-            <div class="assessment-header d-flex align-items-center mb-4">
-              <div class="assessment-number bg-primary">A</div>
-              <h3 class="mb-0 ms-3">Etüt Çalışmaları</h3>
+          <div class="assessment-card card-a">
+            <div class="assessment-header">
+              <div class="assessment-number">A</div>
+              <h3>Etüt Çalışmaları</h3>
             </div>
-            <div class="assessment-image mb-4 rounded-3 overflow-hidden">
-              <img src="image/etut/5.jpg" alt="Etüt çalışmaları" class="img-fluid w-100">
+            <div class="assessment-image">
+              <img src="image/etut/5.jpg" alt="Etüt çalışmaları">
             </div>
             <p>Çalışan toplumlarda öğrencinin ailesi ile geçirdiği zaman kısıtlıdır. Aile evde olduğu zaman diliminde
-              çocuğuyla kaliteli zaman geçirmek istemektedir.
-              Bizler de 18 Mart Sirac Koleji olarak bu ihtiyacın farkında olarak, eğitim sistemimizi planlıyoruz.
-              Okulumuz etütlü bir okuldur. Etüt saatlerinde öğrenciler dilerlerse ödevlerini yaparlar ya da gün içinde
-              yarım kalan çalışmalarını tamamlarlar. Ayrıca etüt derslerinde öğrencilerimizle işlediğimiz konuların
-              pekişmesi, öğrenme eksikliklerinin fark edilmesi adına çalışmalar yapıyoruz. Bireysel öğrenmeye daha çok
-              ihtiyacı olan öğrencilerimizi tespit edip, onlar
-              için birebir dersler planlıyoruz. Yine aynı şekilde öğrendiği bilgileri somut materyaller kullanarak,
-              kalıcı hale getiriyoruz:</p>
+              çocuğuyla kaliteli zaman geçirmek ister. Okulumuz etütlü bir okuldur. Etüt saatlerinde öğrenciler
+              dilerlerse ödevlerini yapar ya da gün içinde yarım kalan çalışmalarını tamamlarlar.</p>
+            <p>Ayrıca etüt derslerinde öğrencilerimizle işlediğimiz konuların pekişmesi, öğrenme eksikliklerinin fark
+              edilmesi adına çalışmalar yapıyoruz. Bireysel öğrenmeye daha çok ihtiyacı olan öğrencilerimizi tespit
+              edip, onlar için birebir dersler planlıyoruz.</p>
             <ul class="assessment-features">
-              <li><i class="fas fa-check-circle text-primary"></i> Ödevlerini tamamlarlar</li>
-              <li><i class="fas fa-check-circle text-primary"></i> Konu tekrarı yaparlar</li>
-              <li><i class="fas fa-check-circle text-primary"></i> Bireysel öğrenme ihtiyaçlarına göre destek alırlar
-              </li>
+              <li><i class="fas fa-check-circle"></i> Ödevlerin okulda tamamlanması</li>
+              <li><i class="fas fa-check-circle"></i> Konu tekrarı ve pekiştirme</li>
+              <li><i class="fas fa-check-circle"></i> Bireysel öğrenme ihtiyaçlarına göre destek</li>
             </ul>
-            <div class="highlight-box mt-3 p-3 rounded-3 bg-primary-light">
-              <p class="mb-0">Öğrenme eksikliklerini tespit edip birebir dersler planlıyor, somut materyallerle kalıcı
-                öğrenme sağlıyoruz.</p>
+            <div class="highlight-box">
+              <p>Öğrenme eksikliklerini tespit edip birebir dersler planlıyor, somut materyallerle kalıcı öğrenme
+                sağlıyoruz.</p>
             </div>
           </div>
         </div>
 
         <!-- B- Portfolyo Çalışmaları -->
         <div class="col-lg-6">
-          <div class="assessment-card p-4 p-lg-5 rounded-4 shadow-sm h-100">
-            <div class="assessment-header d-flex align-items-center mb-4">
-              <div class="assessment-number bg-success">B</div>
-              <h3 class="mb-0 ms-3">Portfolyo Çalışmaları</h3>
+          <div class="assessment-card card-b">
+            <div class="assessment-header">
+              <div class="assessment-number">B</div>
+              <h3>Portfolyo Çalışmaları</h3>
             </div>
-            <div class="assessment-image mb-4 rounded-3 overflow-hidden">
-              <img src="image/portfolyo/profolya.jpg" alt="Portfolyo çalışmaları" class="img-fluid w-100">
+            <div class="assessment-image">
+              <img src="image/portfolyo/profolya.jpg" alt="Portfolyo çalışmaları">
             </div>
-            <p>Montessori eğitim sistemi değerlendirmeyi, kendi geliştirdiği alternatif teknikler kullanarak
-              gerçekleştirir. Okulumuzda öğretmenlerimiz, sene başında öğrencilerin hazırbulunuşluk derecelerini tespit
-              etmek için envanterler oluşturur. Aynı zamanda müfredatın
-              tamamını kapsayan kazanım değerlendirme ölçekleri ile dönem içinde gelişimlerini de takip ederler. Her
-              öğrencinin kendine özel oluşturulan
-              portfolyo dosyasında yaptığı çalışmalar kendi özgür seçimiyle biriktirilir ve bireysel yapılan veli
-              toplantılarında velilere sunulur. Dosya içeriğine öğrencinin Montessori atölyesinde yaptığı çalışmalara da
-              yer verilir. Öğretmen, öğrencinin hem sosyal- duygusal gelişimini hem de
-              akademik gelişimini gözlemler ve kayda geçer. Ölçeklerle bir değerlendirme yapar. Öğrencinin çalışmalarını
-              bir ürün dosyasında biriktirir. Sene
-              sonunda öğrenci durumu hakkında bir değerlendirmede bulunur. Bu değerlendirmeler her dönemde birer kere
-              veli toplantısında ebeveynlere
-              yazılı olarak sunulur. Dönem sonunda verilen karneye ek olarak öğrenci gelişim karnesi de verilir:</p>
+            <p>Montessori eğitim sistemi değerlendirmeyi kendi geliştirdiği alternatif tekniklerle gerçekleştirir. Sene
+              başında hazırbulunuşluk envanterleri oluşturulur. Müfredatın tamamını kapsayan kazanım değerlendirme
+              ölçekleri ile dönem içi gelişim takip edilir.</p>
+            <p>Her öğrencinin kendine özel oluşturulan portfolyo dosyasında yaptığı çalışmalar biriktirilir. Öğretmen,
+              öğrencinin hem sosyal-duygusal hem de akademik gelişimini gözlemler ve kaydeder.</p>
             <ul class="assessment-features">
-              <li><i class="fas fa-check-circle text-success"></i> Kişisel portfolyo dosyaları</li>
-              <li><i class="fas fa-check-circle text-success"></i> Kazanım değerlendirme ölçekleri</li>
-              <li><i class="fas fa-check-circle text-success"></i> Bireysel veli toplantıları</li>
+              <li><i class="fas fa-check-circle"></i> Kişisel portfolyo ve ürün dosyaları</li>
+              <li><i class="fas fa-check-circle"></i> Kazanım değerlendirme ölçekleri</li>
+              <li><i class="fas fa-check-circle"></i> Bireysel veli sunumları</li>
             </ul>
-            <div class="highlight-box mt-3 p-3 rounded-3 bg-success-light">
-              <p class="mb-0">Öğrencilerin sosyal-duygusal ve akademik gelişimleri gözlemlenerek kaydedilir ve velilere
-                yazılı olarak sunulur.</p>
+            <div class="highlight-box">
+              <p>Öğrencilerin sosyal-duygusal ve akademik gelişimleri gözlemlenerek kaydedilir ve velilere yazılı olarak
+                sunulur.</p>
             </div>
           </div>
         </div>
 
         <!-- C- Ödevlendirme -->
         <div class="col-lg-6">
-          <div class="assessment-card p-4 p-lg-5 rounded-4 shadow-sm h-100">
-            <div class="assessment-header d-flex align-items-center mb-4">
-              <div class="assessment-number bg-warning">C</div>
-              <h3 class="mb-0 ms-3">Ödevlendirme</h3>
+          <div class="assessment-card card-c">
+            <div class="assessment-header">
+              <div class="assessment-number">C</div>
+              <h3>Ödevlendirme</h3>
             </div>
-            <div class="assessment-image mb-4 rounded-3 overflow-hidden">
-              <img src="image/odevlar/5.jpg" alt="Ödevlendirme" class="img-fluid w-100">
+            <div class="assessment-image">
+              <img src="image/odevlar/5.jpg" alt="Ödevlendirme">
             </div>
-            <p>Eğitim yönüyle gelişmiş olan toplumlarda ödevin ağırlığı ve niteliği diğer toplumlara göre farklılıklar
-              gösterir. Yapılan araştırmalar ödevin, çocuğun yaşamında özellikle zaman yönetimi ve sorumluluk duygusunu
-              kazanmada etkin bir yere sahiptir. Klasik eğitim anlayışından farklı
-              olarak önerilen ödev öğrenciyi aktif kılan, düşünmeye- araştırmaya sevk eden, aile bireyleriyle işbirliği
-              yapmayı gerektiren nitelikte ödevlerin verilmesidir. Bizler Özel On Sekiz Mart Siraç İlkokulu olarak
-              modern eğitim sistemlerini takip etmekte ve ödev sistemimizi bu doğrultuda planlamaktayız. Okulumuzda
-              Montessori eğitim felsefesinin öngördüğü şekilde ödevler haftalık olarak
-              öğrencilerin bireysel öğrenme hızları dikkate alınarak verilir. Öğrenci ödevini teslim edeceği
-              güne kadar günlere böler ve planlamasını kendisi gerçekleştirir. Öğretmenlerimiz tarafından
-              sınıf düzeyine göre yapılan ödevlendirmeler K12 veli takip sistemimize eklenir ve ödevlerin yapılma
-              durumları sisteme işlenir. Ödevler her öğrenci için bireysel olarak öğrenme hızına göre
-              ve seviyesine uygun olarak verilmektedir. Haftalık ödevler sayesinde öğrencilere sorumluluk
-              bilinci kazandırılmaktadır. Ödevler bir sonraki hafta teslim alındığında öğretmen tarafından
-              kontroller yapılır. Ardından öğrencilerle birebir doğru ve yanlışlarına bakılarak geri dönüt yapılması
-              sağlanır: </p>
+            <p>Ödevler, öğrenciyi aktif kılan, düşünmeye-araştırmaya sevk eden nitelikte olmalıdır. Okulumuzda
+              Montessori eğitim felsefesine uygun olarak ödevler haftalık ve bireysel öğrenme hızlarına göre verilir.
+              Öğrenci, ödevini kendi planlar ve zaman yönetimini öğrenir.</p>
+            <p>Ödevler K12 veli takip sistemimize işlenir. Haftalık ödevler sayesinde öğrencilere sorumluluk bilinci
+              kazandırılır. Ödevler teslim edildiğinde öğretmen tarafından kontrol edilir ve birebir geri dönüt
+              sağlanır.</p>
             <ul class="assessment-features">
-              <li><i class="fas fa-check-circle text-warning"></i> Haftalık bireysel ödev planlaması</li>
-              <li><i class="fas fa-check-circle text-warning"></i> Araştırmaya teşvik eden projeler</li>
-              <li><i class="fas fa-check-circle text-warning"></i> K12 veli takip sistemi entegrasyonu</li>
+              <li><i class="fas fa-check-circle"></i> Haftalık bireysel ödev planlaması</li>
+              <li><i class="fas fa-check-circle"></i> Araştırmaya teşvik eden projeler</li>
+              <li><i class="fas fa-check-circle"></i> K12 veli takip sistemi entegrasyonu</li>
             </ul>
-            <div class="highlight-box mt-3 p-3 rounded-3 bg-warning-light">
-              <p class="mb-0">Öğretmenler ödevleri değerlendirip geri dönüt verir ve öğrencilere zaman yönetimi
-                becerisi kazandırılır..</p>
+            <div class="highlight-box">
+              <p>Öğretmenler ödevleri değerlendirip anında geri dönüt verir ve öğrencilere zaman yönetimi becerisi
+                kazandırılır.</p>
             </div>
           </div>
         </div>
 
-        <!-- D- Kazanım Tarama ve Dijital Sistem -->
+        <!-- D- Kazanım Tarama ve Dijital -->
         <div class="col-lg-6">
-          <div class="assessment-card p-4 p-lg-5 rounded-4 shadow-sm h-100">
-            <div class="assessment-header d-flex align-items-center mb-4">
-              <div class="assessment-number bg-info">E</div>
-              <h3 class="mb-0 ms-3"> Dijital Eğitim ve K12</h3>
+          <div class="assessment-card card-d">
+            <div class="assessment-header">
+              <div class="assessment-number">D</div>
+              <h3>Dijital Eğitim ve K12</h3>
             </div>
-            <div class="assessment-image mb-4 rounded-3 overflow-hidden">
-              <img src="image/dijital/1.JPEG" alt="Dijital eğitim" class="img-fluid w-100">
+            <div class="assessment-image">
+              <img src="image/dijital/1.JPEG" alt="Dijital eğitim">
             </div>
+            <p>Teknolojiyi eğitimin bir parçası olarak etkin kullanıyoruz. Dijital platformlar üzerinden animasyon ve
+              simülasyon destekli konu anlatımları sunuyoruz.</p>
+            <p>Ayrıca düzenli yapılan kazanım tarama çalışmaları ile öğrencilerin akademik süreçleri yakından takip
+              edilir. Eksik görülen kazanımlar için anında müdahale edilerek tam öğrenme sağlanır.</p>
             <ul class="assessment-features">
-              <li><i class="fas fa-check-circle text-info"></i> Animasyon ve simülasyonlu konu anlatımı - soru çözümü
-              </li>
-              <li><i class="fas fa-check-circle text-info"></i> Öğrenciye özel ödevlendirme</li>
-              <li><i class="fas fa-check-circle text-info"></i> Öğrenciye özel gelişim raporları</li>
-              <li><i class="fas fa-check-circle text-info"></i> Öğrenciye özel K12 sisteminde fotoğraf paylaşımi</li>
+              <li><i class="fas fa-check-circle"></i> Animasyonlu konu anlatımları</li>
+              <li><i class="fas fa-check-circle"></i> Öğrenciye özel dijital ödevlendirme</li>
+              <li><i class="fas fa-check-circle"></i> K12 üzerinden gelişim raporları</li>
+              <li><i class="fas fa-check-circle"></i> Düzenli kazanım tarama testleri</li>
             </ul>
-            <div class="highlight-box mt-3 p-3 rounded-3 bg-info-light">
-              <h1>D-4 Sınıf Kazanım Tarama Çalısmaları</h1>
-              <p class="mb-0">
-              <p>Her hafta önceki haftaların kazanımları kazanım tarama testleri ile gözden geçirilir. Konu pekiştirme
-                ve soru çözme çalışmaları yapılır.</p>
-              </p>
+            <div class="highlight-box">
+              <p>Her hafta önceki haftaların kazanımları tarama testleri ile gözden geçirilir. Konu pekiştirme ve soru
+                çözme çalışmaları yapılır.</p>
             </div>
           </div>
         </div>
+
       </div>
     </div>
   </section>
 
-  <style>
-    .hero-section {
-      background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-        url('image/anasayfa1.JPG') center/cover no-repeat;
-      color: white;
-      padding: 180px 0;
-      text-align: center;
-      user-select: none;
-      min-height: 600px;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-    }
-
-    .hero-section h1 {
-      font-size: 4rem;
-      font-weight: 800;
-      letter-spacing: 1px;
-      margin-bottom: 20px;
-      text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.6);
-    }
-
-    .hero-section p {
-      font-size: 1.5rem;
-      max-width: 700px;
-      margin: 20px auto 0;
-      line-height: 1.6;
-      text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.4);
-    }
-
-    .hero-section .btn {
-      background-color: #ffffff;
-      color: #000;
-      font-weight: bold;
-      padding: 12px 30px;
-      border-radius: 30px;
-      text-decoration: none;
-      transition: all 0.3s ease;
-      display: inline-block;
-      margin-top: 30px;
-    }
-
-    .hero-section .btn:hover {
-      background-color: var(--sirac-secondary, #4a7b9d);
-      color: #fff;
-    }
-
-    .assessment-system {
-      position: relative;
-      overflow: hidden;
-    }
-
-    .assessment-system::before {
-      content: "";
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background: url('path/to/subtle-pattern.png') repeat;
-      opacity: 0.03;
-      z-index: 0;
-    }
-
-    .divider {
-      width: 80px;
-      height: 4px;
-      margin-top: 20px;
-      margin-bottom: 30px;
-    }
-
-    /* Assessment Cards */
-    .assessment-card {
-      background-color: white;
-      position: relative;
-      z-index: 1;
-      transition: all 0.3s ease;
-      border-top: 4px solid transparent;
-    }
-
-    .assessment-card:hover {
-      transform: translateY(-10px);
-      box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1) !important;
-    }
-
-    .assessment-header {
-      position: relative;
-      padding-bottom: 15px;
-    }
-
-    .assessment-header::after {
-      content: "";
-      position: absolute;
-      bottom: 0;
-      left: 0;
-      width: 50px;
-      height: 3px;
-      background: currentColor;
-    }
-
-    .assessment-number {
-      width: 50px;
-      height: 50px;
-      border-radius: 50%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 1.5rem;
-      font-weight: bold;
-      color: white;
-    }
-
-    .assessment-image {
-      height: 200px;
-      overflow: hidden;
-      transition: all 0.3s ease;
-    }
-
-    .assessment-image img {
-      height: 100%;
-      width: 100%;
-      object-fit: cover;
-      transition: transform 0.5s ease;
-    }
-
-    .assessment-card:hover .assessment-image img {
-      transform: scale(1.05);
-    }
-
-    .assessment-features {
-      list-style: none;
-      padding-left: 0;
-    }
-
-    .assessment-features li {
-      margin-bottom: 8px;
-      padding-left: 30px;
-      position: relative;
-    }
-
-    .assessment-features i {
-      position: absolute;
-      left: 0;
-      top: 4px;
-    }
-
-    .highlight-box {
-      border-left: 4px solid;
-      background-color: rgba(52, 152, 219, 0.1);
-    }
-
-    .bg-primary-light {
-      background-color: rgba(52, 152, 219, 0.1) !important;
-      border-left-color: #3498db !important;
-    }
-
-    .bg-success-light {
-      background-color: rgba(46, 204, 113, 0.1) !important;
-      border-left-color: #2ecc71 !important;
-    }
-
-    .bg-warning-light {
-      background-color: rgba(243, 156, 18, 0.1) !important;
-      border-left-color: #f39c12 !important;
-    }
-
-    .bg-info-light {
-      background-color: rgba(155, 89, 182, 0.1) !important;
-      border-left-color: #9b59b6 !important;
-    }
-
-    .assessment-card:nth-child(1) {
-      border-top-color: #3498db;
-    }
-
-    .assessment-card:nth-child(2) {
-      border-top-color: #2ecc71;
-    }
-
-    .assessment-card:nth-child(3) {
-      border-top-color: #f39c12;
-    }
-
-    .assessment-card:nth-child(4) {
-      border-top-color: #9b59b6;
-    }
-
-    @media (max-width: 768px) {
-      .assessment-card {
-        padding: 2rem;
-      }
-
-      .section-header h2 {
-        font-size: 2.2rem;
-      }
-
-      .assessment-number {
-        width: 40px;
-        height: 40px;
-        font-size: 1.2rem;
-      }
-
-      .assessment-image {
-        height: 150px;
-      }
-    }
-  </style>
   <!-- FOOTER -->
   <footer>
     <div class="container">
@@ -467,43 +226,28 @@
           <p>2007 yılında kurulan 18 Mart Sirac Koleji, güçlü değerlerle donanmış nesiller yetiştirir. Öğrencilerimizin
             akademik, sosyal ve manevi gelişimini ön planda tutuyoruz.</p>
 
-          <!-- ÖZELLİKLER -->
           <div class="footer-features">
             <div class="feature-item">
-              <div class="feature-icon">
-                <i class="fas fa-award"></i>
-              </div>
+              <div class="feature-icon"><i class="fas fa-award"></i></div>
               <div class="feature-text">Kaliteli Eğitim</div>
             </div>
             <div class="feature-item">
-              <div class="feature-icon">
-                <i class="fas fa-heart"></i>
-              </div>
+              <div class="feature-icon"><i class="fas fa-heart"></i></div>
               <div class="feature-text">Sevgi Dolu Ortam</div>
             </div>
             <div class="feature-item">
-              <div class="feature-icon">
-                <i class="fas fa-users"></i>
-              </div>
+              <div class="feature-icon"><i class="fas fa-users"></i></div>
               <div class="feature-text">Deneyimli Kadro</div>
             </div>
           </div>
 
-          <!-- SOSYAL MEDYA -->
           <div class="footer-social">
-            <a href="https://www.facebook.com/18MartSiracKoleji/" class="social-icon" target="_blank" title="Facebook">
-              <i class="fab fa-facebook-f"></i>
-            </a>
+            <a href="https://www.facebook.com/18MartSiracKoleji/" class="social-icon" target="_blank"
+              title="Facebook"><i class="fab fa-facebook-f"></i></a>
             <a href="https://www.instagram.com/18martsirackoleji/" class="social-icon" target="_blank"
-              title="Instagram">
-              <i class="fab fa-instagram"></i>
-            </a>
-            <a href="#" class="social-icon" title="Twitter">
-              <i class="fab fa-twitter"></i>
-            </a>
-            <a href="#" class="social-icon" title="YouTube">
-              <i class="fab fa-youtube"></i>
-            </a>
+              title="Instagram"><i class="fab fa-instagram"></i></a>
+            <a href="#" class="social-icon" title="Twitter"><i class="fab fa-twitter"></i></a>
+            <a href="#" class="social-icon" title="YouTube"><i class="fab fa-youtube"></i></a>
           </div>
         </div>
 
@@ -517,7 +261,6 @@
             <p><i class="fas fa-clock"></i> Pazartesi - Cuma: 08:00 - 18:00</p>
           </div>
 
-          <!-- ÇALIŞMA SAATLERİ -->
           <div class="working-hours">
             <h6>Çalışma Saatleri</h6>
             <p>Pazartesi - Cuma <span>08:00 - 18:00</span></p>
@@ -547,13 +290,10 @@
             <div class="input-group mb-3">
               <input type="email" class="form-control" placeholder="E-posta adresiniz" required
                 aria-label="E-posta adresi">
-              <button class="btn btn-warning" type="submit">
-                <i class="fas fa-paper-plane me-1"></i>Abone Ol
-              </button>
+              <button class="btn btn-warning" type="submit"><i class="fas fa-paper-plane me-1"></i>Abone Ol</button>
             </div>
           </form>
 
-          <!-- GÜVENLİK BADGES -->
           <div class="security-badge mt-4">
             <div
               style="display: flex; align-items: center; gap: 10px; padding: 10px; background: rgba(42, 157, 143, 0.1); border-radius: 8px; border-left: 4px solid #2a9d8f;">
@@ -576,145 +316,9 @@
       </div>
     </div>
   </footer>
+
   <script src="js/script.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
-  <script>
-    // Smooth scrolling for anchor links
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-      anchor.addEventListener('click', function (e) {
-        e.preventDefault();
-        document.querySelector(this.getAttribute('href')).scrollIntoView({
-          behavior: 'smooth'
-        });
-      });
-    });
-    // Back to top button functionality
-    const backToTopButton = document.createElement('button');
-    backToTopButton.innerHTML = '<i class="fas fa-arrow-up"></i>';
-    backToTopButton.classList.add('back-to-top-button');
-    document.body.appendChild(backToTopButton);
-
-    backToTopButton.addEventListener('click', function () {
-      window.scrollTo({
-        top: 0,
-        behavior: 'smooth'
-      });
-    });
-  </script>
-  <style>
-    .back-to-top-button {
-      position: fixed;
-      bottom: 20px;
-      right: 20px;
-      background-color: #3498db;
-      color: white;
-      border: none;
-      border-radius: 50%;
-      width: 50px;
-      height: 50px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-      cursor: pointer;
-      z-index: 1000;
-      transition: background-color 0.3s ease, transform 0.3s ease;
-    }
-
-    .back-to-top-button:hover {
-      background-color: #2980b9;
-      transform: scale(1.1);
-    }
-
-    .back-to-top-button i {
-      font-size: 24px;
-    }
-
-    @media (max-width: 768px) {
-      .back-to-top-button {
-        width: 40px;
-        height: 40px;
-        bottom: 15px;
-        right: 15px;
-      }
-
-      .back-to-top-button i {
-        font-size: 20px;
-      }
-    }
-
-    /* Footer Styles */
-    footer {
-      background-color: #343a40;
-      color: white;
-      padding: 40px 0;
-    }
-
-    .footer-title {
-      font-size: 1.5rem;
-      margin-bottom: 20px;
-      color: #f8f9fa;
-    }
-
-    .footer-links {
-      list-style: none;
-      padding: 0;
-    }
-
-    .footer-links li {
-      margin-bottom: 10px;
-    }
-
-    .footer-links a {
-      color: #f8f9fa;
-      text-decoration: none;
-      transition: color 0.3s ease;
-    }
-
-    .footer-links a:hover {
-      color: #3498db;
-    }
-  </style>
-  <style>
-    .hero-section {
-      background: url('image/anasayfa1.JPG') no-repeat center center/cover;
-      color: white;
-      padding: 100px 0;
-      text-align: center;
-    }
-
-    .hero-section h1 {
-      font-size: 3rem;
-      margin-bottom: 20px;
-    }
-
-    .hero-section p {
-      font-size: 1.2rem;
-      max-width: 600px;
-      margin: auto;
-    }
-
-    @media (max-width: 768px) {
-      .hero-section h1 {
-        font-size: 2.5rem;
-      }
-
-      .hero-section p {
-        font-size: 1rem;
-      }
-    }
-  </style>
-  <script>
-    // Back to Top Button Functionality
-    window.addEventListener('scroll', function () {
-      const backToTopButton = document.querySelector('.back-to-top-button');
-      if (window.scrollY > 300) {
-        backToTopButton.style.display = 'block';
-      } else {
-        backToTopButton.style.display = 'none';
-      }
-    });
-  </script>
 </body>
 
 </html>

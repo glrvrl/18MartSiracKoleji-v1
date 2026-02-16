@@ -4,682 +4,25 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>İletişim </title>
+  <title>İletişim | Siraç Koleji</title>
   <link rel="icon" type="image/png" href="image/favicon.ico">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
   <link rel="stylesheet" href="css/style.css">
-  <link rel="stylesheet" href="css/contact.css">
-  <style>
-    /* HERO SECTION REDESIGN */
-    .contact-hero {
-      position: relative;
-      height: 50vh;
-      min-height: 450px;
-      background: linear-gradient(rgba(26, 82, 118, 0.85), rgba(44, 62, 80, 0.8)),
-        url('image/anasayfa1.JPG') center/cover fixed;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      text-align: center;
-      color: white;
-      margin-bottom: 60px;
-      border-radius: 0 0 50px 50px;
-      overflow: hidden;
-      padding: 0;
-    }
-
-    .contact-hero::before {
-      content: '';
-      position: absolute;
-      bottom: -50px;
-      left: 0;
-      width: 100%;
-      height: 100px;
-      background: white;
-      border-radius: 50% 50% 0 0;
-      transform: scaleX(1.5);
-      z-index: 1;
-    }
-
-    .hero-content {
-      z-index: 2;
-      padding: 20px;
-      animation: fadeInUp 1s ease-out;
-    }
-
-    .contact-hero h1 {
-      font-size: 3.5rem;
-      font-weight: 700;
-      margin-bottom: 15px;
-      text-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
-    }
-
-    .hero-btn {
-      padding: 16px 32px;
-      border-radius: 12px;
-      font-weight: 700;
-      font-size: 16px;
-      text-decoration: none;
-      transition: all 0.3s ease;
-      display: inline-flex;
-      align-items: center;
-      gap: 10px;
-      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
-    }
-
-    /* PREMIUM BUTTONS */
-    .hero-buttons {
-      display: flex;
-      gap: 15px;
-      justify-content: center;
-      flex-wrap: wrap;
-    }
-
-    .hero-btn {
-      padding: 14px 35px;
-      border-radius: 50px;
-      font-weight: 600;
-      font-size: 1rem;
-      text-decoration: none;
-      transition: all 0.3s ease;
-      display: inline-flex;
-      align-items: center;
-      gap: 10px;
-      border: 2px solid transparent;
-    }
-
-    /* Primary Button (Orange) */
-    .hero-btn.primary {
-      background: #e68d08;
-      color: white;
-      box-shadow: 0 4px 15px rgba(230, 141, 8, 0.4);
-    }
-
-    .hero-btn.primary:hover {
-      background: #d47d06;
-      transform: translateY(-3px);
-      box-shadow: 0 8px 25px rgba(230, 141, 8, 0.5);
-    }
-
-    /* Secondary Button (Outline) */
-    .hero-btn.secondary {
-      background: rgba(255, 255, 255, 0.1);
-      border-color: white;
-      color: white;
-      backdrop-filter: blur(5px);
-    }
-
-    .hero-btn.secondary:hover {
-      background: white;
-      color: #1a5276;
-      transform: translateY(-3px);
-    }
-
-    /* CONTACT SECTION */
-    .section-title {
-      text-align: center;
-      margin-bottom: 60px;
-      position: relative;
-    }
-
-    .section-title h2 {
-      font-size: 2.5rem;
-      display: inline-block;
-      position: relative;
-      padding-bottom: 15px;
-    }
-
-    .section-title h2::after {
-      content: '';
-      position: absolute;
-      bottom: 0;
-      left: 50%;
-      transform: translateX(-50%);
-      width: 80px;
-      height: 4px;
-      background: #e68d08;
-      border-radius: 2px;
-    }
-
-    /* PREMIUM CONTACT CARDS */
-    .contact-container {
-      display: grid;
-      grid-template-columns: 1fr 1.5fr;
-      gap: 0;
-      background: white;
-      border-radius: 20px;
-      box-shadow: 0 20px 50px rgba(0, 0, 0, 0.1);
-      overflow: hidden;
-      border: 1px solid rgba(0, 0, 0, 0.05);
-      margin-bottom: 60px;
-    }
-
-    .contact-info {
-      background: #1a5276;
-      padding: 60px 40px;
-      color: white;
-      position: relative;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      overflow: hidden;
-    }
-
-    .contact-info::before {
-      content: '';
-      position: absolute;
-      top: -50px;
-      right: -50px;
-      width: 200px;
-      height: 200px;
-      background: rgba(230, 141, 8, 0.2);
-      border-radius: 50%;
-      transform: none;
-    }
-
-    .contact-info::after {
-      content: '';
-      position: absolute;
-      bottom: -50px;
-      left: -50px;
-      width: 150px;
-      height: 150px;
-      background: rgba(255, 255, 255, 0.05);
-      border-radius: 50%;
-    }
-
-    .contact-info h3 {
-      color: white;
-      margin-bottom: 30px;
-      font-size: 1.8rem;
-      position: relative;
-      padding-bottom: 15px;
-      z-index: 2;
-    }
-
-    .contact-info h3::after {
-      content: '';
-      position: absolute;
-      bottom: 0;
-      left: 0;
-      width: 50px;
-      height: 3px;
-      background: #e68d08;
-    }
-
-    .contact-detail {
-      position: relative;
-      z-index: 2;
-      margin-bottom: 35px;
-      display: flex;
-      gap: 20px;
-      align-items: flex-start;
-    }
-
-    .contact-icon {
-      background: rgba(255, 255, 255, 0.15);
-      color: #e68d08;
-      border: 1px solid rgba(255, 255, 255, 0.2);
-      width: 60px;
-      height: 60px;
-      font-size: 1.4rem;
-      transition: all 0.3s ease;
-      border-radius: 50%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      flex-shrink: 0;
-    }
-
-    .contact-detail:hover .contact-icon {
-      background: white;
-      transform: scale(1.1);
-    }
-
-    .contact-text h4 {
-      color: white;
-      margin-bottom: 5px;
-      font-size: 1.2rem;
-    }
-
-    .contact-text p {
-      margin: 0;
-      opacity: 0.9;
-      line-height: 1.6;
-    }
-
-    .contact-form {
-      padding: 60px;
-      background: #fff;
-    }
-
-    .form-group {
-      margin-bottom: 25px;
-    }
-
-    .form-group label {
-      font-size: 0.9rem;
-      text-transform: uppercase;
-      letter-spacing: 1px;
-      color: #666;
-      margin-bottom: 10px;
-      display: block;
-      font-weight: 600;
-    }
-
-    .form-group label i {
-      margin-right: 8px;
-      color: #e68d08;
-    }
-
-    .form-group input,
-    .form-group select,
-    .form-group textarea {
-      background: #f8f9fa;
-      border: 1px solid #eee;
-      padding: 15px 20px;
-      border-radius: 10px;
-      transition: all 0.3s ease;
-      width: 100%;
-      font-size: 1rem;
-    }
-
-    .form-group input:focus,
-    .form-group select:focus,
-    .form-group textarea:focus {
-      background: white;
-      border-color: #e68d08;
-      box-shadow: 0 0 0 4px rgba(230, 141, 8, 0.1);
-      outline: none;
-    }
-
-    .contact-form .btn {
-      background: #e68d08;
-      color: white;
-      padding: 16px 40px;
-      border-radius: 50px;
-      text-transform: uppercase;
-      letter-spacing: 1px;
-      font-size: 1rem;
-      margin-top: 10px;
-      box-shadow: 0 4px 15px rgba(230, 141, 8, 0.3);
-      border: none;
-      width: 100%;
-      font-weight: 600;
-      cursor: pointer;
-      transition: all 0.3s ease;
-    }
-
-    .contact-form .btn:hover {
-      background: #d47d06;
-      box-shadow: 0 8px 25px rgba(230, 141, 8, 0.4);
-      transform: translateY(-3px);
-    }
-
-    .contact-form .btn i {
-      margin-right: 8px;
-    }
-
-    /* MAP SECTION */
-    .map-container {
-      border-radius: 15px;
-      overflow: hidden;
-      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
-      margin-bottom: 60px;
-    }
-
-    .map-container iframe {
-      width: 100%;
-      height: 450px;
-      border: none;
-      display: block;
-    }
-
-    /* SOCIAL MEDIA */
-    .social-media {
-      background: linear-gradient(rgba(26, 86, 167, 0.05), rgba(26, 86, 167, 0.05));
-      padding: 80px 0;
-      text-align: center;
-    }
-
-    .social-media h2 {
-      margin-bottom: 20px;
-    }
-
-    .social-media p {
-      max-width: 600px;
-      margin: 0 auto 40px;
-      font-size: 1.1rem;
-    }
-
-    .social-icons {
-      display: flex;
-      justify-content: center;
-      gap: 20px;
-    }
-
-    .social-icon {
-      width: 60px;
-      height: 60px;
-      border-radius: 50%;
-      background: var(--primary-color);
-      color: white;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 1.5rem;
-      transition: all 0.3s ease;
-      text-decoration: none;
-    }
-
-    .social-icon:hover {
-      transform: translateY(-8px);
-      box-shadow: 0 8px 20px rgba(26, 86, 167, 0.3);
-    }
-
-    .social-icon:nth-child(1):hover {
-      background: #3b5998;
-    }
-
-    .social-icon:nth-child(2):hover {
-      background: #e1306c;
-    }
-
-    .social-icon:nth-child(3):hover {
-      background: #1da1f2;
-    }
-
-    .social-icon:nth-child(4):hover {
-      background: #ff0000;
-    }
-
-    .social-icon:nth-child(5):hover {
-      background: #0077b5;
-    }
-
-    .newsletter-form input {
-      background: rgba(255, 255, 255, 0.1);
-      border: none;
-      color: white;
-      padding: 12px 15px;
-      border-radius: 8px;
-      width: 100%;
-      margin-bottom: 15px;
-    }
-
-    .newsletter-form input::placeholder {
-      color: rgba(255, 255, 255, 0.6);
-    }
-
-    .newsletter-form .btn {
-      background: var(--secondary-color);
-      color: white;
-      border: none;
-      padding: 12px 20px;
-      border-radius: 8px;
-      font-weight: 600;
-      width: 100%;
-      transition: all 0.3s ease;
-    }
-
-    .newsletter-form .btn:hover {
-      background: #d47d06;
-      transform: translateY(-3px);
-    }
-
-    .copyright {
-      text-align: center;
-      padding: 25px 0;
-      margin-top: 50px;
-      border-top: 1px solid rgba(255, 255, 255, 0.1);
-      color: rgba(255, 255, 255, 0.7);
-      font-size: 0.9rem;
-    }
-
-    /* RESPONSIVE DESIGN */
-    @media (max-width: 992px) {
-      .contact-container {
-        flex-direction: column;
-      }
-
-      .contact-hero {
-        padding: 130px 0 80px;
-      }
-
-      .contact-hero h1 {
-        font-size: 2.8rem;
-      }
-    }
-
-    @media (max-width: 768px) {
-      .contact-hero {
-        padding: 60px 0 60px;
-      }
-
-      .contact-hero h1 {
-        font-size: 2.3rem;
-      }
-
-      .section-title h2 {
-        font-size: 2rem;
-      }
-
-      .social-icons {
-        flex-wrap: wrap;
-      }
-
-      .map-container iframe {
-        height: 350px;
-      }
-    }
-
-    @media (max-width: 576px) {
-
-      .contact-info,
-      .contact-form {
-        padding: 30px 20px;
-      }
-
-      .contact-hero h1 {
-        font-size: 2rem;
-      }
-
-      .section-title h2 {
-        font-size: 1.8rem;
-      }
-
-      .contact-detail {
-        flex-direction: column;
-        gap: 10px;
-      }
-
-      .map-container iframe {
-        height: 300px;
-      }
-    }
-
-    .top-applybar {
-      background: #6b2b2b;
-      /* bordo kurumsal */
-      color: #fff;
-      font-size: 14px;
-    }
-
-    .top-applybar-inner {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      min-height: 48px;
-    }
-
-    /* LEFT */
-    .apply-text {
-      font-weight: 500;
-      letter-spacing: .3px;
-    }
-
-    /* RIGHT */
-    .top-applybar-right {
-      display: flex;
-      align-items: center;
-      gap: 10px;
-    }
-
-    /* BUTTONS */
-    .apply-btn {
-      padding: 6px 14px;
-      border-radius: 6px;
-      font-size: 13px;
-      font-weight: 600;
-      text-decoration: none;
-      transition: .25s;
-    }
-
-    .apply-btn.light {
-      background: #f3f3f3;
-      color: #6b2b2b;
-    }
-
-    .apply-btn.light:hover {
-      background: #fff;
-    }
-
-    .apply-btn.outline {
-      border: 1px solid #fff;
-      color: #fff;
-    }
-
-    .apply-btn.outline:hover {
-      background: #fff;
-      color: #6b2b2b;
-    }
-
-    .apply-btn.dark {
-      background: #4b1d1d;
-      color: #fff;
-    }
-
-    .apply-btn.dark:hover {
-      background: #3a1515;
-    }
-
-    /* SOCIAL */
-    .apply-social a {
-      color: #fff;
-      margin-left: 8px;
-      font-size: 16px;
-      opacity: .85;
-    }
-
-    .apply-social a:hover {
-      opacity: 1;
-    }
-
-    /* MOBILE */
-    @media (max-width: 768px) {
-      .top-applybar-inner {
-        flex-direction: column;
-        gap: 6px;
-        padding: 8px 0;
-      }
-    }
-
-    /* SOCIAL WRAPPER */
-    .apply-social {
-      display: flex;
-      align-items: center;
-      gap: 10px;
-      margin-left: 10px;
-    }
-
-    /* SOCIAL ITEM */
-    .social-item {
-      display: flex;
-      align-items: center;
-      gap: 6px;
-      padding: 5px 10px;
-      border-radius: 6px;
-      font-size: 13px;
-      text-decoration: none;
-      color: #fff;
-      transition: all .25s ease;
-      white-space: nowrap;
-    }
-
-    /* ICON */
-    .social-item i {
-      font-size: 15px;
-    }
-
-    /* EMAIL */
-    .social-item.email {
-      background: rgba(255, 255, 255, 0.12);
-    }
-
-    .social-item.email:hover {
-      background: #ffffff;
-      color: #6b2b2b;
-    }
-
-    /* INSTAGRAM */
-    .social-item.instagram {
-      background: linear-gradient(45deg, #f58529, #dd2a7b, #8134af);
-    }
-
-    .social-item.instagram:hover {
-      opacity: 0.9;
-    }
-
-    /* MOBILE */
-    @media (max-width: 992px) {
-      .apply-social span {
-        display: none;
-        /* mobilde sadece ikon */
-      }
-    }
-  </style>
+  <link rel="stylesheet" href="css/index.css">
+  <link rel="stylesheet" href="css/iletisim.css">
 </head>
 
 <body>
-  <!-- TOP BAR (MENU ÜSTÜ) -->
-  <div class="top-applybar">
-    <div class="container top-applybar-inner">
-
-      <!-- LEFT -->
-      <div class="top-applybar-left">
-        <span class="apply-text">
-          🎓 2026 Özel 18 Mart Siraç Koleji İlkokulu
-        </span>
-      </div>
-      <div class="top-applybar-right">
-        <a href="yonetım.html" class="apply-btn light">Yönetim Kurulu</a>
-        <a href="onkayit.html" class="apply-btn outline">Ön Kayıt</a>
-        <div class="apply-social">
-          <a href="mailto:bilgi@18martsirackoleji.com?subject=Bilgi%20Talebi&body=Merhaba," class="social-item email">
-            <i class="bi bi-envelope-fill"></i>
-            <span>bilgi@18martsirackoleji.com</span>
-          </a>
-          <a href="https://www.instagram.com/18martsirackoleji/" target="_blank" class="social-item instagram">
-            <i class="bi bi-instagram"></i>
-            <span>@18martsirackoleji</span>
-          </a>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <!-- HEADER / NAVBAR -->
+  <!-- NAVBAR -->
   <header>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <nav class="navbar navbar-expand-lg navbar-light bg-white sticky-top shadow-sm">
       <div class="container">
-
-        <a class="navbar-brand d-flex align-items-center gap-3" href="index.html">
-          <img src="image/ilokullogo.jpeg" alt="18 Mart Sirac Koleji Logo" class="navbar-logo" />
-          <span class="navbar-title">Özel OnSekiz Mart Siraç Koleji İlkokulu</span>
+        <a class="navbar-brand" href="index.html">
+          <img src="image/siraclogu .png" alt="18 Mart Sirac Koleji Logo" class="navbar-logo" />
+          <span class="navbar-title d-none d-sm-block">Özel OnSekiz Mart<br>Siraç İlkokulu</span>
         </a>
-
 
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#siracNavbar">
           <span class="navbar-toggler-icon"></span>
@@ -687,14 +30,10 @@
 
         <div class="collapse navbar-collapse" id="siracNavbar">
           <ul class="navbar-nav ms-auto">
+            <li class="nav-item"><a class="nav-link" href="index.html">Anasayfa</a></li>
 
-            <li class="nav-item">
-              <a class="nav-link" href="index.html">Anasayfa</a>
-            </li>
-
-            <!-- Kurumsal -->
             <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">Kurumsal</a>
+              <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">Kurumsal</a>
               <ul class="dropdown-menu">
                 <li><a class="dropdown-item" href="anlayis.html">Eğitim Anlayışımız</a></li>
                 <li><a class="dropdown-item" href="misyon.html">Misyon & Vizyon</a></li>
@@ -702,10 +41,8 @@
               </ul>
             </li>
 
-            <!-- Eğitim Programları -->
             <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">Eğitim
-                Programları</a>
+              <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">Eğitim</a>
               <ul class="dropdown-menu">
                 <li><a class="dropdown-item" href="manevi.html">Manevi Eğitim</a></li>
                 <li><a class="dropdown-item" href="kulubuler.html">Kulüpler</a></li>
@@ -715,9 +52,8 @@
               </ul>
             </li>
 
-            <!-- Atölyeler -->
             <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">Atölyeler</a>
+              <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">Atölyeler</a>
               <ul class="dropdown-menu">
                 <li><a class="dropdown-item" href="robotik.html">Robotik Kodlama</a></li>
                 <li><a class="dropdown-item" href="gorsel.html">Görsel Sanatlar ve Ahşap</a></li>
@@ -726,145 +62,113 @@
               </ul>
             </li>
 
-            <!-- Etkinlikler -->
             <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">Etkinlikler</a>
+              <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">Etkinlikler</a>
               <ul class="dropdown-menu">
                 <li><a class="dropdown-item" href="oyun.html">Oyun ve Fiziki Etkinlikler</a></li>
-                <li><a class="dropdown-item" href="kulubuler.html">Kulüpler ve P4C</a></li>
                 <li><a class="dropdown-item" href="sosyalyardim.html">Sosyal Yardım Projeleri</a></li>
                 <li><a class="dropdown-item" href="Helal_Sagalik.html">Helal ve Sağlıklı</a></li>
                 <li><a class="dropdown-item" href="galeri.html">Galeri</a></li>
               </ul>
             </li>
 
-            <li class="nav-item">
-              <a class="nav-link" href="ogretmenler.html">Kadromuz</a>
-            </li>
+            <li class="nav-item"><a class="nav-link" href="ogretmenler.html">Kadromuz</a></li>
+            <li class="nav-item active"><a class="nav-link" href="iletisim.html">İletişim</a></li>
 
-            <li class="nav-item">
-              <a class="nav-link" href="iletisim.html">İletişim</a>
+            <li class="nav-item ms-lg-3">
+              <a href="onkayit.html" class="btn btn-primary rounded-pill px-4 py-2 fw-semibold">
+                <i class="fas fa-edit me-1"></i> Ön Kayıt
+              </a>
             </li>
-
           </ul>
         </div>
       </div>
     </nav>
   </header>
-  <!-- HERO SECTION -->
-  <section class="contact-hero">
-    <div class="hero-content container">
-      <h1 class="display-3 fw-bold">Bizimle İletişime Geçin</h1>
-      <div style="width: 80px; height: 4px; background: #e68d08; margin: 20px auto; border-radius: 2px;"></div>
-      <p class="lead">Soru, görüş ve önerileriniz için aşağıdaki iletişim kanallarını
-        kullanabilir veya iletişim formunu doldurabilirsiniz.</p>
 
-      <div class="hero-buttons mt-4" data-aos="fade-up" data-aos-delay="200">
-        <a href="#contact-form" class="hero-btn primary">Hemen Mesaj Gönder</a>
-        <a href="personalRandevu.html" class="hero-btn secondary">Personel İş Başvuru</a>
+  <!-- CONTACT HERO -->
+  <section class="contact-hero">
+    <div class="hero-content container text-center">
+      <h1>Bizimle Tanışın</h1>
+      <p>Geleceğin liderlerini yetiştirdiğimiz kampüsümüzde sizleri ağırlamaktan mutluluk duyarız.</p>
+      <div class="hero-btns">
+        <a href="#contact-main" class="hero-btn hero-btn-primary">İletişime Geç</a>
+        <a href="personalRandevu.html" class="hero-btn hero-btn-outline">İş Başvurusu</a>
       </div>
     </div>
   </section>
-  <!-- CONTACT SECTION -->
-  <section id="contact" class="py-5">
-    <div class="container">
-      <div class="section-title" data-aos="fade-up">
-        <h2>İletişim Formu</h2>
-        <p>Sorularınız için bize ulaşın, en kısa sürede yanıtlayalım</p>
+
+  <!-- INFO CARDS -->
+  <section class="container">
+    <div class="contact-info-grid">
+      <!-- Address -->
+      <div class="info-card">
+        <div class="info-icon"><i class="fas fa-map-marker-alt"></i></div>
+        <h4>Yerleşke</h4>
+        <p>Kalabaklı Köyü No:25<br>Kepez, Çanakkale / Türkiye</p>
       </div>
+      <!-- Phone -->
+      <div class="info-card">
+        <div class="info-icon"><i class="fas fa-phone-alt"></i></div>
+        <h4>Telefon</h4>
+        <p>+90 543 717 8217<br>Haftaiçi: 09:00 - 18:00</p>
+      </div>
+      <!-- Email -->
+      <div class="info-card">
+        <div class="info-icon"><i class="fas fa-envelope"></i></div>
+        <h4>E-Posta</h4>
+        <p>bilgi@sirackoleji.com<br>muhasebe@sirackoleji.com</p>
+      </div>
+    </div>
+  </section>
 
-      <div class="contact-container" data-aos="fade-up" data-aos-delay="100">
-        <div class="contact-info">
-          <h3>İletişim Bilgilerimiz</h3>
+  <!-- MAIN CONTACT AREA -->
+  <section class="contact-main" id="contact-main">
+    <div class="container">
+      <div class="contact-layout">
+        <!-- FORM SIDE -->
+        <div class="form-side">
+          <span class="section-tag">Bize Yazın</span>
+          <h2 class="section-title">İletişim Formu</h2>
+          <form action="#" method="POST">
+            <div class="row">
+              <div class="col-md-6">
+                <input type="text" class="premium-input" placeholder="Adınız Soyadınız" required>
+              </div>
+              <div class="col-md-6">
+                <input type="email" class="premium-input" placeholder="E-Posta Adresiniz" required>
+              </div>
+            </div>
 
-          <div class="contact-detail">
-            <div class="contact-icon">
-              <i class="fas fa-map-marker-alt"></i>
+            <div class="row">
+              <div class="col-md-12">
+                <select class="premium-input" required>
+                  <option value="" disabled selected>Lütfen Konu Seçin</option>
+                  <option value="genel">Genel Bilgi</option>
+                  <option value="kayit">Okul Kayıt Süreçleri</option>
+                  <option value="is">İş Başvurusu</option>
+                  <option value="oneri">Görüş & Öneri</option>
+                  <option value="diger">Diğer</option>
+                </select>
+              </div>
             </div>
-            <div class="contact-text">
-              <h4>Adres</h4>
-              <p>Kalabaklı koyu No:25 Kepez, Çanakkale, Türkiye</p>
-            </div>
-          </div>
 
-          <div class="contact-detail">
-            <div class="contact-icon">
-              <i class="fas fa-phone-alt"></i>
-            </div>
-            <div class="contact-text">
-              <h4>Telefon</h4>
-              <p>+90 543 717 8217</p>
-            </div>
-          </div>
+            <textarea class="premium-input" rows="4" placeholder="Mesajınız..." required></textarea>
 
-          <div class="contact-detail">
-            <div class="contact-icon">
-              <i class="fas fa-envelope"></i>
-            </div>
-            <div class="contact-text">
-              <h4>E-posta</h4>
-              <p>bilgi@18martsirackoleji.com</p>
-            </div>
-          </div>
-
-          <div class="contact-detail">
-            <div class="contact-icon">
-              <i class="fas fa-clock"></i>
-            </div>
-            <div class="contact-text">
-              <h4>Çalışma Saatleri</h4>
-              <p>Pazartesi - Cuma: 08:00 - 17:00</p>
-              <p>Cumartesi: 09:00 - 14:00</p>
-              <p>Pazar: Kapalı</p>
-            </div>
-          </div>
+            <button type="submit" class="submit-btn">
+              <span>Mesajı Gönder</span>
+              <i class="fas fa-paper-plane"></i>
+            </button>
+          </form>
         </div>
 
-        <form class="contact-form" id="contact-form">
-          <div class="form-group">
-            <label for="fullname"><i class="fas fa-user"></i> Adınız Soyadınız</label>
-            <input type="text" id="fullname" placeholder="Adınız ve soyadınız" required>
-          </div>
+        <!-- MAP SIDE -->
+        <div class="map-side">
+          <iframe src="https://www.google.com/maps?q=18+Mart+Sıraç+Koleji&output=embed" width="100%" height="450"
+            style="border:0;" allowfullscreen="" loading="lazy">
+          </iframe>
 
-          <div class="form-group">
-            <label for="email"><i class="fas fa-envelope"></i> E-posta Adresiniz</label>
-            <input type="email" id="email" placeholder="E-posta adresiniz" required>
-          </div>
-
-          <div class="form-group">
-            <label for="phone"><i class="fas fa-phone"></i> Telefon Numaranız</label>
-            <input type="tel" id="phone" placeholder="Telefon numaranız">
-          </div>
-
-          <div class="form-group">
-            <label for="subject"><i class="fas fa-tag"></i> Konu</label>
-            <select id="subject" required>
-              <option value="" disabled selected>Konu seçiniz</option>
-              <option value="genel">Genel Soru</option>
-              <option value="kayit">Kayıt Bilgileri</option>
-              <option value="egitim">Eğitim Programları</option>
-              <option value="etkinlik">Etkinlikler</option>
-              <option value="etkinlik">İş Başvurusu</option>
-              <option value="diger">Diğer</option>
-            </select>
-          </div>
-
-          <div class="form-group">
-            <label for="message"><i class="fas fa-comment"></i> Mesajınız</label>
-            <textarea id="message" rows="6" placeholder="Mesajınızı buraya yazın..." required></textarea>
-          </div>
-
-          <button type="submit" class="btn"><i class="fas fa-paper-plane"></i> Mesajı Gönder</button>
-        </form>
-      </div>
-
-      <!-- Google Maps Integration -->
-      <div class="map-container" data-aos="fade-up">
-        <iframe src="https://www.google.com/maps?q=Kalabaklı+Köyü+No:25+Kepez,+Çanakkale,+Türkiye&output=embed"
-          width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy"
-          referrerpolicy="no-referrer-when-downgrade">
-        </iframe>
-
+        </div>
       </div>
     </div>
   </section>

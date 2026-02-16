@@ -1,0 +1,329 @@
+/* 'KADROMUZ' PAGE - PREMIUM DESIGN */
+/* Consistent with manevi.css, misyon.css, kulup.css */
+
+/* 1. HERO SECTION */
+.teacher-hero {
+    position: relative;
+    background: linear-gradient(135deg, rgba(26, 86, 219, 0.9) 0%, rgba(16, 66, 179, 0.95) 100%),
+        url('../image/anasayfa1.JPG') center/cover no-repeat fixed;
+    color: white;
+    padding: 160px 0 120px;
+    text-align: center;
+    clip-path: polygon(0 0, 100% 0, 100% 90%, 50% 100%, 0 90%);
+    /* Consistent clipping */
+    margin-bottom: -50px;
+    z-index: 1;
+}
+
+.teacher-hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" preserveAspectRatio="none"><path fill="rgba(255,255,255,0.05)" d="M0,0 L100,0 L100,100 Z"/></svg>');
+    background-size: cover;
+    pointer-events: none;
+}
+
+.teacher-hero h1 {
+    font-size: 3.5rem;
+    font-weight: 800;
+    margin-bottom: 20px;
+    text-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    animation: fadeInDown 1s ease-out;
+}
+
+.teacher-hero p {
+    font-size: 1.35rem;
+    max-width: 800px;
+    margin: 0 auto 30px;
+    font-weight: 300;
+    opacity: 0.95;
+    line-height: 1.6;
+    animation: fadeInUp 1s ease-out 0.3s backwards;
+}
+
+.hero-divider {
+    width: 100px;
+    height: 4px;
+    background: linear-gradient(90deg, #ffd700, #ffed4e);
+    margin: 20px auto 30px;
+    border-radius: 2px;
+}
+
+/* 2. QUALITIES SECTION */
+.qualities-section {
+    padding: 100px 0 80px;
+    background-color: #f8f9fa;
+    position: relative;
+    z-index: 2;
+}
+
+.description-box {
+    max-width: 900px;
+    margin: 0 auto 60px;
+    text-align: center;
+    font-size: 1.15rem;
+    line-height: 1.8;
+    color: #555;
+    background-color: white;
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.08);
+    border-left: 5px solid #1a56db;
+    transition: transform 0.3s ease;
+}
+
+.description-box:hover {
+    transform: translateY(-5px);
+}
+
+/* Feature Cards (Kadro Box) */
+.kadro-box {
+    background: white;
+    border-radius: 20px;
+    padding: 40px 30px;
+    text-align: center;
+    height: 100%;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+    border-top: 5px solid transparent;
+}
+
+.kadro-box:hover {
+    transform: translateY(-15px);
+    box-shadow: 0 25px 50px rgba(0, 0, 0, 0.15);
+}
+
+.kadro-box .icon {
+    font-size: 3.5rem;
+    margin-bottom: 25px;
+    display: block;
+    transition: all 0.4s ease;
+}
+
+.kadro-box:hover .icon {
+    transform: scale(1.1) rotate(5deg);
+}
+
+/* Specific Colors for Cards */
+.kadro-box.orange-box {
+    border-top-color: #ff7e5f;
+}
+
+.kadro-box.orange-box .icon {
+    background: linear-gradient(135deg, #ff7e5f, #feb47b);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.kadro-box.green-box {
+    border-top-color: #56ab2f;
+}
+
+.kadro-box.green-box .icon {
+    background: linear-gradient(135deg, #56ab2f, #a8e063);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.kadro-box.blue-box {
+    border-top-color: #4a6fa5;
+}
+
+.kadro-box.blue-box .icon {
+    background: linear-gradient(135deg, #4a6fa5, #86a8e7);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.kadro-box.sky-box {
+    border-top-color: #36d1dc;
+}
+
+.kadro-box.sky-box .icon {
+    background: linear-gradient(135deg, #36d1dc, #5b86e5);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.kadro-box.red-box {
+    border-top-color: #ff5858;
+}
+
+.kadro-box.red-box .icon {
+    background: linear-gradient(135deg, #ff5858, #f09819);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.kadro-box h5 {
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: #2c3e50;
+    margin-bottom: 15px;
+}
+
+.kadro-box p {
+    color: #6c757d;
+    font-size: 0.95rem;
+}
+
+
+/* 3. TEACHERS GRID SECTION */
+.teachers-section {
+    padding: 80px 0 100px;
+    background: white;
+}
+
+.teacher-card {
+    background: white;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.06);
+    transition: all 0.4s ease;
+    height: 100%;
+    position: relative;
+    border: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.teacher-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.12);
+    border-color: rgba(26, 86, 219, 0.2);
+}
+
+.teacher-img-container {
+    height: 320px;
+    overflow: hidden;
+    position: relative;
+}
+
+.teacher-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.6s ease;
+}
+
+.teacher-card:hover .teacher-img {
+    transform: scale(1.05);
+}
+
+.teacher-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to top, rgba(26, 86, 219, 0.8), transparent 60%);
+    opacity: 0;
+    transition: opacity 0.4s ease;
+}
+
+.teacher-card:hover .teacher-overlay {
+    opacity: 1;
+}
+
+.teacher-info {
+    padding: 25px;
+    text-align: center;
+}
+
+.teacher-name {
+    font-size: 1.35rem;
+    font-weight: 700;
+    color: #1a56db;
+    margin-bottom: 5px;
+}
+
+.teacher-position {
+    font-size: 0.95rem;
+    color: #6c757d;
+    font-weight: 500;
+    margin-bottom: 20px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid #eee;
+}
+
+.teacher-email-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    background-color: #f8f9fa;
+    color: #1a56db;
+    padding: 10px 20px;
+    border-radius: 50px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.teacher-email-btn:hover {
+    background-color: #1a56db;
+    color: white;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(26, 86, 219, 0.2);
+}
+
+/* ANIMATIONS */
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@media (max-width: 992px) {
+    .teacher-hero {
+        padding-top: 140px;
+    }
+
+    .teacher-hero h1 {
+        font-size: 2.5rem;
+    }
+
+    .teacher-img-container {
+        height: 280px;
+    }
+}
+
+@media (max-width: 768px) {
+    .teacher-hero {
+        padding: 120px 0 80px;
+    }
+
+    .description-box {
+        padding: 30px;
+        font-size: 1rem;
+    }
+}

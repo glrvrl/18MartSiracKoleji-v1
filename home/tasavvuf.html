@@ -4,25 +4,29 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Tasavvuf </title>
+  <title>Tasavvuf Müziği - Özel On Sekiz Mart Siraç İlkokulu</title>
   <link rel="icon" type="image/png" href="image/favicon.ico" />
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/tasavvuf.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&display=swap" rel="stylesheet">
 </head>
 
 <body>
 
   <!-- HEADER / NAVBAR -->
   <header>
-    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+    <nav class="navbar navbar-expand-lg navbar-light bg-white fixed-top shadow-sm">
       <div class="container">
 
         <a class="navbar-brand d-flex align-items-center gap-3" href="index.html">
-          <img src="image/ilokullogo.jpeg" alt="18 Mart Sirac Koleji Logo" class="navbar-logo" />
-          <span class="navbar-title">Özel OnSekiz Mart Siraç Koleji İlkokulu</span>
+          <img src="image/siraclogu .png" alt="18 Mart Sirac Koleji Logo" class="navbar-logo" />
+          <span class="navbar-title d-none d-sm-block">Özel OnSekiz Mart<br>Siraç İlkokulu</span>
+          <span class="navbar-title d-block d-sm-none">Siraç Koleji</span>
         </a>
-
 
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#siracNavbar">
           <span class="navbar-toggler-icon"></span>
@@ -30,12 +34,7 @@
 
         <div class="collapse navbar-collapse" id="siracNavbar">
           <ul class="navbar-nav ms-auto">
-
-            <li class="nav-item">
-              <a class="nav-link" href="index.html">Anasayfa</a>
-            </li>
-
-            <!-- Kurumsal -->
+            <li class="nav-item"><a class="nav-link" href="index.html">Anasayfa</a></li>
             <li class="nav-item dropdown">
               <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">Kurumsal</a>
               <ul class="dropdown-menu">
@@ -44,8 +43,6 @@
                 <li><a class="dropdown-item" href="tarihce.html">Tarihçe</a></li>
               </ul>
             </li>
-
-            <!-- Eğitim Programları -->
             <li class="nav-item dropdown">
               <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">Eğitim
                 Programları</a>
@@ -57,8 +54,6 @@
                 <li><a class="dropdown-item" href="rehberlik.html">Rehberlik</a></li>
               </ul>
             </li>
-
-            <!-- Atölyeler -->
             <li class="nav-item dropdown">
               <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">Atölyeler</a>
               <ul class="dropdown-menu">
@@ -68,8 +63,6 @@
                 <li><a class="dropdown-item" href="kozmik.html">Montessori Kozmik</a></li>
               </ul>
             </li>
-
-            <!-- Etkinlikler -->
             <li class="nav-item dropdown">
               <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">Etkinlikler</a>
               <ul class="dropdown-menu">
@@ -80,114 +73,105 @@
                 <li><a class="dropdown-item" href="galeri.html">Galeri</a></li>
               </ul>
             </li>
-
-            <li class="nav-item">
-              <a class="nav-link" href="ogretmenler.html">Kadromuz</a>
-            </li>
-
-            <li class="nav-item">
-              <a class="nav-link" href="iletisim.html">İletişim</a>
-            </li>
-
+            <li class="nav-item"><a class="nav-link" href="ogretmenler.html">Kadromuz</a></li>
+            <li class="nav-item"><a class="nav-link" href="iletisim.html">İletişim</a></li>
           </ul>
         </div>
       </div>
     </nav>
   </header>
-  <section class="tasawwuf-section py-5" style="padding-top: 160px !important;">
+
+  <!-- HERO SECTION -->
+  <section class="hero-section">
     <div class="container">
-      <div class="section-header text-center mb-5">
-        <h2 class="display-4 fw-bold">Tasavvuf Müziği Atölyesi</h2>
-        <p class="lead text-muted">Ruhun nağmelerle terbiyesi</p>
+      <h1>TASAVVUF MÜZİĞİ ATÖLYESİ</h1>
+      <p>"Ruhun nağmelerle terbiyesi, kalbin ritimle buluşması..."</p>
+    </div>
+  </section>
+
+  <!-- MAIN SECTION -->
+  <section class="tasawwuf-section">
+    <div class="container">
+      <div class="section-header text-center">
+        <h2>Müziğin Mistik Yolculuğu</h2>
         <div class="divider mx-auto"></div>
+        <p class="lead">Geleneksel Sanatlarımızla Tanışma</p>
       </div>
 
-      <!-- Main Content -->
-      <div class="row g-4 align-items-center mb-5">
+      <!-- Content Row -->
+      <div class="row g-5 align-items-center mb-5">
         <div class="col-lg-6 order-lg-2">
-          <div class="tasawwuf-main-image rounded-4 overflow-hidden shadow-lg position-relative">
-            <img src="image/muzik/2.PNG" alt="Tasavvuf Müziği" class="img-fluid w-100">
+          <div class="tasawwuf-main-image">
+            <img src="image/muzik/2.PNG" alt="Tasavvuf Müziği Dersi">
             <div class="image-overlay"></div>
           </div>
         </div>
 
         <div class="col-lg-6 order-lg-1">
-          <div class="tasawwuf-main-content p-4 p-lg-5 rounded-4 h-100">
-            <h3 class="mb-4">Müziğin Mistik Yolculuğu</h3>
-            <p>18 Mart Sirac Kolejinde müzik dersi,öğrencilere müzikle tanışma ve müziği, müzik aletlerini sevdirme
-              amacı güden bir derstir. Müzik dersi genellikle şu başlıklar altında işlenir:</p>
+          <div class="tasawwuf-main-content">
+            <h3>Müzik ve Manevi Gelişim</h3>
+            <p>18 Mart Sirac Koleji'nde müzik eğitimi, sadece notaları öğrenmek değil, müziğin ruh üzerindeki derin
+              etkilerini hissetmek ve kültürel mirasımızla bağ kurmak demektir.</p>
 
-            <ul class="tasawwuf-features mb-4">
-              <li><i class="fas fa-music"></i> <strong>Müzik ve ses frekanslarını algılama müzikal kavramlar:</strong>
-                a)Ritim: Öğrencilere basit ritmik usullerden; nim sofyan, semai, sofyan devri hindi gibi Türk
-                musikisinin usullerinin uygulamaları öğretilir.</br>
-                b) Melodi ve Armoni:Melodi, bir müzik eserinin ana ezgisini ifade ederken, armoni ise birden fazla sesin
-                uyumlu bir şekilde bir araya gelmesini anlatır. Basit melodili şarkılar, ilahiler, marşlar vb. formlarda
-                eserler öğretilir.</br>
-                c) Tempo:Müziğin hızını ifade eder. Öğrencilere hızlı, orta ve yavaş tempolar tanıtılır.
-                Derstelerde okunan eserlerde, öğrencilerin müzik kulağının oluşması için yönlendirilir.
-              <li><i class="fas fa-music"></i> <strong>Müzik Aletleri ve Çeşitleri:</strong><br>
-                a) Enstrümanlar: Öğrenciler, yaylı, üflemeli, vurmalı ve tuşlu enstrümanlar hakkında bilgi edinir. Her
-                bir enstrümanın nasıl çalındığını ve nasıl ses çıkardığını öğrenirler. Her hafta bir enstrüman
-                tanıtılarak öğrencilerin müziğe, müzik aletlerine ilgi duyması hedeflenmektedir.</br>
-                b) Enstrümana yönlendirme:Eğer imkân varsa, öğrenciler bazı temel enstrümanları çalmayı
-                öğrenebilecekleri kabiliyetleri varsa aileye bilgi verilerek öğrencinin enstrüman öğrenmeye
-                yönlendirilir. Örneğin, ritim atma, bendir, bağlama, kudüm, def çalma için basit enstrümanlar gibi.
-              <li><i class="fas fa-music"></i> <strong>Müzik ve Sosyalleşme:</strong></br> Grup Çalışmaları: Müzik
-                dersi, öğrencilerin grup halinde çalışma becerilerini geliştirebilecekleri bir alandır. Öğrenciler,
-                toplu şarkı ,ilahi, marşlar ve müzikli
-                oyunlar aracılığıyla işbirliği yapmayı öğrenirler. Sonuç olarak müzik dersi, öğrencilerimize müziği
-                tanıtmak, müziği bir ifade biçimi olarak kullanmalarını sağlamak ve
-                estetik duygularını geliştirmek için önemli bir fırsat sunar. Müzik dersleri, çocuklarınsosyal, duygusal
-                ve zihinsel gelişimlerine katkıda bulunur, aynı zamanda kültürel birbağ oluşturur.</li>
+            <ul class="tasawwuf-features">
+              <li><i class="fas fa-drum"></i> <strong>Ritim ve Usul:</strong> Nim sofyan, semai gibi Türk musikisinin
+                kadim usulleriyle tanışma.</li>
+              <li><i class="fas fa-music"></i> <strong>Melodi ve Makam:</strong> İlahiler, marşlar ve klasik eserlerle
+                kulağın terbiyesi.</li>
+              <li><i class="fas fa-seedling"></i> <strong>Karakter Eğitimi:</strong> Müziğin sakinleştirici ve
+                birleştirici gücüyle sabır ve ahenk kazanımı.</li>
             </ul>
 
-            <div class="quote-box p-4 rounded-3 mb-4">
+            <div class="quote-box">
               <i class="fas fa-quote-left"></i>
-              <p class="mb-0">Müzik dersleri öğrencilerimizin sosyal, duygusal gelişimine katkı sağlarken kültürel
-                bağlarını güçlendirir.</p>
+              <p class="mb-0">"Müzik dersleri öğrencilerimizin sosyal, duygusal gelişimine katkı sağlarken kültürel
+                bağlarını güçlendirir."</p>
             </div>
           </div>
         </div>
       </div>
+
+      <!-- Instruments & Group Work -->
       <div class="row g-4">
+        <!-- Instruments Card -->
         <div class="col-lg-6">
-          <div class="tasawwuf-card p-4 p-lg-5 rounded-4 h-100">
-            <div class="instrument-icon mb-4">
-              <i class="fas fa-drum"></i>
+          <div class="tasawwuf-card">
+            <div class="instrument-icon">
+              <i class="fas fa-guitar"></i>
             </div>
-            <h3 class="mb-4">Enstrüman Eğitimi</h3>
-            <p>Öğrencilerimiz kabiliyetleri doğrultusunda temel enstrümanları çalmayı öğrenirler:</p>
+            <h3 class="mb-4 text-center" style="color: #5d4037;">Enstrüman Eğitimi</h3>
+            <p class="text-center text-muted mb-4">Öğrencilerimiz kabiliyetleri doğrultusunda, geleneksel
+              sazlarımızla tanışır ve temel icra becerileri kazanır.</p>
 
             <div class="instrument-list row mt-4">
-              <div class="col-6 mb-3">
+              <div class="col-6 mb-4">
                 <div class="instrument-item text-center">
-                  <div class="instrument-circle mb-2">
+                  <div class="instrument-circle">
                     <i class="fas fa-drum"></i>
                   </div>
                   <span>Bendir</span>
                 </div>
               </div>
-              <div class="col-6 mb-3">
+              <div class="col-6 mb-4">
                 <div class="instrument-item text-center">
-                  <div class="instrument-circle mb-2">
+                  <div class="instrument-circle">
                     <i class="fas fa-guitar"></i>
                   </div>
                   <span>Bağlama</span>
                 </div>
               </div>
-              <div class="col-6 mb-3">
+              <div class="col-6 mb-4">
                 <div class="instrument-item text-center">
-                  <div class="instrument-circle mb-2">
+                  <div class="instrument-circle">
                     <i class="fas fa-drum-steelpan"></i>
                   </div>
                   <span>Kudüm</span>
                 </div>
               </div>
-              <div class="col-6 mb-3">
+              <div class="col-6 mb-4">
                 <div class="instrument-item text-center">
-                  <div class="instrument-circle mb-2">
-                    <i class="fas fa-flute"></i>
+                  <div class="instrument-circle">
+                    <i class="fas fa-wind"></i>
                   </div>
                   <span>Ney</span>
                 </div>
@@ -195,32 +179,45 @@
             </div>
           </div>
         </div>
+
+        <!-- Group Work Card -->
         <div class="col-lg-6">
-          <div class="tasawwuf-card p-4 p-lg-5 rounded-4 h-100">
-            <div class="practice-image mb-4 rounded-3 overflow-hidden">
+          <div class="tasawwuf-card">
+            <div class="practice-image">
               <img src="image/muzik/3.JPEG" alt="Grup Çalışması" class="img-fluid w-100">
             </div>
-            <h3 class="mb-4">Grup Çalışmaları</h3>
-            <p>Öğrencilerimiz toplu şarkı söyleme, ilahi ve marş gruplarıyla işbirliği içinde çalışmayı öğrenirler.</p>
+            <h3 class="mb-3" style="color: #5d4037;">Meşk ve Grup Çalışmaları</h3>
+            <p class="mb-4 text-muted">Birlikte söylemenin, aynı nefesi paylaşmanın ve 'biz' olmanın huzurunu
+              yaşıyoruz.</p>
 
-            <div class="practice-benefits mt-4">
-              <div class="benefit-item d-flex mb-3">
+            <div class="practice-benefits">
+              <div class="benefit-item d-flex align-items-center mb-3">
                 <div class="benefit-icon me-3">
                   <i class="fas fa-users"></i>
                 </div>
                 <div>
-                  <h5 class="mb-0">Takım Çalışması</h5>
-                  <small>Müzikle uyum içinde çalışma becerisi</small>
+                  <h5 class="mb-1" style="color: #5d4037; font-weight: 600;">Takım Ahengi</h5>
+                  <small class="text-muted">Birbiriyle uyum içinde hareket etme</small>
                 </div>
               </div>
 
-              <div class="benefit-item d-flex mb-3">
+              <div class="benefit-item d-flex align-items-center mb-3">
                 <div class="benefit-icon me-3">
                   <i class="fas fa-heart"></i>
                 </div>
                 <div>
-                  <h5 class="mb-0">Duygusal Gelişim</h5>
-                  <small>Müzikle içsel yolculuk</small>
+                  <h5 class="mb-1" style="color: #5d4037; font-weight: 600;">Duygusal Derinlik</h5>
+                  <small class="text-muted">Kendi iç dünyasını keşfetme ve ifade etme</small>
+                </div>
+              </div>
+
+              <div class="benefit-item d-flex align-items-center mb-3">
+                <div class="benefit-icon me-3">
+                  <i class="fas fa-hands-helping"></i>
+                </div>
+                <div>
+                  <h5 class="mb-1" style="color: #5d4037; font-weight: 600;">Sosyal Bağlar</h5>
+                  <small class="text-muted">Ortak bir kültürü paylaşarak sosyalleşme</small>
                 </div>
               </div>
             </div>
@@ -229,188 +226,6 @@
       </div>
     </div>
   </section>
-
-  <style>
-    .tasawwuf-section {
-      background: linear-gradient(135deg, #f8f5f2 0%, #f1ece7 100%);
-      position: relative;
-      overflow: hidden;
-    }
-
-    .tasawwuf-section::before {
-      content: "";
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background: url('path/to/subtle-pattern.png') repeat;
-      opacity: 0.03;
-      z-index: 0;
-    }
-
-    .divider {
-      width: 80px;
-      height: 4px;
-      background: linear-gradient(90deg, #8d6e63, #a1887f);
-      margin: 20px auto 30px;
-    }
-
-    /* Main Content */
-    .tasawwuf-main-image {
-      height: 100%;
-      min-height: 400px;
-      transition: transform 0.3s ease;
-    }
-
-    .tasawwuf-main-image:hover {
-      transform: scale(1.02);
-    }
-
-    .tasawwuf-main-image img {
-      height: 100%;
-      object-fit: cover;
-    }
-
-    .image-overlay {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background: linear-gradient(to bottom, rgba(0, 0, 0, 0.1), rgba(109, 76, 65, 0.3));
-    }
-
-    .tasawwuf-main-content {
-      background-color: rgba(255, 255, 255, 0.9);
-      backdrop-filter: blur(5px);
-      border: 1px solid rgba(141, 110, 99, 0.2);
-      transition: all 0.3s ease;
-    }
-
-    .tasawwuf-main-content:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1) !important;
-    }
-
-    .tasawwuf-features {
-      list-style: none;
-      padding-left: 0;
-    }
-
-    .tasawwuf-features li {
-      margin-bottom: 12px;
-      padding-left: 30px;
-      position: relative;
-    }
-
-    .tasawwuf-features i {
-      position: absolute;
-      left: 0;
-      top: 4px;
-      color: #8d6e63;
-    }
-
-    .quote-box {
-      background-color: rgba(141, 110, 99, 0.1);
-      border-left: 4px solid #8d6e63;
-    }
-
-    .quote-box i {
-      color: #8d6e63;
-      margin-right: 10px;
-    }
-
-    /* Cards */
-    .tasawwuf-card {
-      background-color: white;
-      border-top: 4px solid #8d6e63;
-      transition: all 0.3s ease;
-    }
-
-    .tasawwuf-card:hover {
-      transform: translateY(-10px);
-      box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1) !important;
-    }
-
-    /* Instrument Section */
-    .instrument-icon {
-      width: 70px;
-      height: 70px;
-      background-color: rgba(141, 110, 99, 0.1);
-      border-radius: 50%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 1.8rem;
-      color: #8d6e63;
-    }
-
-    .instrument-circle {
-      width: 60px;
-      height: 60px;
-      background-color: rgba(141, 110, 99, 0.1);
-      border-radius: 50%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      margin: 0 auto;
-      font-size: 1.5rem;
-      color: #8d6e63;
-      transition: all 0.3s ease;
-    }
-
-    .instrument-item:hover .instrument-circle {
-      background-color: rgba(141, 110, 99, 0.2);
-      transform: scale(1.1);
-    }
-
-    /* Practice Section */
-    .practice-image {
-      height: 200px;
-      transition: transform 0.5s ease;
-    }
-
-    .practice-image:hover img {
-      transform: scale(1.05);
-    }
-
-    .practice-image img {
-      height: 100%;
-      width: 100%;
-      object-fit: cover;
-      transition: transform 0.5s ease;
-    }
-
-    .benefit-icon {
-      width: 40px;
-      height: 40px;
-      background-color: rgba(141, 110, 99, 0.1);
-      border-radius: 50%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      color: #8d6e63;
-    }
-
-    @media (max-width: 768px) {
-
-      .tasawwuf-main-content,
-      .tasawwuf-card {
-        padding: 2rem;
-      }
-
-      .section-header h2 {
-        font-size: 2.2rem;
-      }
-
-      .tasawwuf-main-image {
-        min-height: 300px;
-        margin-bottom: 20px;
-      }
-    }
-  </style>
-
 
   <!-- FOOTER -->
   <footer>
@@ -427,43 +242,28 @@
           <p>2007 yılında kurulan 18 Mart Sirac Koleji, güçlü değerlerle donanmış nesiller yetiştirir. Öğrencilerimizin
             akademik, sosyal ve manevi gelişimini ön planda tutuyoruz.</p>
 
-          <!-- ÖZELLİKLER -->
           <div class="footer-features">
             <div class="feature-item">
-              <div class="feature-icon">
-                <i class="fas fa-award"></i>
-              </div>
+              <div class="feature-icon"><i class="fas fa-award"></i></div>
               <div class="feature-text">Kaliteli Eğitim</div>
             </div>
             <div class="feature-item">
-              <div class="feature-icon">
-                <i class="fas fa-heart"></i>
-              </div>
+              <div class="feature-icon"><i class="fas fa-heart"></i></div>
               <div class="feature-text">Sevgi Dolu Ortam</div>
             </div>
             <div class="feature-item">
-              <div class="feature-icon">
-                <i class="fas fa-users"></i>
-              </div>
+              <div class="feature-icon"><i class="fas fa-users"></i></div>
               <div class="feature-text">Deneyimli Kadro</div>
             </div>
           </div>
 
-          <!-- SOSYAL MEDYA -->
           <div class="footer-social">
-            <a href="https://www.facebook.com/18MartSiracKoleji/" class="social-icon" target="_blank" title="Facebook">
-              <i class="fab fa-facebook-f"></i>
-            </a>
+            <a href="https://www.facebook.com/18MartSiracKoleji/" class="social-icon" target="_blank"
+              title="Facebook"><i class="fab fa-facebook-f"></i></a>
             <a href="https://www.instagram.com/18martsirackoleji/" class="social-icon" target="_blank"
-              title="Instagram">
-              <i class="fab fa-instagram"></i>
-            </a>
-            <a href="#" class="social-icon" title="Twitter">
-              <i class="fab fa-twitter"></i>
-            </a>
-            <a href="#" class="social-icon" title="YouTube">
-              <i class="fab fa-youtube"></i>
-            </a>
+              title="Instagram"><i class="fab fa-instagram"></i></a>
+            <a href="#" class="social-icon" title="Twitter"><i class="fab fa-twitter"></i></a>
+            <a href="#" class="social-icon" title="YouTube"><i class="fab fa-youtube"></i></a>
           </div>
         </div>
 
@@ -477,7 +277,6 @@
             <p><i class="fas fa-clock"></i> Pazartesi - Cuma: 08:00 - 18:00</p>
           </div>
 
-          <!-- ÇALIŞMA SAATLERİ -->
           <div class="working-hours">
             <h6>Çalışma Saatleri</h6>
             <p>Pazartesi - Cuma <span>08:00 - 18:00</span></p>
@@ -507,13 +306,10 @@
             <div class="input-group mb-3">
               <input type="email" class="form-control" placeholder="E-posta adresiniz" required
                 aria-label="E-posta adresi">
-              <button class="btn btn-warning" type="submit">
-                <i class="fas fa-paper-plane me-1"></i>Abone Ol
-              </button>
+              <button class="btn btn-warning" type="submit"><i class="fas fa-paper-plane me-1"></i>Abone Ol</button>
             </div>
           </form>
 
-          <!-- GÜVENLİK BADGES -->
           <div class="security-badge mt-4">
             <div
               style="display: flex; align-items: center; gap: 10px; padding: 10px; background: rgba(42, 157, 143, 0.1); border-radius: 8px; border-left: 4px solid #2a9d8f;">
@@ -536,146 +332,9 @@
       </div>
     </div>
   </footer>
+
   <script src="js/script.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
-  <script>
-    // Smooth scrolling for anchor links
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-      anchor.addEventListener('click', function (e) {
-        e.preventDefault();
-        document.querySelector(this.getAttribute('href')).scrollIntoView({
-          behavior: 'smooth'
-        });
-      });
-    });
-    // Back to top button functionality
-    const backToTopButton = document.createElement('button');
-    backToTopButton.innerHTML = '<i class="fas fa-arrow-up"></i>';
-    backToTopButton.classList.add('back-to-top-button');
-    document.body.appendChild(backToTopButton);
-
-    backToTopButton.addEventListener('click', function () {
-      window.scrollTo({
-        top: 0,
-        behavior: 'smooth'
-      });
-    });
-  </script>
-  <style>
-    .back-to-top-button {
-      position: fixed;
-      bottom: 20px;
-      right: 20px;
-      background-color: #3498db;
-      color: white;
-      border: none;
-      border-radius: 50%;
-      width: 50px;
-      height: 50px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-      cursor: pointer;
-      z-index: 1000;
-      transition: background-color 0.3s ease, transform 0.3s ease;
-    }
-
-    .back-to-top-button:hover {
-      background-color: #2980b9;
-      transform: scale(1.1);
-    }
-
-    .back-to-top-button i {
-      font-size: 24px;
-    }
-
-    @media (max-width: 768px) {
-      .back-to-top-button {
-        width: 40px;
-        height: 40px;
-        bottom: 15px;
-        right: 15px;
-      }
-
-      .back-to-top-button i {
-        font-size: 20px;
-      }
-    }
-
-    /* Footer Styles */
-    footer {
-      background-color: #343a40;
-      color: white;
-      padding: 40px 0;
-    }
-
-    .footer-title {
-      font-size: 1.5rem;
-      margin-bottom: 20px;
-      color: #f8f9fa;
-    }
-
-    .footer-links {
-      list-style: none;
-      padding: 0;
-    }
-
-    .footer-links li {
-      margin-bottom: 10px;
-    }
-
-    .footer-links a {
-      color: #f8f9fa;
-      text-decoration: none;
-      transition: color 0.3s ease;
-    }
-
-    .footer-links a:hover {
-      color: #3498db;
-    }
-  </style>
-  <style>
-    /* Hero Section Styles */
-    .hero-section {
-      background: url('../image/anasayfa1.JPG') no-repeat center center/cover;
-      color: white;
-      padding: 100px 0;
-      text-align: center;
-    }
-
-    .hero-section h1 {
-      font-size: 3rem;
-      margin-bottom: 20px;
-    }
-
-    .hero-section p {
-      font-size: 1.2rem;
-      max-width: 600px;
-      margin: auto;
-    }
-
-    @media (max-width: 768px) {
-      .hero-section h1 {
-        font-size: 2.5rem;
-      }
-
-      .hero-section p {
-        font-size: 1rem;
-      }
-    }
-  </style>
-  <script>
-    // Back to Top Button Functionality
-    window.addEventListener('scroll', function () {
-      const backToTopButton = document.querySelector('.back-to-top-button');
-      if (window.scrollY > 300) {
-        backToTopButton.style.display = 'block';
-      } else {
-        backToTopButton.style.display = 'none';
-      }
-    });
-  </script>
 </body>
 
 </html>

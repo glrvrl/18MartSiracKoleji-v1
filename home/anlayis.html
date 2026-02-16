@@ -10,21 +10,18 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
   <link rel="stylesheet" href="css/style.css" />
-  <link rel="stylesheet" href="css/index.css" />
   <link rel="stylesheet" href="css/anlayis.css" />
 </head>
 
 <body>
   <!-- HEADER / NAVBAR -->
   <header>
-    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+    <nav class="navbar navbar-expand-lg navbar-light bg-white sticky-top shadow-sm">
       <div class="container">
-
-        <a class="navbar-brand d-flex align-items-center gap-3" href="index.html">
-          <img src="image/ilokullogo.jpeg" alt="18 Mart Sirac Koleji Logo" class="navbar-logo" />
-          <span class="navbar-title">Özel OnSekiz Mart Siraç Koleji İlkokulu</span>
+        <a class="navbar-brand" href="index.html">
+          <img src="image/siraclogu .png" alt="18 Mart Sirac Koleji Logo" class="navbar-logo" />
+          <span class="navbar-title d-none d-sm-block">Özel OnSekiz Mart<br>Siraç İlkokulu</span>
         </a>
-
 
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#siracNavbar">
           <span class="navbar-toggler-icon"></span>
@@ -32,14 +29,10 @@
 
         <div class="collapse navbar-collapse" id="siracNavbar">
           <ul class="navbar-nav ms-auto">
+            <li class="nav-item"><a class="nav-link" href="index.html">Anasayfa</a></li>
 
-            <li class="nav-item">
-              <a class="nav-link active" href="index.html">Anasayfa</a>
-            </li>
-
-            <!-- Kurumsal -->
-            <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">Kurumsal</a>
+            <li class="nav-item active dropdown">
+              <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">Kurumsal</a>
               <ul class="dropdown-menu">
                 <li><a class="dropdown-item" href="anlayis.html">Eğitim Anlayışımız</a></li>
                 <li><a class="dropdown-item" href="misyon.html">Misyon & Vizyon</a></li>
@@ -47,10 +40,8 @@
               </ul>
             </li>
 
-            <!-- Eğitim Programları -->
             <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">Eğitim
-                Programları</a>
+              <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">Eğitim</a>
               <ul class="dropdown-menu">
                 <li><a class="dropdown-item" href="manevi.html">Manevi Eğitim</a></li>
                 <li><a class="dropdown-item" href="kulubuler.html">Kulüpler</a></li>
@@ -60,9 +51,8 @@
               </ul>
             </li>
 
-            <!-- Atölyeler -->
             <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">Atölyeler</a>
+              <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">Atölyeler</a>
               <ul class="dropdown-menu">
                 <li><a class="dropdown-item" href="robotik.html">Robotik Kodlama</a></li>
                 <li><a class="dropdown-item" href="gorsel.html">Görsel Sanatlar ve Ahşap</a></li>
@@ -71,26 +61,24 @@
               </ul>
             </li>
 
-            <!-- Etkinlikler -->
             <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">Etkinlikler</a>
+              <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">Etkinlikler</a>
               <ul class="dropdown-menu">
                 <li><a class="dropdown-item" href="oyun.html">Oyun ve Fiziki Etkinlikler</a></li>
-                <li><a class="dropdown-item" href="kulubuler.html">Kulüpler ve P4C</a></li>
                 <li><a class="dropdown-item" href="sosyalyardim.html">Sosyal Yardım Projeleri</a></li>
                 <li><a class="dropdown-item" href="Helal_Sagalik.html">Helal ve Sağlıklı</a></li>
                 <li><a class="dropdown-item" href="galeri.html">Galeri</a></li>
               </ul>
             </li>
 
-            <li class="nav-item">
-              <a class="nav-link" href="ogretmenler.html">Kadromuz</a>
-            </li>
+            <li class="nav-item"><a class="nav-link" href="ogretmenler.html">Kadromuz</a></li>
+            <li class="nav-item"><a class="nav-link" href="iletisim.html">İletişim</a></li>
 
-            <li class="nav-item">
-              <a class="nav-link" href="iletisim.html">İletişim</a>
+            <li class="nav-item ms-lg-3">
+              <a href="onkayit.html" class="btn btn-primary rounded-pill px-4 py-2 fw-semibold">
+                <i class="fas fa-edit me-1"></i> Ön Kayıt
+              </a>
             </li>
-
           </ul>
         </div>
       </div>

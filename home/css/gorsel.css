@@ -1,0 +1,250 @@
+/* VISUAL ARTS & WOODWORK PAGE DESIGN */
+/* Consistent theme with anlayis.css */
+
+/* 1. HERO SECTION */
+.hero-section {
+    position: relative;
+    /* Rich warm gradient to reflect wood/art theme + image */
+    background: linear-gradient(135deg, rgba(44, 62, 80, 0.85) 0%, rgba(211, 84, 0, 0.65) 100%),
+        url('../image/hasabbackground.jpg') center/cover no-repeat;
+    color: #fff;
+    padding: 180px 0 140px;
+    text-align: center;
+    /* Modern clipped bottom edge */
+    clip-path: polygon(0 0, 100% 0, 100% 90%, 50% 100%, 0 90%);
+    margin-bottom: -60px;
+    z-index: 1;
+}
+
+.hero-section h1 {
+    font-size: 3.5rem;
+    font-weight: 800;
+    letter-spacing: -1px;
+    margin-bottom: 20px;
+    text-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+.hero-section p {
+    font-size: 1.35rem;
+    max-width: 800px;
+    margin: 0 auto;
+    font-weight: 300;
+    opacity: 0.95;
+    line-height: 1.6;
+}
+
+/* 2. WORKSHOP CONTENT SECTION */
+.workshop-section {
+    background-color: var(--acik-gri, #f8fafc);
+    padding: 100px 0 80px;
+    position: relative;
+    z-index: 2;
+    border-top: none;
+    border-bottom: none;
+}
+
+/* SECTION TITLE */
+.section-title {
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.section-title h2 {
+    font-size: 2.5rem;
+    font-weight: 800;
+    color: #2c3e50;
+    position: relative;
+    display: inline-block;
+}
+
+.section-title h2::after {
+    content: '';
+    display: block;
+    width: 80px;
+    height: 4px;
+    background: #d35400;
+    /* Warm accent color */
+    margin: 15px auto 0;
+    border-radius: 2px;
+}
+
+.highlight-wood {
+    color: #d35400;
+    position: relative;
+    z-index: 1;
+}
+
+/* Decorative underline for highlight */
+.highlight-wood::before {
+    content: '';
+    position: absolute;
+    bottom: 2px;
+    left: 0;
+    width: 100%;
+    height: 8px;
+    background: rgba(211, 84, 0, 0.15);
+    z-index: -1;
+    border-radius: 4px;
+}
+
+
+/* 3. CONTENT & TEXT STYLES */
+.workshop-text {
+    background: #fff;
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+    height: 100%;
+    transition: all 0.3s ease;
+}
+
+.workshop-text p {
+    font-size: 1.05rem;
+    line-height: 1.8;
+    color: #555;
+    margin-bottom: 20px;
+}
+
+/* Feature Boxes inside Text */
+.feature-box {
+    display: flex;
+    align-items: flex-start;
+    gap: 15px;
+    margin-bottom: 20px;
+    padding: 15px;
+    background: #fdfefe;
+    border-left: 4px solid #d35400;
+    border-radius: 0 8px 8px 0;
+}
+
+.feature-box i {
+    font-size: 1.5rem;
+    color: #d35400;
+    margin-top: 4px;
+}
+
+/* QUOTE STYLE */
+.quote-box {
+    background: linear-gradient(135deg, #fdfbf7, #fff);
+    padding: 25px;
+    border-radius: 12px;
+    margin-top: 30px;
+    border-left: 5px solid #d35400;
+    position: relative;
+    box-shadow: 0 5px 15px rgba(211, 84, 0, 0.08);
+}
+
+.quote-box p {
+    font-size: 1.2rem;
+    font-weight: 600;
+    font-style: italic;
+    color: #2c3e50;
+    margin: 0;
+    text-align: center;
+}
+
+.quote-box::before {
+    content: '\f10d';
+    /* FontAwesome quote-left */
+    font-family: "Font Awesome 6 Free";
+    font-weight: 900;
+    font-size: 2rem;
+    color: rgba(211, 84, 0, 0.15);
+    position: absolute;
+    top: 10px;
+    left: 10px;
+}
+
+/* 4. IMAGE GRID - MODERN GALLERY */
+.gallery-wrapper {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    height: 100%;
+}
+
+.gallery-item {
+    position: relative;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    height: 280px;
+    /* Fixed height for uniform look */
+    transition: all 0.4s ease;
+}
+
+/* Make the first image span full width on small screens or create variation */
+.gallery-item:first-child {
+    grid-row: span 2;
+    height: 100%;
+}
+
+.gallery-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.6s ease;
+}
+
+.gallery-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.7), transparent);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    display: flex;
+    align-items: flex-end;
+    padding: 20px;
+}
+
+.gallery-overlay span {
+    color: #fff;
+    font-weight: 600;
+    font-size: 1.1rem;
+    transform: translateY(20px);
+    transition: transform 0.3s ease;
+}
+
+.gallery-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+}
+
+.gallery-item:hover img {
+    transform: scale(1.1);
+}
+
+.gallery-item:hover .gallery-overlay {
+    opacity: 1;
+}
+
+.gallery-item:hover .gallery-overlay span {
+    transform: translateY(0);
+}
+
+
+/* RESPONSIVE */
+@media (max-width: 992px) {
+    .hero-section {
+        padding: 150px 0 100px;
+    }
+
+    .hero-section h1 {
+        font-size: 2.5rem;
+    }
+
+    .gallery-wrapper {
+        grid-template-columns: 1fr;
+        /* Stack images on mobile */
+        margin-top: 40px;
+    }
+
+    .gallery-item:first-child {
+        grid-row: auto;
+        height: 300px;
+    }
+
+    .gallery-item {
+        height: 300px;
+    }
+}

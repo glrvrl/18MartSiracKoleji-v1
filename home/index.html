@@ -14,41 +14,14 @@
 </head>
 
 <body>
-  <!-- TOP BAR (MENU ÜSTÜ) -->
-  <div class="top-applybar">
-    <div class="container top-applybar-inner">
-
-      <!-- LEFT -->
-      <div class="top-applybar-left">
-        <span class="apply-text">
-          🎓 2026 Özel 18 Mart Siraç Koleji İlkokulu
-        </span>
-      </div>
-      <div class="top-applybar-right">
-        <a href="yonetım.html" class="apply-btn light">Yönetim Kurulu</a>
-        <a href="onkayit.html" class="apply-btn outline">Ön Kayıt</a>
-        <div class="apply-social">
-          <a href="mailto:bilgi@18martsirackoleji.com?subject=Bilgi%20Talebi&body=Merhaba," class="social-item email">
-            <i class="bi bi-envelope-fill"></i>
-            <span>bilgi@18martsirackoleji.com</span>
-          </a>
-          <a href="https://www.instagram.com/18martsirackoleji/" target="_blank" class="social-item instagram">
-            <i class="bi bi-instagram"></i>
-            <span>@18martsirackoleji</span>
-          </a>
-        </div>
-      </div>
-    </div>
-  </div>
-
   <!-- HEADER / NAVBAR -->
   <header>
-    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+    <nav class="navbar navbar-expand-lg navbar-light bg-white sticky-top shadow-sm">
       <div class="container">
 
-        <a class="navbar-brand d-flex align-items-center gap-3" href="index.html">
-          <img src="image/ilokullogo.jpeg" alt="18 Mart Sirac Koleji Logo" class="navbar-logo" />
-          <span class="navbar-title">Özel OnSekiz Mart Siraç Koleji İlkokulu</span>
+        <a class="navbar-brand" href="index.html">
+          <img src="image/siraclogu .png" alt="18 Mart Sirac Koleji Logo" class="navbar-logo" />
+          <span class="navbar-title d-none d-sm-block">Özel OnSekiz Mart<br>Siraç İlkokulu</span>
         </a>
 
 
@@ -58,14 +31,10 @@
 
         <div class="collapse navbar-collapse" id="siracNavbar">
           <ul class="navbar-nav ms-auto">
+            <li class="nav-item active"><a class="nav-link" href="index.html">Anasayfa</a></li>
 
-            <li class="nav-item">
-              <a class="nav-link active" href="index.html">Anasayfa</a>
-            </li>
-
-            <!-- Kurumsal -->
             <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">Kurumsal</a>
+              <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">Kurumsal</a>
               <ul class="dropdown-menu">
                 <li><a class="dropdown-item" href="anlayis.html">Eğitim Anlayışımız</a></li>
                 <li><a class="dropdown-item" href="misyon.html">Misyon & Vizyon</a></li>
@@ -73,10 +42,8 @@
               </ul>
             </li>
 
-            <!-- Eğitim Programları -->
             <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">Eğitim
-                Programları</a>
+              <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">Eğitim</a>
               <ul class="dropdown-menu">
                 <li><a class="dropdown-item" href="manevi.html">Manevi Eğitim</a></li>
                 <li><a class="dropdown-item" href="kulubuler.html">Kulüpler</a></li>
@@ -86,9 +53,8 @@
               </ul>
             </li>
 
-            <!-- Atölyeler -->
             <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">Atölyeler</a>
+              <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">Atölyeler</a>
               <ul class="dropdown-menu">
                 <li><a class="dropdown-item" href="robotik.html">Robotik Kodlama</a></li>
                 <li><a class="dropdown-item" href="gorsel.html">Görsel Sanatlar ve Ahşap</a></li>
@@ -97,24 +63,24 @@
               </ul>
             </li>
 
-            <!-- Etkinlikler -->
             <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">Etkinlikler</a>
+              <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">Etkinlikler</a>
               <ul class="dropdown-menu">
                 <li><a class="dropdown-item" href="oyun.html">Oyun ve Fiziki Etkinlikler</a></li>
-                <li><a class="dropdown-item" href="kulubuler.html">Kulübüler ve P4C</a></li>
                 <li><a class="dropdown-item" href="sosyalyardim.html">Sosyal Yardım Projeleri</a></li>
                 <li><a class="dropdown-item" href="Helal_Sagalik.html">Helal ve Sağlıklı</a></li>
                 <li><a class="dropdown-item" href="galeri.html">Galeri</a></li>
               </ul>
             </li>
 
-            <li class="nav-item">
-              <a class="nav-link" href="ogretmenler.html">Kadromuz</a>
-            </li>
+            <li class="nav-item"><a class="nav-link" href="ogretmenler.html">Kadromuz</a></li>
+            <li class="nav-item"><a class="nav-link" href="iletisim.html">İletişim</a></li>
 
-            <li class="nav-item">
-              <a class="nav-link" href="iletisim.html">İletişim</a>
+            <!-- CTA Button -->
+            <li class="nav-item ms-lg-3">
+              <a href="onkayit.html" class="btn btn-primary rounded-pill px-4 py-2 fw-semibold">
+                <i class="fas fa-edit me-1"></i> Ön Kayıt
+              </a>
             </li>
 
           </ul>
@@ -123,135 +89,172 @@
     </nav>
   </header>
 
-  <!--  HERO SLIDER (SADECE RESİM) -->
+  <!-- HERO SLIDER (PREMIUM POSTER DESIGN) -->
   <section class="hero-slider">
     <div id="heroCarousel" class="carousel slide carousel-fade" data-bs-ride="carousel">
 
       <div class="carousel-indicators">
-        <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="0" class="active"
-          aria-current="true"></button>
+        <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="0" class="active"></button>
         <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="1"></button>
         <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="2"></button>
         <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="3"></button>
       </div>
 
       <div class="carousel-inner">
+        <!-- Slayt 1 -->
         <div class="carousel-item active">
-          <img class="d-block w-100 hero-img" src="image/habarlar/sladır1.jpeg" alt="Slider 1">
+          <div class="hero-bg-blur" style="background-image: url('image/habarlar/sladır1.jpeg');"></div>
+          <div class="hero-img-container">
+            <img class="hero-img" src="image/habarlar/sladır1.jpeg" alt="Siraç Koleji Duyuru">
+          </div>
         </div>
 
+        <!-- Slayt 2 -->
         <div class="carousel-item">
-          <img class="d-block w-100 hero-img" src="image/habarlar/slider2.jpeg" alt="Slider 2">
+          <div class="hero-bg-blur" style="background-image: url('image/habarlar/slider2.jpeg');"></div>
+          <div class="hero-img-container">
+            <img class="hero-img" src="image/habarlar/slider2.jpeg" alt="Siraç Koleji Etkinlik">
+          </div>
         </div>
 
+        <!-- Slayt 3 -->
         <div class="carousel-item">
-          <img class="d-block w-100 hero-img" src="image/habarlar/slider3.jpeg" alt="Slider 3">
+          <div class="hero-bg-blur" style="background-image: url('image/habarlar/slider3.jpeg');"></div>
+          <div class="hero-img-container">
+            <img class="hero-img" src="image/habarlar/slider3.jpeg" alt="Siraç Koleji Eğitim">
+          </div>
         </div>
 
+        <!-- Slayt 4 -->
         <div class="carousel-item">
-          <img class="d-block w-100 hero-img" src="image/sirac.jpg" alt="Slider 4">
+          <div class="hero-bg-blur" style="background-image: url('image/sirac.jpg');"></div>
+          <div class="hero-img-container">
+            <img class="hero-img" src="image/sirac.jpg" alt="Siraç Koleji Kampüs">
+          </div>
+        </div>
+      </div>
+
+      <!-- Glassmorphism Text Overlay Card -->
+      <div class="hero-overlay-content">
+        <h1>Geleceği Hikmetle İnşa Ediyoruz</h1>
+        <p>Milli ve manevi değerlerle donanmış, akademik başarısı yüksek nesiller için Siraç Koleji.</p>
+        <div class="d-flex gap-3 btn-group-mobile">
+          <a href="onkayit.html" class="btn btn-primary rounded-pill fw-bold">Hemen Başvur</a>
+          <a href="anlayis.html" class="btn btn-outline-light rounded-pill fw-bold">Keşfet</a>
         </div>
       </div>
 
       <button class="carousel-control-prev" type="button" data-bs-target="#heroCarousel" data-bs-slide="prev">
         <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-        <span class="visually-hidden">Önceki</span>
       </button>
-
       <button class="carousel-control-next" type="button" data-bs-target="#heroCarousel" data-bs-slide="next">
         <span class="carousel-control-next-icon" aria-hidden="true"></span>
-        <span class="visually-hidden">Sonraki</span>
       </button>
     </div>
   </section>
 
+  <!-- STATS SECTION (Koleji Statüsü) -->
+  <section class="stats-section">
+    <div class="container">
+      <div class="stats-grid">
+        <div class="stat-card">
+          <div class="stat-icon"><i class="fas fa-history"></i></div>
+          <span class="stat-number">17+</span>
+          <span class="stat-label">Yıllık Tecrübe</span>
+        </div>
+        <div class="stat-card">
+          <div class="stat-icon"><i class="fas fa-users-viewfinder"></i></div>
+          <span class="stat-number">40+</span>
+          <span class="stat-label">Uzman Eğitimci</span>
+        </div>
+        <div class="stat-card">
+          <div class="stat-icon"><i class="fas fa-graduation-cap"></i></div>
+          <span class="stat-number">1200+</span>
+          <span class="stat-label">Mutlu Mezun</span>
+        </div>
+        <div class="stat-card">
+          <div class="stat-icon"><i class="fas fa-microscope"></i></div>
+          <span class="stat-number">12+</span>
+          <span class="stat-label">Modern Atölye</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- EĞİTİM MODELİMİZ -->
   <section class="services" id="services">
     <div class="container">
-      <div class="services-grid">
+      <div class="section-header text-center mb-5">
+        <h2 class="section-title">Eğitim Modelimiz</h2>
+        <p class="text-muted">Geleneksel değerlerle modern eğitimi harmanlayan özgün yaklaşımımız</p>
+      </div>
 
-        <!-- 1 -->
-        <a href="anlayis.html" class="service-link">
+      <div class="services-grid">
+        <!-- 1: Değerler Eğitimi -->
+        <a href="manevi.html" class="text-decoration-none">
           <div class="service-card">
             <div class="service-image">
               <img src="image/kuran/kuran.jpeg" alt="Değerler Eğitimi">
             </div>
             <h3>Değerler Eğitimi</h3>
-            <p>
-              Kur'an -Kerim , Siyer-i Nebi,Temel Dini Bilgiler, Esma'ül Hüsna ve Tefekkür dersleri ile milli ve manevi
-              değerlerini kazanmalarını sağlıyoruz.
-            </p>
+            <p>Kur'an-ı Kerim, Siyer ve Tefekkür dersleri ile milli-manevi değerler kazanımı.</p>
           </div>
         </a>
 
-        <!-- 2 -->
-        <a href="kozmik.html" class="service-link">
+        <!-- 2: Montessori -->
+        <a href="kozmik.html" class="text-decoration-none">
           <div class="service-card">
             <div class="service-image">
               <img src="image/m.jpeg" alt="Montessori Eğitimi">
             </div>
             <h3>Montessori Eğitimi</h3>
-            <p>
-              Montessori sistemi atölye bazında oluşturulmuştur. Öğrenciler bilgiyi somut bir şekilde kavrar, pekiştirir
-              ve yazılı çalışmalarını tamamlamak için sınıflarına geri dönerler.
-            </p>
+            <p>Somut öğrenme araçları ile çocuğun kendi hızında, keşfederek geliştiği özel atölyeler.</p>
           </div>
         </a>
 
-        <!-- 3 -->
-        <a href="yabancidil.html" class="service-link">
+        <!-- 3: Yabancı Dil -->
+        <a href="yabancidil.html" class="text-decoration-none">
           <div class="service-card">
             <div class="service-image">
               <img src="image/dııl.jpeg" alt="İngilizce & Arapça">
             </div>
             <h3>İngilizce & Arapça</h3>
-            <p>
-              Öğrencilerimizin gelişim düzeylerine, ilgi ve isteklerine, öğrenme hızlarına uygun olarak İngilizce ve
-              Arapça dil eğitimi veriyoruz.
-            </p>
+            <p>Global vizyon için iki dilli eğitim modeli; Speaking odaklı modern yaklaşımlar.</p>
           </div>
         </a>
 
-        <!-- 4 -->
-        <a href="gorsel.html" class="service-link">
+        <!-- 4: Atölyeler -->
+        <a href="gorsel.html" class="text-decoration-none">
           <div class="service-card">
             <div class="service-image">
               <img src="image/gore.jpeg" alt="Görsel Sanatlar">
             </div>
             <h3>Görsel Sanatlar & Ahşap</h3>
-            <p>
-              Öğrencilerimizin gelişim düzeylerine, ilgi ve isteklerine, öğrenme hızlarına uygun olarak İngilizce ve
-              Arapça dil eğitimi veriyoruz.
-            </p>
+            <p>Sanatsal becerileri geliştiren, el-göz koordinasyonunu artıran yaratıcı atölye çalışmaları.</p>
           </div>
         </a>
 
-        <!-- 5 -->
-        <a href="oyun.html" class="service-link">
+        <!-- 5: Tasavvuf -->
+        <a href="tasavvuf.html" class="text-decoration-none">
           <div class="service-card">
             <div class="service-image">
               <img src="image/muza.jpeg" alt="Tasavvuf Müziği">
             </div>
             <h3>Tasavvuf Müziği</h3>
-            <p>
-              Öğrencilere müzikle tanışma, müziği ve müzik aletlerini sevdirme amacı güden bir derstir.
-            </p>
+            <p>Ruhsal gelişimi destekleyen, estetik algıyı güçlendiren musiki ve enstrüman eğitimleri.</p>
           </div>
         </a>
 
-        <!-- 6 -->
-        <a href="oyun.html" class="service-link">
+        <!-- 6: Sportif -->
+        <a href="oyun.html" class="text-decoration-none">
           <div class="service-card">
             <div class="service-image">
               <img src="image/spr.jpeg" alt="Sportif Faaliyetler">
             </div>
             <h3>Sportif Faaliyetler</h3>
-            <p>
-              Öğrencilerimiz; basketbol, voleybol, tekvando ve küçük yaş gruplarına yönelik jimnastik branşlarında
-              eğitim alarak çok yönlü sportif faaliyetler yürütmektedir.
-            </p>
+            <p>Basketbol, jimnastik ve fiziksel gelişim odaklı çok yönlü branş eğitimleri.</p>
           </div>
         </a>
-
       </div>
     </div>
   </section>
@@ -264,7 +267,7 @@
         <div class="home-news-main">
           <div class="home-section-header">
             <h2>Haberler & Etkinlikler</h2>
-            <a href="Habarlar.html">Tümünü Görüntüle →</a>
+            <a href="haberler.html">Tümünü Görüntüle →</a>
           </div>
 
           <div class="home-news-cards">
@@ -275,7 +278,7 @@
                 2026–2027 eğitim öğretim yılı için Ocak ayı itibariyle erken kayıt avantajlarımız başlamıştır.
                 Anaokulu ve ilkokul kademelerimiz hakkında detaylı bilgi almak için bizimle iletişime geçebilirsiniz.
               </h3>
-              <a href="Habarlar.html">Devamını Oku →</a>
+              <a href="haberler.html">Devamını Oku →</a>
             </article>
 
             <!-- Haber 2 -->
@@ -285,7 +288,7 @@
                 ayların ruhunu hissettirdik, kandil simidi ve lokumla paylaşmanın sevincini yaşadık. Gül kokularına
                 çocukların masum kokusu karıştı; dualarımız amin sesleriyle çoğaldı. Bu güzel gecenin bereketi, minik
                 kalplerde iz bıraksın </h3>
-              <a href="Habarlar.html">Devamını Oku →</a>
+              <a href="haberler.html">Devamını Oku →</a>
             </article>
           </div>
         </div>
@@ -294,7 +297,7 @@
         <aside class="home-announcements">
           <div class="home-section-header">
             <h2>Duyurular</h2>
-            <a href="Habarlar.html">Tümünü Görüntüle →</a>
+            <a href="haberler.html">Tümünü Görüntüle →</a>
           </div>
           <ul class="announcement-list">
 
@@ -522,29 +525,26 @@
 </div>
 
 <script>
-  window.onload = function () {
-
-    // Sadece index sayfasında çalıştır
+  document.addEventListener("DOMContentLoaded", function () {
+    // Sadece index sayfasında ve belirli periyotlarla popup göster
     const currentPage = window.location.pathname;
+    const isIndex = currentPage.endsWith("index.html") || currentPage === "/" || currentPage.includes("index");
 
-    if (currentPage.endsWith("index.html") || currentPage === "/" || currentPage === "/index.php") {
-      if (!localStorage.getItem("popupClosed")) {
-        document.getElementById("imagePopup").style.display = "flex";
+    if (isIndex) {
+      if (!sessionStorage.getItem("popupShown")) {
+        const popup = document.getElementById("imagePopup");
+        if (popup) {
+          popup.style.display = "flex";
+          sessionStorage.setItem("popupShown", "true");
+        }
       }
     }
-  };
+  });
 
   function closeImagePopup() {
-    document.getElementById("imagePopup").style.display = "none";
-    localStorage.setItem("popupClosed", "true");
+    const popup = document.getElementById("imagePopup");
+    if (popup) popup.style.display = "none";
   }
-  window.onload = function () {
-    if (!sessionStorage.getItem("popupShown")) {
-      document.getElementById("imagePopup").style.display = "flex";
-      sessionStorage.setItem("popupShown", "true");
-    }
-  };
-
 </script>
 
 
