@@ -56,17 +56,17 @@ body {
 }
 
 .hero {
-    background: linear-gradient(rgba(26, 35, 126, 0.85), rgba(57, 73, 171, 0.9)),
-        url('../image/1sirac.jpg') center/cover no-repeat;
+    background: linear-gradient(rgba(26, 35, 126, 0.75), rgba(57, 73, 171, 0.8)),
+        url('../image/campus.png') center/cover no-repeat;
 }
 
 .hero {
-    background: url('../image/1sirac.jpg') center/cover no-repeat;
+    background: url('../image/campus.png') center/cover no-repeat;
 }
 
 .hero {
     position: relative;
-    background: url('../image/1sirac.jpg') center/cover no-repeat;
+    background: url('../image/campus.png') center/cover no-repeat;
 }
 
 .hero::before {

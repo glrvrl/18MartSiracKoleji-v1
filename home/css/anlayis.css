@@ -4,8 +4,8 @@
 .education-header {
     position: relative;
     /* Using a dark gradient over the image for better text readability */
-    background: linear-gradient(135deg, rgba(11, 28, 45, 0.85) 0%, rgba(79, 182, 194, 0.7) 100%),
-        url('../image/anasayfa1.JPG') center/cover no-repeat;
+    background: linear-gradient(135deg, rgba(11, 28, 45, 0.7), rgba(79, 182, 194, 0.65) 100%),
+        url('../image/anlayis_bg.png') center/cover no-repeat;
     color: #fff;
     padding: 180px 0 140px;
     text-align: center;

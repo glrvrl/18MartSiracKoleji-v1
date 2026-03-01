@@ -18,8 +18,8 @@
     position: relative;
     height: 60vh;
     min-height: 500px;
-    background: linear-gradient(135deg, rgba(26, 82, 118, 0.9), rgba(44, 62, 80, 0.8)),
-        url('../image/anasayfa1.JPG') center/cover no-repeat fixed;
+    background: linear-gradient(135deg, rgba(26, 82, 118, 0.8), rgba(44, 62, 80, 0.7)),
+        url('../image/iletisim.JPG') center/cover no-repeat fixed;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -209,6 +209,7 @@ select.premium-input {
     background-position: right 15px center;
     background-size: 18px;
     -webkit-appearance: none;
+    appearance: none;
 }
 
 .submit-btn {

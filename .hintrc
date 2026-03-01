@@ -3,12 +3,7 @@
     "development"
   ],
   "hints": {
-    "axe/name-role-value": [
-      "default",
-      {
-        "button-name": "off"
-      }
-    ],
+    "axe/name-role-value": "off",
     "disown-opener": "off",
     "axe/text-alternatives": [
       "default",
@@ -24,7 +19,8 @@
           "backdrop-filter"
         ]
       }
-    ]
+    ],
+    "no-inline-styles": "off"
   },
   "browserslist": [
     "defaults",

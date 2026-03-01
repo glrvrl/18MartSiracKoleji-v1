@@ -21,8 +21,8 @@ body {
 .hero-section {
     position: relative;
     padding: 180px 0 100px;
-    background: linear-gradient(135deg, rgba(38, 70, 83, 0.9), rgba(42, 157, 143, 0.8)),
-        url('../image/1sirac.jpg') center/cover no-repeat fixed;
+    background: linear-gradient(135deg, rgba(38, 70, 83, 0.8), rgba(42, 157, 143, 0.7)),
+        url('../image/campus.png') center/cover no-repeat fixed;
     color: var(--white);
     text-align: center;
     clip-path: polygon(0 0, 100% 0, 100% 90%, 50% 100%, 0 90%);

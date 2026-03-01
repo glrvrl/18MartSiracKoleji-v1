@@ -34,18 +34,22 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 
     // --- 3. YUKARI ÇIK BUTONU ---
-    const backToTopButton = document.createElement('button');
-    backToTopButton.innerHTML = '<i class="fas fa-arrow-up"></i>';
-    backToTopButton.classList.add('back-to-top-button');
-    document.body.appendChild(backToTopButton);
+    let backToTopButton = document.getElementById('backToTop');
+
+    if (!backToTopButton) {
+        backToTopButton = document.createElement('div');
+        backToTopButton.id = 'backToTop';
+        backToTopButton.className = 'back-to-top';
+        backToTopButton.innerHTML = '<i class="fas fa-arrow-up"></i>';
+        backToTopButton.title = 'Yukarı Çık';
+        document.body.appendChild(backToTopButton);
+    }
 
     window.addEventListener('scroll', function () {
-        if (window.scrollY > 300) {
-            backToTopButton.classList.add('visible');
-            backToTopButton.style.display = 'block';
+        if (window.scrollY > 400) {
+            backToTopButton.classList.add('show');
         } else {
-            backToTopButton.classList.remove('visible');
-            backToTopButton.style.display = 'none';
+            backToTopButton.classList.remove('show');
         }
     });
 

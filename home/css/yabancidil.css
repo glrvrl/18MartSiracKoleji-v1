@@ -4,8 +4,8 @@
 /* 1. HERO SECTION */
 .hero-section {
     position: relative;
-    background: linear-gradient(135deg, rgba(0, 82, 212, 0.9), rgba(67, 100, 247, 0.8), rgba(111, 177, 252, 0.8)),
-        url('../image/ingilizce/1.JPG') center/cover no-repeat fixed;
+    background: linear-gradient(135deg, rgba(44, 62, 80, 0.7), rgba(26, 86, 219, 0.65)),
+        url('../image/language_bg.png') center/cover no-repeat fixed;
     color: white;
     padding: 180px 0 140px;
     text-align: center;
