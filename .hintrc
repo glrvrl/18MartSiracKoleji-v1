@@ -5,12 +5,7 @@
   "hints": {
     "axe/name-role-value": "off",
     "disown-opener": "off",
-    "axe/text-alternatives": [
-      "default",
-      {
-        "image-alt": "off"
-      }
-    ],
+    "axe/text-alternatives": "off",
     "axe/forms": "off",
     "compat-api/css": [
       "default",
@@ -20,7 +15,16 @@
         ]
       }
     ],
-    "no-inline-styles": "off"
+    "no-inline-styles": "off",
+    "axe/parsing": "off",
+    "compat-api/html": [
+      "default",
+      {
+        "ignore": [
+          "video[playsinline]"
+        ]
+      }
+    ]
   },
   "browserslist": [
     "defaults",

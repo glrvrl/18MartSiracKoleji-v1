@@ -113,7 +113,8 @@
           <p>Geleceği birlikte inşa etmek için ilk adımı atın.</p>
         </div>
 
-        <form class="apply-form" id="applicationForm" action="#" method="post" enctype="multipart/form-data">
+        <form class="apply-form" id="applicationForm" action="personalRandevu_submit.php" method="post"
+          enctype="multipart/form-data">
           <!-- Bölüm 1: Kişisel Bilgiler -->
           <div class="form-section" id="section1">
             <h3 class="section-title"><i class="fas fa-user"></i> Kişisel Bilgiler</h3>
@@ -886,55 +887,49 @@
         }
       });
 
-      // Form gönderimi
+      // Form gönderimi - PHP'ye gerçek submit
       form.addEventListener('submit', function (e) {
-        e.preventDefault();
-
         // Form doğrulama
         if (!selectedPositionValue) {
+          e.preventDefault();
           showFeedback('Lütfen bir görev seçiniz.', 'error');
           navigateToSection('section2');
           return;
         }
 
         if (selectedPositionValue === 'teacher' && selectedSubjectsArray.length === 0) {
+          e.preventDefault();
           showFeedback('Öğretmen görevi için lütfen en az bir ders seçiniz.', 'error');
           navigateToSection('section2');
           return;
         }
 
-        // Form verilerini topla
-        const formData = new FormData(this);
+        // Doğrulama geçtiyse, gönder butonunu devre dışı bırak
+        const submitBtn = form.querySelector('button[type="submit"]');
+        submitBtn.disabled = true;
+        submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Gönderiliyor...';
 
-        // Konsola verileri yazdır (test amaçlı)
-        console.log('Form verileri:');
-        for (let pair of formData.entries()) {
-          console.log(pair[0] + ': ' + pair[1]);
-        }
-
-        // Başarılı gönderim simülasyonu
-        showFeedback('Başvurunuz başarıyla alındı! En kısa sürede size dönüş yapacağız.', 'success');
-
-        // Formu sıfırla
-        setTimeout(() => {
-          form.reset();
-          cvFileName.textContent = '';
-          photoFileName.textContent = '';
-          cvUpload.style.borderColor = '';
-          cvUpload.style.backgroundColor = '';
-          photoUpload.style.borderColor = '';
-          photoUpload.style.backgroundColor = '';
-          positionOptions.forEach(opt => opt.classList.remove('selected'));
-          subjectItems.forEach(item => item.classList.remove('selected'));
-          selectedPosition.value = '';
-          selectedSubjects.value = '';
-          selectedPositionValue = '';
-          selectedSubjectsArray = [];
-          selectedSubjectsMap = {};
-          nextToSection3.disabled = true;
-          navigateToSection('section1');
-        }, 3000);
+        // Form PHP'ye doğal olarak submit olacak (e.preventDefault() çağrılmadı)
       });
+
+      // URL parametresinden durum kontrolü (PHP'den döndükten sonra)
+      const urlParams = new URLSearchParams(window.location.search);
+      const status = urlParams.get('status');
+      if (status === 'success') {
+        showFeedback('✅ Başvurunuz başarıyla alındı! E-posta olarak iletildi. En kısa sürede size dönüş yapacağız.', 'success');
+        // URL'den parametreleri temizle
+        window.history.replaceState({}, document.title, window.location.pathname);
+      } else if (status === 'error') {
+        const msg = urlParams.get('msg');
+        if (msg === 'zorunlu') {
+          showFeedback('❌ Lütfen zorunlu alanları doldurunuz!', 'error');
+        } else if (msg === 'mail') {
+          showFeedback('❌ E-posta gönderilirken bir hata oluştu. Lütfen tekrar deneyiniz.', 'error');
+        } else {
+          showFeedback('❌ Bir hata oluştu. Lütfen tekrar deneyiniz.', 'error');
+        }
+        window.history.replaceState({}, document.title, window.location.pathname);
+      }
 
       // Geri bildirim göster
       function showFeedback(message, type) {

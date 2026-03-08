@@ -262,7 +262,7 @@
                 <p>Lütfen bilgileri eksiksiz ve doğru bir şekilde doldurunuz.</p>
             </div>
 
-            <form id="onKayitForm" class="form-body">
+            <form id="onKayitForm" class="form-body" action="onkayit_submit.php" method="POST">
                 <div class="row">
                     <!-- ÖĞRENCİ BİLGİLERİ -->
                     <div class="col-md-6 mb-5">
@@ -399,11 +399,26 @@
             once: true
         });
 
+        // Form gönderimi
         document.getElementById('onKayitForm').addEventListener('submit', function (e) {
-            e.preventDefault();
-            document.getElementById('successOverlay').style.display = 'flex';
-            // Gerçek API entegrasyonu buraya gelecek
+            // Gönder butonunu devre dışı bırak
+            const submitBtn = this.querySelector('.btn-submit');
+            submitBtn.disabled = true;
+            submitBtn.textContent = 'GÖNDERİLİYOR...';
+            // Form PHP'ye doğal olarak submit olacak
         });
+
+        // URL parametresinden durum kontrolü (PHP'den döndükten sonra)
+        const urlParams = new URLSearchParams(window.location.search);
+        const status = urlParams.get('status');
+        if (status === 'success') {
+            document.getElementById('successOverlay').style.display = 'flex';
+            window.history.replaceState({}, document.title, window.location.pathname);
+        } else if (status === 'error') {
+            const msg = urlParams.get('msg');
+            alert(msg === 'zorunlu' ? 'Lütfen zorunlu alanları doldurunuz!' : 'E-posta gönderilirken bir hata oluştu. Lütfen tekrar deneyiniz.');
+            window.history.replaceState({}, document.title, window.location.pathname);
+        }
     </script>
 </body>
 

@@ -138,19 +138,19 @@
         <div class="form-side">
           <span class="section-tag">Bize Yazın</span>
           <h2 class="section-title">İletişim Formu</h2>
-          <form action="#" method="POST">
+          <form action="iletisim_submit.php" method="POST" id="contactForm">
             <div class="row">
               <div class="col-md-6">
-                <input type="text" class="premium-input" placeholder="Adınız Soyadınız" required>
+                <input type="text" name="fullname" class="premium-input" placeholder="Adınız Soyadınız" required>
               </div>
               <div class="col-md-6">
-                <input type="email" class="premium-input" placeholder="E-Posta Adresiniz" required>
+                <input type="email" name="email" class="premium-input" placeholder="E-Posta Adresiniz" required>
               </div>
             </div>
 
             <div class="row">
               <div class="col-md-12">
-                <select class="premium-input" required>
+                <select name="subject" class="premium-input" required>
                   <option value="" disabled selected>Lütfen Konu Seçin</option>
                   <option value="genel">Genel Bilgi</option>
                   <option value="kayit">Okul Kayıt Süreçleri</option>
@@ -161,12 +161,16 @@
               </div>
             </div>
 
-            <textarea class="premium-input" rows="4" placeholder="Mesajınız..." required></textarea>
+            <textarea name="message" class="premium-input" rows="4" placeholder="Mesajınız..." required></textarea>
 
-            <button type="submit" class="submit-btn">
+            <button type="submit" class="submit-btn" id="contactSubmitBtn">
               <span>Mesajı Gönder</span>
               <i class="fas fa-paper-plane"></i>
             </button>
+
+            <div id="contactFeedback"
+              style="display:none; margin-top:15px; padding:15px; border-radius:10px; text-align:center; font-weight:600;">
+            </div>
           </form>
         </div>
 
@@ -334,21 +338,37 @@
     });
 
     // İletişim Form Gönderimi
-    const contactForm = document.getElementById('contact-form');
+    const contactForm = document.getElementById('contactForm');
     if (contactForm) {
       contactForm.addEventListener('submit', function (e) {
-        e.preventDefault();
-        const name = document.getElementById('fullname').value;
-        const successMsg = document.createElement('div');
-        successMsg.className = 'alert alert-success mt-3';
-        successMsg.innerHTML = `
-          <i class="fas fa-check-circle me-2"></i>
-          Teşekkürler ${name}! Mesajınız başarıyla gönderildi.
-        `;
-        this.parentNode.insertBefore(successMsg, this.nextSibling);
-        this.reset();
-        setTimeout(() => successMsg.remove(), 5000);
+        const submitBtn = document.getElementById('contactSubmitBtn');
+        submitBtn.disabled = true;
+        submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Gönderiliyor...';
+        // Form PHP'ye doğal olarak submit olacak
       });
+    }
+
+    // URL parametresinden durum kontrolü
+    const urlParams = new URLSearchParams(window.location.search);
+    const status = urlParams.get('status');
+    const feedback = document.getElementById('contactFeedback');
+    if (status === 'success' && feedback) {
+      feedback.style.display = 'block';
+      feedback.style.background = '#d4edda';
+      feedback.style.color = '#155724';
+      feedback.style.border = '1px solid #28a745';
+      feedback.innerHTML = '<i class="fas fa-check-circle me-2"></i> Mesajınız başarıyla gönderildi! En kısa sürede size dönüş yapacağız.';
+      window.history.replaceState({}, document.title, window.location.pathname);
+    } else if (status === 'error' && feedback) {
+      feedback.style.display = 'block';
+      feedback.style.background = '#f8d7da';
+      feedback.style.color = '#721c24';
+      feedback.style.border = '1px solid #dc3545';
+      const msg = urlParams.get('msg');
+      feedback.innerHTML = msg === 'zorunlu'
+        ? '<i class="fas fa-exclamation-circle me-2"></i> Lütfen zorunlu alanları doldurunuz!'
+        : '<i class="fas fa-exclamation-circle me-2"></i> E-posta gönderilirken bir hata oluştu. Lütfen tekrar deneyiniz.';
+      window.history.replaceState({}, document.title, window.location.pathname);
     }
   </script>
 </body>
