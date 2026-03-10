@@ -311,4 +311,70 @@ select.premium-input {
     .hero-content h1 {
         font-size: 2.8rem;
     }
+
+    .contact-hero {
+        clip-path: none;
+        padding: 130px 20px 80px;
+    }
+
+    .form-side {
+        padding: 40px 30px;
+    }
+}
+
+@media (max-width: 768px) {
+    .contact-hero {
+        height: auto;
+        padding: 100px 15px 60px;
+    }
+
+    .hero-content h1 {
+        font-size: 2.2rem;
+    }
+
+    .hero-content p {
+        font-size: 1.05rem;
+        padding: 0 10px;
+    }
+
+    .hero-btns {
+        flex-direction: column;
+        align-items: center;
+        gap: 12px;
+    }
+
+    .hero-btn {
+        width: 100%;
+        max-width: 280px;
+        text-align: center;
+        padding: 12px 25px;
+    }
+
+    .section-title {
+        font-size: 2rem;
+    }
+
+    .form-side {
+        padding: 30px 20px;
+    }
+
+    .contact-info-grid {
+        margin-top: -40px;
+        gap: 20px;
+        padding: 0 10px;
+    }
+
+    .info-card {
+        padding: 30px 25px;
+    }
+
+    .social-links {
+        gap: 15px;
+    }
+
+    .social-box {
+        width: 55px;
+        height: 55px;
+        font-size: 1.4rem;
+    }
 }

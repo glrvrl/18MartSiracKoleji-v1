@@ -1030,22 +1030,42 @@ footer .col-lg-4 p {
 @media (max-width: 768px) {
   .whatsapp-container {
     bottom: 20px;
-    right: 20px;
+    right: 15px;
+    z-index: 9999;
   }
 
   .whatsapp-float {
-    width: 60px;
-    height: 60px;
-    font-size: 30px;
+    width: 55px;
+    height: 55px;
+    font-size: 28px;
+    box-shadow: 0 6px 20px rgba(37, 211, 102, 0.5);
   }
 
   .whatsapp-popup {
     font-size: 12px;
     padding: 8px 12px;
-    max-width: 180px;
+    max-width: 170px;
+    right: 0;
+  }
+
+  .whatsapp-popup::after {
+    right: 18px;
+  }
+
+  .whatsapp-float span {
+    display: none;
   }
 
   .whatsapp-float:hover span {
     display: none;
+  }
+
+  /* Back to top button mobilde WhatsApp'ın üstünde */
+  .back-to-top {
+    bottom: 85px;
+    right: 15px;
+    width: 42px;
+    height: 42px;
+    font-size: 1rem;
   }
 }

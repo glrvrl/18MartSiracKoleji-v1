@@ -95,6 +95,7 @@
   line-height: 1.15;
   background: linear-gradient(135deg, #fff 50%, var(--primary));
   -webkit-background-clip: text;
+  background-clip: text;
   -webkit-text-fill-color: transparent;
   text-shadow: none;
 }
@@ -152,39 +153,44 @@
 /* Mobile Responsiveness */
 @media (max-width: 992px) {
   .hero-slider {
-    height: 75vh;
+    height: auto;
+    background: #111;
+  }
+
+  #heroCarousel,
+  .carousel-inner,
+  .carousel-item {
+    height: auto;
+  }
+
+  /* Arka plan blur'u mobilde gizle, resimler zaten tam görünecek */
+  .hero-bg-blur {
+    display: none;
+  }
+
+  /* Resimleri mobilde tam genişlikte göster */
+  .hero-img-container {
+    padding: 0;
   }
 
   .hero-img {
-    max-height: 60%;
+    width: 100% !important;
+    max-width: 100%;
+    max-height: none;
+    height: auto;
+    border-radius: 0;
+    box-shadow: none;
+    animation: none;
   }
 
+  /* Overlay kartı mobilde gizle (sadece bilgisayarda görünsün) */
   .hero-overlay-content {
-    left: 5%;
-    right: 5%;
-    bottom: 40px;
-    top: auto;
-    transform: none;
-    max-width: none;
-    text-align: center;
-    padding: 25px;
-    backdrop-filter: blur(10px);
+    display: none;
   }
 
-  .hero-overlay-content h1 {
-    font-size: 1.8rem;
-  }
-
-  @keyframes slideInLeftFade {
-    from {
-      opacity: 0;
-      transform: translateY(20px);
-    }
-
-    to {
-      opacity: 1;
-      transform: translateY(0);
-    }
+  /* Carousel ok ve noktalar mobilde görünsün */
+  .carousel-indicators {
+    bottom: 10px;
   }
 }
 
@@ -489,5 +495,37 @@
   .stats-grid {
     padding: 20px;
     margin-top: -30px;
+  }
+
+  /* Haberler & Duyurular bölümü mobilde alt alta */
+  .home-news-layout {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+
+  /* Haber kartları mobilde alt alta (tek sütun) */
+  .home-news-cards {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  /* Section header mobilde düzgün wrap */
+  .home-section-header {
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+
+  .home-section-header h2 {
+    font-size: 1.5rem;
+  }
+
+  /* Eğitim Modeli kartları mobilde tek sütun */
+  .services-grid {
+    grid-template-columns: 1fr;
+  }
+
+  /* Home news preview padding azalt */
+  .home-news-preview {
+    padding: 60px 0;
   }
 }

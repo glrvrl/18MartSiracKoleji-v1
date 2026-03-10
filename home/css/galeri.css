@@ -395,11 +395,46 @@ body {
 }
 
 @media (max-width: 768px) {
+    .gallery-hero {
+        height: auto;
+        min-height: 300px;
+        margin-top: 60px;
+        border-radius: 0 0 30px 30px;
+        margin-bottom: 30px;
+    }
+
     .gallery-hero h1 {
-        font-size: 2.5rem;
+        font-size: 2.2rem;
+    }
+
+    .gallery-hero p {
+        font-size: 1rem;
+        padding: 0 15px;
+    }
+
+    .gallery-filter {
+        gap: 10px;
+        margin-bottom: 30px;
+    }
+
+    .filter-btn {
+        padding: 8px 20px;
+        font-size: 0.85rem;
     }
 
     .gallery-item {
-        height: 250px;
+        height: 220px;
+    }
+
+    .gallery-grid {
+        gap: 15px;
+    }
+
+    .video-info {
+        padding: 15px;
+    }
+
+    .section-header h2 {
+        font-size: 1.8rem !important;
     }
 }

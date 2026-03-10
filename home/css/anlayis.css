@@ -270,7 +270,9 @@
 /* RESPONSIVE ADJUSTMENTS */
 @media (max-width: 768px) {
     .education-header {
-        padding: 140px 0 100px;
+        padding: 120px 15px 80px;
+        clip-path: none;
+        margin-bottom: 0;
     }
 
     .education-header h1 {
@@ -290,11 +292,26 @@
         padding: 30px 20px;
     }
 
+    .montessori-section {
+        padding: 50px 25px;
+        margin: 40px 10px;
+        border-radius: 20px;
+    }
+
+    .montessori-section h3 {
+        font-size: 1.8rem;
+    }
+
     .quote-section {
         padding: 30px;
+        margin: 40px 10px;
     }
 
     .quote-section p:first-child {
         font-size: 1.2rem;
+    }
+
+    .education-content {
+        padding: 60px 0;
     }
 }
