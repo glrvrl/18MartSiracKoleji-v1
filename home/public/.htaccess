@@ -1,0 +1,34 @@
+RewriteEngine On
+
+# Block direct access to PHP files via GET requests
+# Allow POST requests for form submissions
+RewriteCond %{REQUEST_METHOD} GET
+RewriteRule \.php$ - [F,L]
+
+# Prevent access to sensitive files
+<Files "composer.json">
+    Order Allow,Deny
+    Deny from all
+</Files>
+
+<Files "composer.lock">
+    Order Allow,Deny
+    Deny from all
+</Files>
+
+# Security headers
+<IfModule mod_headers.c>
+    Header always set X-Content-Type-Options nosniff
+    Header always set X-Frame-Options DENY
+    Header always set X-XSS-Protection "1; mode=block"
+    Header always set Referrer-Policy "strict-origin-when-cross-origin"
+</IfModule>
+
+# Prevent directory listing
+Options -Indexes
+
+# Prevent access to .htaccess
+<Files ".htaccess">
+    Order Allow,Deny
+    Deny from all
+</Files>

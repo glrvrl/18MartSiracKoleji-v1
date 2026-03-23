@@ -36,3 +36,99 @@ Bu proje, okulumuzun **resmi web sitesinin** kaynak kodlarını içermektedir. S
 <p align="center">
   <strong>🌟 "Geleceği Hikmetle İnşa Ediyoruz" 🌟</strong>
 </p>
+
+---
+
+## 🚀 Kurulum ve Yapılandırma
+
+### Gereksinimler
+- PHP 7.4 veya üzeri
+- Composer
+- Web sunucusu (Apache/Nginx)
+
+### Adımlar
+1. **Depoyu klonlayın:**
+   ```bash
+   git clone <repository-url>
+   cd 18MartSiracKoleji-v1
+   ```
+
+2. **Bağımlılıkları yükleyin:**
+   ```bash
+   cd home
+   composer install
+   ```
+
+3. **Ortam değişkenlerini yapılandırın:**
+   - PHP dosyalarındaki hardcoded değerleri düzenleyin:
+     ```php
+     'MAIL_USERNAME' => 'your-gmail@gmail.com',
+     'MAIL_PASSWORD' => 'your-app-password',
+     'MAIL_RECIPIENT' => 'recipient@example.com'
+     ```
+
+4. **Dosya izinlerini ayarlayın:**
+   ```bash
+   chmod 755 home/public/
+   chmod 644 home/public/*.php
+   chmod 600 home/public/.env
+   ```
+
+5. **Web sunucusunu yapılandırın:**
+   - Document root'u `home/public/` klasörüne yönlendirin
+   - `.htaccess` dosyasını etkinleştirin (mod_rewrite gerekli)
+   - PHP'yi etkinleştirin
+
+### Güvenlik Notları
+- `.htaccess` ile PHP dosyalarına doğrudan GET erişimi engellenmiştir
+- Form POST istekleri normal çalışır
+- Hassas bilgiler PHP kodu içinde saklanır
+- Rate limiting ile spam koruması sağlanır (1 dakikalık süre)
+- Tüm form verileri XSS koruması için filtrelenir
+- Public klasöründe sadece gerekli dosyalar bulunur
+
+---
+
+## 📁 Proje Yapısı
+
+```
+18MartSiracKoleji-v1/
+├── .gitignore             # Hariç tutulacak dosyalar
+├── README.md              # Proje dokümantasyonu
+└── home/
+    └── public/            # Web root klasörü
+        ├── .htaccess      # Güvenlik kuralları
+        ├── classes/       # PHP sınıfları
+        │   └── MailHandler.php # Mail gönderme sınıfı (hardcoded config)
+        ├── vendor/        # Composer bağımlılıkları
+        ├── css/           # Stil dosyaları
+        ├── js/            # JavaScript dosyaları
+        ├── image/         # Görseller
+        ├── index.html     # Ana sayfa
+        ├── iletisim.html  # İletişim sayfası
+        ├── onkayit.html   # Ön kayıt sayfası
+        ├── personalRandevu.html # Personel başvuru sayfası
+        ├── *_submit.php   # Form işleme dosyaları (rate limited)
+        └── ...            # Diğer dosyalar
+```
+
+---
+
+## 🔧 Geliştirme
+
+### Kod Kalitesi
+- **DRY Prensibi:** Kod tekrarını önlemek için `MailHandler` sınıfı kullanılır
+- **Güvenlik:** XSS koruması, input validasyonu
+- **Modüler Yapı:** Ortak işlevler sınıflarda toplanır
+
+### Yeni Özellik Ekleme
+1. `classes/` altında yeni sınıf oluşturun
+2. Form verilerini `htmlspecialchars()` ile temizleyin
+3. Hata yönetimi için try-catch kullanın
+4. `.env` üzerinden yapılandırma yapın
+
+---
+
+## 📞 Destek
+
+Herhangi bir sorun yaşarsanız, lütfen [iletişim formu](home/iletisim.html) üzerinden iletişime geçin.
