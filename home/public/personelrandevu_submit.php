@@ -1,4 +1,4 @@
-<?php
+﻿<?php
 session_start();
 
 // ─── RATE LIMIT KONTROL ──────────────────────────────────
@@ -9,7 +9,7 @@ $maxSubmissions = 1;
 if (isset($_SESSION[$rateLimitKey])) {
     $lastSubmission = $_SESSION[$rateLimitKey];
     if (time() - $lastSubmission < $rateLimitTime) {
-        header('Location: personalRandevu.html?status=error&msg=rate_limit');
+        header('Location: personelrandevu.html?status=error&msg=rate_limit');
         exit;
     }
 }
@@ -35,7 +35,7 @@ $approval = isset($_POST['approval']) ? 'Evet' : 'Hayır';
 
 // ─── ZORUNLU ALAN KONTROL ────────────────────────────────
 if (empty($fullname) || empty($phone) || empty($email) || empty($position)) {
-    header('Location: personalRandevu.html?status=error&msg=zorunlu');
+    header('Location: personelrandevu.html?status=error&msg=zorunlu');
     exit;
 }
 
@@ -235,10 +235,10 @@ try {
         $attachments
     );
 
-    header('Location: personalRandevu.html?status=success');
+    header('Location: personelrandevu.html?status=success');
 
 } catch (Exception $e) {
-    header('Location: personalRandevu.html?status=error&msg=mail');
+    header('Location: personelrandevu.html?status=error&msg=mail');
 }
 
 exit;
