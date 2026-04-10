@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="home/image/siraclogu%20.png" alt="Siraç Koleji Logo" width="120" />
+  <img src="home/public/image/siraclogo.png" alt="Siraç Koleji Logo" width="120" />
 </p>
 
 <h1 align="center">🏫 Özel On Sekiz Mart Siraç İlkokulu</h1>
@@ -107,7 +107,7 @@ Bu proje, okulumuzun **resmi web sitesinin** kaynak kodlarını içermektedir. S
         ├── index.html     # Ana sayfa
         ├── iletisim.html  # İletişim sayfası
         ├── onkayit.html   # Ön kayıt sayfası
-        ├── personalRandevu.html # Personel başvuru sayfası
+        ├── personelrandevu.html # Personel başvuru sayfası
         ├── *_submit.php   # Form işleme dosyaları (rate limited)
         └── ...            # Diğer dosyalar
 ```
@@ -131,4 +131,4 @@ Bu proje, okulumuzun **resmi web sitesinin** kaynak kodlarını içermektedir. S
 
 ## 📞 Destek
 
-Herhangi bir sorun yaşarsanız, lütfen [iletişim formu](home/iletisim.html) üzerinden iletişime geçin.
+Herhangi bir sorun yaşarsanız, lütfen [iletişim formu](home/public/iletisim.html) üzerinden iletişime geçin.
