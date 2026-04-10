@@ -1,5 +1,5 @@
-/**
- * Siraç Koleji - Ana JavaScript Dosyası
+﻿/**
+ * Sirac Koleji - Ana JavaScript Dosyası
  * Tüm site genelindeki dinamik efektler ve slider kontrolleri burada birleştirilmiştir.
  */
 

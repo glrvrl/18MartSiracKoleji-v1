@@ -1,4 +1,4 @@
-
+﻿
 :root {
   --primary-color: #0af1d3;
   --secondary-color: #e68d08;
@@ -23,7 +23,7 @@ h1, h2, h3, h4, h5 {
 
 /* CONTACT HERO SECTION */
 .contact-hero {
-  background: linear-gradient(rgba(26, 86, 167, 0.85), rgba(26, 86, 167, 0.85)), url('../image/anasayfa1.JPG') center center/cover no-repeat;
+  background: linear-gradient(rgba(26, 86, 167, 0.85), rgba(26, 86, 167, 0.85)), url('../image/anasayfa1.jpeg') center center/cover no-repeat;
   color: white;
   padding: 150px 0 100px;
   text-align: center;

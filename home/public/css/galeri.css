@@ -1,4 +1,4 @@
-/* Modern & Premium Gallery CSS */
+﻿/* Modern & Premium Gallery CSS */
 :root {
     --primary: #1a5276;
     --secondary: #e67e22;
@@ -26,7 +26,7 @@ body {
     height: 50vh;
     min-height: 400px;
     background: linear-gradient(rgba(26, 82, 118, 0.75), rgba(44, 62, 80, 0.7)),
-        url('../image/anasayfa1.JPG') center/cover fixed;
+        url('../image/anasayfa1.jpeg') center/cover fixed;
     display: flex;
     align-items: center;
     justify-content: center;
