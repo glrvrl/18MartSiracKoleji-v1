@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="tr">
 
 <head>
@@ -90,9 +90,9 @@
     </nav>
   </header>
 
-  <!-- HERO SLIDER (PREMIUM POSTER DESIGN) -->
+  <!-- HERO SLIDER (PREMIUM FULL-BLEED DESIGN) -->
   <section class="hero-slider">
-    <div id="heroCarousel" class="carousel slide carousel-fade" data-bs-ride="carousel" data-bs-interval="1000">
+    <div id="heroCarousel" class="carousel slide carousel-fade" data-bs-ride="carousel" data-bs-interval="6000">
 
       <div class="carousel-indicators">
         <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="0" class="active"></button>
@@ -102,83 +102,44 @@
       </div>
 
       <div class="carousel-inner">
-        <!-- Slayt 1 -->
-        <div class="carousel-item active">
-          <div class="hero-bg-blur" style="background-image: url('image/haberler/sladır1.jpeg');"></div>
-          <div class="hero-img-container">
-            <img class="hero-img" src="image/haberler/sladır1.jpeg" alt="Sirac Koleji Duyuru">
-          </div>
+        <!-- Slayt 1 (Video) -->
+        <div class="carousel-item active" data-bs-interval="15000">
+          <video id="heroVideo" class="hero-img" src="image/IMG_8871.MP4" autoplay muted playsinline></video>
         </div>
 
         <!-- Slayt 2 -->
         <div class="carousel-item">
-          <div class="hero-bg-blur" style="background-image: url('image/haberler/slider2.jpeg');"></div>
-          <div class="hero-img-container">
-            <img class="hero-img" src="image/haberler/slider2.jpeg" alt="Sirac Koleji Etkinlik">
-          </div>
+          <img class="hero-img" src="image/haberler/slider2.jpeg" alt="Sirac Koleji Etkinlik">
         </div>
 
         <!-- Slayt 3 -->
         <div class="carousel-item">
-          <div class="hero-bg-blur" style="background-image: url('image/haberler/slider3.jpeg');"></div>
-          <div class="hero-img-container">
-            <img class="hero-img" src="image/haberler/slider3.jpeg" alt="Sirac Koleji Eğitim">
-          </div>
+          <img class="hero-img" src="image/haberler/slider3.jpeg" alt="Sirac Koleji Eğitim">
         </div>
 
         <!-- Slayt 4 -->
         <div class="carousel-item">
-          <div class="hero-bg-blur" style="background-image: url('image/sirac.jpg');"></div>
-          <div class="hero-img-container">
-            <img class="hero-img" src="image/sirac.jpg" alt="Sirac Koleji Kampüs">
-          </div>
+          <img class="hero-img" src="image/sirac.jpg" alt="Sirac Koleji Kampüs">
         </div>
       </div>
 
-      <!-- Glassmorphism Text Overlay Card -->
+      <!-- Modern Text Overlay -->
       <div class="hero-overlay-content">
         <h1>Geleceği Hikmetle İnşa Ediyoruz</h1>
         <p>Milli ve manevi değerlerle donanmış, akademik başarısı yüksek nesiller için Sirac Koleji.</p>
         <div class="d-flex gap-3 btn-group-mobile">
-          <a href="onkayit.html" class="btn btn-primary rounded-pill fw-bold">Hemen Başvur</a>
-          <a href="anlayis.html" class="btn btn-outline-light rounded-pill fw-bold">Keşfet</a>
+          <a href="onkayit.html" class="btn btn-primary">Hemen Başvur</a>
+          <a href="anlayis.html" class="btn btn-outline-light">Keşfet</a>
         </div>
       </div>
 
+      <!-- Kaydırma Okları (Sadece PC'de görünür) -->
       <button class="carousel-control-prev" type="button" data-bs-target="#heroCarousel" data-bs-slide="prev">
         <span class="carousel-control-prev-icon" aria-hidden="true"></span>
       </button>
       <button class="carousel-control-next" type="button" data-bs-target="#heroCarousel" data-bs-slide="next">
         <span class="carousel-control-next-icon" aria-hidden="true"></span>
       </button>
-    </div>
-  </section>
-
-  <!-- STATS SECTION (Koleji Statüsü) -->
-  <section class="stats-section">
-    <div class="container">
-      <div class="stats-grid">
-        <div class="stat-card">
-          <div class="stat-icon"><i class="fas fa-history"></i></div>
-          <span class="stat-number">17+</span>
-          <span class="stat-label">Yıllık Tecrübe</span>
-        </div>
-        <div class="stat-card">
-          <div class="stat-icon"><i class="fas fa-users-viewfinder"></i></div>
-          <span class="stat-number">40+</span>
-          <span class="stat-label">Uzman Eğitimci</span>
-        </div>
-        <div class="stat-card">
-          <div class="stat-icon"><i class="fas fa-graduation-cap"></i></div>
-          <span class="stat-number">1200+</span>
-          <span class="stat-label">Mutlu Mezun</span>
-        </div>
-        <div class="stat-card">
-          <div class="stat-icon"><i class="fas fa-microscope"></i></div>
-          <span class="stat-number">12+</span>
-          <span class="stat-label">Modern Atölye</span>
-        </div>
-      </div>
     </div>
   </section>
 
@@ -217,7 +178,7 @@
         <a href="yabancidil.html" class="text-decoration-none">
           <div class="service-card">
             <div class="service-image">
-              <img src="image/dııl.jpeg" alt="İngilizce & Arapça">
+              <img src="image/dil2.jpeg" alt="İngilizce & Arapça">
             </div>
             <h3>İngilizce & Arapça</h3>
             <p>Global vizyon için iki dilli eğitim modeli; Speaking odaklı modern yaklaşımlar.</p>
@@ -274,10 +235,11 @@
           <div class="home-news-cards">
             <!-- Haber 1 -->
             <article class="home-news-card">
-              <img src="image/haberler/1anasayfa.jpeg" alt="">
-              <h3>Doğru bir başlangıç, doğru zamanda atılan adımlarla başlar.
-                2026–2027 eğitim öğretim yılı için Ocak ayı itibariyle erken kayıt avantajlarımız başlamıştır.
-                Anaokulu ve ilkokul kademelerimiz hakkında detaylı bilgi almak için bizimle iletişime geçebilirsiniz.
+              <img src="image/haberler/ıfter.jpeg" alt="">
+              <h3>
+                Rahmet ve bereket ayı Ramazan’da,
+Ak Parti İl Başkanı Abdurrahman Kuzu ve Çanakkalemizdeki güzide STK temsilcilerimizi iftar soframızda misafir etmekten büyük onur duyduk.
+Birlik, dayanışma ve kardeşlik ruhunun en güzel örneklerinden birini yaşadığımız bu anlamlı akşamda bizlerle olan tüm misafirlermize teşekkür ederiz.
               </h3>
               <a href="haberler.html">Devamını Oku →</a>
             </article>
@@ -294,80 +256,76 @@
           </div>
         </div>
 
-        <!-- SAĞ: DUYURULAR -->
+        <!-- SAĞ: YAN PANEL (ETKİNLİKLER & DUYURULAR) -->
         <aside class="home-announcements">
-          <div class="home-section-header">
-            <h2>Duyurular</h2>
-            <a href="haberler.html">Tümünü Görüntüle →</a>
+          <div class="home-section-header" style="margin-bottom: 25px;">
+            <h2 style="font-size: 1.5rem; color: var(--primary);">📅 Yaklaşan Etkinlikler</h2>
+            <a href="haberler.html" style="padding: 4px 12px; font-size: 0.8rem;">Tümünü Gör</a>
           </div>
           <ul class="announcement-list">
 
-            <li class="announcement-item">
+            <!-- Etkinlik 1 -->
+            <li class="announcement-item" style="border-bottom: 1px solid rgba(0,0,0,0.05); padding-bottom: 15px; margin-bottom: 15px;">
               <span class="ann-date">
                 <strong>13</strong>
                 <small>Ocak</small>
               </span>
-
               <div class="ann-content">
-                <button class="ann-title">
-                  Sinema Etkinliği
-                </button>
-                <div class="ann-detail">
-                  Öğrencilerimizle birlikte sinema etkinliği düzenlenecektir.
+                <h4 class="ann-title" style="margin: 0; font-size: 1rem; color: var(--dark);">Sinema Etkinliği</h4>
+                <div class="ann-detail" style="font-size: 0.85rem; color: var(--gray); margin-top: 5px;">
+                  Öğrencilerimizle birlikte sinema etkinliği düzenlenecektir. <br>
+                  <small style="color: var(--secondary);"><i class="far fa-clock"></i> 09:00 - 17:00</small>
                 </div>
               </div>
             </li>
 
-            <li class="announcement-item">
+            <!-- Etkinlik 2 -->
+            <li class="announcement-item" style="border-bottom: 1px solid rgba(0,0,0,0.05); padding-bottom: 15px; margin-bottom: 15px;">
               <span class="ann-date">
                 <strong>14</strong>
                 <small>Ocak</small>
               </span>
-
               <div class="ann-content">
-                <button class="ann-title">
-                  Kütüphane Gezisi
-                </button>
-                <div class="ann-detail">
-                  Öğrencilerimizle birlikte Çannakale kütüphane gezisi düzenlenecektir.
+                <h4 class="ann-title" style="margin: 0; font-size: 1rem; color: var(--dark);">Kütüphane Gezisi</h4>
+                <div class="ann-detail" style="font-size: 0.85rem; color: var(--gray); margin-top: 5px;">
+                  Öğrencilerimizle birlikte Çanakkale kütüphane gezisi düzenlenecektir. <br>
+                  <small style="color: var(--secondary);"><i class="far fa-clock"></i> 10:00 - 16:00</small>
                 </div>
               </div>
             </li>
 
-            <li class="announcement-item">
+            <!-- Etkinlik 3 -->
+            <li class="announcement-item" style="border-bottom: 1px solid rgba(0,0,0,0.05); padding-bottom: 15px; margin-bottom: 15px;">
               <span class="ann-date">
                 <strong>15</strong>
                 <small>Ocak</small>
               </span>
               <div class="ann-content">
-                <button class="ann-title">
-                  Miraç Kandili
-                </button>
-                <div class="ann-detail">
-                  Miraç Kandili programı okul bahçesinde düzenlenecektir.
+                <h4 class="ann-title" style="margin: 0; font-size: 1rem; color: var(--dark);">Miraç Kandili</h4>
+                <div class="ann-detail" style="font-size: 0.85rem; color: var(--gray); margin-top: 5px;">
+                  Miraç Kandili programı okul bahçesinde düzenlenecektir. <br>
+                  <small style="color: var(--secondary);"><i class="far fa-clock"></i> 19:00</small>
                 </div>
               </div>
             </li>
 
+             <!-- Etkinlik 4 -->
             <li class="announcement-item">
               <span class="ann-date">
                 <strong>16</strong>
                 <small>Ocak</small>
               </span>
-
               <div class="ann-content">
-                <button class="ann-title">
-                  1.Dönem Karne Töreni
-                </button>
-                <div class="ann-detail">
-                  1.Dönem Karne Töreni okul bahçesinde düzenlenecektir.
+                <h4 class="ann-title" style="margin: 0; font-size: 1rem; color: var(--dark);">1.Dönem Karne Töreni</h4>
+                <div class="ann-detail" style="font-size: 0.85rem; color: var(--gray); margin-top: 5px;">
+                  1.Dönem Karne Töreni okul bahçesinde düzenlenecektir. <br>
+                  <small style="color: var(--secondary);"><i class="far fa-clock"></i> 10:00</small>
                 </div>
               </div>
             </li>
 
           </ul>
-
-
+        </aside>
       </div>
     </div>
   </section>
@@ -520,11 +478,40 @@
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>`n  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>`n
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
   <script src="js/main.js"></script>
 
   <script>
     document.addEventListener("DOMContentLoaded", function () {
+      const heroCarousel = document.getElementById('heroCarousel');
+      const firstVideo = document.getElementById('heroVideo');
+
+      if (heroCarousel && firstVideo) {
+        firstVideo.addEventListener('play', () => {
+          const bsCarousel = bootstrap.Carousel.getInstance(heroCarousel) || new bootstrap.Carousel(heroCarousel);
+          bsCarousel.pause();
+        });
+
+        firstVideo.addEventListener('ended', () => {
+          const bsCarousel = bootstrap.Carousel.getInstance(heroCarousel);
+          if (bsCarousel) {
+            bsCarousel.next();
+            bsCarousel.cycle();
+          }
+        });
+
+        heroCarousel.addEventListener('slid.bs.carousel', function (e) {
+          if (e.to === 0) {
+            firstVideo.currentTime = 0;
+            // Add a small delay to ensure rendering before play
+            setTimeout(() => firstVideo.play(), 100);
+          } else {
+            firstVideo.pause();
+          }
+        });
+      }
+
       if (!sessionStorage.getItem("popupShown")) {
         const popup = document.getElementById("imagePopup");
         if (popup) {
@@ -532,8 +519,7 @@
           sessionStorage.setItem("popupShown", "true");
         }
       }
-    }
-    );
+    });
 
     function closeImagePopup() {
       const popup = document.getElementById("imagePopup");
@@ -544,4 +530,3 @@
 
 
 </html>
-

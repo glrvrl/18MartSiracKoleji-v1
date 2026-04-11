@@ -1,5 +1,6 @@
 <?php
 session_start();
+require_once 'classes/MailHandler.php';
 
 // ─── RATE LIMIT KONTROL ──────────────────────────────────
 $rateLimitKey = 'onkayit_submit';

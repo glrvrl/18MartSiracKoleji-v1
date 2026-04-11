@@ -11,13 +11,12 @@
   --shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
 }
 
-/* 1. HERO SLIDER - PREMIUM "POSTER" DESIGN */
+/* 1. HERO SLIDER - PREMIUM "FULL-BLEED" DESIGN */
 .hero-slider {
   position: relative;
-  height: 85vh;
-  min-height: 550px;
-  background: #111;
-  /* Dark base for depth */
+  height: 90vh; /* Daha büyük ve etkileyici alan */
+  min-height: 600px;
+  background: var(--dark);
   overflow: hidden;
 }
 
@@ -29,46 +28,39 @@
 
 .carousel-item {
   position: relative;
+  overflow: hidden;
 }
 
-/* Background blurred layer to fill the screen beautifully */
-.hero-bg-blur {
-  position: absolute;
-  inset: -30px;
-  /* Slight overflow to hide edges */
-  background-size: cover;
-  background-position: center;
-  filter: blur(30px) brightness(0.4);
-  /* Dark and blurred */
-  z-index: 1;
-}
-
-/* Front container for the full poster */
-.hero-img-container {
-  position: relative;
-  height: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  /* Centered poster */
-  z-index: 2;
-  padding: 30px 0;
-}
-
+/* Full Bleed Images/Videos with Dark Overlay */
 .hero-img {
-  height: auto;
-  max-height: 90%;
-  /* Keep it within view */
-  width: auto !important;
-  max-width: 90%;
-  object-fit: contain;
-  /* DO NOT CROP */
-  border-radius: 12px;
-  box-shadow: 0 30px 60px rgba(0, 0, 0, 0.6);
-  animation: zoomInSubtle 12s infinite alternate ease-in-out;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transform: scale(1);
+  transition: transform 6s cubic-bezier(0.25, 0.46, 0.45, 0.94); /* Smooth Ken Burns effect */
 }
 
-/* Sleek Lateral Info Box (Glassmorphism) */
+/* Aktif slaytta hafif yakınlaşma efekti (Ken Burns) */
+.carousel-item.active .hero-img {
+  transform: scale(1.05);
+}
+
+/* Premium Gradient Overlay to ensure text readability */
+.carousel-item::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to right, 
+    rgba(38, 70, 83, 0.85) 0%,   /* Koyu mavi başlangıç (Tasarım rengi --dark) */
+    rgba(38, 70, 83, 0.4) 50%,   /* Ortada hafiflet */
+    rgba(0, 0, 0, 0.2) 100%      /* Sağda çok hafif karanlık */
+  );
+  z-index: 2;
+  pointer-events: none;
+}
+
+/* Sleek Lateral Info Box (Modern, temiz, çerçevesiz) */
 .hero-overlay-content {
   position: absolute;
   left: 8%;
@@ -77,120 +69,167 @@
   text-align: left;
   color: white;
   z-index: 10;
-  max-width: 480px;
-  background: rgba(255, 255, 255, 0.05);
-  /* Very transparent */
-  backdrop-filter: blur(20px);
-  padding: 40px;
-  border-radius: 30px;
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  box-shadow: 0 40px 100px rgba(0, 0, 0, 0.4);
-  animation: slideInLeftFade 1s both;
+  max-width: 600px;
+  /* Glassmorphism yerine daha zarif, temiz ve doğrudan metin görünümü */
+  background: transparent; 
+  padding: 0;
+  border: none;
+  box-shadow: none;
+  animation: slideUpFade 1.2s cubic-bezier(0.2, 0.8, 0.2, 1) both;
+  animation-delay: 0.3s;
 }
 
 .hero-overlay-content h1 {
-  font-size: 2.8rem;
+  font-size: clamp(2.5rem, 5vw, 4rem); /* Responsive typography */
   font-weight: 800;
-  margin-bottom: 20px;
-  line-height: 1.15;
-  background: linear-gradient(135deg, #fff 50%, var(--primary));
+  margin-bottom: 24px;
+  line-height: 1.1;
+  background: linear-gradient(135deg, var(--white) 60%, var(--accent) 100%);
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
-  text-shadow: none;
 }
 
 .hero-overlay-content p {
-  font-size: 1.1rem;
-  margin-bottom: 35px;
-  font-weight: 300;
-  opacity: 0.9;
+  font-size: 1.25rem;
+  margin-bottom: 40px;
+  font-weight: 400;
+  color: var(--white);
+  opacity: 0.95;
   line-height: 1.6;
+  text-shadow: 0 2px 8px rgba(0,0,0,0.4);
 }
 
 /* Modern Minimal Button Group */
+.hero-overlay-content .btn-group-mobile {
+  gap: 20px !important;
+}
+
 .hero-overlay-content .btn {
-  padding: 14px 35px;
-  font-size: 0.95rem;
+  padding: 16px 40px;
+  font-size: 1rem;
+  font-weight: 600;
   text-transform: uppercase;
   letter-spacing: 1px;
+  border-radius: 50px;
+  transition: var(--transition);
 }
+
+.hero-overlay-content .btn-primary {
+  background: var(--primary);
+  border-color: var(--primary);
+  box-shadow: 0 10px 20px rgba(42, 157, 143, 0.3);
+}
+
+.hero-overlay-content .btn-primary:hover {
+  background: #21867a;
+  box-shadow: 0 15px 30px rgba(42, 157, 143, 0.4);
+  transform: translateY(-3px);
+}
+
+.hero-overlay-content .btn-outline-light {
+  border-width: 2px;
+}
+
+.hero-overlay-content .btn-outline-light:hover {
+  background: white;
+  color: var(--dark);
+  transform: translateY(-3px);
+}
+
 
 /* Modern Indicators & Controls */
 .carousel-indicators {
-  bottom: 30px;
+  bottom: 40px;
+  gap: 8px;
+  z-index: 15;
 }
 
 .carousel-indicators [data-bs-target] {
-  width: 30px;
+  width: 40px;
   height: 4px;
-  /* Line style */
-  border-radius: 2px;
+  border-radius: 4px;
+  background-color: rgba(255,255,255,0.4);
+  border: none;
+  transition: all 0.4s ease;
 }
 
-@keyframes zoomInSubtle {
-  from {
-    transform: scale(1);
-  }
-
-  to {
-    transform: scale(1.04);
-  }
+.carousel-indicators .active {
+  background-color: var(--accent); /* --accent gold rengi vurgu */
+  width: 60px;
 }
 
-@keyframes slideInLeftFade {
+.carousel-control-prev,
+.carousel-control-next {
+  width: 80px;
+  z-index: 15;
+  opacity: 0; /* Hover olana kadar görünmez */
+  transition: opacity 0.3s ease;
+}
+
+.hero-slider:hover .carousel-control-prev,
+.hero-slider:hover .carousel-control-next {
+  opacity: 0.8;
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  width: 3rem;
+  height: 3rem;
+  filter: drop-shadow(0 2px 4px rgba(0,0,0,0.5));
+}
+
+
+@keyframes slideUpFade {
   from {
     opacity: 0;
-    transform: translateY(-50%) translateX(-40px);
+    transform: translateY(-30px);
   }
-
   to {
     opacity: 1;
-    transform: translateY(-50%) translateX(0);
+    transform: translateY(-50%); /* Orijinal hizalama noktası */
   }
 }
 
 /* Mobile Responsiveness */
 @media (max-width: 992px) {
   .hero-slider {
-    height: auto;
-    background: #111;
+    height: 70vh;
+    min-height: 500px;
   }
 
-  #heroCarousel,
-  .carousel-inner,
-  .carousel-item {
-    height: auto;
-  }
-
-  /* Arka plan blur'u mobilde gizle, resimler zaten tam görünecek */
-  .hero-bg-blur {
-    display: none;
-  }
-
-  /* Resimleri mobilde tam genişlikte göster */
-  .hero-img-container {
-    padding: 0;
-  }
-
-  .hero-img {
-    width: 100% !important;
-    max-width: 100%;
-    max-height: none;
-    height: auto;
-    border-radius: 0;
-    box-shadow: none;
-    animation: none;
-  }
-
-  /* Overlay kartı mobilde gizle (sadece bilgisayarda görünsün) */
   .hero-overlay-content {
-    display: none;
+    left: 5%;
+    right: 5%;
+    text-align: center;
+    background: rgba(38, 70, 83, 0.6); /* Mobilde okunabilirlik için arka plan */
+    padding: 30px 20px;
+    border-radius: 20px;
+    backdrop-filter: blur(10px);
+    max-width: none;
   }
 
-  /* Carousel ok ve noktalar mobilde görünsün */
-  .carousel-indicators {
-    bottom: 10px;
+  .hero-overlay-content h1 {
+    font-size: 2.2rem;
+  }
+
+  .hero-overlay-content p {
+    font-size: 1.1rem;
+    margin-bottom: 30px;
+  }
+
+  .btn-group-mobile {
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .carousel-item::after {
+    background: rgba(0,0,0,0.4); /* Mobilde sade koyulaştırma */
+  }
+
+  .carousel-control-prev,
+  .carousel-control-next {
+    display: none; /* Mobilde okları gizle (kaydırma daha iyi) */
   }
 }
 
@@ -368,7 +407,9 @@
 .home-news-card img {
   width: 100%;
   height: 220px;
-  object-fit: cover;
+  object-fit: contain;
+  background-color: #f8f9fa;
+  padding: 15px;
 }
 
 .home-news-card h3 {
@@ -394,10 +435,12 @@
 /* Aside Announcements */
 .home-announcements {
   background: white;
-  border-radius: 25px;
+  border-radius: 20px;
   padding: 30px;
-  box-shadow: var(--shadow);
-  border: 1px solid rgba(0, 0, 0, 0.03);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+  border: 1px solid rgba(0, 0, 0, 0.05);
+  position: sticky;
+  top: 100px;
 }
 
 .announcement-list {
@@ -410,32 +453,30 @@
   display: flex;
   gap: 20px;
   padding: 15px 0;
-  border-bottom: 1px solid #f0f0f0;
+  transition: var(--transition);
 }
 
 .announcement-item:last-child {
-  border-bottom: none;
+  border-bottom: none !important;
+  margin-bottom: 0 !important;
+  padding-bottom: 0 !important;
+}
+
+.announcement-item:hover {
+  transform: translateX(5px);
 }
 
 .ann-date {
-  background: #f8f9fa;
   min-width: 60px;
-  height: 60px;
-  border-radius: 12px;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  transition: var(--transition);
-}
-
-.announcement-item:hover .ann-date {
-  background: var(--primary);
-  color: white;
+  color: var(--secondary);
 }
 
 .ann-date strong {
-  font-size: 1.25rem;
+  font-size: 1.5rem;
   line-height: 1;
   font-weight: 800;
 }
@@ -444,6 +485,7 @@
   font-size: 0.75rem;
   text-transform: uppercase;
   font-weight: 700;
+  letter-spacing: 0.5px;
 }
 
 .ann-content {
@@ -451,19 +493,11 @@
 }
 
 .ann-title {
-  background: none;
-  border: none;
-  padding: 0;
-  text-align: left;
+  margin: 0;
   font-size: 1rem;
   font-weight: 700;
   color: var(--dark);
-  cursor: pointer;
-  transition: var(--transition);
-}
-
-.ann-title:hover {
-  color: var(--primary);
+  line-height: 1.3;
 }
 
 .ann-detail {
@@ -473,6 +507,12 @@
   line-height: 1.4;
 }
 
+.ann-detail small {
+  display: block;
+  margin-top: 4px;
+  color: var(--primary);
+  font-weight: 500;
+}
 /* ANIMATIONS */
 @keyframes fadeInUp {
   from {
