@@ -1,4 +1,4 @@
-﻿/* 'STUDENT CLUBS' PAGE - PREMIUM DESIGN */
+/* 'STUDENT CLUBS' PAGE - PREMIUM DESIGN */
 /* Consistent with anlayis.css, kozmik.css, gorsel.css */
 /* Core Theme: Vibrant, Energetic (Colors: Gold/Teal/Blue) */
 
@@ -6,8 +6,10 @@
 .hero-section {
     position: relative;
     /* Dynamic gradient + background image */
-    background: linear-gradient(135deg, rgba(26, 86, 167, 0.75), rgba(42, 157, 143, 0.7)),
-        url('../image/kulupler_bg.png') center/cover no-repeat fixed;
+    background: linear-gradient(135deg, rgba(11, 28, 45, 0.94), rgba(42, 157, 143, 0.82)),
+        radial-gradient(circle at 10% 20%, rgba(42, 157, 143, 0.3) 0%, transparent 50%),
+        radial-gradient(circle at 90% 80%, rgba(243, 156, 61, 0.15) 0%, transparent 50%),
+        url('../image/iletisim.JPG') center/cover no-repeat fixed;
     color: #fff;
     padding: 180px 0 140px;
     text-align: center;
@@ -121,11 +123,28 @@
     width: 100%;
     height: 100%;
     object-fit: cover;
-    transition: transform 0.6s ease;
+    transition: transform 0.7s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.club-img-wrapper::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to top, rgba(0,0,0,0.4) 0%, transparent 60%);
+    opacity: 0;
+    transition: opacity 0.4s ease;
+    z-index: 1;
 }
 
 .club-card:hover .club-img-wrapper img {
-    transform: scale(1.1);
+    transform: scale(1.12);
+}
+
+.club-card:hover .club-img-wrapper::after {
+    opacity: 1;
 }
 
 .club-badge {
@@ -191,23 +210,67 @@
 }
 
 .gallery-item {
-    border-radius: 12px;
+    border-radius: 16px;
     overflow: hidden;
-    height: 200px;
+    height: 220px;
     position: relative;
     cursor: pointer;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.gallery-item::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, rgba(26, 86, 167, 0.6), rgba(79, 182, 194, 0.6));
+    opacity: 0;
+    transition: opacity 0.4s ease;
+    z-index: 1;
+}
+
+.gallery-item::after {
+    content: '\f00e'; /* FontAwesome search-plus icon */
+    font-family: 'Font Awesome 6 Free';
+    font-weight: 900;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0.5);
+    color: white;
+    font-size: 2.5rem;
+    opacity: 0;
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    z-index: 2;
+    text-shadow: 0 4px 10px rgba(0,0,0,0.3);
+}
+
+.gallery-item:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 35px rgba(26, 86, 167, 0.2);
+}
+
+.gallery-item:hover::before {
+    opacity: 1;
+}
+
+.gallery-item:hover::after {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1);
 }
 
 .gallery-item img {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    transition: transform 0.5s ease;
+    transition: transform 0.7s cubic-bezier(0.25, 0.46, 0.45, 0.94);
 }
 
 .gallery-item:hover img {
-    transform: scale(1.1);
+    transform: scale(1.15);
 }
 
 /* 5. MODALS (Popups) - Clean & Modern */

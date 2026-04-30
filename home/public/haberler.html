@@ -1,16 +1,17 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="tr">
 
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Haber</title>
-  <meta name="description" content="18 Mart Sirac Koleji'nin güncel haberleri, etkinlikleri, videoları ve fotoğrafları">
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
-    rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <title>Haberler & Etkinlikler - Özel On Sekiz Mart Sirac Koleji <span class='highlight-green'>İlkokulu</span></title>
+  <meta name="description" content="Özel On Sekiz Mart Sirac Koleji <span class='highlight-green'>İlkokulu</span>'nun güncel haberleri, etkinlikleri, videoları ve fotoğrafları">
+  <link rel="icon" type="image/x-icon" href="image/favicon.ico" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:wght@700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
   <link rel="stylesheet" href="css/style.css" />
   <link rel="stylesheet" href="css/habar.css" />
 </head>
@@ -23,8 +24,8 @@
       <div class="container">
 
         <a class="navbar-brand d-flex align-items-center gap-3" href="index.html">
-          <img src="image/siraclogo.png" alt="18 Mart Sirac Koleji Logo" class="navbar-logo" />
-          <span class="navbar-title d-none d-sm-block">Özel OnSekiz Mart<br>Sirac İlkokulu</span>
+          <img src="image/siraclogo.png" alt="Özel On Sekiz Mart Sirac Koleji <span class='highlight-green'>İlkokulu</span> Logo" class="navbar-logo" />
+          <span class="navbar-title d-none d-sm-block">Özel On Sekiz Mart<br>Sirac Koleji <span class='highlight-green'>İlkokulu</span></span>
           <span class="navbar-title d-block d-sm-none">Sirac Koleji</span>
         </a>
 
@@ -33,90 +34,140 @@
           <span class="navbar-toggler-icon"></span>
         </button>
 
-        <div class="collapse navbar-collapse" id="siracNavbar">
+                        <div class="collapse navbar-collapse" id="siracNavbar">
           <ul class="navbar-nav ms-auto">
-
-            <li class="nav-item">
-              <a class="nav-link" href="index.html">Anasayfa</a>
-            </li>
+            <li class="nav-item"><a class="nav-link" href="index.html">Anasayfa</a></li>
 
             <!-- Kurumsal -->
             <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">Kurumsal</a>
-              <ul class="dropdown-menu">
-                <li><a class="dropdown-item" href="anlayis.html">Eğitim Anlayışımız</a></li>
-                <li><a class="dropdown-item" href="misyon.html">Misyon & Vizyon</a></li>
-                <li><a class="dropdown-item" href="tarihce.html">Tarihçe</a></li>
-                <li><a class='dropdown-item' href='yonetim.html'>Yönetim Ekibimiz</a></li>
+              <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">Kurumsal</a>
+              <ul class="dropdown-menu dd-kurumsal">
+                <li><a class="dropdown-item" href="anlayis.html">
+                    <span class="dd-icon"><i class="fas fa-lightbulb"></i></span>
+                    <span class="dd-text"><span class="dd-label">Eğitim Anlayışımız</span><span class="dd-desc">Felsefemiz ve pedagojik yaklaşım</span></span>
+                </a></li>
+                <li><a class="dropdown-item" href="misyon.html">
+                    <span class="dd-icon"><i class="fas fa-bullseye"></i></span>
+                    <span class="dd-text"><span class="dd-label">Misyon &amp; Vizyon</span><span class="dd-desc">Hedeflerimiz ve değerlerimiz</span></span>
+                </a></li>
+                <li><a class="dropdown-item" href="tarihce.html">
+                    <span class="dd-icon"><i class="fas fa-landmark"></i></span>
+                    <span class="dd-text"><span class="dd-label">Tarihçe</span><span class="dd-desc">2007'den bugüne yolculuğumuz</span></span>
+                </a></li>
+                <li><a class="dropdown-item" href="yonetim.html">
+                    <span class="dd-icon"><i class="fas fa-users-cog"></i></span>
+                    <span class="dd-text"><span class="dd-label">Yönetim Ekibimiz</span><span class="dd-desc">Liderlik kadromuzla tanışın</span></span>
+                </a></li>
               </ul>
             </li>
 
-            <!-- Eğitim Programları -->
+            <!-- Egitim -->
             <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">Eğitim
-                Programları</a>
-              <ul class="dropdown-menu">
-                <li><a class="dropdown-item" href="manevi.html">Manevi Eğitim</a></li>
-                <li><a class="dropdown-item" href="kulupler.html">Kulüpler</a></li>
-                <li><a class="dropdown-item" href="olcum.html">Ölçme ve Değerlendirme</a></li>
-                <li><a class="dropdown-item" href="yabancidil.html">Yabancı Dil</a></li>
-                <li><a class="dropdown-item" href="rehberlik.html">Rehberlik</a></li>
+              <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">Eğitim</a>
+              <ul class="dropdown-menu dd-egitim">
+                <li><a class="dropdown-item" href="manevi.html">
+                    <span class="dd-icon"><i class="fas fa-mosque"></i></span>
+                    <span class="dd-text"><span class="dd-label">Manevi Eğitim</span><span class="dd-desc">Kur'an, Siyer ve değerler</span></span>
+                </a></li>
+                <li><a class="dropdown-item" href="kulupler.html">
+                    <span class="dd-icon"><i class="fas fa-puzzle-piece"></i></span>
+                    <span class="dd-text"><span class="dd-label">Kulüpler</span><span class="dd-desc">Sosyal ve akademik kulüpler</span></span>
+                </a></li>
+                <li><a class="dropdown-item" href="olcum.html">
+                    <span class="dd-icon"><i class="fas fa-chart-bar"></i></span>
+                    <span class="dd-text"><span class="dd-label">Ölçme ve Değerlendirme</span><span class="dd-desc">Gelişim takip sistemi</span></span>
+                </a></li>
+                <li><a class="dropdown-item" href="yabancidil.html">
+                    <span class="dd-icon"><i class="fas fa-globe"></i></span>
+                    <span class="dd-text"><span class="dd-label">Yabancı Dil</span><span class="dd-desc">İngilizce &amp; Arapça eğitimi</span></span>
+                </a></li>
+                <li><a class="dropdown-item" href="rehberlik.html">
+                    <span class="dd-icon"><i class="fas fa-hand-holding-heart"></i></span>
+                    <span class="dd-text"><span class="dd-label">Rehberlik</span><span class="dd-desc">Psikolojik danışmanlık servisi</span></span>
+                </a></li>
               </ul>
             </li>
 
-            <!-- Atölyeler -->
+            <!-- Atolyeler -->
             <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">Atölyeler</a>
-              <ul class="dropdown-menu">
-                <li><a class="dropdown-item" href="robotik.html">Robotik Kodlama</a></li>
-                <li><a class="dropdown-item" href="gorsel.html">Görsel Sanatlar ve Ahşap</a></li>
-                <li><a class="dropdown-item" href="tasavvuf.html">Tasavvuf Müziği</a></li>
-                <li><a class="dropdown-item" href="kozmik.html">Montessori Kozmik</a></li>
+              <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">Atölyeler</a>
+              <ul class="dropdown-menu dd-atolye">
+                <li><a class="dropdown-item" href="robotik.html">
+                    <span class="dd-icon"><i class="fas fa-robot"></i></span>
+                    <span class="dd-text"><span class="dd-label">Robotik Kodlama</span><span class="dd-desc">STEM odaklı teknoloji eğitimi</span></span>
+                </a></li>
+                <li><a class="dropdown-item" href="gorsel.html">
+                    <span class="dd-icon"><i class="fas fa-paint-brush"></i></span>
+                    <span class="dd-text"><span class="dd-label">Görsel Sanatlar &amp; Ahşap</span><span class="dd-desc">Yaratıcı sanat atölyesi</span></span>
+                </a></li>
+                <li><a class="dropdown-item" href="tasavvuf.html">
+                    <span class="dd-icon"><i class="fas fa-music"></i></span>
+                    <span class="dd-text"><span class="dd-label">Tasavvuf Müziği</span><span class="dd-desc">Ruhu besleyen musiki eğitimi</span></span>
+                </a></li>
+                <li><a class="dropdown-item" href="kozmik.html">
+                    <span class="dd-icon"><i class="fas fa-atom"></i></span>
+                    <span class="dd-text"><span class="dd-label">Montessori Kozmik</span><span class="dd-desc">Keşfederek öğrenme yöntemi</span></span>
+                </a></li>
               </ul>
             </li>
 
             <!-- Etkinlikler -->
             <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">Etkinlikler</a>
-              <ul class="dropdown-menu">
-                <li><a class="dropdown-item" href="oyun.html">Oyun ve Fiziki Etkinlikler</a></li>
-                <li><a class="dropdown-item" href="kulupler.html">Kulüpler ve P4C</a></li>
-                <li><a class="dropdown-item" href="sosyalyardim.html">Sosyal Yardım Projeleri</a></li>
-                <li><a class="dropdown-item" href="helalsaglik.html">Helal ve Sağlıklı</a></li>
-                <li><a class="dropdown-item" href="galeri.html">Galeri</a></li>
+              <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">Etkinlikler</a>
+              <ul class="dropdown-menu dd-etkinlik">
+                <li><a class="dropdown-item" href="oyun.html">
+                    <span class="dd-icon"><i class="fas fa-running"></i></span>
+                    <span class="dd-text"><span class="dd-label">Oyun ve Fiziki Etkinlikler</span><span class="dd-desc">Sportif gelişim aktiviteleri</span></span>
+                </a></li>
+                <li><a class="dropdown-item" href="sosyalyardim.html">
+                    <span class="dd-icon"><i class="fas fa-hands-helping"></i></span>
+                    <span class="dd-text"><span class="dd-label">Sosyal Yardım Projeleri</span><span class="dd-desc">Topluma değer katan projeler</span></span>
+                </a></li>
+                <li><a class="dropdown-item" href="helalsaglik.html">
+                    <span class="dd-icon"><i class="fas fa-seedling"></i></span>
+                    <span class="dd-text"><span class="dd-label">Helal ve Sağlıklı</span><span class="dd-desc">Beslenme ve yaşam bilinci</span></span>
+                </a></li>
+                <li><a class="dropdown-item" href="galeri.html">
+                    <span class="dd-icon"><i class="fas fa-images"></i></span>
+                    <span class="dd-text"><span class="dd-label">Galeri</span><span class="dd-desc">Fotoğraf ve etkinlik arşivi</span></span>
+                </a></li>
               </ul>
             </li>
 
-            <li class="nav-item">
-              <a class="nav-link" href="ogretmenler.html">Kadromuz</a>
-            </li>
+            <li class="nav-item"><a class="nav-link" href="ogretmenler.html">Kadromuz</a></li>
+            <li class="nav-item"><a class="nav-link" href="iletisim.html">İletişim</a></li>
 
-            <li class="nav-item">
-              <a class="nav-link" href="iletisim.html">İletişim</a>
+            <li class="nav-item ms-lg-3">
+              <a href="onkayit.html" class="btn btn-primary rounded-pill px-4 py-2 fw-semibold">
+                <i class="fas fa-edit me-1"></i> On Kayit
+              </a>
             </li>
-
           </ul>
         </div>
-      </div>
+</div>
     </nav>
   </header>
-
   <!-- HERO BÖLÜMÜ -->
   <section class="hero">
-    <div class="container">
-      <div class="hero-content">
-        <div class="hero-badge animate-in">
-          <i class="fas fa-graduation-cap"></i>
-          <span> 18 Mart Sirac Koleji Haber & Medya </span>
-        </div>
-        <h1 class="hero-title animate-in delay-1">
-          Geleceğe <span class="highlight">Işık Tutan</span> Haberler
-        </h1>
-        <p class="hero-description animate-in delay-2">
-          Okulumuzun akademik başarıları, sosyal etkinlikleri ve modern kampüs yaşamından 
-          en güncel gelişmeleri buradan takip edin.
-        </p>
+    <div class="hero-content">
+      <div class="hero-badge animate-in">
+        <i class="fas fa-star"></i>
+        <span> Özel On Sekiz Mart Sirac Koleji <span class='highlight-green'>İlkokulu</span> </span>
       </div>
+      <h1 class="hero-title animate-in delay-1">
+        HABER <span class="highlight">ETKİNLİK</span>
+      </h1>
+      <p class="hero-description animate-in delay-2">
+        Okulumuzun tüm duyuruları, haberleri, videoları ve etkinlikleri
+        burada güncel olarak paylaşılmaktadır.
+      </p>
+    </div>
+    <div class="hero-wave">
+      <svg viewBox="0 0 1200 120" preserveAspectRatio="none">
+        <path
+          d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z">
+        </path>
+      </svg>
     </div>
   </section>
 
@@ -130,449 +181,710 @@
         </p>
       </div>
 
-      <div class="row">
-        <div class="col-lg-8">
-          <div class="news-grid" style="grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); gap: 24px;">
-            <!-- Haber 1 -->
-            <article class="news-card animate-in delay-1">
-              <div class="news-image">
-                <span class="news-category">Etkinlik</span>
-                <img src="image/haberler/ac.jpeg" alt="Kütüphane Haftası">
-              </div>
-              <div class="news-content">
-                <div class="news-meta">
-                  <span><i class="far fa-calendar"></i> 01.04.2026</span>
-                </div>
-                <h3 class="news-title" style="font-size: 1.25rem;">Nisan Kütüphaneler Haftası</h3>
-                <p class="news-excerpt">
-                  30 Mart - 3 Nisan Kütüphaneler Haftası kapsamında okulumuz bahçesinde Açık Hava Kütüphanesi etkinliği gerçekleştirildi.
-                </p>
-                <div class="news-footer">
-                  <button class="read-more" onclick="toggleMore(this)">Kütüphane Haftası</button>
-                  <button class="share-btn" onclick="shareNews(this)"><i class="fas fa-share-alt"></i></button>
-                </div>
-              </div>
-            </article>
-
-            <!-- Haber 2 -->
-            <article class="news-card animate-in delay-2">
-              <div class="news-image">
-                <span class="news-category">Güvenlik</span>
-                <img src="image/haberler/depran.jpeg" alt="Deprem Tatbikatı">
-              </div>
-              <div class="news-content">
-                <div class="news-meta">
-                  <span><i class="far fa-calendar"></i> 06.03.2026</span>
-                </div>
-                <h3 class="news-title" style="font-size: 1.25rem;">Depreme Karşı Bilinçliyiz</h3>
-                <p class="news-excerpt">
-                  Okulumuzda afet bilinci oluşturmak amacıyla kapsamlı bir deprem tatbikatı ve tahliye süreci başarıyla tamamlandı.
-                </p>
-                <div class="news-footer">
-                  <button class="read-more" onclick="toggleMore(this)">Deprem Tatbikatı</button>
-                  <button class="share-btn" onclick="shareNews(this)"><i class="fas fa-share-alt"></i></button>
-                </div>
-              </div>
-            </article>
+      <div class="news-grid">
+        <!-- Haber 1 -->
+        <article class="news-card animate-in delay-1">
+          <div class="news-image">
+            <img src="image/haberler/ilders.jpeg"
+              onerror="this.src='https://images.unsplash.com/photo-1503676260728-1c00da094a0b?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80'">
           </div>
-        </div>
-
-        <div class="col-lg-4">
-          <aside class="events-sidebar animate-in delay-3" style="background: var(--bg-light); padding: 30px; border-radius: var(--radius); border: 1px solid var(--border-color);">
-            <h3 class="footer-title" style="color: var(--primary); margin-bottom: 20px;">📅 Yaklaşan Etkinlikler</h3>
-            <ul class="list-unstyled">
-              <li style="margin-bottom: 20px; padding-bottom: 15px; border-bottom: 1px solid rgba(0,0,0,0.05);">
-                <span style="display: block; font-size: 0.8rem; color: var(--secondary); font-weight: 700; text-transform: uppercase;">13 Ocak</span>
-                <h4 style="font-size: 1rem; margin: 5px 0; color: var(--primary);">Sinema Etkinliği</h4>
-                <small style="color: var(--text-muted);"><i class="far fa-clock"></i> 09:00 - 17:00</small>
-              </li>
-              <li style="margin-bottom: 20px; padding-bottom: 15px; border-bottom: 1px solid rgba(0,0,0,0.05);">
-                <span style="display: block; font-size: 0.8rem; color: var(--secondary); font-weight: 700; text-transform: uppercase;">14 Ocak</span>
-                <h4 style="font-size: 1rem; margin: 5px 0; color: var(--primary);">Kütüphane Gezisi</h4>
-              <li class="mb-4 pb-3 border-bottom border-light">
-                <span class="d-block text-secondary fw-bold small">13 OCAK</span>
-                <h4 class="h6 my-1">Sinema Etkinliği</h4>
-                <small class="text-muted"><i class="far fa-clock"></i> 09:00 - 17:00</small>
-              </li>
-              <li class="mb-4 pb-3 border-bottom border-light">
-                <span class="d-block text-secondary fw-bold small">14 OCAK</span>
-                <h4 class="h6 my-1">Kütüphane Gezisi</h4>
-                <small class="text-muted"><i class="far fa-clock"></i> 10:00 - 16:00</small>
-              </li>
-              <li class="mb-4 pb-3">
-                <span class="d-block text-secondary fw-bold small">16 OCAK</span>
-                <h4 class="h6 my-1">1. Dönem Karne Töreni</h4>
-                <small class="text-muted"><i class="far fa-clock"></i> 10:00</small>
-              </li>
-            </ul>
-          </aside>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- MEDYA GALERİSİ -->
-  <section class="section bg-light">
-    <div class="container">
-      <div class="section-header animate-in">
-        <h2 class="section-title">🎥 Medya Galerisi</h2>
-        <p class="section-subtitle">Okul etkinliklerimizden özel video ve fotoğraflar</p>
-      </div>
-
-      <div class="video-grid mb-5">
-        <article class="video-card animate-in delay-1">
-          <div class="yt-video">
-            <video controls poster="image/siraclogo.png">
-              <source src="image/haberler/ramazan.mp4" type="video/mp4">
-            </video>
-          </div>
-        </article>
-        <article class="video-card animate-in delay-2">
-          <div class="yt-video">
-            <video controls poster="image/siraclogo.png">
-              <source src="image/haberler/annebaba.mp4" type="video/mp4">
-            </video>
-          </div>
-        </article>
-      </div>
-
-      <div class="photo-grid">
-        <div class="photo-card animate-in delay-1" onclick="openLightbox(this)">
-          <img src="image/haberler/yim1.jpeg" alt="Galeri">
-          <div class="photo-overlay"><i class="fas fa-expand photo-icon"></i></div>
-        </div>
-        <div class="photo-card animate-in delay-2" onclick="openLightbox(this)">
-          <img src="image/haberler/yim2.jpeg" alt="Galeri">
-          <div class="photo-overlay"><i class="fas fa-expand photo-icon"></i></div>
-        </div>
-        <div class="photo-card animate-in delay-3" onclick="openLightbox(this)">
-          <img src="image/haberler/haber5.jpeg" alt="Galeri">
-          <div class="photo-overlay"><i class="fas fa-expand photo-icon"></i></div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- FOOTER -->
-  <footer>
-    <div class="container">
-      <div class="row">
-        <!-- LOGO VE AÇIKLAMA -->
-        <div class="col-lg-4 mb-4 mb-lg-0">
-          <div class="footer-logo">
-            <i class="fas fa-graduation-cap"></i>
-            <div>
-              <h5>Özel OnSekiz Mart <span>Sirac İlkokulu</span></h5>
+          <div class="news-content">
+            <div class="news-meta">
+              <span class="news-date">
+                <i class="far fa-calendar"></i>02.02.2026
+              </span>
+              <span class="news-author">
+                <i class="far fa-user"></i>BAYRAK SEVGİSİ Bayrağımız
+              </span>
             </div>
-          </div>
-          <p>2007 yılında kurulan 18 Mart Sirac Koleji, güçlü değerlerle donanmış nesiller yetiştirir. Öğrencilerimizin
-            akademik, sosyal ve manevi gelişimini ön planda tutuyoruz.</p>
-
-          <!-- ÖZELLİKLER -->
-          <div class="footer-features">
-            <div class="feature-item">
-              <div class="feature-icon">
-                <i class="fas fa-award"></i>
-              </div>
-              <div class="feature-text">Kaliteli Eğitim</div>
+            <h3 class="news-title">BAYRAK SEVGİSİ Bayrağımız</h3>
+            <p class="news-excerpt">
+             BAYRAK SEVGİSİ
+Bayrağımız; bağımsızlığımızın simgesi, birliğimizin nişanesi, aziz şehitlerimizin bize bıraktığı en kutsal emanettir.
+Bayrak Sevgisi Teması kapsamında öğrencilerimizle bayrağımızın anlamını, taşıdığı değerleri ve vatan sevgisini öğreniyor; bu bilinci kalplerimize nakşediyoruz.
+            </p>
+            <div class="news-tags">
+              <span class="tag">Bayrak Sevgisi</span>
+              <span class="tag">Vatan Sevgisi</span>
             </div>
-            <div class="feature-item">
-              <div class="feature-icon">
-                <i class="fas fa-heart"></i>
-              </div>
-              <div class="feature-text">Sevgi Dolu Ortam</div>
-            </div>
-            <div class="feature-item">
-              <div class="feature-icon">
-                <i class="fas fa-users"></i>
-              </div>
-              <div class="feature-text">Deneyimli Kadro</div>
-            </div>
-          </div>
 
-          <!-- SOSYAL MEDYA -->
-          <div class="footer-social">
-            <a href="https://www.facebook.com/18MartSiracKoleji/" class="social-icon" target="_blank" title="Facebook">
-              <i class="fab fa-facebook-f"></i>
-            </a>
-            <a href="https://www.instagram.com/18martsirackoleji/" class="social-icon" target="_blank"
-              title="Instagram">
-              <i class="fab fa-instagram"></i>
-            </a>
-            <a href="#" class="social-icon" title="Twitter">
-              <i class="fab fa-twitter"></i>
-            </a>
-            <a href="#" class="social-icon" title="YouTube">
-              <i class="fab fa-youtube"></i>
-            </a>
-          </div>
-        </div>
-
-        <!-- İLETİŞİM -->
-        <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
-          <h5 class="footer-title">İletişim Bilgileri</h5>
-          <div class="footer-contact">
-            <p><i class="fas fa-map-marker-alt"></i> Kalabaklı/Kepez, Çanakkale</p>
-            <p><i class="fas fa-phone"></i> +90 543 717 8217</p>
-            <p><i class="fas fa-envelope"></i> bilgi@18martsirackoleji.com</p>
-            <p><i class="fas fa-clock"></i> Pazartesi - Cuma: 08:00 - 18:00</p>
-          </div>
-
-          <!-- ÇALIŞMA SAATLERİ -->
-          <div class="working-hours">
-            <h6>Çalışma Saatleri</h6>
-            <p>Pazartesi - Cuma <span>08:00 - 18:00</span></p>
-            <p>Cumartesi <span>09:00 - 14:00</span></p>
-            <p>Pazar <span>Kapalı</span></p>
-          </div>
-        </div>
-
-        <!-- HIZLI LİNKLER -->
-        <div class="col-lg-2 col-md-6 mb-4 mb-md-0">
-          <h5 class="footer-title">Hızlı Linkler</h5>
-          <ul class="footer-links list-unstyled">
-            <li><a href="index.html"><i class="fas fa-chevron-right"></i> Anasayfa</a></li>
-            <li><a href="anlayis.html"><i class="fas fa-chevron-right"></i> Eğitim Anlayışımız</a></li>
-            <li><a href="galeri.html"><i class="fas fa-chevron-right"></i> Galeri</a></li>
-            <li><a href="ogretmenler.html"><i class="fas fa-chevron-right"></i> Öğretmen Kadromuz</a></li>
-            <li><a href="rehberlik.html"><i class="fas fa-chevron-right"></i> Rehberlik</a></li>
-            <li><a href="iletisim.html"><i class="fas fa-chevron-right"></i> İletişim</a></li>
-          </ul>
-        </div>
-
-        <!-- E-BÜLTEN -->
-        <div class="col-lg-3 col-md-6">
-          <h5 class="footer-title">E-Bülten Aboneliği</h5>
-          <p>Etkinlik ve duyurularımızdan haberdar olmak için e-bültenimize abone olun.</p>
-          <form id="newsletter-form">
-            <div class="input-group mb-3">
-              <input type="email" class="form-control" placeholder="E-posta adresiniz" required
-                aria-label="E-posta adresi">
-              <button class="btn btn-warning" type="submit">
-                <i class="fas fa-paper-plane me-1"></i>Abone Ol
+            <div class="news-footer">
+              <button class="read-more" onclick="toggleMore(this)">
+                <span>Devamını Oku</span>
+                <i class="fas fa-arrow-right"></i>
               </button>
-            </div>
-          </form>
-
-          <!-- GÜVENLİK BADGES -->
-          <div class="security-badge mt-4">
-            <div
-              style="display: flex; align-items: center; gap: 10px; padding: 10px; background: rgba(42, 157, 143, 0.1); border-radius: 8px; border-left: 4px solid #2a9d8f;">
-              <i class="fas fa-shield-alt" style="color: #0af1d3; font-size: 1.5rem;"></i>
-              <div>
-                <small style="color: #adb5bd; font-size: 0.85rem; display: block;">Güvenli İletişim</small>
-                <small style="color: #0af1d3; font-size: 0.75rem;">KVKK Uyumludur</small>
+              <div class="share-buttons">
+                <button class="share-btn" onclick="shareNews(this)">
+                  <i class="fas fa-share-alt"></i>
+                </button>
               </div>
             </div>
           </div>
+        </article>
+        <!-- Haber 2 -->
+        <article class="news-card animate-in delay-2">
+          <div class="news-image">
+            <img src="image/haberler/depram.jpeg"
+              onerror="this.src='https://images.unsplash.com/photo-1523580494863-6f3031224c94?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80'">
+          </div>
+          <div class="news-content">
+            <div class="news-meta">
+              <span class="news-date">
+                <i class="far fa-calendar"></i>06.03.2026
+              </span>
+              <span class="news-author">
+                <i class="far fa-user"></i>Depreme Karşı Bilinçliyiz
+              </span>
+            </div>
+            <h3 class="news-title">Depreme Karşı Bilinçliyiz</h3>
+            <p class="news-excerpt">
+            Okulumuzda öğrencilerimizin afetlere karşı bilinçlenmesi amacıyla deprem tatbikatı gerçekleştirdik.
+Öğrencilerimiz deprem anında yapılması gerekenleri uygulamalı olarak öğrenirken, güvenli tahliye sürecini de deneyimledi.
+Afetlere hazırlıklı bireyler yetiştirmek için çalışmalarımıza devam ediyoruz.
+            </p>
+
+            <div class="news-tags">
+              <span class="tag">Doğa</span>
+              <span class="tag">Hayaret</span>
+              <span class="tag">Tatbikat</span>
+            </div>
+
+            <div class="news-footer">
+              <button class="read-more" onclick="toggleMore(this)">
+                <span>Devamını Oku</span>
+                <i class="fas fa-arrow-right"></i>
+              </button>
+              <div class="share-buttons">
+                <button class="share-btn" onclick="shareNews(this)">
+                  <i class="fas fa-share-alt"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <!-- Haber 3 -->
+        <article class="news-card animate-in delay-3">
+          <div class="news-image">
+            <img src="image/haberler/kutuban.jpeg"
+              onerror="this.src='https://images.unsplash.com/photo-1523050854058-8df90110c9f1?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80'">
+            <div class="news-category">Okul Gezisi</div>
+          </div>
+          <div class="news-content">
+            <div class="news-meta">
+              <span class="news-date">
+                <i class="far fa-calendar"></i>01.04.2026
+              </span>
+              <span class="news-author">
+                <i class="far fa-user"></i>Nisan Kütüphaneler 
+              </span>
+            </div>
+            <h3 class="news-title"> Nisan Kütüphaneler Haftası</h3>
+            <p class="news-excerpt">
+            30 Mart - 3 Nisan Kütüphaneler Haftası kapsamında okulumuz bahçesinde oluşturulan Açık Hava Kütüphanesinde öğrencilerimiz kitap okuma etkinliği gerçekleştirdiler.
+            </p>
+
+            <div class="news-tags">
+              <span class="tag">Kitap Okuma</span>
+              <span class="tag">Kütüphane</span>
+            </div>
+
+            <div class="news-footer">
+              <button class="read-more" onclick="toggleMore(this)">
+                <span>Devamını Oku</span>
+                <i class="fas fa-arrow-right"></i>
+              </button>
+              <div class="share-buttons">
+                <button class="share-btn" onclick="shareNews(this)">
+                  <i class="fas fa-share-alt"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+        </article>
+        <!-- Haber 4 -->
+        <article class="news-card animate-in delay-3">
+          <div class="news-image">
+            <img src="image/haberler/anasinif.jpeg"
+              onerror="this.src='https://images.unsplash.com/photo-1523050854058-8df90110c9f1?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80'">
+            <div class="news-category">Atölye</div>
+          </div>
+          <div class="news-content">
+            <div class="news-meta">
+              <span class="news-date">
+                <i class="far fa-calendar"></i>13.02.2026
+              </span>
+              <span class="news-author">
+                <i class="far fa-user"></i>Anasınıfı ve İlkokul öğrencilerimizle 
+              </span>
+            </div>
+            <h3 class="news-title">Anasınıfı ve İlkokul öğrencilerimizle birlikte  </h3>
+            <p class="news-excerpt">
+              Anasınıfı ve İlkokul öğrencilerimizle birlikte mahremiyet tiyatrosu gerçekleştirdik. Bu çalışmada;
+                 • İzin isteme ve "izinsiz dokunma" kavramını
+                 • İyi dokunma – kötü dokunma farkını
+                 • Özel eşya kavramını
+                 • Beden mahremiyetini
+                 • Özel bölgelerin korunmasını
+                 • Kötü bir durumda nasıl tepki verileceğini ve kime anlatılması gerektiğini
+                 • Tuvalet ve ev mahremiyetini
+              çocuklarımızın anlayabileceği sade ve güvenli bir dille ele aldık.
+
+Sirac Koleji olarak çocuklarımızın hem ahlakî hem de kişisel sınır bilinciyle yetişmesi için çalışmaya devam ediyoruz.
+            </p>
+
+            <div class="news-tags">
+              <span class="tag">Atölye</span>
+              <span class="tag">Deney</span>
+            </div>
+
+            <div class="news-footer">
+              <button class="read-more" onclick="toggleMore(this)">
+                <span>Devamını Oku</span>
+                <i class="fas fa-arrow-right"></i>
+              </button>
+              <div class="share-buttons">
+                <button class="share-btn" onclick="shareNews(this)">
+                  <i class="fas fa-share-alt"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <!-- Haber 5 -->
+        <article class="news-card animate-in delay-3">
+          <div class="news-image">
+            <img src="image/haberler/haber5.jpeg"
+              onerror="this.src='https://images.unsplash.com/photo-1523050854058-8df90110c9f1?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80'">
+          </div>
+          <div class="news-content">
+            <div class="news-meta">
+              <span class="news-date">
+                <i class="far fa-calendar"></i>26.02.2026
+              </span>
+              <span class="news-author">
+                <i class="far fa-user"></i>Renklerin süt
+              </span>
+            </div>
+            <h3 class="news-title">Renklerin süt üzerinde dans ettiğini </h3>
+            <p class="news-excerpt">
+              Renklerin süt üzerinde dans ettiğini hiç gördünüz mü? 💃🕺
+Bu eğlenceli ve öğretici deneyle bilim gözlerimizin önünde canlanıyor! ✨
+
+🔬 Deneyin Amacı:
+Sütün içinde bulunan yağların, deterjanla etkileşime girerek nasıl hareket oluşturduğunu gözlemlemek. Aynı zamanda yüzey gerilimi kavramını eğlenceli bir şekilde öğrenmek! 🧠💡
+            </p>
+
+            <div class="news-tags">
+              <span class="tag">Bilim Deneysi</span>
+              <span class="tag">Yüzey Gerilimi</span>
+            </div>
+
+            <div class="news-footer">
+              <button class="read-more" onclick="toggleMore(this)">
+                <span>Devamını Oku</span>
+                <i class="fas fa-arrow-right"></i>
+              </button>
+              <div class="share-buttons">
+                <button class="share-btn" onclick="shareNews(this)">
+                  <i class="fas fa-share-alt"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+        </article>
+
+
+        <!-- Haber 6 -->
+        <article class="news-card animate-in delay-3">
+          <div class="news-image">
+            <img src="image/haberler/orman.jpeg"
+              onerror="this.src='https://images.unsplash.com/photo-1523050854058-8df90110c9f1?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80'">
+          </div>
+          <div class="news-content">
+            <div class="news-meta">
+              <span class="news-date">
+                <i class="far fa-calendar"></i>30.03.2026
+              </span>
+              <span class="news-author">
+                <i class="far fa-user"></i>Orman Haftası 
+              </span>
+            </div>
+            <h3 class="news-title">Orman Haftası kapsamında</h3>
+            <p class="news-excerpt">
+              Orman Haftası kapsamında "Orman Okulu Projesi" çerçevesinde anasınıfı öğrencilerimizle doğa gezisi gerçekleştirdik. Etkinlikten meşe palamudu incelenmiş, ilgili masal kitabı okunmuş; öğrencilerimiz doğa yürüyüşleri yaparak ağaçlarla etkileşim kurmuşlardır. Bu süreçte çocuklarımızın doğa sevgisi ve çevre bilinci desteklenmiştir.
+            </p>
+
+            <div class="news-tags">
+              <span class="tag">Orman</span>
+              <span class="tag">Doğa</span>
+            </div>
+
+            <div class="news-footer">
+              <button class="read-more" onclick="toggleMore(this)">
+                <span>Devamını Oku</span>
+                <i class="fas fa-arrow-right"></i>
+              </button>
+              <div class="share-buttons">
+                <button class="share-btn" onclick="shareNews(this)">
+                  <i class="fas fa-share-alt"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+  <!-- ETKİNLİK TAKVİMİ -->
+  <section class="calendar-section">
+    <div class="container">
+
+      <div class="section-header">
+        <h2 class="section-title">📅 Etkinlik Takvimi</h2>
+        <p class="section-subtitle">Önümüzdeki aylarda gerçekleşecek programlar</p>
+      </div>
+
+      <div class="calendar-grid">
+
+        <!-- EYLÜL -->
+        <div class="calendar-card">
+          <div class="calendar-header">
+            <h3 class="calendar-title">Eylül 2025</h3>
+            <span class="event-count">5 Etkinlik</span>
+          </div>
+          <div class="event-list">
+            <div class="event-item">
+              <div class="event-date"><div class="event-day">9-12</div><div class="event-month">Eyl</div></div>
+              <div class="event-details"><h4 class="event-title">İlköğretim Haftası</h4><div class="event-meta"><span><i class="fas fa-map-marker-alt"></i> Okul Bahçesi</span></div></div>
+            </div>
+            <div class="event-item">
+              <div class="event-date"><div class="event-day">4-10</div><div class="event-month">Eyl</div></div>
+              <div class="event-details"><h4 class="event-title">Mevlid-i Nebi Haftası</h4><div class="event-meta"><span><i class="fas fa-mosque"></i> Çok Amaçlı Salon</span></div></div>
+            </div>
+            <div class="event-item">
+              <div class="event-date"><div class="event-day">10-18</div><div class="event-month">Eyl</div></div>
+              <div class="event-details"><h4 class="event-title">Veli Toplantıları</h4><div class="event-meta"><span><i class="fas fa-users"></i> Sınıflar</span></div></div>
+            </div>
+            <div class="event-item highlight">
+              <div class="event-date"><div class="event-day">25</div><div class="event-month">Eyl</div></div>
+              <div class="event-details"><h4 class="event-title">Bedi Besmele Töreni</h4><div class="event-meta"><span><i class="fas fa-star"></i> Prototip Tören</span></div></div>
+            </div>
+            <div class="event-item">
+              <div class="event-date"><div class="event-day">29</div><div class="event-month">Eyl</div></div>
+              <div class="event-details"><h4 class="event-title">At Çiftliği Gezisi (Anasınıfı)</h4><div class="event-meta"><span><i class="fas fa-horse"></i> At Çiftliği</span></div></div>
+            </div>
+          </div>
         </div>
+
+        <!-- EKİM -->
+        <div class="calendar-card">
+          <div class="calendar-header">
+            <h3 class="calendar-title">Ekim 2025</h3>
+            <span class="event-count">5 Etkinlik</span>
+          </div>
+          <div class="event-list">
+            <div class="event-item">
+              <div class="event-date"><div class="event-day">4</div><div class="event-month">Eki</div></div>
+              <div class="event-details"><h4 class="event-title">Hayvanları Koruma Günü</h4><div class="event-meta"><span><i class="fas fa-paw"></i> Kat Panosu Etkinliği</span></div></div>
+            </div>
+            <div class="event-item">
+              <div class="event-date"><div class="event-day">7</div><div class="event-month">Eki</div></div>
+              <div class="event-details"><h4 class="event-title">Okul Aile Birliği Toplantısı</h4><div class="event-meta"><span><i class="fas fa-comments"></i> Konferans Salonu</span></div></div>
+            </div>
+            <div class="event-item">
+              <div class="event-date"><div class="event-day">17, 24</div><div class="event-month">Eki</div></div>
+              <div class="event-details"><h4 class="event-title">Trafik Eğitim Parkı Gezisi</h4><div class="event-meta"><span><i class="fas fa-car-side"></i> İlkokul Gezisi</span></div></div>
+            </div>
+            <div class="event-item">
+              <div class="event-date"><div class="event-day">26</div><div class="event-month">Eki</div></div>
+              <div class="event-details"><h4 class="event-title">Filistin Kahvaltısı</h4><div class="event-meta"><span><i class="fas fa-heart"></i> Aile Katılımlı</span></div></div>
+            </div>
+            <div class="event-item">
+              <div class="event-date"><div class="event-day">29</div><div class="event-month">Eki</div></div>
+              <div class="event-details"><h4 class="event-title">Cumhuriyet Bayramı Töreni</h4><div class="event-meta"><span><i class="fas fa-flag"></i> Okul Bahçesi</span></div></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- KASIM -->
+        <div class="calendar-card">
+          <div class="calendar-header">
+            <h3 class="calendar-title">Kasım 2025</h3>
+            <span class="event-count">9 Etkinlik</span>
+          </div>
+          <div class="event-list">
+            <div class="event-item">
+              <div class="event-date"><div class="event-day">2</div><div class="event-month">Kas</div></div>
+              <div class="event-details"><h4 class="event-title">Kızılay Haftası</h4><div class="event-meta"><span><i class="fas fa-medkit"></i> Sınıf İçi Etkinlik</span></div></div>
+            </div>
+            <div class="event-item">
+              <div class="event-date"><div class="event-day">4</div><div class="event-month">Kas</div></div>
+              <div class="event-details"><h4 class="event-title">Hatime Ana Ulu Cami Gezisi</h4><div class="event-meta"><span><i class="fas fa-mosque"></i> Anasınıfı</span></div></div>
+            </div>
+            <div class="event-item">
+              <div class="event-date"><div class="event-day">5</div><div class="event-month">Kas</div></div>
+              <div class="event-details"><h4 class="event-title">At Çiftliği Gezisi (İlkokul)</h4><div class="event-meta"><span><i class="fas fa-horse"></i> Gezi</span></div></div>
+            </div>
+            <div class="event-item">
+              <div class="event-date"><div class="event-day">10</div><div class="event-month">Kas</div></div>
+              <div class="event-details"><h4 class="event-title">Atatürk'ü Anma Programı</h4><div class="event-meta"><span><i class="fas fa-clock"></i> 09:05</span></div></div>
+            </div>
+            <div class="event-item highlight">
+              <div class="event-date"><div class="event-day">10-14</div><div class="event-month">Kas</div></div>
+              <div class="event-details"><h4 class="event-title">Ara Tatil / Seminer</h4><div class="event-meta"><span><i class="fas fa-laptop-code"></i> Öğretmen Programı</span></div></div>
+            </div>
+            <div class="event-item">
+              <div class="event-date"><div class="event-day">23</div><div class="event-month">Kas</div></div>
+              <div class="event-details"><h4 class="event-title">Bireysel Veli Toplantısı</h4><div class="event-meta"><span><i class="fas fa-user-friends"></i> Görüşme</span></div></div>
+            </div>
+            <div class="event-item">
+              <div class="event-date"><div class="event-day">24</div><div class="event-month">Kas</div></div>
+              <div class="event-details"><h4 class="event-title">Öğretmenler Günü</h4><div class="event-meta"><span><i class="fas fa-apple-alt"></i> Okul Programı</span></div></div>
+            </div>
+            <div class="event-item">
+              <div class="event-date"><div class="event-day">30</div><div class="event-month">Kas</div></div>
+              <div class="event-details"><h4 class="event-title">Filistin Kahvaltısı / Yazar Buluşması</h4><div class="event-meta"><span><i class="fas fa-book-reader"></i> Etkinlik</span></div></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- ARALIK -->
+        <div class="calendar-card">
+          <div class="calendar-header">
+            <h3 class="calendar-title">Aralık 2025</h3>
+            <span class="event-count">7 Etkinlik</span>
+          </div>
+          <div class="event-list">
+            <div class="event-item">
+              <div class="event-date"><div class="event-day">3</div><div class="event-month">Ara</div></div>
+              <div class="event-details"><h4 class="event-title">Ağız ve Diş Sağlığı Etkinliği</h4><div class="event-meta"><span><i class="fas fa-tooth"></i> Veli Katılım</span></div></div>
+            </div>
+            <div class="event-item">
+              <div class="event-date"><div class="event-day">12</div><div class="event-month">Ara</div></div>
+              <div class="event-details"><h4 class="event-title">Yerli Malları Haftası</h4><div class="event-meta"><span><i class="fas fa-apple-alt"></i> Sınıf Kutlaması</span></div></div>
+            </div>
+            <div class="event-item highlight">
+              <div class="event-date"><div class="event-day">21</div><div class="event-month">Ara</div></div>
+              <div class="event-details"><h4 class="event-title">Üç Ayların Başlangıcı</h4><div class="event-meta"><span><i class="fas fa-moon"></i> Manevi Etkinlik</span></div></div>
+            </div>
+            <div class="event-item">
+              <div class="event-date"><div class="event-day">25</div><div class="event-month">Ara</div></div>
+              <div class="event-details"><h4 class="event-title">Deniz Müzesi Gezisi (Anasınıfı)</h4><div class="event-meta"><span><i class="fas fa-anchor"></i> Gezi</span></div></div>
+            </div>
+            <div class="event-item">
+              <div class="event-date"><div class="event-day">25</div><div class="event-month">Ara</div></div>
+              <div class="event-details"><h4 class="event-title">Karina Müzesi Gezisi (Anasınıfı)</h4><div class="event-meta"><span><i class="fas fa-university"></i> Gezi</span></div></div>
+            </div>
+            <div class="event-item">
+              <div class="event-date"><div class="event-day">25</div><div class="event-month">Ara</div></div>
+              <div class="event-details"><h4 class="event-title">Regaip Kandili</h4><div class="event-meta"><span><i class="fas fa-pray"></i> Okul Programı</span></div></div>
+            </div>
+            <div class="event-item">
+              <div class="event-date"><div class="event-day">27</div><div class="event-month">Ara</div></div>
+              <div class="event-details"><h4 class="event-title">Sinema Etkinliği (İlkokul)</h4><div class="event-meta"><span><i class="fas fa-film"></i> Gezi</span></div></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- OCAK -->
+        <div class="calendar-card">
+          <div class="calendar-header">
+            <h3 class="calendar-title">Ocak 2026</h3>
+            <span class="event-count">5 Etkinlik</span>
+          </div>
+          <div class="event-list">
+            <div class="event-item">
+              <div class="event-date"><div class="event-day">13</div><div class="event-month">Oca</div></div>
+              <div class="event-details"><h4 class="event-title">Sinema Etkinliği (Anasınıfı)</h4><div class="event-meta"><span><i class="fas fa-film"></i> Gezi</span></div></div>
+            </div>
+            <div class="event-item">
+              <div class="event-date"><div class="event-day">14</div><div class="event-month">Oca</div></div>
+              <div class="event-details"><h4 class="event-title">Kütüphane Gezisi (İlkokul)</h4><div class="event-meta"><span><i class="fas fa-book"></i> Gezi</span></div></div>
+            </div>
+            <div class="event-item">
+              <div class="event-date"><div class="event-day">15</div><div class="event-month">Oca</div></div>
+              <div class="event-details"><h4 class="event-title">Miraç Kandili</h4><div class="event-meta"><span><i class="fas fa-pray"></i> Program</span></div></div>
+            </div>
+            <div class="event-item highlight">
+              <div class="event-date"><div class="event-day">16</div><div class="event-month">Oca</div></div>
+              <div class="event-details"><h4 class="event-title">1.Dönem Karne Töreni</h4><div class="event-meta"><span><i class="fas fa-award"></i> Yarıyıl Tatili</span></div></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- ŞUBAT -->
+        <div class="calendar-card">
+          <div class="calendar-header">
+            <h3 class="calendar-title">Şubat 2026</h3>
+            <span class="event-count">5 Etkinlik</span>
+          </div>
+          <div class="event-list">
+            <div class="event-item">
+              <div class="event-date"><div class="event-day">3</div><div class="event-month">Şub</div></div>
+              <div class="event-details"><h4 class="event-title">Berat Kandili</h4><div class="event-meta"><span><i class="fas fa-pray"></i> Maneviyet</span></div></div>
+            </div>
+            <div class="event-item">
+              <div class="event-date"><div class="event-day">6</div><div class="event-month">Şub</div></div>
+              <div class="event-details"><h4 class="event-title">Anne Baba Seminerleri</h4><div class="event-meta"><span><i class="fas fa-users-cog"></i> Rehberlik</span></div></div>
+            </div>
+            <div class="event-item">
+              <div class="event-date"><div class="event-day">16</div><div class="event-month">Şub</div></div>
+              <div class="event-details"><h4 class="event-title">Sabah Namazı Buluşması</h4><div class="event-meta"><span><i class="fas fa-clock"></i> Cami Etkinliği</span></div></div>
+            </div>
+            <div class="event-item highlight">
+              <div class="event-date"><div class="event-day">19</div><div class="event-month">Şub</div></div>
+              <div class="event-details"><h4 class="event-title">Ramazan Başlangıcı</h4><div class="event-meta"><span><i class="fas fa-moon"></i> Hayırlı Ramazanlar</span></div></div>
+            </div>
+            <div class="event-item">
+              <div class="event-date"><div class="event-day">27</div><div class="event-month">Şub</div></div>
+              <div class="event-details"><h4 class="event-title">İftar Programı</h4><div class="event-meta"><span><i class="fas fa-utensils"></i> Okul Sofrası</span></div></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- MART -->
+        <div class="calendar-card">
+          <div class="calendar-header">
+            <h3 class="calendar-title">Mart 2026</h3>
+            <span class="event-count">5 Etkinlik</span>
+          </div>
+          <div class="event-list">
+            <div class="event-item">
+              <div class="event-date"><div class="event-day">15</div><div class="event-month">Mar</div></div>
+              <div class="event-details"><h4 class="event-title">Kütüphane Gezisi (Anasınıfı)</h4><div class="event-meta"><span><i class="fas fa-book"></i> Gezi</span></div></div>
+            </div>
+            <div class="event-item">
+              <div class="event-date"><div class="event-day">15</div><div class="event-month">Mar</div></div>
+              <div class="event-details"><h4 class="event-title">Kütüphane Gezisi (İlkokul)</h4><div class="event-meta"><span><i class="fas fa-book-open"></i> Gezi</span></div></div>
+            </div>
+            <div class="event-item highlight">
+              <div class="event-date"><div class="event-day">16</div><div class="event-month">Mar</div></div>
+              <div class="event-details"><h4 class="event-title">Kadir Gecesi</h4><div class="event-meta"><span><i class="fas fa-star-and-crescent"></i> Program</span></div></div>
+            </div>
+            <div class="event-item">
+              <div class="event-date"><div class="event-day">18</div><div class="event-month">Mar</div></div>
+              <div class="event-details"><h4 class="event-title">Çanakkale Deniz Zaferi</h4><div class="event-meta"><span><i class="fas fa-flag"></i> Tören</span></div></div>
+            </div>
+            <div class="event-item highlight">
+              <div class="event-date"><div class="event-day">19</div><div class="event-month">Mar</div></div>
+              <div class="event-details"><h4 class="event-title">Ramazan Bayramı</h4><div class="event-meta"><span><i class="fas fa-candy-cane"></i> Tatil</span></div></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- NİSAN -->
+        <div class="calendar-card">
+          <div class="calendar-header">
+            <h3 class="calendar-title">Nisan 2026</h3>
+            <span class="event-count">5 Etkinlik</span>
+          </div>
+          <div class="event-list">
+            <div class="event-item">
+              <div class="event-date"><div class="event-day">2</div><div class="event-month">Nis</div></div>
+              <div class="event-details"><h4 class="event-title">Deniz Müzesi Gezisi</h4><div class="event-meta"><span><i class="fas fa-ship"></i> Gezi</span></div></div>
+            </div>
+            <div class="event-item">
+              <div class="event-date"><div class="event-day">9</div><div class="event-month">Nis</div></div>
+              <div class="event-details"><h4 class="event-title">Köy İftarı</h4><div class="event-meta"><span><i class="fas fa-home"></i> Kalabaklı</span></div></div>
+            </div>
+            <div class="event-item">
+              <div class="event-date"><div class="event-day">18-19</div><div class="event-month">Nis</div></div>
+              <div class="event-details"><h4 class="event-title">Sabah Namazı Etkinliği</h4><div class="event-meta"><span><i class="fas fa-pray"></i> Cami</span></div></div>
+            </div>
+            <div class="event-item highlight">
+              <div class="event-date"><div class="event-day">23</div><div class="event-month">Nis</div></div>
+              <div class="event-details"><h4 class="event-title">Ulusal Egemenlik Bayramı</h4><div class="event-meta"><span><i class="fas fa-child"></i> Çocuk Şenliği</span></div></div>
+            </div>
+            <div class="event-item">
+              <div class="event-date"><div class="event-day">29</div><div class="event-month">Nis</div></div>
+              <div class="event-details"><h4 class="event-title">Okul Pikniği</h4><div class="event-meta"><span><i class="fas fa-tree"></i> Doğa Gezisi</span></div></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- MAYIS -->
+        <div class="calendar-card">
+          <div class="calendar-header">
+            <h3 class="calendar-title">Mayıs 2026</h3>
+            <span class="event-count">5 Etkinlik</span>
+          </div>
+          <div class="event-list">
+            <div class="event-item highlight">
+              <div class="event-date"><div class="event-day">8</div><div class="event-month">May</div></div>
+              <div class="event-details"><h4 class="event-title">Anneler Günü</h4><div class="event-meta"><span><i class="fas fa-heart"></i> Program</span></div></div>
+            </div>
+            <div class="event-item">
+              <div class="event-date"><div class="event-day">10</div><div class="event-month">May</div></div>
+              <div class="event-details"><h4 class="event-title">Şehir Dışı Gezi (3, 4. Sınıf)</h4><div class="event-meta"><span><i class="fas fa-bus"></i> Kültür Gezisi</span></div></div>
+            </div>
+            <div class="event-item">
+              <div class="event-date"><div class="event-day">17</div><div class="event-month">May</div></div>
+              <div class="event-details"><h4 class="event-title">Bireysel Veli Toplantısı</h4><div class="event-meta"><span><i class="fas fa-user-friends"></i> Görüşme</span></div></div>
+            </div>
+            <div class="event-item highlight">
+              <div class="event-date"><div class="event-day">May</div><div class="event-month">Bölüm</div></div>
+              <div class="event-details"><h4 class="event-title">Filistin'e Destek Şenliği</h4><div class="event-meta"><span><i class="fas fa-hand-holding-heart"></i> Kermes</span></div></div>
+            </div>
+            <div class="event-item">
+              <div class="event-date"><div class="event-day">May</div><div class="event-month">Sonu</div></div>
+              <div class="event-details"><h4 class="event-title">Toplu Kuran Töreni</h4><div class="event-meta"><span><i class="fas fa-book"></i> Hatim Merasimi</span></div></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- HAZİRAN -->
+        <div class="calendar-card">
+          <div class="calendar-header">
+            <h3 class="calendar-title">Haziran 2026</h3>
+            <span class="event-count">3 Etkinlik</span>
+          </div>
+          <div class="event-list">
+            <div class="event-item">
+              <div class="event-date"><div class="event-day">2.</div><div class="event-month">Haf</div></div>
+              <div class="event-details"><h4 class="event-title">Montessori Sunum Günleri</h4><div class="event-meta"><span><i class="fas fa-chalkboard-teacher"></i> Sunum</span></div></div>
+            </div>
+            <div class="event-item highlight">
+              <div class="event-date"><div class="event-day">Haz</div><div class="event-month">Ort</div></div>
+              <div class="event-details"><h4 class="event-title">4. Sınıflar Mezuniyet</h4><div class="event-meta"><span><i class="fas fa-graduation-cap"></i> Tören & Yemek</span></div></div>
+            </div>
+            <div class="event-item highlight">
+              <div class="event-date"><div class="event-day">Haz</div><div class="event-month">Son</div></div>
+              <div class="event-details"><h4 class="event-title">2. Dönem Karne Töreni</h4><div class="event-meta"><span><i class="fas fa-school"></i> Kapanış</span></div></div>
+            </div>
+          </div>
+        </div>
+
       </div>
 
-      <!-- COPYRIGHT -->
-      <div class="copyright">
-        <small>&copy; 2007-2025 18 Mart Sirac Koleji. Tüm Hakları Saklıdır. |
-          <a href="#" style="color: #0af1d3; text-decoration: none;">Gizlilik Politikası</a> |
-          <a href="#" style="color: #0af1d3; text-decoration: none;">Çerez Politikası</a>
-        </small>
-      </div>
+      <div class="video-grid">
+        <!-- Footer and rest of file -->
     </div>
-  </footer>
-  <!-- LIGHTBOX MODAL -->
-  <div class="modal" id="lightboxModal">
-    <div class="modal-content">
-      <button class="modal-close" onclick="closeLightbox()">
-        <i class="fas fa-times"></i>
-      </button>
-      <img class="lightbox-image" id="lightboxImg" src="" alt="">
+  </section>
+
+      <!-- FOOTER -->
+        <footer class="premium-footer">
+        <div class="container">
+            <div class="row">
+                <!-- LOGO VE AÇIKLAMA -->
+                <div class="col-lg-4 mb-5 mb-lg-0">
+                    <div class="footer-brand">
+                        <img src="image/siraclogo.png" alt="Sirac Koleji Logo" class="footer-logo-main">
+                        <div class="footer-logo-text">
+                            <h5>Özel On Sekiz Mart <span>Sirac Koleji <span class='highlight-green'>İlkokulu</span></span></h5>
+                        </div>
+                    </div>
+                    <p class="footer-motto">"Değerleriyle büyüyen, geleceği kuşatan nesiller."</p>
+                    <p class="footer-description">2016 yılında Çanakkale'de kurulan okulumuz, akademik mükemmelliği manevi değerlerle harmanlayarak öğrencilerimize umut dolu bir gelecek sunar.</p>
+
+                    <!-- SOSYAL MEDYA -->
+                    <div class="footer-social-premium">
+                        <a href="https://www.facebook.com/18MartSiracKoleji/" target="_blank" title="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="https://www.instagram.com/18martsirackoleji/" target="_blank" title="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" title="Twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="#" title="YouTube"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+
+                <!-- İLETİŞİM & ÇALIŞMA SAATLERİ -->
+                <div class="col-lg-4 col-md-6 mb-5 mb-md-0">
+                    <div class="footer-glass-card">
+                        <h5 class="footer-title">İletişim & Konum</h5>
+                        <div class="footer-contact-info">
+                            <p><i class="fas fa-map-marker-alt"></i> Kalabaklı Köyü, Kepez, Çanakkale</p>
+                            <p><i class="fas fa-phone"></i> <a href="tel:+905437178217">+90 543 717 8217</a></p>
+                            <p><i class="fas fa-envelope"></i> bilgi@18martsirackoleji.com</p>
+                        </div>
+                        <div class="footer-working-hours">
+                            <h6><i class="fas fa-clock"></i> Çalışma Saatleri</h6>
+                            <div class="hours-row"><span>Hafta İçi</span> <span>08:00 - 18:00</span></div>
+                            <div class="hours-row"><span>Cumartesi</span> <span>09:00 - 14:00</span></div>
+                            <div class="hours-row highlight"><span>Pazar</span> <span>Kapalı</span></div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- HIZLI LİNKLER & BÜLTEN -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="row">
+                        <div class="col-6">
+                            <h5 class="footer-title">Hızlı Linkler</h5>
+                            <ul class="footer-links-list">
+                                <li><a href="anlayis.html">Eğitimimiz</a></li>
+                                <li><a href="galeri.html">Galeri</a></li>
+                                <li><a href="ogretmenler.html">Kadro</a></li>
+                                <li><a href="rehberlik.html">Rehberlik</a></li>
+                                <li><a href="misyon.html">Vizyon</a></li>
+                                <li><a href="iletisim.html">İletişim</a></li>
+                            </ul>
+                        </div>
+                        <div class="col-6">
+                            <h5 class="footer-title">Bülten</h5>
+                            <p class="small">Yeniliklerden haberdar olun.</p>
+                            <form id="footer-newsletter">
+                                <div class="newsletter-box">
+                                    <input type="email" placeholder="E-posta" required>
+                                    <button type="submit"><i class="fas fa-paper-plane"></i></button>
+                                </div>
+                            </form>
+                            <div class="footer-badges-modern">
+                                <img src="https://img.icons8.com/color/48/000000/verified-badge.png" alt="Verified" style="width: 24px; opacity: 0.8;">
+                                <span>MEB Onaylı Kurum</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- COPYRIGHT BAR -->
+            <div class="footer-bottom-bar">
+                <div class="row align-items-center">
+                    <div class="col-md-6 text-center text-md-start">
+                        <p class="mb-0">&copy; 2016-2025 Özel On Sekiz Mart Sirac Koleji <span class='highlight-green'>İlkokulu</span></p>
+                    </div>
+                    <div class="col-md-6 text-center text-md-end">
+                        <div class="legal-links">
+                            <a href="#">Gizlilik</a>
+                            <a href="#">Çerezler</a>
+                            <a href="#">KVKK</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- WHATSAPP FLOATING BUTTON -->
+    <div class="whatsapp-container">
+        <div class="whatsapp-popup">
+            <span>Merhaba! Size nasıl yardımcı olabiliriz?</span>
+        </div>
+        <a href="https://wa.me/905437178217" class="whatsapp-float" target="_blank" title="WhatsApp ile İletişime Geç">
+            <i class="fab fa-whatsapp"></i>
+            <span>WhatsApp ile İletişime Geç</span>
+        </a>
     </div>
-  </div>
 
-  <script>
+    <!-- WHATSAPP FLOATING BUTTON -->
+    <div class="whatsapp-container">
+        <div class="whatsapp-popup">
+            <span>Merhaba! Size nasıl yardımcı olabiliriz?</span>
+        </div>
+        <a href="https://wa.me/905437178217" class="whatsapp-float" target="_blank" title="WhatsApp ile İletişime Geç">
+            <i class="fab fa-whatsapp"></i>
+            <span>WhatsApp ile İletişime Geç</span>
+        </a>
+    </div>
 
-    document.addEventListener('DOMContentLoaded', function () {
-
-      setTimeout(() => {
-        document.querySelectorAll('.animate-in').forEach(el => {
-          el.style.animationPlayState = 'running';
-        });
-      }, 300);
-
-      window.toggleMore = function (button) {
-        const newsCard = button.closest('.news-card');
-        const excerpt = newsCard.querySelector('.news-excerpt');
-        const icon = button.querySelector('i');
-        
-        // This is a simplified toggle, you could add a real full content div if needed
-        if (excerpt.style.display === 'none' || excerpt.style.display === '') {
-          // Just as an example, maybe change button text
-          button.innerHTML = 'Daha Az <i class="fas fa-arrow-up"></i>';
-        } else {
-          button.innerHTML = 'Devamını Oku <i class="fas fa-arrow-right"></i>';
-        }
-      };
-
-      // Haber paylaşma fonksiyonu
-      window.shareNews = function (button) {
-        const newsCard = button.closest('.news-card');
-        const title = newsCard.querySelector('.news-title').textContent;
-        const url = window.location.href;
-
-        if (navigator.share) {
-          navigator.share({
-            title: title,
-            text: '18 Mart Sirac Koleji Haberi: ' + title,
-            url: url
-          });
-        } else {
-          // Fallback: URL'yi kopyala
-          navigator.clipboard.writeText(url).then(() => {
-            alert('Bağlantı kopyalandı!');
-          });
-        }
-      };
-
-      // Lightbox açma fonksiyonu
-      window.openLightbox = function (element) {
-        const imgSrc = element.querySelector('img').src;
-        const lightboxImg = document.getElementById('lightboxImg');
-        const lightboxModal = document.getElementById('lightboxModal');
-
-        lightboxImg.src = imgSrc;
-        lightboxModal.classList.add('active');
-        document.body.style.overflow = 'hidden';
-      };
-
-      // Lightbox kapatma fonksiyonu
-      window.closeLightbox = function () {
-        const lightboxModal = document.getElementById('lightboxModal');
-        const lightboxImg = document.getElementById('lightboxImg');
-
-        lightboxModal.classList.remove('active');
-        lightboxImg.src = '';
-        document.body.style.overflow = 'auto';
-      };
-
-      // Modal dışına tıklayarak kapatma
-      document.getElementById('lightboxModal').addEventListener('click', function (e) {
-        if (e.target === this) {
-          closeLightbox();
-        }
-      });
-
-      // Keyboard kontrolleri
-      document.addEventListener('keydown', function (e) {
-        // Escape ile modal kapatma
-        if (e.key === 'Escape') {
-          const lightboxModal = document.getElementById('lightboxModal');
-          if (lightboxModal.classList.contains('active')) {
-            closeLightbox();
-          }
-        }
-      });
-
-      // Görsel hata yönetimi
-      document.querySelectorAll('img').forEach(img => {
-        img.addEventListener('error', function () {
-          if (!this.classList.contains('error-handled')) {
-            this.classList.add('error-handled');
-            this.src = 'https://images.unsplash.com/photo-1523050854058-8df90110c9f1?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80';
-            this.alt = 'Görsel yüklenemedi';
-          }
-        });
-      });
-
-      // Buton hover efektleri
-      document.querySelectorAll('.btn').forEach(btn => {
-        btn.addEventListener('mouseenter', function () {
-          this.style.transform = 'translateY(-3px)';
-        });
-
-        btn.addEventListener('mouseleave', function () {
-          this.style.transform = 'translateY(0)';
-        });
-      });
-
-      // Sayfalandırma için örnek fonksiyon
-      function loadMoreNews() {
-        const newsGrid = document.querySelector('.news-grid');
-        newsGrid.style.opacity = '0.5';
-
-        setTimeout(() => {
-          // Burada AJAX ile yeni haberler yüklenir
-          newsGrid.style.opacity = '1';
-          alert('Daha fazla haber yükleniyor...');
-        }, 500);
-      }
-    });
-  </script>
-  <script>
-    document.addEventListener('DOMContentLoaded', function () {
-      const videos = document.querySelectorAll('video');
-
-      // Diğer videoları durdurma fonksiyonu
-      function pauseOtherVideos(currentVideo) {
-        videos.forEach(video => {
-          if (video !== currentVideo && !video.paused) {
-            video.pause();
-            // Video kartındaki aktif durumunu temizle
-            const container = video.closest('.video-card');
-            if (container) container.classList.remove('is-playing');
-          }
-        });
-      }
-
-      videos.forEach(video => {
-        const container = video.closest('.video-card');
-
-        // Video oynatıldığında
-        video.addEventListener('play', function () {
-          if (container) container.classList.add('is-playing');
-          pauseOtherVideos(this); // Diğer videoları durdur
-        });
-
-        // Video durdurulduğunda
-        video.addEventListener('pause', function () {
-          if (container) container.classList.remove('is-playing');
-        });
-
-        // Video bittiğinde
-        video.addEventListener('ended', function () {
-          if (container) container.classList.remove('is-playing');
-          // Videoyu başa sarıp posteri göster (isteğe bağlı)
-          this.currentTime = 0;
-          this.load();
-        });
-
-        // Hata durumunda
-        video.addEventListener('error', function () {
-          console.error('Video yüklenemedi:', this.src);
-          if (container) {
-            container.style.border = '2px solid red';
-            // Daha önce eklenmiş hata mesajı varsa sil
-            const existingMsg = container.querySelector('.error-msg');
-            if (existingMsg) existingMsg.remove();
-
-            const errorMsg = document.createElement('div');
-            errorMsg.classList.add('error-msg');
-            errorMsg.textContent = 'Video yüklenemedi';
-            errorMsg.style.color = 'red';
-            errorMsg.style.textAlign = 'center';
-            errorMsg.style.padding = '10px';
-            errorMsg.style.zIndex = '5';
-            errorMsg.style.position = 'absolute';
-            errorMsg.style.bottom = '0';
-            errorMsg.style.width = '100%';
-            errorMsg.style.backgroundColor = 'rgba(255,255,255,0.8)';
-            container.appendChild(errorMsg);
-          }
-        });
-      });
-    });
-  </script>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
-  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>`n  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-  <script src="js/main.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="js/main.js"></script>
+    <script>
+        const revealObserver = new IntersectionObserver((entries) => {
+            entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('revealed'); revealObserver.unobserve(e.target); } });
+        }, { threshold: 0.08 });
+        document.querySelectorAll('[data-reveal]').forEach(el => revealObserver.observe(el));
+    </script>
 </body>
-
 </html>
-

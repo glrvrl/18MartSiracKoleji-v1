@@ -17,6 +17,11 @@
   --transition: all 0.3s ease;
 }
 
+.highlight-green {
+  color: var(--turkuaz);
+  font-weight: 700;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -33,19 +38,25 @@ body {
 
 /* 1. NAVBAR - PREMIUM FLOATING DESIGN */
 .navbar {
-  background: #ffffff !important;
-  /* Forces solid white to hide logo artifacts */
+  background: rgba(255, 255, 255, 1) !important;
   backdrop-filter: blur(15px);
   -webkit-backdrop-filter: blur(15px);
-  padding: 8px 0 !important;
-  /* Tightened padding for elite look */
-  transition: all 0.4s ease;
-  border-bottom: 1px solid rgba(0, 0, 0, 0.06);
-  min-height: 75px !important;
-  /* Strictly lock height for all pages */
+  padding: 18px 0 !important; /* Initial padding */
+  transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.04);
+  min-height: 85px !important;
   display: flex !important;
   align-items: center !important;
   z-index: 1050;
+}
+
+.navbar.scrolled {
+  padding: 8px 0 !important;
+  min-height: 70px !important;
+  background: rgba(255, 255, 255, 0.88) !important;
+  backdrop-filter: blur(25px) saturate(200%);
+  -webkit-backdrop-filter: blur(25px) saturate(200%);
+  box-shadow: 0 10px 35px rgba(0,0,0,0.08) !important;
 }
 
 .navbar-brand {
@@ -56,13 +67,15 @@ body {
 }
 
 .navbar-logo {
-  height: 48px !important;
-  /* Calibrated height */
+  height: 52px !important;
   width: auto !important;
-  transition: var(--transition);
+  transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
   display: block;
   mix-blend-mode: multiply;
-  /* Blends white logo background with navbar */
+}
+
+.navbar.scrolled .navbar-logo {
+  height: 44px !important;
 }
 
 .navbar-title {
@@ -92,26 +105,27 @@ body {
   text-transform: capitalize;
 }
 
-/* CUSTOM DROPDOWN ARROW (WIDER CHEVRON) */
+/* CUSTOM DROPDOWN ARROW — Animated chevron */
 .dropdown-toggle::after {
   display: inline-block;
   content: "";
-  width: 7px;
-  height: 7px;
+  width: 5px;
+  height: 5px;
   border-right: 2px solid var(--turuncu);
   border-bottom: 2px solid var(--turuncu);
-  transform: rotate(45deg);
+  transform: rotate(45deg) translateY(-2px);
   border-left: 0;
   border-top: 0;
   margin-left: 5px;
-  margin-top: -3px;
-  transition: transform 0.3s ease;
+  transition: transform 0.35s cubic-bezier(0.34, 1.56, 0.64, 1);
   vertical-align: middle;
+  opacity: 0.85;
 }
 
+.nav-item.dropdown:hover .dropdown-toggle::after,
 .nav-item.show .dropdown-toggle::after {
-  transform: rotate(-135deg);
-  margin-top: 3px;
+  transform: rotate(-135deg) translateY(1px);
+  opacity: 1;
 }
 
 .nav-link:hover,
@@ -163,42 +177,295 @@ body {
   box-shadow: 0 6px 18px rgba(79, 182, 194, 0.35);
 }
 
-/* 2. DROPDOWN - PREMIUM ANIMATIONS */
+/* =====================================================
+   2. DROPDOWN — 2025 PREMIUM CARD-STYLE
+   ===================================================== */
+
+/* ── ORTAK: Panel stili (her ekranda geçerli) ── */
 .dropdown-menu {
-  border-radius: 12px;
-  border: 1px solid rgba(0, 0, 0, 0.06);
-  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
-  padding: 8px;
-  margin-top: 8px;
-  background: white;
-  animation: dropdownFadeIn 0.3s ease-out;
+  border-radius: 22px;
+  border: 1px solid rgba(255, 255, 255, 0.5) !important;
+  box-shadow: 0 30px 70px rgba(0,0,0,0.12) !important;
+  padding: 12px;
+  background: rgba(255, 255, 255, 0.85) !important;
+  backdrop-filter: blur(28px) saturate(180%);
+  -webkit-backdrop-filter: blur(28px) saturate(180%);
+  min-width: 280px;
+  overflow: hidden;
+  display: block;
+  visibility: hidden;
+  opacity: 0;
+  pointer-events: none;
+  transform: translateY(15px);
+  transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
 }
 
-.dropdown-item {
-  padding: 7px 15px;
-  font-weight: 600;
-  font-size: 0.8rem;
-  border-radius: 6px;
-  transition: var(--transition);
-  color: #444;
+.dropdown-menu.show {
+  visibility: visible;
+  opacity: 1;
+  transform: translateY(0);
 }
 
-.dropdown-item:hover {
-  background: rgba(26, 82, 118, 0.05);
-  color: var(--primary);
-  transform: translateX(5px);
+/* ── Üst renk şeridi (her ekranda) ── */
+.dropdown-menu::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 12px;
+  right: 12px;
+  height: 2px;
+  background: linear-gradient(90deg, var(--turkuaz), var(--turuncu), var(--turkuaz));
+  background-size: 200% 100%;
+  border-radius: 0 0 2px 2px;
+  animation: shimmer 2.5s linear infinite;
+  opacity: 0.7;
+  pointer-events: none;
 }
 
-@keyframes dropdownFadeIn {
-  from {
+@keyframes shimmer {
+  0%   { background-position: 200% 0; }
+  100% { background-position: -200% 0; }
+}
+
+/* ──────────────────────────────────────────────────────
+   MOBİL (< 992px): Bootstrap toggle ile açılır/kapanır
+   Smooth animasyon: max-height geçişi
+   ────────────────────────────────────────────────────── */
+@media (max-width: 991.98px) {
+  /* Caret üçgeni mobilde gösterme */
+  .dropdown-menu::before { display: none; }
+
+  /* Mobilde rounded corners daha küçük, full width */
+  .dropdown-menu {
+    display: none !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+    transform: none !important;
+    pointer-events: auto !important;
+    border-radius: 12px;
+    min-width: unset;
+    width: calc(100% - 16px);
+    margin: 4px 8px;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.08);
+    background: white !important;
+    backdrop-filter: none !important;
+  }
+
+  .dropdown-menu.show {
+    display: block !important;
+  }
+
+  /* Bootstrap .show eklendiğinde zaten görünür olur — sadece item animasyonu */
+  .dropdown-menu.show .dropdown-item {
+    animation: mobileItemIn 0.25s ease both;
+  }
+  .dropdown-menu.show .dropdown-item:nth-child(1) { animation-delay: 0.03s; }
+  .dropdown-menu.show .dropdown-item:nth-child(2) { animation-delay: 0.07s; }
+  .dropdown-menu.show .dropdown-item:nth-child(3) { animation-delay: 0.11s; }
+  .dropdown-menu.show .dropdown-item:nth-child(4) { animation-delay: 0.15s; }
+  .dropdown-menu.show .dropdown-item:nth-child(5) { animation-delay: 0.19s; }
+
+  @keyframes mobileItemIn {
+    from { opacity: 0; transform: translateX(-10px); }
+    to   { opacity: 1; transform: translateX(0); }
+  }
+
+  /* Mobilde hover transform yok */
+  .dropdown-item:hover {
+    transform: none !important;
+  }
+
+  /* dd-icon mobilde biraz küçük */
+  .dd-icon {
+    width: 30px;
+    height: 30px;
+    font-size: 0.85rem;
+  }
+
+  /* dd-desc mobilde gizle — yer kazanmak için */
+  .dd-desc {
+    display: none;
+  }
+}
+
+/* ──────────────────────────────────────────────────────
+   MASAÜSTÜ (>= 992px): Hover ile otomatik açılma
+   visibility/opacity/transform tekniği
+   ────────────────────────────────────────────────────── */
+@media (min-width: 992px) {
+  /* Bootstrap'ın display kontrolü yerine visibility kullanıyoruz */
+  .dropdown-menu {
+    display: block !important;   /* her zaman DOM'da */
+    visibility: hidden;
     opacity: 0;
-    transform: translateY(10px);
+    transform: translateY(14px) scale(0.97);
+    pointer-events: none;
+    margin-top: 0 !important;
+    padding-top: 16px;           /* hover köprüsü — görünmez boşluk */
+    transition:
+      opacity 0.28s cubic-bezier(0.16, 1, 0.3, 1),
+      transform 0.28s cubic-bezier(0.16, 1, 0.3, 1),
+      visibility 0s linear 0.28s;
   }
 
-  to {
+  /* Hover veya Bootstrap .show ile aç */
+  .nav-item.dropdown:hover > .dropdown-menu,
+  .nav-item.dropdown.show  > .dropdown-menu {
+    visibility: visible;
     opacity: 1;
-    transform: translateY(0);
+    transform: translateY(0) scale(1);
+    pointer-events: auto;
+    transition:
+      opacity 0.28s cubic-bezier(0.16, 1, 0.3, 1),
+      transform 0.28s cubic-bezier(0.16, 1, 0.3, 1),
+      visibility 0s;
   }
+
+  /* Caret (ok köşesi) sadece masaüstünde */
+  .dropdown-menu::before {
+    content: '';
+    position: absolute;
+    top: 6px;        /* padding-top kadar aşağı */
+    left: 26px;
+    width: 10px;
+    height: 10px;
+    background: rgba(255,255,255,0.97);
+    border-left: 1px solid rgba(0,0,0,0.05);
+    border-top: 1px solid rgba(0,0,0,0.05);
+    transform: rotate(45deg);
+    border-radius: 2px 0 0 0;
+    z-index: 1;
+    pointer-events: none;
+  }
+
+  /* Stagger animasyonu — masaüstü */
+  .nav-item.dropdown:hover .dropdown-item:nth-child(1) { animation: ddItemIn 0.28s cubic-bezier(0.16,1,0.3,1) 0.04s both; }
+  .nav-item.dropdown:hover .dropdown-item:nth-child(2) { animation: ddItemIn 0.28s cubic-bezier(0.16,1,0.3,1) 0.09s both; }
+  .nav-item.dropdown:hover .dropdown-item:nth-child(3) { animation: ddItemIn 0.28s cubic-bezier(0.16,1,0.3,1) 0.14s both; }
+  .nav-item.dropdown:hover .dropdown-item:nth-child(4) { animation: ddItemIn 0.28s cubic-bezier(0.16,1,0.3,1) 0.19s both; }
+  .nav-item.dropdown:hover .dropdown-item:nth-child(5) { animation: ddItemIn 0.28s cubic-bezier(0.16,1,0.3,1) 0.24s both; }
+}
+
+@keyframes ddItemIn {
+  from { opacity: 0; transform: translateY(6px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+/* ── Dropdown Item (ortak) ── */
+.dropdown-item {
+  display: flex !important;
+  align-items: center !important;
+  gap: 12px !important;
+  padding: 9px 12px !important;
+  border-radius: 12px !important;
+  transition: background 0.2s ease, transform 0.22s cubic-bezier(0.34, 1.56, 0.64, 1) !important;
+  color: #1e293b !important;
+  font-weight: 600 !important;
+  font-size: 0.82rem !important;
+  letter-spacing: 0.01em !important;
+  white-space: nowrap;
+  text-decoration: none;
+}
+
+/* Nav-link ::before çubuğunu dropdown item'lardan gizle */
+.dropdown-menu .dropdown-item::before {
+  display: none !important;
+}
+
+/* ── İkon Badge ── */
+.dd-icon {
+  width: 36px;
+  height: 36px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.95rem;
+  flex-shrink: 0;
+  transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1), background 0.2s ease;
+}
+
+/* ── Label + Açıklama ── */
+.dd-text {
+  display: flex;
+  flex-direction: column;
+  gap: 1px;
+  min-width: 0;
+}
+
+.dd-label {
+  font-size: 0.82rem;
+  font-weight: 700;
+  color: #1e293b;
+  line-height: 1.2;
+  transition: color 0.2s ease;
+}
+
+.dd-desc {
+  font-size: 0.7rem;
+  font-weight: 500;
+  color: #94a3b8;
+  line-height: 1.3;
+  transition: color 0.2s ease;
+}
+
+/* ── Hover State ── */
+.dropdown-item:hover {
+  transform: translateX(3px) !important;
+  background: transparent !important;
+}
+
+/* Kurumsal — mavi */
+.dropdown-menu.dd-kurumsal .dropdown-item:hover { background: rgba(26, 82, 118, 0.06) !important; }
+.dropdown-menu.dd-kurumsal .dd-icon { background: rgba(26, 82, 118, 0.08); color: #1a5276; }
+.dropdown-menu.dd-kurumsal .dropdown-item:hover .dd-icon { transform: scale(1.18) rotate(-5deg); background: rgba(26, 82, 118, 0.14); }
+.dropdown-menu.dd-kurumsal .dropdown-item:hover .dd-label { color: #1a5276; }
+.dropdown-menu.dd-kurumsal .dropdown-item:hover .dd-desc { color: #2980b9; }
+
+/* Eğitim — teal */
+.dropdown-menu.dd-egitim .dropdown-item:hover { background: rgba(79, 182, 194, 0.07) !important; }
+.dropdown-menu.dd-egitim .dd-icon { background: rgba(79, 182, 194, 0.09); color: #0e7f8a; }
+.dropdown-menu.dd-egitim .dropdown-item:hover .dd-icon { transform: scale(1.18) rotate(-5deg); background: rgba(79, 182, 194, 0.18); }
+.dropdown-menu.dd-egitim .dropdown-item:hover .dd-label { color: #0e7f8a; }
+.dropdown-menu.dd-egitim .dropdown-item:hover .dd-desc { color: #4fb6c2; }
+
+/* Atölyeler — turuncu */
+.dropdown-menu.dd-atolye .dropdown-item:hover { background: rgba(243, 156, 61, 0.07) !important; }
+.dropdown-menu.dd-atolye .dd-icon { background: rgba(243, 156, 61, 0.09); color: #c27d28; }
+.dropdown-menu.dd-atolye .dropdown-item:hover .dd-icon { transform: scale(1.18) rotate(-5deg); background: rgba(243, 156, 61, 0.18); }
+.dropdown-menu.dd-atolye .dropdown-item:hover .dd-label { color: #c27d28; }
+.dropdown-menu.dd-atolye .dropdown-item:hover .dd-desc { color: #f39c3d; }
+
+/* Etkinlikler — yeşil */
+.dropdown-menu.dd-etkinlik .dropdown-item:hover { background: rgba(39, 174, 96, 0.07) !important; }
+.dropdown-menu.dd-etkinlik .dd-icon { background: rgba(39, 174, 96, 0.09); color: #1e8449; }
+.dropdown-menu.dd-etkinlik .dropdown-item:hover .dd-icon { transform: scale(1.18) rotate(-5deg); background: rgba(39, 174, 96, 0.18); }
+.dropdown-menu.dd-etkinlik .dropdown-item:hover .dd-label { color: #1e8449; }
+.dropdown-menu.dd-etkinlik .dropdown-item:hover .dd-desc { color: #27ae60; }
+
+/* ── Ayırıcı ── */
+.dropdown-divider {
+  margin: 6px 4px;
+  border-color: rgba(0,0,0,0.05);
+}
+
+/* ── Mobil fallback animasyon ── */
+@keyframes dropdownFadeIn {
+  from { opacity: 0; transform: translateY(8px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+
+/* ── Ayırıcı ── */
+.dropdown-divider {
+  margin: 6px 4px;
+  border-color: rgba(0,0,0,0.05);
+}
+
+/* ── Mobil fallback ── */
+@keyframes dropdownFadeIn {
+  from { opacity: 0; transform: translateY(8px); }
+  to   { opacity: 1; transform: translateY(0); }
 }
 
 /* HERO SLIDER */
@@ -515,149 +782,231 @@ footer .col-lg-4 p {
 #newsletter-form .input-group {
   background: rgba(255, 255, 255, 0.05);
   border: 1px solid rgba(255, 255, 255, 0.1);
-  border-radius: 12px;
-  padding: 5px;
-  transition: var(--transition);
-}
-
-#newsletter-form .input-group:focus-within {
-  border-color: #f39c12;
-  box-shadow: 0 0 20px rgba(243, 156, 18, 0.15);
-}
-
-.form-control {
-  background: transparent !important;
-  border: none !important;
-  color: #ffffff !important;
-  padding: 10px 15px !important;
-}
-
-.btn-warning {
-  background: #f39c12 !important;
-  border: none !important;
-  border-radius: 10px !important;
-  color: #0b1c2d !important;
-  font-weight: 700 !important;
-  padding: 10px 20px !important;
-  transition: all 0.3s ease !important;
-}
-
-.btn-warning:hover {
-  transform: scale(1.05);
-  box-shadow: 0 5px 15px rgba(243, 156, 18, 0.4) !important;
-}
-
-/* COPYRIGHT */
-.copyright {
-  margin-top: 60px;
-  padding-top: 30px;
+  overflow: hidden;
   border-top: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.footer-brand {
   display: flex;
-  justify-content: space-between;
   align-items: center;
-  flex-wrap: wrap;
-  gap: 20px;
-}
-
-.copyright small {
-  color: #6c757d;
-  font-size: 0.9rem;
-}
-
-.copyright a {
-  transition: var(--transition);
-}
-
-.copyright a:hover {
-  color: #ffffff !important;
-}
-
-/* Feature Cards in Footer */
-.footer-features {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
   gap: 15px;
-  margin-top: 30px;
-  padding-top: 30px;
-  border-top: 1px solid rgba(255, 255, 255, 0.05);
+  margin-bottom: 25px;
 }
 
-.feature-item {
-  text-align: center;
-  padding: 15px 10px;
-  background: rgba(255, 255, 255, 0.02);
-  border-radius: 12px;
-  border: 1px solid rgba(255, 255, 255, 0.05);
-  transition: all 0.3s ease;
-}
-
-.feature-item:hover {
-  background: rgba(243, 156, 18, 0.05);
-  transform: translateY(-5px);
-  border-color: rgba(243, 156, 18, 0.2);
-}
-
-.feature-icon {
-  font-size: 1.4rem;
-  color: #f39c12;
-  margin-bottom: 8px;
-}
-
-.feature-text {
-  font-size: 0.8rem;
-  color: #adb5bd;
-  font-weight: 600;
-  text-transform: uppercase;
-  letter-spacing: 0.5px;
-}
-
-/* FOOTER BRAND REFINEMENTS */
-.footer-logo img {
-  max-height: 70px;
+.footer-logo-main {
+  height: 65px;
   width: auto;
-  filter: drop-shadow(0 5px 15px rgba(0, 0, 0, 0.2));
+  filter: drop-shadow(0 5px 15px rgba(0,0,0,0.3));
 }
 
-.footer-logo .logo-text h5 {
-  font-size: 1.2rem;
+.footer-logo-text h5 {
+  font-size: 1.15rem;
   font-weight: 800;
-  color: #ffffff;
   margin: 0;
   line-height: 1.2;
 }
 
-.footer-logo .logo-text span {
+.footer-logo-text span {
+  color: var(--turkuaz);
   font-size: 0.9rem;
-  color: #f39c12;
-  font-weight: 600;
-  text-transform: uppercase;
+  display: block;
 }
 
-.footer-tagline {
-  color: #6c757d;
+.footer-motto {
+  font-family: 'Playfair Display', serif;
   font-style: italic;
-  font-size: 0.9rem;
-  margin: 20px 0;
-  padding-left: 15px;
-  border-left: 3px solid rgba(243, 156, 18, 0.3);
+  color: var(--turkuaz);
+  font-size: 1.1rem;
+  margin-bottom: 20px;
+  letter-spacing: 0.5px;
 }
 
-.footer .col-lg-4 p {
-  color: #adb5bd;
+.footer-description {
+  color: rgba(255, 255, 255, 0.7);
   font-size: 0.95rem;
   line-height: 1.7;
+  margin-bottom: 30px;
 }
 
-@media (max-width: 991px) {
-  .footer-logo {
-    justify-content: center;
-  }
+.footer-social-premium {
+  display: flex;
+  gap: 15px;
+}
 
-  .footer-tagline {
-    border-left: none;
-    border-bottom: 1px solid rgba(243, 156, 18, 0.2);
-    padding: 0 0 15px 0;
-  }
+.footer-social-premium a {
+  width: 42px;
+  height: 42px;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  font-size: 1.1rem;
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.footer-social-premium a:hover {
+  background: var(--turkuaz);
+  color: #fff;
+  transform: translateY(-5px) rotate(8deg);
+  box-shadow: 0 10px 20px rgba(42, 157, 143, 0.3);
+}
+
+/* Glass Card Component */
+.footer-glass-card {
+  background: rgba(255, 255, 255, 0.03);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 24px;
+  padding: 30px;
+  height: 100%;
+}
+
+.footer-working-hours {
+  margin-top: 25px;
+  padding-top: 20px;
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.footer-working-hours h6 {
+  font-weight: 700;
+  margin-bottom: 15px;
+  font-size: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.hours-row {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.9rem;
+  margin-bottom: 8px;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.hours-row.highlight {
+  color: #e76f51;
+  font-weight: 700;
+}
+
+.footer-contact-info p {
+  font-size: 0.95rem;
+  margin-bottom: 12px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.footer-contact-info i {
+  color: var(--turkuaz);
+}
+
+.footer-contact-info a {
+  color: inherit;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.footer-contact-info a:hover {
+  color: var(--turkuaz);
+}
+
+.footer-links-list {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-links-list li {
+  margin-bottom: 12px;
+}
+
+.footer-links-list a {
+  color: rgba(255, 255, 255, 0.75);
+  text-decoration: none;
+  font-size: 0.95rem;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  display: inline-block;
+}
+
+.footer-links-list a:hover {
+  color: var(--turkuaz);
+  transform: translateX(8px);
+}
+
+/* Newsletter Box */
+.newsletter-box {
+  display: flex;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  padding: 5px;
+  margin-top: 15px;
+}
+
+.newsletter-box input {
+  background: transparent;
+  border: none;
+  color: #fff;
+  padding: 10px 15px;
+  flex: 1;
+  outline: none;
+  width: 100%;
+}
+
+.newsletter-box button {
+  background: var(--turkuaz);
+  border: none;
+  color: #fff;
+  width: 44px;
+  height: 44px;
+  border-radius: 10px;
+  transition: 0.3s;
+}
+
+.newsletter-box button:hover {
+  background: #3a97a3;
+  transform: scale(0.95);
+}
+
+.footer-badges-modern {
+  margin-top: 25px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 0.8rem;
+  color: rgba(255, 255, 255, 0.5);
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
+  padding-top: 15px;
+}
+
+/* Bottom Bar */
+.footer-bottom-bar {
+  margin-top: 60px;
+  padding: 30px 0;
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
+  font-size: 0.85rem;
+  color: rgba(255, 255, 255, 0.4);
+}
+
+.legal-links {
+  display: flex;
+  gap: 20px;
+  justify-content: flex-end;
+}
+
+.legal-links a {
+  color: inherit;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.legal-links a:hover {
+  color: #fff;
 }
 
 /* Working Hours refined */
@@ -786,34 +1135,46 @@ footer .col-lg-4 p {
   box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
 }
 
-/* RESPONSIVE */
+/* RESPONSIVE REFINEMENTS (GLOBAL) */
+@media (max-width: 992px) {
+  .navbar-logo { height: 44px !important; }
+}
+
 @media (max-width: 768px) {
-  footer {
-    padding: 4rem 0 2rem;
-  }
-
-  .footer-logo {
-    flex-direction: column;
+  .premium-footer {
+    padding: 60px 0 0;
     text-align: center;
-    gap: 10px;
   }
 
-  .footer-social {
+  .footer-brand {
+    justify-content: center;
+    flex-direction: column;
+  }
+
+  .footer-glass-card {
+    padding: 20px;
+    margin-bottom: 30px;
+  }
+
+  .footer-social-premium {
     justify-content: center;
   }
 
-  .footer-features {
-    grid-template-columns: 1fr;
+  .legal-links {
+    justify-content: center;
+    margin-top: 15px;
   }
 
-  .feature-item {
-    padding: 20px;
+  .back-to-top {
+    bottom: 90px;
+    right: 20px;
+    width: 44px;
+    height: 44px;
   }
-}
 
-@media (min-width: 992px) {
-  .footer-logo h5 {
-    font-size: 1.6rem;
+  .whatsapp-container {
+    bottom: 20px;
+    right: 20px;
   }
 }
 
