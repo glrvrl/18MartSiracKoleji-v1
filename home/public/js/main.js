@@ -1,4 +1,4 @@
-﻿/**
+/**
  * Sirac Koleji - Ana JavaScript Dosyası
  * Tüm site genelindeki dinamik efektler ve slider kontrolleri burada birleştirilmiştir.
  */
@@ -104,5 +104,69 @@ document.addEventListener("DOMContentLoaded", function () {
             if (e.key === 'ArrowLeft') carousel.prev();
             if (e.key === 'ArrowRight') carousel.next();
         });
+    }
+
+    // --- 5. HOVER İLE DROPDOWN AÇMA (Masaüstü) ---
+    // Fare nav-item veya dropdown-menu üzerindeyken açık kalır
+    if (window.innerWidth >= 992) {
+        document.querySelectorAll('.nav-item.dropdown').forEach(function (item) {
+            let leaveTimer = null;
+
+            function openMenu() {
+                clearTimeout(leaveTimer);
+                const toggle = item.querySelector('[data-bs-toggle="dropdown"]');
+                if (toggle) {
+                    const bsDropdown = bootstrap.Dropdown.getOrCreateInstance(toggle);
+                    bsDropdown.show();
+                }
+            }
+
+            function scheduleClose() {
+                leaveTimer = setTimeout(function () {
+                    const toggle = item.querySelector('[data-bs-toggle="dropdown"]');
+                    if (toggle) {
+                        const bsDropdown = bootstrap.Dropdown.getInstance(toggle);
+                        if (bsDropdown) bsDropdown.hide();
+                    }
+                }, 300); // 300ms — yeterli geçiş süresi
+            }
+
+            // Nav-item (toggle dahil) hover
+            item.addEventListener('mouseenter', openMenu);
+            item.addEventListener('mouseleave', scheduleClose);
+
+            // Dropdown-menu içine girilince timer iptal et
+            const menu = item.querySelector('.dropdown-menu');
+            if (menu) {
+                menu.addEventListener('mouseenter', function () {
+                    clearTimeout(leaveTimer);
+                });
+                menu.addEventListener('mouseleave', scheduleClose);
+            }
+        });
+    }
+
+    // --- 6. OTOMATİK ERKEN KAYIT POPUP ---
+    const autoPopup = document.getElementById("registration-popup");
+    if (autoPopup) {
+        const closeBtn = autoPopup.querySelector(".auto-popup-close");
+
+        // Sayfa yüklendikten 500ms sonra aç
+        setTimeout(() => {
+            autoPopup.classList.add("show");
+            
+            // 2 saniye sonra otomatik kapat (Kullanıcı isteği üzerine)
+            setTimeout(() => {
+                autoPopup.classList.remove("show");
+            }, 2500); // 500ms animasyon + 2000ms görünürlük
+        }, 500);
+
+        // Manuel kapatma
+        if (closeBtn) {
+            closeBtn.onclick = () => autoPopup.classList.remove("show");
+        }
+        autoPopup.onclick = (e) => {
+            if (e.target === autoPopup) autoPopup.classList.remove("show");
+        };
     }
 });

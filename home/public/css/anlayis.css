@@ -4,7 +4,9 @@
 .education-header {
     position: relative;
     /* Using a dark gradient over the image for better text readability */
-    background: linear-gradient(135deg, rgba(11, 28, 45, 0.7), rgba(79, 182, 194, 0.65) 100%),
+    background: linear-gradient(135deg, rgba(11, 28, 45, 0.94), rgba(42, 157, 143, 0.82)),
+        radial-gradient(circle at 10% 20%, rgba(42, 157, 143, 0.3) 0%, transparent 50%),
+        radial-gradient(circle at 90% 80%, rgba(243, 156, 61, 0.15) 0%, transparent 50%),
         url('../image/anlayis_bg.png') center/cover no-repeat;
     color: #fff;
     padding: 180px 0 140px;
